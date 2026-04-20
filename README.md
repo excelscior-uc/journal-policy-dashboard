@@ -1,6 +1,6 @@
 # Tracking the Shift from Bar Graphs to Informative Plots in Biomedical Journals
 
-An interactive dashboard for tracking how data-visualisation practices in scientific publishing have evolved over time in biomedical journals — focusing on the use of bar charts versus more informative alternatives across hundreds of journals and 12 research fields: 
+An interactive dashboard for tracking how data-visualisation practices in scientific publishing have evolved over time in biomedical journals — focusing on the use of bar graphs versus more informative alternatives across hundreds of journals and 12 research fields: 
 - Cardiac & Cardiovascular Systems
 - Clinical Neurology
 - Endocrinology & Metabolism
@@ -15,7 +15,8 @@ An interactive dashboard for tracking how data-visualisation practices in scient
 - Urology & Nephrology
 
 > **Pre-registration:** [osf.io/tcyxg](https://osf.io/tcyxg/overview)
-> **Dashboard: ** [website](https://teresacoliveira.github.io/journal-observatory-2)
+
+> **Dashboard:** [website](https://teresacoliveira.github.io/journal-observatory-2)
 
 ---
 
@@ -25,7 +26,7 @@ This repository generates a self-contained, single-file HTML dashboard from long
 
 The dashboard lets you:
 
-- Track the prevalence of **bar charts** vs. **informative visualisations** (box plots, violin plots, dot plots, etc.) year by year (2010–2025)
+- Track the prevalence of **bar graphs** vs. **informative visualisations** (bar graphs with dots, box plots, dot plots, histograms or violin plots) year by year (2010–2025)
 - Compare **policy journals** (those that adopted an editorial recommendation on figure types) against **non-policy journals**
 - Explore trends at three levels: **global**, **per research field**, and **per journal**
 - Visually assess whether editorial policies produce measurable changes in author behaviour
@@ -75,7 +76,7 @@ CSV_PATH = r"path/to/bz_journal_year_percentages_YYYYMMDD_HHMMSS.csv"
 3. Run the generator:
 
 ```bash
-python generate_dashboard_from_csv_v5.py
+python generate_dashboard_from_csv_v8.py
 ```
 
 4. Open the output file in any modern browser:
@@ -99,9 +100,9 @@ The input CSV must contain one row per journal per year, with the following key 
 | `All_Fields` | All fields the journal belongs to |
 | `policy` | `1` if the journal has an editorial visualisation policy, `0` otherwise |
 | `policy_year` | Year the policy was adopted (if applicable) |
-| `p_only_bar` | Proportion of articles using *only* bar charts (0–1) |
-| `p_only_inf` | Proportion of articles using *only* informative charts (0–1) |
-| `p_bar_and_inf` | Proportion of articles using *both* chart types (0–1) |
+| `p_only_bar` | Proportion of articles using *only* bar graphs (0–1) |
+| `p_only_inf` | Proportion of articles using *only* informative graphs (0–1) |
+| `p_bar_and_inf` | Proportion of articles using *both* graph types (0–1) |
 | `n_articles` | Total number of screened articles that year |
 | `n_bar_or_informative` | Number of eligible articles containing relevant figures |
 
@@ -132,16 +133,16 @@ Per-journal charts show a single vertical line at the year of policy adoption. A
 
 | Metric | Colour | Description |
 |---|---|---|
-| % only bar | Red `#c0392b` | Articles using only bar charts for continuous data |
-| % bar and informative | Salmon `#e8998d` | Articles using both bar and informative charts |
-| % only informative | Teal `#76b5b2` | Articles using only informative charts |
+| % only bar | Red `#c0392b` | Articles using only bar graphs for continuous data |
+| % bar and informative | Salmon `#e8998d` | Articles using both bar and informative graphs |
+| % only informative | Teal `#76b5b2` | Articles using only informative graphs |
 | Policy adoption | Yellow `#fde624` | Vertical marker at the journal's policy adoption year |
 
 ---
 
 ## Background & Motivation
 
-Bar charts that reduce continuous data to a mean and error bar are widely criticised for concealing distributional features — bimodality, skewness, outliers — that are critical for interpreting and replicating results. Despite two decades of calls to replace them, bar charts remain the dominant format across many biomedical and life-science journals.
+Bar graphs that reduce continuous data to a mean and error bar are widely criticised for concealing distributional features — bimodality, skewness, outliers — that are critical for interpreting and replicating results. Despite two decades of calls to replace them, bar charts remain the dominant format across many biomedical and life-science journals.
 
 A growing number of journals have introduced **editorial policies** that explicitly encourage or require more informative alternatives. These policy adoptions create natural quasi-experiments: by comparing visualisation practices *before* and *after* a policy — and against journals that never adopted one — it is possible to estimate whether editorial recommendations produce measurable changes in author behaviour.
 
