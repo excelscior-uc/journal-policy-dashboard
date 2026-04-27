@@ -35,7 +35,7 @@ The dashboard lets you:
 
 ## How It Works
 
-The script `generate_dashboard_from_csv_v8.py` reads a CSV file of journal-year-level statistics and outputs a fully self-contained HTML file (no server required). All charts are rendered with [Plotly](https://plotly.com/python/) and embedded as JSON inside the HTML.
+The script `generate_dashboard_from_csv_v11.py` reads a CSV file of journal-year-level statistics and outputs a fully self-contained HTML file (no server required). All charts are rendered with [Plotly](https://plotly.com/python/) and embedded as JSON inside the HTML.
 
 ```
 Input:  bz_journal_year_percentages_YYYYMMDD_HHMMSS.csv
@@ -76,7 +76,7 @@ CSV_PATH = r"path/to/bz_journal_year_percentages_YYYYMMDD_HHMMSS.csv"
 3. Run the generator:
 
 ```bash
-python generate_dashboard_from_csv_v8.py
+python generate_dashboard_from_csv_v11.py
 ```
 
 4. Open the output file in any modern browser:
