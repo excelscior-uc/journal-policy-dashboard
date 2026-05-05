@@ -247,7 +247,7 @@ The study protocol is publicly pre-registered at **[osf.io/tcyxg](https://osf.io
 ## Key References
 
 - Weissgerber et al. (2015). *Beyond bar and line graphs: time for a new data presentation paradigm.* PLOS Biology. [doi:10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128)
-- Weissgerber et al. (2019). *From static to interactive: Transforming data visualization to improve transparency.* PLOS Biology. [doi:10.1371/journal.pbio.3000153](https://doi.org/10.1371/journal.pbio.3000153)
+- Weissgerber et al. (2019). *From static to interactive: Transforming data visualization to improve transparency.* PLOS Biology. [doi:10.1371/journal.pbio.1002484](https://doi.org/10.1371/journal.pbio.1002484)
 - Weissgerber et al. (2019). *Reveal, don't conceal: Transforming data visualization to improve transparency.* Circulation. [doi:10.1161/CIRCULATIONAHA.118.037777](https://doi.org/10.1161/CIRCULATIONAHA.118.037777)
 - Riedel et al. (2022). *Replacing bar graphs of continuous data with more informative graphics: are we making progress?* Clinical Science. [doi:10.1042/CS20220287](https://doi.org/10.1042/CS20220287)
 - Riedel N, Nachev V, Schulz R, Kazezian V, Weissgerber T. *barzooka* — automated figure screening tool. [GitHub](https://github.com/quest-bih/barzooka)
