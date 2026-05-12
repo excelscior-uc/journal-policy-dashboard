@@ -28,7 +28,7 @@ This repository processes barzooka screening results and article metadata for 21
 The dashboard lets you:
 
 - Track the prevalence of **bar graphs** vs. **informative visualisations** (bars with dots, box plots, dot plots, histograms, violin plots) year by year (2010–2025)
-- Compare **policy journals** (those that adopted an editorial recommendation on figure types) against **non-policy journals**
+- Compare **policy journals** (71 journals that adopted an editorial recommendation on figure types) against **non-policy journals**
 - Explore trends at three levels: **global**, **per research field**, and **per journal**
 - Visually assess whether editorial policies produce measurable changes in author behaviour
 
@@ -44,15 +44,17 @@ The analysis runs as three sequential Python scripts. Each script accepts file p
 step1_merge_bz_results.py
     → merged_bz_results_TIMESTAMP.csv            (571,744 rows)
 
-step2_build_aggregated_dataset.py
+step2_build_aggregated_dataset_v3.py
     → bz_journal_year_percentages_All_Fields_TIMESTAMP.csv   (3,211 rows)
     → sankey_workflow_TIMESTAMP.html
     → diag_missing_issns_TIMESTAMP.csv           (if any unmatched ISSNs)
     → diag_unmatched_rows_TIMESTAMP.csv          (if any unmatched rows)
 
-step3_generate_dashboard.py
+step3_generate_dashboard_v8.py
     → dashboard_output/index_TIMESTAMP.html      (~3.6 MB, self-contained)
 ```
+
+An optional utility script, `looker_studio_prep.py`, produces three supplementary CSV files from the aggregated dataset for use in Google Looker Studio (see [Looker Studio Export](#looker-studio-export)).
 
 ---
 
@@ -75,7 +77,7 @@ pip install pandas plotly requests
 
 ### Step 1 — Merge barzooka screening results
 
-Reads all per-journal `*_bz_results.csv` files and merges them into a single CSV. Rows with no screening results are flagged (`has_no_results = 1`) but retained; they are filtered in step 2.
+Reads all per-journal `*_bz_results.csv` files and merges them into a single CSV. Rows with no screening results are flagged (`has_no_results = 1`) but retained; they are filtered in step 2, after the join with metadata, so the Sankey diagram can track them at the correct stage.
 
 ```bash
 python step1_merge_bz_results.py \
@@ -88,7 +90,7 @@ python step1_merge_bz_results.py \
 Filters article metadata, joins it with the BZ results, derives article-level chart-type flags, enriches with journal metadata, and aggregates to one row per journal × year. Also produces a Sankey diagram showing row counts and exclusion reasons at each processing stage.
 
 ```bash
-python step2_build_aggregated_dataset.py \
+python step2_build_aggregated_dataset_v3.py \
     --bz      path/to/merged_bz_results_TIMESTAMP.csv \
     --meta    path/to/metadata_full.csv \
     --mapping path/to/Journal_names_mapping.csv \
@@ -102,12 +104,30 @@ Add `--no-crossref` to skip the Crossref API lookup for missing publication year
 Reads the aggregated CSV and writes a fully self-contained HTML dashboard.
 
 ```bash
-python step3_generate_dashboard.py \
+python step3_generate_dashboard_v8.py \
     --csv    path/to/bz_journal_year_percentages_All_Fields_TIMESTAMP.csv \
     --output dashboard_output/
 ```
 
 Open the resulting `index_TIMESTAMP.html` in any modern browser — no server required.
+
+---
+
+## Looker Studio Export
+
+`looker_studio_prep.py` is an optional utility that transforms the aggregated CSV into three files ready to connect in Google Looker Studio:
+
+- **`ls_main.csv`** — the primary fact table (1 row per journal × year), with derived columns `policy_label`, `policy_adopted` (Before/After/No policy), `years_since_policy`, and `field_count`.
+- **`ls_policy_window.csv`** — event-centred data aligned to years relative to policy adoption (±7 years by default), for ITS-style charts.
+- **`ls_field_summary.csv`** — mean metrics and total eligible articles per field × year, for small-multiple field comparisons.
+
+Proportions are scaled to 0–100 in all three files (unlike the raw aggregated CSV, which uses 0–1).
+
+```bash
+python looker_studio_prep.py \
+    --csv path/to/bz_journal_year_percentages_All_Fields_TIMESTAMP.csv \
+    --out path/to/output_dir/
+```
 
 ---
 
@@ -120,13 +140,16 @@ Open the resulting `index_TIMESTAMP.html` in any modern browser — no server re
 PubMed metadata export covering all retrieved articles. Only rows where `is_in_main_folder == TRUE` are used. After deduplication on DOI and year filtering (2010–2025), approximately 570,410 rows remain.
 
 ### Journal mapping CSV
-214 rows for 213 journals (one journal has two rows because it changed name and e-ISSN in 2021). Contains journal name, primary and all WoS research fields, editorial policy flag, policy adoption year, and JCR abbreviation.
+214 rows for 213 journals (one journal, *Transplantation and Cellular Therapy* / JID 114, has two rows because it changed its name and e-ISSN in 2021). Contains journal name, primary and all WoS research fields, editorial policy flag, policy adoption year, and JCR abbreviation. Of the 213 journals, 40 belong to more than one of the 12 research fields.
+
+### Policy strength data (`Policy_strength_data_original.xlsx`)
+71 rows with `BarSpecificity`, `Recommendation vs Requirement vs mixed`, and `SampleSize` classifications for policy-adopting journals. This file informed construction of the journal mapping and is available for future policy-strength subgroup analyses; it is not a direct input to the current three-script pipeline.
 
 ---
 
 ## Aggregated CSV Format
 
-The pipeline produces one row per journal per year. Key columns:
+The pipeline produces one row per journal per year (3,211 rows total, covering 213 journals across 2010–2025). Key columns:
 
 | Column | Description |
 |---|---|
@@ -137,18 +160,20 @@ The pipeline produces one row per journal per year. Key columns:
 | `Field` | Primary WoS research field |
 | `All_Fields` | All WoS fields the journal belongs to |
 | `policy` | `1` if the journal has an editorial visualisation policy, `0` otherwise |
-| `policy_year` | Year the policy was adopted (if applicable) |
-| `n_articles` | Count of eligible articles that year |
-| `n_bar_or_informative` | Denominator for proportions (= `n_articles` after eligibility filter) |
+| `policy_year` | Year the policy was adopted (if applicable); adoption years range from 2013 to 2021 |
+| `n_articles` | Total screened articles per journal × year (denominator for `p_eligible`) |
+| `n_bar_or_informative` | Eligible articles (with ≥1 bar or informative chart); denominator for all other proportions |
 | `p_only_bar` | Proportion of eligible articles using *only* bar charts (0–1) |
 | `p_only_inf` | Proportion of eligible articles using *only* informative charts (0–1) |
 | `p_bar_and_inf` | Proportion of eligible articles using *both* chart types (0–1) |
-| `p_bar` | Proportion using any bar chart (0–1) |
-| `p_informative` | Proportion using any informative chart (0–1) |
-| `p_eligible` | Proportion of all articles that are eligible (0–1) |
-| `sum_bar`, `sum_inf`, `sum_only_bar`, `sum_only_inf`, `sum_bar_and_inf` | Article counts for each category |
-| `Cardiac & Cardiovascular Systems` … `Urology & Nephrology` | Binary field indicators (12 columns) |
+| `p_bar` | Proportion of eligible articles using any bar chart (0–1) |
+| `p_informative` | Proportion of eligible articles using any informative chart (0–1) |
+| `p_eligible` | Proportion of *all* screened articles that are eligible (`n_bar_or_informative / n_articles`) |
+| `sum_bar`, `sum_inf`, `sum_only_bar`, `sum_only_inf`, `sum_bar_and_inf`, `sum_eligible` | Article counts for each category |
+| `Cardiac & Cardiovascular Systems` … `Urology & Nephrology` | Binary field indicators (12 columns; 1 if the journal's `All_Fields` string contains that field) |
 
+> **Note:** `n_articles` and `n_bar_or_informative` are distinct. `n_articles` is the total number of screened articles per journal-year before the eligibility filter; `n_bar_or_informative` is the eligible subset. `p_eligible` therefore reflects the true fraction of all screened articles that contain at least one bar or informative chart.
+>
 > Proportions in the CSV (0–1) are scaled to percentages (0–100) by the dashboard script before charting.
 
 ---
@@ -157,17 +182,19 @@ The pipeline produces one row per journal per year. Key columns:
 
 | Stage | Rows | Notes |
 |---|---|---|
-| BZ screening files (213 journals) | 571,744 | One row per screened article |
+| BZ screening files (213 journals) | 571,744 | One row per screened article; `has_no_results` flag added, rows retained |
 | metadata_full.csv (raw) | 622,085 | Full PubMed export |
 | After `is_in_main_folder = TRUE` | 571,769 | In-scope articles only |
 | After DOI deduplication | ~571,744 | First occurrence kept |
-| After year filter (2010–2025) | 570,410 | 2026 records and missing years removed |
-| After left join metadata + BZ | 570,410 | Metadata is left table |
-| After removing no-results rows | 570,402 | Rows with all figure counts null/zero |
-| After eligibility filter (`has_bar_or_inf = 1`) | 360,858 | Articles with ≥1 bar or informative chart |
+| After year filter (2010–2025) | 570,410 | 2026 records and unresolvable years removed |
+| After left join metadata + BZ | 570,410 | Metadata is the left table; unmatched articles receive NaN chart columns |
+| After removing no-results rows | 570,402 | Rows where ALL figure-type count columns are NULL (no BZ match) |
+| After eligibility filter (`has_bar_or_inf = 1`) | 360,858 | Articles containing ≥1 bar or informative chart |
 | Aggregated (journal × year) | 3,211 | Final dashboard input |
 
 A Sankey diagram of this flow (with actual row counts from each run) is written to `sankey_workflow_TIMESTAMP.html` by step 2.
+
+**Why the no-results filter is applied after the join:** rows with no screening results are retained through step 1 and removed in step 2 stage C, after the left join with metadata. This placement allows the Sankey diagram to show the accurate count at each distinct stage and catches both BZ rows flagged `has_no_results = 1` in step 1 and metadata rows that found no BZ match after the join (NaN chart columns).
 
 ---
 
@@ -189,7 +216,7 @@ Step 2 derives the following binary flags before aggregation:
 ## Dashboard Features
 
 **Navigation**
-Sidebar links to the **About** tab, a **Global** overview, and individual **Research Field** tabs.
+Sidebar links to the **About** tab, a **Global** overview, and individual **Research Field** tabs (one per field).
 
 **Aggregated charts**
 Each tab shows three side-by-side trend charts: *All journals*, *Policy journals*, and *Non-Policy journals*. The **Show charts** dropdown in the top bar filters which card types are visible across the active tab.
@@ -198,7 +225,7 @@ Each tab shows three side-by-side trend charts: *All journals*, *Policy journals
 Each field tab lists per-journal trend charts. Use the **Find journal** search box to highlight and scroll to a specific card, the **Show journals** dropdown to filter by policy status, and the **Columns** slider to adjust the grid layout (1–6 columns for journal cards; 1–3 for aggregated cards). Cards can be **drag-and-dropped** to reorder within their grid.
 
 **Responsive title and axis scaling**
-Chart titles wrap and shrink as cards narrow. In multi-column grids, the top margin is unified across all cards in each row so that y-axes remain vertically aligned. X-axis tick density adapts to card width (annual ticks at ≥500 px; biennial at ≥350 px; quinquennial below that). These updates fire on column-slider changes, panel switches, sidebar collapses, drag-and-drop reorders, and browser window resizes (via ResizeObserver with an 80 ms debounce).
+Chart titles wrap and shrink as cards narrow. In multi-column grids, the top margin is unified across all cards in each row so that y-axes remain vertically aligned. X-axis tick density adapts to card width (annual ticks at ≥500 px; biennial at ≥350 px; quinquennial below that). These updates fire on column-slider changes, panel switches, section collapses, drag-and-drop reorders, and browser window resizes (via ResizeObserver with an 80 ms debounce).
 
 **Global controls**
 **Show/hide all** toggle buttons in the top bar hide or show any metric across every chart simultaneously.
@@ -206,8 +233,11 @@ Chart titles wrap and shrink as cards narrow. In multi-column grids, the top mar
 **Policy year markers**
 Per-journal charts show a single vertical yellow line at the year of policy adoption. Aggregated charts show semi-transparent yellow bands whose width reflects the proportion of journals adopting a policy in a given year.
 
+**Eligible articles line**
+A dotted grey line showing `% eligible articles` (proportion of all screened articles that are eligible) is available on all charts; it is hidden by default and can be toggled via the legend.
+
 **Collapsible About sections**
-The About tab contains collapsible sections covering study background, metric definitions, navigation guidance, and a references list — all expandable/collapsible without page reload.
+The About tab contains collapsible sections covering study background, metric definitions, and a references list — all expandable/collapsible without page reload.
 
 ---
 
@@ -226,9 +256,13 @@ The About tab contains collapsible sections covering study background, metric de
 
 **BZ-derived ISSN used for journal mapping.** The journal mapping join uses the ISSN extracted from the BZ filename rather than the PubMed metadata ISSN. One journal in the sample (*Transplantation and Cellular Therapy*, JID 114) changed its name and ISSN in 2021. Its BZ file was compiled under the new ISSN for all articles, so using the BZ filename ISSN correctly unifies pre- and post-2021 articles under the same journal row.
 
-**No-results filter applied after the join.** Rows with no screening results (all figure-type counts null or zero, n = 8) are retained through step 1 and filtered in step 2 after the left join with metadata. This ensures the Sankey diagram can show accurate row counts at each distinct processing stage.
+**No-results filter applied after the join.** Only rows where all figure-type count columns are NULL (no BZ match at all) are removed at stage C. Rows where all counts are zero are valid BZ results — the tool ran and found no matching chart types — and are retained until the eligibility filter at stage E.
 
-**Eligibility denominator.** Only articles containing at least one bar chart or informative chart (`has_bar_or_inf = 1`) are included in the analysis. The denominator for all proportion columns (`n_bar_or_informative`) is the count of these eligible articles per journal × year.
+**Denominator for proportions.** The denominator for all proportion columns except `p_eligible` is `n_bar_or_informative` — the count of eligible articles (those containing at least one bar or informative chart) per journal × year. `p_eligible` uses `n_articles` (total screened articles per journal-year, captured before the eligibility filter) as its denominator, making it a meaningful measure of how much of a journal's output the analysis covers.
+
+**Journal mapping not deduplicated.** The mapping file has 214 rows for 213 journals (two rows for JID 114, one per ISSN). All 214 ISSNs are unique, so no deduplication is applied; removing one row would silently discard a valid ISSN-to-journal mapping.
+
+**Multi-field journals.** Of the 213 journals, 40 belong to more than one of the 12 research fields. Each journal receives a binary `1` for every field present in its `All_Fields` string, allowing it to contribute to all relevant field-level aggregations in the dashboard.
 
 ---
 
@@ -256,7 +290,7 @@ The study protocol is publicly pre-registered at **[osf.io/tcyxg](https://osf.io
 
 ## License
 
-MIT
+[GNU General Public License v3.0 (GPLv3)](https://github.com/teresacoliveira/journal-observatory-2#GPL-3.0-1-ov-file)
 
 ---
 
