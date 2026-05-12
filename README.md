@@ -256,7 +256,7 @@ The study protocol is publicly pre-registered at **[osf.io/tcyxg](https://osf.io
 
 ## License
 
-MIT
+GNU General Public License v3.0 (GPLv3)
 
 ---
 
