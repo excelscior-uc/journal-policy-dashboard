@@ -1,0 +1,38 @@
+{
+  "name": "journal-policy-dashboard",
+  "version": "1.0.0",
+  "description": "An interactive dashboard tracking how data-visualisation practices in scientific publishing have evolved over time — focusing on the use of bar graphs versus more informative alternatives across 213 journals and 12 biomedical research fields:",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/excelscior-uc/journal-policy-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/excelscior-uc/journal-policy-dashboard/issues"
+  },
+  "homepage": "https://github.com/excelscior-uc/journal-policy-dashboard#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/ui": "^4.1.6",
+    "jsdom": "^29.1.1",
+    "vite": "^8.0.12",
+    "vitest": "^4.1.6"
+  },
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.15.0",
+    "recharts": "^3.8.1"
+  }
+}
