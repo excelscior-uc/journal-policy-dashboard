@@ -14,7 +14,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "type": "module",
   "bugs": {
     "url": "https://github.com/excelscior-uc/journal-policy-dashboard/issues"
