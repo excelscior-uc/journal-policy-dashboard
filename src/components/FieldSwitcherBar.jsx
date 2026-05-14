@@ -15,7 +15,7 @@ export default function FieldSwitcherBar({ currentSlug }) {
         onChange={e => navigate(`/field/${e.target.value}`)}
       >
         {FIELDS.map(f => (
-          <option key={f.slug} value={f.slug}>{f.icon} {f.name}</option>
+          <option key={f.slug} value={f.slug} aria-label={f.name}>{f.icon} {f.name}</option>
         ))}
       </select>
     </div>
