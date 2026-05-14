@@ -22,6 +22,21 @@ describe('tracesToChartData', () => {
     const result = tracesToChartData(traces)
     expect(result).toEqual([{ year: 2010, pct_only_bar: 72.3 }])
   })
+
+  it('decodes base64 float64 binary axis encoding', () => {
+    const buf = Buffer.alloc(16)
+    buf.writeDoubleLE(2010.0, 0)
+    buf.writeDoubleLE(2011.0, 8)
+    const bdata = buf.toString('base64')
+    const traces = [
+      { legendgroup: '% only bar', x: { bdata, dtype: 'f8' }, y: [72.3, 68.1], name: '% only bar' },
+    ]
+    const result = tracesToChartData(traces)
+    expect(result).toEqual([
+      { year: 2010, pct_only_bar: 72.3 },
+      { year: 2011, pct_only_bar: 68.1 },
+    ])
+  })
 })
 
 describe('tracesToPolicyLines', () => {

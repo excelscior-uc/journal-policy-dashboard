@@ -26,6 +26,7 @@ function decodeAxis(v) {
   if (Array.isArray(v)) return v
   if (v && typeof v === 'object' && v.bdata) {
     const buf = Buffer.from(v.bdata, 'base64')
+    if (buf.length % 8 !== 0) return []
     const out = []
     for (let i = 0; i < buf.length; i += 8) {
       out.push(buf.readDoubleLE(i))
