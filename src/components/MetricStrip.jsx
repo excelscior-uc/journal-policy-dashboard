@@ -21,8 +21,8 @@ export default function MetricStrip() {
     <div className="metric-strip">
       {METRICS.map(m => (
         <div key={m.label} className="metric-strip__item">
-          <div className="metric-strip__swatch" style={{ background: m.color }} />
-          <div>
+          <div className="metric-strip__swatch" aria-hidden="true" style={{ background: m.color }} />
+          <div className="metric-strip__content">
             <div className="metric-strip__label">{m.label}</div>
             <div className="metric-strip__desc">{m.desc}</div>
           </div>
