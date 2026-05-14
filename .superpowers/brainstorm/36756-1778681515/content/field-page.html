@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Field Page Mockup</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; background: #f0f2f5; }
+  .page-label { background: #1a252f; color: #fff; font-size: 11px; text-align: center; padding: 6px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* TOP NAV */
+  .topnav {
+    background: #2c3e50; color: #fff;
+    display: flex; align-items: center; gap: 16px;
+    padding: 10px 24px; font-size: 13px;
+  }
+  .topnav-home { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; }
+  .topnav-sep { color: rgba(255,255,255,0.3); }
+  .topnav-current { font-weight: 600; }
+
+  /* FIELD HEADER */
+  .field-header {
+    background: #fff; border-bottom: 1px solid #dee2e6;
+    padding: 20px 32px 16px;
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 24px;
+  }
+  .field-header-left {}
+  .field-header-icon { font-size: 28px; margin-bottom: 6px; }
+  .field-header h1 { font-size: 20px; font-weight: 800; color: #2c3e50; }
+  .field-header-sub { font-size: 12px; color: #6c757d; margin-top: 4px; }
+
+  /* FILTER BAR */
+  .filter-bar {
+    background: #f8f9fa; border-bottom: 1px solid #dee2e6;
+    padding: 8px 32px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    font-size: 12px; color: #495057;
+  }
+  .filter-label { font-weight: 600; color: #2c3e50; }
+  .filter-chip {
+    padding: 3px 12px; border-radius: 14px; border: 1px solid #ced4da;
+    background: #fff; font-size: 11px; cursor: pointer; color: #495057;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .filter-chip.active { background: #2c3e50; color: #fff; border-color: #2c3e50; }
+  .filter-sep { color: #dee2e6; }
+  .filter-select {
+    padding: 3px 10px; border: 1px solid #ced4da; border-radius: 5px;
+    font-size: 11px; background: #fff; color: #495057;
+  }
+
+  /* MAIN LAYOUT */
+  .main-layout { display: flex; height: calc(100vh - 210px); min-height: 400px; }
+
+  /* SIDEBAR */
+  .journal-sidebar {
+    width: 220px; flex-shrink: 0; background: #fff;
+    border-right: 1px solid #dee2e6; overflow-y: auto;
+    padding: 12px 8px;
+  }
+  .sidebar-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.09em; color: #adb5bd; padding: 0 8px 8px; font-weight: 600; }
+  .journal-link {
+    display: block; padding: 6px 10px; border-radius: 5px; font-size: 11px;
+    color: #495057; cursor: pointer; margin-bottom: 2px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .journal-link:hover { background: #f1f3f5; }
+  .journal-link.active { background: #2c3e50; color: #fff; font-weight: 600; }
+  .policy-dot { width: 6px; height: 6px; border-radius: 50%; background: #76b5b2; flex-shrink: 0; }
+  .policy-dot.no-policy { background: #dee2e6; }
+
+  /* CHART AREA */
+  .chart-area { flex: 1; overflow-y: auto; padding: 20px 24px; }
+  .chart-section-title { font-size: 13px; font-weight: 700; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #dee2e6; }
+  .chart-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+
+  /* CHART CARD */
+  .chart-card {
+    background: #fff; border: 1px solid #dee2e6; border-radius: 7px;
+    overflow: hidden;
+  }
+  .chart-card-header {
+    padding: 10px 14px 8px; border-bottom: 1px solid #f1f3f5;
+    font-size: 12px; font-weight: 600; color: #2c3e50;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .chart-card-meta { font-size: 10px; color: #6c757d; font-weight: 400; }
+  .chart-placeholder {
+    height: 200px; background: #f8f9fa;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: #adb5bd; flex-direction: column; gap: 8px;
+  }
+  .chart-bars { display: flex; align-items: flex-end; gap: 4px; height: 80px; }
+  .bar { width: 14px; border-radius: 2px 2px 0 0; }
+
+  /* AGG CARD */
+  .agg-card { grid-column: 1 / -1; }
+  .agg-placeholder { height: 240px; }
+
+  /* LOADING BADGE */
+  .lazy-badge {
+    display: inline-block; background: #e8f5e9; color: #2e7d32;
+    font-size: 9px; padding: 2px 7px; border-radius: 10px; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-label">Field Page Mockup — per research field view</div>
+
+<!-- BREADCRUMB NAV -->
+<div class="topnav">
+  <a class="topnav-home" href="#">← Home</a>
+  <span class="topnav-sep">/</span>
+  <span class="topnav-current">🫀 Cardiac &amp; Cardiovascular Systems</span>
+</div>
+
+<!-- FIELD HEADER -->
+<div class="field-header">
+  <div class="field-header-left">
+    <div class="field-header-icon">🫀</div>
+    <h1>Cardiac &amp; Cardiovascular Systems</h1>
+    <div class="field-header-sub">Charts load on demand · Journals with policy highlighted</div>
+  </div>
+  <span class="lazy-badge">⚡ Lazy loaded</span>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <span class="filter-label">Show:</span>
+  <span class="filter-chip active"><span style="width:10px;height:3px;background:#c0392b;border-radius:2px;display:inline-block"></span> % only bar</span>
+  <span class="filter-chip active"><span style="width:10px;height:3px;background:#e8998d;border-radius:2px;display:inline-block"></span> % bar &amp; informative</span>
+  <span class="filter-chip active"><span style="width:10px;height:3px;background:#76b5b2;border-radius:2px;display:inline-block"></span> % only informative</span>
+  <span class="filter-chip active"><span style="width:10px;height:3px;background:rgba(253,231,37,0.8);border-radius:2px;display:inline-block"></span> Policy adoption</span>
+  <span class="filter-sep">|</span>
+  <span class="filter-label">Journals:</span>
+  <select class="filter-select"><option>All (Policy + Non-Policy)</option><option>Policy only</option><option>Non-Policy only</option></select>
+</div>
+
+<!-- MAIN -->
+<div class="main-layout">
+
+  <!-- JOURNAL SIDEBAR -->
+  <nav class="journal-sidebar">
+    <div class="sidebar-title">Journals</div>
+    <div class="journal-link active">
+      All Journals (aggregated)
+      <span class="policy-dot"></span>
+    </div>
+    <div class="journal-link">
+      Journal A <span class="policy-dot"></span>
+    </div>
+    <div class="journal-link">
+      Journal B <span class="policy-dot"></span>
+    </div>
+    <div class="journal-link">
+      Journal C <span class="policy-dot no-policy"></span>
+    </div>
+    <div class="journal-link">
+      Journal D <span class="policy-dot no-policy"></span>
+    </div>
+    <div class="journal-link">
+      Journal E <span class="policy-dot"></span>
+    </div>
+    <div class="journal-link">
+      Journal F <span class="policy-dot no-policy"></span>
+    </div>
+    <div style="font-size:9px;color:#adb5bd;padding:8px 10px 4px;">
+      <span style="display:inline-flex;align-items:center;gap:4px;"><span style="width:6px;height:6px;border-radius:50%;background:#76b5b2;display:inline-block"></span> has policy</span>
+    </div>
+  </nav>
+
+  <!-- CHARTS -->
+  <div class="chart-area">
+
+    <!-- AGGREGATED -->
+    <div class="chart-section-title">Aggregated Trend — All Journals</div>
+    <div class="chart-grid">
+      <div class="chart-card agg-card">
+        <div class="chart-card-header">
+          All Cardiac &amp; CV Journals
+          <span class="chart-card-meta">2008–2024 · n=XX journals</span>
+        </div>
+        <div class="chart-placeholder agg-placeholder">
+          <div class="chart-bars">
+            <div class="bar" style="height:90%;background:#c0392b;"></div>
+            <div class="bar" style="height:85%;background:#c0392b;"></div>
+            <div class="bar" style="height:82%;background:#c0392b;"></div>
+            <div class="bar" style="height:78%;background:#c0392b;"></div>
+            <div class="bar" style="height:72%;background:#c0392b;"></div>
+            <div class="bar" style="height:68%;background:#c0392b;"></div>
+            <div class="bar" style="height:60%;background:#c0392b;"></div>
+            <div class="bar" style="height:52%;background:#c0392b;"></div>
+            <div class="bar" style="height:44%;background:#c0392b;"></div>
+            <div class="bar" style="height:38%;background:#c0392b;"></div>
+          </div>
+          <span>Plotly chart renders here (lazy-loaded)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PER-JOURNAL -->
+    <div class="chart-section-title">Per-Journal Charts</div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          Journal A <span style="font-size:9px;background:#e8f5e9;color:#2e7d32;border-radius:3px;padding:1px 5px;margin-left:4px;">Policy 2016</span>
+          <span class="chart-card-meta">n=XX papers/yr</span>
+        </div>
+        <div class="chart-placeholder">
+          <div class="chart-bars">
+            <div class="bar" style="height:88%;background:#c0392b;"></div>
+            <div class="bar" style="height:80%;background:#c0392b;"></div>
+            <div class="bar" style="height:70%;background:#c0392b;"></div>
+            <div class="bar" style="height:55%;background:#c0392b;"></div>
+            <div class="bar" style="height:40%;background:#c0392b;"></div>
+            <div class="bar" style="height:28%;background:#c0392b;"></div>
+          </div>
+          <span>Lazy-loaded on tab open</span>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          Journal B <span style="font-size:9px;background:#e8f5e9;color:#2e7d32;border-radius:3px;padding:1px 5px;margin-left:4px;">Policy 2019</span>
+          <span class="chart-card-meta">n=XX papers/yr</span>
+        </div>
+        <div class="chart-placeholder">
+          <div class="chart-bars">
+            <div class="bar" style="height:92%;background:#c0392b;"></div>
+            <div class="bar" style="height:90%;background:#c0392b;"></div>
+            <div class="bar" style="height:85%;background:#c0392b;"></div>
+            <div class="bar" style="height:60%;background:#c0392b;"></div>
+            <div class="bar" style="height:45%;background:#c0392b;"></div>
+          </div>
+          <span>Lazy-loaded on tab open</span>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          Journal C
+          <span class="chart-card-meta">No policy · n=XX papers/yr</span>
+        </div>
+        <div class="chart-placeholder">
+          <div class="chart-bars">
+            <div class="bar" style="height:85%;background:#c0392b;"></div>
+            <div class="bar" style="height:83%;background:#c0392b;"></div>
+            <div class="bar" style="height:80%;background:#c0392b;"></div>
+            <div class="bar" style="height:82%;background:#c0392b;"></div>
+            <div class="bar" style="height:78%;background:#c0392b;"></div>
+          </div>
+          <span>Lazy-loaded on tab open</span>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          Journal D
+          <span class="chart-card-meta">No policy · n=XX papers/yr</span>
+        </div>
+        <div class="chart-placeholder">
+          <div class="chart-bars">
+            <div class="bar" style="height:78%;background:#c0392b;"></div>
+            <div class="bar" style="height:76%;background:#c0392b;"></div>
+            <div class="bar" style="height:74%;background:#c0392b;"></div>
+            <div class="bar" style="height:75%;background:#c0392b;"></div>
+            <div class="bar" style="height:72%;background:#c0392b;"></div>
+          </div>
+          <span>Lazy-loaded on tab open</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

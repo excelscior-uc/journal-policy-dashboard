@@ -1,0 +1,5176 @@
+{
+  "field": "Physiology",
+  "slug": "physiology",
+  "aggAll": {
+    "chartData": [
+      {
+        "year": 2010,
+        "pct_only_bar": 77.64443592409665,
+        "pct_bar_informative": 8.879025341708932,
+        "pct_only_informative": 13.476538734194412,
+        "pct_eligible": 64.18541436148588
+      },
+      {
+        "year": 2011,
+        "pct_only_bar": 78.82540427387772,
+        "pct_bar_informative": 9.005457046688324,
+        "pct_only_informative": 12.169138679433939,
+        "pct_eligible": 67.10501242815636
+      },
+      {
+        "year": 2012,
+        "pct_only_bar": 75.9425181049639,
+        "pct_bar_informative": 11.029518592811996,
+        "pct_only_informative": 13.027963302224094,
+        "pct_eligible": 65.16624494725585
+      },
+      {
+        "year": 2013,
+        "pct_only_bar": 73.81423335118066,
+        "pct_bar_informative": 11.934216521456474,
+        "pct_only_informative": 14.251550127362853,
+        "pct_eligible": 67.33586883023195
+      },
+      {
+        "year": 2014,
+        "pct_only_bar": 73.92047051867382,
+        "pct_bar_informative": 12.60810485966329,
+        "pct_only_informative": 13.471424621662887,
+        "pct_eligible": 67.84816159733722
+      },
+      {
+        "year": 2015,
+        "pct_only_bar": 73.13026103761491,
+        "pct_bar_informative": 13.163994152218747,
+        "pct_only_informative": 13.705744810166326,
+        "pct_eligible": 68.23792341846024
+      },
+      {
+        "year": 2016,
+        "pct_only_bar": 69.56487865331505,
+        "pct_bar_informative": 15.546188886440687,
+        "pct_only_informative": 14.88893246024426,
+        "pct_eligible": 68.25088729184621
+      },
+      {
+        "year": 2017,
+        "pct_only_bar": 63.91523903958934,
+        "pct_bar_informative": 16.28998968392527,
+        "pct_only_informative": 19.794771276485392,
+        "pct_eligible": 70.6352935290806
+      },
+      {
+        "year": 2018,
+        "pct_only_bar": 62.24913551255848,
+        "pct_bar_informative": 17.95180076068464,
+        "pct_only_informative": 19.799063726756877,
+        "pct_eligible": 70.68756503463987
+      },
+      {
+        "year": 2019,
+        "pct_only_bar": 52.97022092064604,
+        "pct_bar_informative": 18.708541454162084,
+        "pct_only_informative": 28.321237625191863,
+        "pct_eligible": 70.50321407517596
+      },
+      {
+        "year": 2020,
+        "pct_only_bar": 44.85074593357381,
+        "pct_bar_informative": 19.377008774917694,
+        "pct_only_informative": 35.77224529150848,
+        "pct_eligible": 70.5078354600214
+      },
+      {
+        "year": 2021,
+        "pct_only_bar": 37.70262110366468,
+        "pct_bar_informative": 19.26346877208959,
+        "pct_only_informative": 43.03391012424572,
+        "pct_eligible": 70.7059098315888
+      },
+      {
+        "year": 2022,
+        "pct_only_bar": 31.399063968195907,
+        "pct_bar_informative": 18.543367734583022,
+        "pct_only_informative": 50.05756829722107,
+        "pct_eligible": 71.6018207646422
+      },
+      {
+        "year": 2023,
+        "pct_only_bar": 28.82622413718253,
+        "pct_bar_informative": 19.102600559583635,
+        "pct_only_informative": 52.07117530323384,
+        "pct_eligible": 71.49861466578014
+      },
+      {
+        "year": 2024,
+        "pct_only_bar": 25.266385979967872,
+        "pct_bar_informative": 18.656044232048647,
+        "pct_only_informative": 56.07756978798348,
+        "pct_eligible": 72.63123988251014
+      },
+      {
+        "year": 2025,
+        "pct_only_bar": 24.566249092126206,
+        "pct_bar_informative": 17.216206906482494,
+        "pct_only_informative": 58.217544001391296,
+        "pct_eligible": 71.68602903661812
+      }
+    ],
+    "policyLines": [
+      {
+        "year": 2017,
+        "label": "25% of journals adopted"
+      },
+      {
+        "year": 2019,
+        "label": "2% of journals adopted"
+      },
+      {
+        "year": 2021,
+        "label": "5% of journals adopted"
+      }
+    ]
+  },
+  "aggPolicy": {
+    "chartData": [
+      {
+        "year": 2010,
+        "pct_only_bar": 76.41245969687063,
+        "pct_bar_informative": 14.239657562010002,
+        "pct_only_informative": 9.347882741119374,
+        "pct_eligible": 82.94218738776206
+      },
+      {
+        "year": 2011,
+        "pct_only_bar": 76.66479167967483,
+        "pct_bar_informative": 15.329235897748125,
+        "pct_only_informative": 8.005972422577036,
+        "pct_eligible": 84.10300685036268
+      },
+      {
+        "year": 2012,
+        "pct_only_bar": 73.10356583854966,
+        "pct_bar_informative": 18.18273164517775,
+        "pct_only_informative": 8.713702516272589,
+        "pct_eligible": 84.35995010507416
+      },
+      {
+        "year": 2013,
+        "pct_only_bar": 72.05058958270848,
+        "pct_bar_informative": 19.420775500415758,
+        "pct_only_informative": 8.528634916875758,
+        "pct_eligible": 85.12297859347788
+      },
+      {
+        "year": 2014,
+        "pct_only_bar": 67.56672256830443,
+        "pct_bar_informative": 21.457222993999576,
+        "pct_only_informative": 10.976054437695987,
+        "pct_eligible": 85.14099728472446
+      },
+      {
+        "year": 2015,
+        "pct_only_bar": 67.21689860991067,
+        "pct_bar_informative": 20.83433252970538,
+        "pct_only_informative": 11.948768860383941,
+        "pct_eligible": 86.18649475428946
+      },
+      {
+        "year": 2016,
+        "pct_only_bar": 63.81376740835053,
+        "pct_bar_informative": 22.9056091702098,
+        "pct_only_informative": 13.280623421439666,
+        "pct_eligible": 85.49304978088792
+      },
+      {
+        "year": 2017,
+        "pct_only_bar": 57.76346613757232,
+        "pct_bar_informative": 24.18717856520033,
+        "pct_only_informative": 18.04935529722733,
+        "pct_eligible": 86.18017440488588
+      },
+      {
+        "year": 2018,
+        "pct_only_bar": 53.26250702055165,
+        "pct_bar_informative": 25.78794310814217,
+        "pct_only_informative": 20.94954987130617,
+        "pct_eligible": 85.69329280483886
+      },
+      {
+        "year": 2019,
+        "pct_only_bar": 39.92524132614895,
+        "pct_bar_informative": 28.02820760885138,
+        "pct_only_informative": 32.04655106499967,
+        "pct_eligible": 85.8157395359486
+      },
+      {
+        "year": 2020,
+        "pct_only_bar": 25.08292712925599,
+        "pct_bar_informative": 28.483107070911025,
+        "pct_only_informative": 46.433965799832976,
+        "pct_eligible": 84.97355452254149
+      },
+      {
+        "year": 2021,
+        "pct_only_bar": 15.350813552654122,
+        "pct_bar_informative": 24.183252973990328,
+        "pct_only_informative": 60.46593347335555,
+        "pct_eligible": 84.83851172148626
+      },
+      {
+        "year": 2022,
+        "pct_only_bar": 8.514194324953682,
+        "pct_bar_informative": 19.685236090273342,
+        "pct_only_informative": 71.80056958477297,
+        "pct_eligible": 88.14182331484011
+      },
+      {
+        "year": 2023,
+        "pct_only_bar": 6.984156298557625,
+        "pct_bar_informative": 20.846173294957946,
+        "pct_only_informative": 72.16967040648443,
+        "pct_eligible": 86.18286952282541
+      },
+      {
+        "year": 2024,
+        "pct_only_bar": 6.841306657316027,
+        "pct_bar_informative": 22.367311321030247,
+        "pct_only_informative": 70.79138202165372,
+        "pct_eligible": 84.05641853749907
+      },
+      {
+        "year": 2025,
+        "pct_only_bar": 8.129730197589147,
+        "pct_bar_informative": 19.189832981967108,
+        "pct_only_informative": 72.68043682044373,
+        "pct_eligible": 85.40371551072059
+      }
+    ],
+    "policyLines": [
+      {
+        "year": 2017,
+        "label": "77% of journals adopted"
+      },
+      {
+        "year": 2019,
+        "label": "8% of journals adopted"
+      },
+      {
+        "year": 2021,
+        "label": "15% of journals adopted"
+      }
+    ]
+  },
+  "aggNoPolicy": {
+    "chartData": [
+      {
+        "year": 2010,
+        "pct_only_bar": 78.2850635622542,
+        "pct_bar_informative": 6.091496587152374,
+        "pct_only_informative": 15.62343985059343,
+        "pct_eligible": 54.43189238782227
+      },
+      {
+        "year": 2011,
+        "pct_only_bar": 79.99573609573764,
+        "pct_bar_informative": 5.580076835697597,
+        "pct_only_informative": 14.42418706856476,
+        "pct_eligible": 57.897765449461254
+      },
+      {
+        "year": 2012,
+        "pct_only_bar": 77.54714329902413,
+        "pct_bar_informative": 6.986398171909615,
+        "pct_only_informative": 15.46645852906625,
+        "pct_eligible": 54.31762898848897
+      },
+      {
+        "year": 2013,
+        "pct_only_bar": 74.73132811078621,
+        "pct_bar_informative": 8.041205852397647,
+        "pct_only_informative": 17.22746603681614,
+        "pct_eligible": 58.08657175334405
+      },
+      {
+        "year": 2014,
+        "pct_only_bar": 77.2244194528659,
+        "pct_bar_informative": 8.00656342980842,
+        "pct_only_informative": 14.769017117325674,
+        "pct_eligible": 58.855887039895855
+      },
+      {
+        "year": 2015,
+        "pct_only_bar": 76.08694225146705,
+        "pct_bar_informative": 9.328824963475427,
+        "pct_only_informative": 14.584232785057518,
+        "pct_eligible": 59.26363775054563
+      },
+      {
+        "year": 2016,
+        "pct_only_bar": 72.4404342757973,
+        "pct_bar_informative": 11.866478744556131,
+        "pct_only_informative": 15.693086979646559,
+        "pct_eligible": 59.62980604732536
+      },
+      {
+        "year": 2017,
+        "pct_only_bar": 66.99112549059784,
+        "pct_bar_informative": 12.341395243287742,
+        "pct_only_informative": 20.66747926611442,
+        "pct_eligible": 62.86285309117797
+      },
+      {
+        "year": 2018,
+        "pct_only_bar": 66.57603071241363,
+        "pct_bar_informative": 14.178843334131011,
+        "pct_only_informative": 19.24512595345536,
+        "pct_eligible": 63.462584997136645
+      },
+      {
+        "year": 2019,
+        "pct_only_bar": 59.25113702170021,
+        "pct_bar_informative": 14.22129478708946,
+        "pct_only_informative": 26.52756819121032,
+        "pct_eligible": 63.13051663110026
+      },
+      {
+        "year": 2020,
+        "pct_only_bar": 54.368584617134246,
+        "pct_bar_informative": 14.99259107684683,
+        "pct_only_informative": 30.638824306018915,
+        "pct_eligible": 63.54285961510431
+      },
+      {
+        "year": 2021,
+        "pct_only_bar": 48.46460251711421,
+        "pct_bar_informative": 16.89468378598923,
+        "pct_only_informative": 34.64071369689655,
+        "pct_eligible": 63.901323736452966
+      },
+      {
+        "year": 2022,
+        "pct_only_bar": 42.417704907534755,
+        "pct_bar_informative": 17.993579267028426,
+        "pct_only_informative": 39.58871582543681,
+        "pct_eligible": 63.63811583306542
+      },
+      {
+        "year": 2023,
+        "pct_only_bar": 39.34277531874267,
+        "pct_bar_informative": 18.26310257588489,
+        "pct_only_informative": 42.39412210537244,
+        "pct_eligible": 64.42841788275832
+      },
+      {
+        "year": 2024,
+        "pct_only_bar": 34.13772046865209,
+        "pct_bar_informative": 16.86913785587232,
+        "pct_only_informative": 48.99314167547558,
+        "pct_eligible": 67.13022793751549
+      },
+      {
+        "year": 2025,
+        "pct_only_bar": 32.480128559866266,
+        "pct_bar_informative": 16.26594249976768,
+        "pct_only_informative": 51.253928940366045,
+        "pct_eligible": 65.08121703056878
+      }
+    ],
+    "policyLines": []
+  },
+  "journals": [
+    {
+      "id": "acta_physiol",
+      "name": "ACTA PHYSIOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 80.95238095238095,
+          "pct_bar_informative": 9.52380952380952,
+          "pct_only_informative": 9.52380952380952,
+          "pct_eligible": 76.82926829268293
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 83.09859154929578,
+          "pct_bar_informative": 12.676056338028168,
+          "pct_only_informative": 4.22535211267605,
+          "pct_eligible": 82.55813953488372
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 88.33333333333333,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 1.66666666666666,
+          "pct_eligible": 74.07407407407408
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 88.40579710144928,
+          "pct_bar_informative": 10.144927536231881,
+          "pct_only_informative": 1.4492753623188401,
+          "pct_eligible": 81.17647058823529
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 81.1881188118812,
+          "pct_bar_informative": 14.85148514851485,
+          "pct_only_informative": 3.96039603960396,
+          "pct_eligible": 89.38053097345133
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 75,
+          "pct_bar_informative": 22.05882352941176,
+          "pct_only_informative": 2.94117647058823,
+          "pct_eligible": 90.66666666666666
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 89.58333333333334,
+          "pct_bar_informative": 8.33333333333333,
+          "pct_only_informative": 2.08333333333333,
+          "pct_eligible": 88.88888888888889
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 72.1311475409836,
+          "pct_bar_informative": 19.67213114754098,
+          "pct_only_informative": 8.1967213114754,
+          "pct_eligible": 92.42424242424242
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 67.53246753246754,
+          "pct_bar_informative": 20.77922077922078,
+          "pct_only_informative": 11.68831168831168,
+          "pct_eligible": 92.7710843373494
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 58.666666666666664,
+          "pct_bar_informative": 22.66666666666666,
+          "pct_only_informative": 18.66666666666666,
+          "pct_eligible": 93.75
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 42.105263157894726,
+          "pct_bar_informative": 35.08771929824561,
+          "pct_only_informative": 22.80701754385964,
+          "pct_eligible": 96.61016949152543
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 25.33333333333333,
+          "pct_bar_informative": 37.33333333333333,
+          "pct_only_informative": 37.33333333333333,
+          "pct_eligible": 97.40259740259741
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 18.18181818181818,
+          "pct_bar_informative": 40,
+          "pct_only_informative": 41.81818181818181,
+          "pct_eligible": 96.49122807017544
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 16.66666666666666,
+          "pct_bar_informative": 31.25,
+          "pct_only_informative": 52.083333333333336,
+          "pct_eligible": 90.56603773584906
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 15.18987341772152,
+          "pct_bar_informative": 24.0506329113924,
+          "pct_only_informative": 60.75949367088608,
+          "pct_eligible": 91.86046511627907
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 6.8493150684931505,
+          "pct_bar_informative": 28.767123287671232,
+          "pct_only_informative": 64.38356164383562,
+          "pct_eligible": 91.25
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "am_j_physiol_cell_ph",
+      "name": "AM J PHYSIOL CELL PH",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 81.50943396226415,
+          "pct_bar_informative": 16.60377358490566,
+          "pct_only_informative": 1.8867924528301798,
+          "pct_eligible": 93.30985915492957
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 85.36585365853658,
+          "pct_bar_informative": 13.41463414634146,
+          "pct_only_informative": 1.21951219512195,
+          "pct_eligible": 93.5361216730038
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 81.42292490118577,
+          "pct_bar_informative": 15.0197628458498,
+          "pct_only_informative": 3.55731225296442,
+          "pct_eligible": 94.7565543071161
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 83.5978835978836,
+          "pct_bar_informative": 14.814814814814811,
+          "pct_only_informative": 1.5873015873015799,
+          "pct_eligible": 93.56435643564356
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 84.35754189944134,
+          "pct_bar_informative": 13.40782122905028,
+          "pct_only_informative": 2.2346368715083798,
+          "pct_eligible": 94.70899470899472
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 77.02702702702703,
+          "pct_bar_informative": 20.27027027027027,
+          "pct_only_informative": 2.7027027027027,
+          "pct_eligible": 96.73202614379083
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 79.47019867549669,
+          "pct_bar_informative": 16.556291390728468,
+          "pct_only_informative": 3.97350993377483,
+          "pct_eligible": 95.56962025316456
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 72.22222222222221,
+          "pct_bar_informative": 24.07407407407407,
+          "pct_only_informative": 3.7037037037037,
+          "pct_eligible": 97.2972972972973
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 58.97435897435898,
+          "pct_bar_informative": 35.04273504273504,
+          "pct_only_informative": 5.982905982905979,
+          "pct_eligible": 96.69421487603306
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 46.15384615384615,
+          "pct_bar_informative": 29.585798816568047,
+          "pct_only_informative": 24.26035502958579,
+          "pct_eligible": 97.1264367816092
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 16.21621621621621,
+          "pct_bar_informative": 27.027027027027028,
+          "pct_only_informative": 56.75675675675676,
+          "pct_eligible": 92.5
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 3.9215686274509802,
+          "pct_bar_informative": 40.19607843137255,
+          "pct_only_informative": 55.88235294117647,
+          "pct_eligible": 91.8918918918919
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 8.33333333333333,
+          "pct_bar_informative": 26.851851851851848,
+          "pct_only_informative": 64.81481481481481,
+          "pct_eligible": 99.08256880733946
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 8.264462809917351,
+          "pct_bar_informative": 29.75206611570248,
+          "pct_only_informative": 61.98347107438017,
+          "pct_eligible": 96.03174603174604
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 7.7348066298342495,
+          "pct_bar_informative": 35.35911602209944,
+          "pct_only_informative": 56.9060773480663,
+          "pct_eligible": 97.31182795698923
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 5.21327014218009,
+          "pct_bar_informative": 29.383886255924168,
+          "pct_only_informative": 65.40284360189574,
+          "pct_eligible": 95.47511312217196
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "am_j_physiol_endoc_m",
+      "name": "AM J PHYSIOL ENDOC M",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 86.11111111111111,
+          "pct_bar_informative": 8.33333333333333,
+          "pct_only_informative": 5.55555555555555,
+          "pct_eligible": 93.10344827586208
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 89.23766816143498,
+          "pct_bar_informative": 9.41704035874439,
+          "pct_only_informative": 1.3452914798206201,
+          "pct_eligible": 92.91666666666669
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 84.70588235294117,
+          "pct_bar_informative": 12.549019607843128,
+          "pct_only_informative": 2.74509803921568,
+          "pct_eligible": 89.7887323943662
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 81.2,
+          "pct_bar_informative": 17.599999999999998,
+          "pct_only_informative": 1.2,
+          "pct_eligible": 92.59259259259261
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 82.95964125560538,
+          "pct_bar_informative": 13.452914798206269,
+          "pct_only_informative": 3.58744394618834,
+          "pct_eligible": 94.0928270042194
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 78.97727272727273,
+          "pct_bar_informative": 18.18181818181818,
+          "pct_only_informative": 2.84090909090909,
+          "pct_eligible": 93.61702127659576
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 15.48387096774193,
+          "pct_only_informative": 4.5161290322580605,
+          "pct_eligible": 93.93939393939394
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 72.11538461538461,
+          "pct_bar_informative": 22.11538461538461,
+          "pct_only_informative": 5.769230769230759,
+          "pct_eligible": 92.85714285714286
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 59.183673469387756,
+          "pct_bar_informative": 27.89115646258503,
+          "pct_only_informative": 12.925170068027212,
+          "pct_eligible": 89.63414634146342
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 49.45054945054945,
+          "pct_bar_informative": 32.417582417582416,
+          "pct_only_informative": 18.13186813186813,
+          "pct_eligible": 93.81443298969072
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 31.372549019607842,
+          "pct_bar_informative": 31.372549019607842,
+          "pct_only_informative": 37.25490196078431,
+          "pct_eligible": 90
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 27.40740740740741,
+          "pct_bar_informative": 28.14814814814815,
+          "pct_only_informative": 44.44444444444444,
+          "pct_eligible": 93.10344827586208
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 9.85915492957746,
+          "pct_bar_informative": 25.352112676056336,
+          "pct_only_informative": 64.7887323943662,
+          "pct_eligible": 92.20779220779221
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 9.52380952380952,
+          "pct_bar_informative": 26.190476190476193,
+          "pct_only_informative": 64.28571428571429,
+          "pct_eligible": 84.84848484848484
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 9.900990099009901,
+          "pct_bar_informative": 27.72277227722772,
+          "pct_only_informative": 62.37623762376238,
+          "pct_eligible": 90.99099099099101
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 11.200000000000001,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 68.8,
+          "pct_eligible": 90.57971014492753
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "am_j_physiol_gastr_l",
+      "name": "AM J PHYSIOL GASTR L",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 88.54625550660793,
+          "pct_bar_informative": 7.9295154185022,
+          "pct_only_informative": 3.5242290748898597,
+          "pct_eligible": 92.27642276422763
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 81.7258883248731,
+          "pct_bar_informative": 14.21319796954314,
+          "pct_only_informative": 4.06091370558375,
+          "pct_eligible": 95.16908212560388
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 76.42276422764228,
+          "pct_bar_informative": 19.51219512195122,
+          "pct_only_informative": 4.0650406504065,
+          "pct_eligible": 92.4812030075188
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 76.92307692307693,
+          "pct_bar_informative": 21.42857142857142,
+          "pct_only_informative": 1.64835164835164,
+          "pct_eligible": 93.81443298969072
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 67.28395061728395,
+          "pct_bar_informative": 27.77777777777778,
+          "pct_only_informative": 4.9382716049382696,
+          "pct_eligible": 92.04545454545455
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 63.829787234042556,
+          "pct_bar_informative": 31.914893617021278,
+          "pct_only_informative": 4.25531914893617,
+          "pct_eligible": 94.63087248322148
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 63.372093023255815,
+          "pct_bar_informative": 30.23255813953488,
+          "pct_only_informative": 6.3953488372092995,
+          "pct_eligible": 94.5054945054945
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 59.78260869565217,
+          "pct_bar_informative": 26.08695652173913,
+          "pct_only_informative": 14.130434782608688,
+          "pct_eligible": 93.87755102040816
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 56.69291338582677,
+          "pct_bar_informative": 37.00787401574803,
+          "pct_only_informative": 6.29921259842519,
+          "pct_eligible": 96.21212121212122
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 48.4375,
+          "pct_bar_informative": 30.46875,
+          "pct_only_informative": 21.09375,
+          "pct_eligible": 93.43065693430655
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 36.206896551724135,
+          "pct_bar_informative": 34.48275862068966,
+          "pct_only_informative": 29.3103448275862,
+          "pct_eligible": 89.23076923076924
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 22.11538461538461,
+          "pct_bar_informative": 26.923076923076923,
+          "pct_only_informative": 50.96153846153846,
+          "pct_eligible": 84.5528455284553
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 14.1025641025641,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 69.23076923076923,
+          "pct_eligible": 92.85714285714286
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 4.4776119402985,
+          "pct_bar_informative": 35.82089552238806,
+          "pct_only_informative": 59.70149253731343,
+          "pct_eligible": 94.36619718309859
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 7.6190476190476195,
+          "pct_bar_informative": 32.38095238095238,
+          "pct_only_informative": 60,
+          "pct_eligible": 92.92035398230088
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 16.84210526315789,
+          "pct_bar_informative": 21.05263157894736,
+          "pct_only_informative": 62.10526315789474,
+          "pct_eligible": 95.95959595959596
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "am_j_physiol_heart_c",
+      "name": "AM J PHYSIOL HEART C",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 84.79381443298969,
+          "pct_bar_informative": 11.08247422680412,
+          "pct_only_informative": 4.12371134020618,
+          "pct_eligible": 85.65121412803532
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 86.13861386138613,
+          "pct_bar_informative": 9.4059405940594,
+          "pct_only_informative": 4.45544554455445,
+          "pct_eligible": 86.14072494669509
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 83.50877192982456,
+          "pct_bar_informative": 11.57894736842105,
+          "pct_only_informative": 4.91228070175438,
+          "pct_eligible": 84.31952662721893
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 81.0909090909091,
+          "pct_bar_informative": 16.72727272727272,
+          "pct_only_informative": 2.18181818181818,
+          "pct_eligible": 86.75078864353313
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 76.76767676767676,
+          "pct_bar_informative": 16.49831649831649,
+          "pct_only_informative": 6.73400673400673,
+          "pct_eligible": 88.13056379821958
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 74.65277777777779,
+          "pct_bar_informative": 14.93055555555555,
+          "pct_only_informative": 10.41666666666666,
+          "pct_eligible": 89.44099378881988
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 67.22689075630252,
+          "pct_bar_informative": 22.689075630252102,
+          "pct_only_informative": 10.08403361344537,
+          "pct_eligible": 86.54545454545455
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 69.76744186046511,
+          "pct_bar_informative": 20.93023255813953,
+          "pct_only_informative": 9.30232558139534,
+          "pct_eligible": 91.48936170212765
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 61.53846153846154,
+          "pct_bar_informative": 24.61538461538461,
+          "pct_only_informative": 13.846153846153841,
+          "pct_eligible": 88.63636363636364
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 37.77777777777777,
+          "pct_bar_informative": 24.44444444444444,
+          "pct_only_informative": 37.77777777777777,
+          "pct_eligible": 86.1244019138756
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 11.53846153846153,
+          "pct_bar_informative": 20.87912087912088,
+          "pct_only_informative": 67.58241758241759,
+          "pct_eligible": 85.04672897196261
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 9.74358974358974,
+          "pct_bar_informative": 26.15384615384615,
+          "pct_only_informative": 64.1025641025641,
+          "pct_eligible": 87.05357142857143
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 1.51515151515151,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 81.81818181818183,
+          "pct_eligible": 86.8421052631579
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 5.73770491803278,
+          "pct_bar_informative": 20.49180327868852,
+          "pct_only_informative": 73.77049180327869,
+          "pct_eligible": 80.79470198675497
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 5.09554140127388,
+          "pct_bar_informative": 21.65605095541401,
+          "pct_only_informative": 73.24840764331209,
+          "pct_eligible": 79.69543147208121
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 6.09756097560975,
+          "pct_bar_informative": 12.80487804878048,
+          "pct_only_informative": 81.09756097560977,
+          "pct_eligible": 83.6734693877551
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "am_j_physiol_lung_c",
+      "name": "AM J PHYSIOL LUNG C",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 82.09876543209876,
+          "pct_bar_informative": 14.814814814814811,
+          "pct_only_informative": 3.08641975308641,
+          "pct_eligible": 95.29411764705881
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 86.11111111111111,
+          "pct_bar_informative": 10.55555555555555,
+          "pct_only_informative": 3.33333333333333,
+          "pct_eligible": 94.24083769633508
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 71.9047619047619,
+          "pct_bar_informative": 25.71428571428571,
+          "pct_only_informative": 2.38095238095238,
+          "pct_eligible": 97.67441860465115
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 70.54794520547945,
+          "pct_bar_informative": 26.027397260273972,
+          "pct_only_informative": 3.4246575342465704,
+          "pct_eligible": 92.40506329113924
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 73.61963190184049,
+          "pct_bar_informative": 22.08588957055214,
+          "pct_only_informative": 4.29447852760736,
+          "pct_eligible": 93.67816091954025
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 62.55707762557078,
+          "pct_bar_informative": 28.767123287671232,
+          "pct_only_informative": 8.67579908675799,
+          "pct_eligible": 97.76785714285714
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 66.15384615384615,
+          "pct_bar_informative": 23.589743589743588,
+          "pct_only_informative": 10.25641025641025,
+          "pct_eligible": 96.53465346534652
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 35.36585365853658,
+          "pct_bar_informative": 31.09756097560975,
+          "pct_only_informative": 33.53658536585366,
+          "pct_eligible": 98.20359281437125
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 25.49019607843137,
+          "pct_bar_informative": 33.986928104575156,
+          "pct_only_informative": 40.52287581699346,
+          "pct_eligible": 97.45222929936305
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 26.66666666666666,
+          "pct_bar_informative": 36.66666666666666,
+          "pct_only_informative": 36.66666666666666,
+          "pct_eligible": 93.75
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 13.90728476821192,
+          "pct_bar_informative": 34.437086092715234,
+          "pct_only_informative": 51.65562913907284,
+          "pct_eligible": 90.41916167664672
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 5.4054054054054,
+          "pct_bar_informative": 22.297297297297288,
+          "pct_only_informative": 72.2972972972973,
+          "pct_eligible": 93.08176100628933
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 6.796116504854361,
+          "pct_bar_informative": 20.3883495145631,
+          "pct_only_informative": 72.81553398058253,
+          "pct_eligible": 95.37037037037037
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 3.50877192982456,
+          "pct_bar_informative": 14.91228070175438,
+          "pct_only_informative": 81.57894736842105,
+          "pct_eligible": 90.47619047619048
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 4,
+          "pct_bar_informative": 16.8,
+          "pct_only_informative": 79.2,
+          "pct_eligible": 96.15384615384616
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 6.66666666666666,
+          "pct_bar_informative": 15.238095238095239,
+          "pct_only_informative": 78.0952380952381,
+          "pct_eligible": 94.59459459459461
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "am_j_physiol_reg_i",
+      "name": "AM J PHYSIOL REG I",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 86.25429553264605,
+          "pct_bar_informative": 9.62199312714776,
+          "pct_only_informative": 4.12371134020618,
+          "pct_eligible": 84.8396501457726
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 85.82089552238806,
+          "pct_bar_informative": 10.820895522388051,
+          "pct_only_informative": 3.35820895522388,
+          "pct_eligible": 85.8974358974359
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 86.8995633187773,
+          "pct_bar_informative": 9.17030567685589,
+          "pct_only_informative": 3.9301310043668103,
+          "pct_eligible": 87.07224334600761
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 83.25358851674642,
+          "pct_bar_informative": 10.52631578947368,
+          "pct_only_informative": 6.2200956937799,
+          "pct_eligible": 84.95934959349594
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 85.27918781725889,
+          "pct_bar_informative": 9.13705583756345,
+          "pct_only_informative": 5.58375634517766,
+          "pct_eligible": 89.14027149321268
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 76.26262626262627,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 7.07070707070707,
+          "pct_eligible": 86.08695652173914
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 80.78817733990148,
+          "pct_bar_informative": 13.79310344827586,
+          "pct_only_informative": 5.41871921182266,
+          "pct_eligible": 84.58333333333333
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 63.04347826086957,
+          "pct_bar_informative": 18.84057971014492,
+          "pct_only_informative": 18.1159420289855,
+          "pct_eligible": 84.66257668711657
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 68.58974358974359,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 14.743589743589741,
+          "pct_eligible": 86.1878453038674
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 40.57971014492754,
+          "pct_bar_informative": 28.985507246376812,
+          "pct_only_informative": 30.43478260869565,
+          "pct_eligible": 87.89808917197452
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 31.69014084507042,
+          "pct_bar_informative": 19.71830985915492,
+          "pct_only_informative": 48.59154929577465,
+          "pct_eligible": 89.30817610062893
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 18.18181818181818,
+          "pct_bar_informative": 19.00826446280991,
+          "pct_only_informative": 62.8099173553719,
+          "pct_eligible": 78.57142857142857
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 15.17857142857142,
+          "pct_bar_informative": 12.5,
+          "pct_only_informative": 72.32142857142857,
+          "pct_eligible": 90.32258064516128
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 8.57142857142857,
+          "pct_bar_informative": 13.33333333333333,
+          "pct_only_informative": 78.0952380952381,
+          "pct_eligible": 89.74358974358975
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 12.04819277108433,
+          "pct_bar_informative": 15.66265060240964,
+          "pct_only_informative": 72.28915662650603,
+          "pct_eligible": 83
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 10.07751937984496,
+          "pct_bar_informative": 13.95348837209302,
+          "pct_only_informative": 75.96899224806202,
+          "pct_eligible": 89.58333333333334
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "am_j_physiol_renal",
+      "name": "AM J PHYSIOL RENAL",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 83.5249042145594,
+          "pct_bar_informative": 13.02681992337164,
+          "pct_only_informative": 3.44827586206896,
+          "pct_eligible": 90.94076655052264
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 85.54216867469879,
+          "pct_bar_informative": 11.64658634538152,
+          "pct_only_informative": 2.81124497991967,
+          "pct_eligible": 91.8819188191882
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 83.6734693877551,
+          "pct_bar_informative": 15.646258503401361,
+          "pct_only_informative": 0.6802721088435301,
+          "pct_eligible": 91.02167182662538
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 81.13879003558719,
+          "pct_bar_informative": 16.014234875444842,
+          "pct_only_informative": 2.84697508896797,
+          "pct_eligible": 91.53094462540716
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 76.34854771784232,
+          "pct_bar_informative": 18.25726141078838,
+          "pct_only_informative": 5.39419087136929,
+          "pct_eligible": 90.9433962264151
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 77,
+          "pct_bar_informative": 17,
+          "pct_only_informative": 6,
+          "pct_eligible": 91.74311926605505
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 69.10994764397905,
+          "pct_bar_informative": 21.98952879581152,
+          "pct_only_informative": 8.90052356020942,
+          "pct_eligible": 87.61467889908256
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 63.73626373626373,
+          "pct_bar_informative": 21.97802197802197,
+          "pct_only_informative": 14.28571428571428,
+          "pct_eligible": 88.78048780487805
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 56.9620253164557,
+          "pct_bar_informative": 30.37974683544304,
+          "pct_only_informative": 12.65822784810126,
+          "pct_eligible": 90.11406844106465
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 48.4304932735426,
+          "pct_bar_informative": 26.45739910313901,
+          "pct_only_informative": 25.11210762331838,
+          "pct_eligible": 89.5582329317269
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 32.5,
+          "pct_bar_informative": 24.5,
+          "pct_only_informative": 43,
+          "pct_eligible": 89.68609865470853
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 17.21311475409836,
+          "pct_bar_informative": 22.1311475409836,
+          "pct_only_informative": 60.65573770491803,
+          "pct_eligible": 90.37037037037035
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 8.42105263157894,
+          "pct_bar_informative": 17.89473684210526,
+          "pct_only_informative": 73.68421052631578,
+          "pct_eligible": 98.95833333333334
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 3.2258064516128995,
+          "pct_bar_informative": 20.43010752688172,
+          "pct_only_informative": 76.34408602150538,
+          "pct_eligible": 94.89795918367348
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 5.46875,
+          "pct_bar_informative": 13.28125,
+          "pct_only_informative": 81.25,
+          "pct_eligible": 94.11764705882352
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 2.75229357798165,
+          "pct_bar_informative": 19.26605504587156,
+          "pct_only_informative": 77.98165137614679,
+          "pct_eligible": 93.16239316239316
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "arch_physiol_biochem",
+      "name": "ARCH PHYSIOL BIOCHEM",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 71.42857142857143,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 21.42857142857142,
+          "pct_eligible": 60.86956521739131
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 20,
+          "pct_eligible": 62.5
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 69.23076923076923,
+          "pct_bar_informative": 15.38461538461538,
+          "pct_only_informative": 15.38461538461538,
+          "pct_eligible": 50
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 69.23076923076923,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 23.07692307692307,
+          "pct_eligible": 68.42105263157895
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 84.61538461538461,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 7.69230769230769,
+          "pct_eligible": 59.09090909090909
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 88.23529411764706,
+          "pct_bar_informative": 5.88235294117647,
+          "pct_only_informative": 5.88235294117647,
+          "pct_eligible": 58.620689655172406
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 84,
+          "pct_bar_informative": 4,
+          "pct_only_informative": 12,
+          "pct_eligible": 71.42857142857143
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 84.375,
+          "pct_bar_informative": 9.375,
+          "pct_only_informative": 6.25,
+          "pct_eligible": 71.11111111111111
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 92.6829268292683,
+          "pct_bar_informative": 2.4390243902439,
+          "pct_only_informative": 4.8780487804878,
+          "pct_eligible": 71.9298245614035
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 93.33333333333333,
+          "pct_bar_informative": 2.2222222222222197,
+          "pct_only_informative": 4.444444444444439,
+          "pct_eligible": 80.35714285714286
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 90.69767441860463,
+          "pct_bar_informative": 6.97674418604651,
+          "pct_only_informative": 2.32558139534883,
+          "pct_eligible": 82.6923076923077
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 85.71428571428571,
+          "pct_bar_informative": 8.16326530612244,
+          "pct_only_informative": 6.122448979591829,
+          "pct_eligible": 77.77777777777779
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 74.81481481481481,
+          "pct_bar_informative": 15.55555555555555,
+          "pct_only_informative": 9.62962962962963,
+          "pct_eligible": 72.97297297297297
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 80.43478260869566,
+          "pct_bar_informative": 14.130434782608688,
+          "pct_only_informative": 5.43478260869565,
+          "pct_eligible": 79.3103448275862
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 67.27272727272727,
+          "pct_bar_informative": 18.18181818181818,
+          "pct_only_informative": 14.54545454545454,
+          "pct_eligible": 93.22033898305084
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 65.11627906976744,
+          "pct_bar_informative": 20.93023255813953,
+          "pct_only_informative": 13.95348837209302,
+          "pct_eligible": 78.18181818181819
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "chronobiol_int",
+      "name": "CHRONOBIOL INT",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 75,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 17.3076923076923,
+          "pct_eligible": 46.017699115044245
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 83.33333333333334,
+          "pct_bar_informative": 2.08333333333333,
+          "pct_only_informative": 14.583333333333329,
+          "pct_eligible": 47.524752475247524
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 68.18181818181817,
+          "pct_bar_informative": 13.63636363636363,
+          "pct_only_informative": 18.18181818181818,
+          "pct_eligible": 51.96850393700787
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 64.40677966101694,
+          "pct_bar_informative": 11.86440677966101,
+          "pct_only_informative": 23.728813559322028,
+          "pct_eligible": 59
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 63.1578947368421,
+          "pct_bar_informative": 14.03508771929824,
+          "pct_only_informative": 22.80701754385964,
+          "pct_eligible": 45.23809523809524
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 69.44444444444444,
+          "pct_bar_informative": 11.11111111111111,
+          "pct_only_informative": 19.44444444444444,
+          "pct_eligible": 50
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 65.38461538461539,
+          "pct_bar_informative": 9.61538461538461,
+          "pct_only_informative": 25,
+          "pct_eligible": 41.269841269841265
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 61.36363636363637,
+          "pct_bar_informative": 13.63636363636363,
+          "pct_only_informative": 25,
+          "pct_eligible": 34.92063492063492
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 61.111111111111114,
+          "pct_bar_informative": 18.05555555555555,
+          "pct_only_informative": 20.83333333333333,
+          "pct_eligible": 44.44444444444444
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 45.61403508771929,
+          "pct_bar_informative": 12.28070175438596,
+          "pct_only_informative": 42.105263157894726,
+          "pct_eligible": 38
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 58.92857142857143,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 33.92857142857143,
+          "pct_eligible": 37.33333333333333
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 49.152542372881356,
+          "pct_bar_informative": 18.64406779661017,
+          "pct_only_informative": 32.20338983050847,
+          "pct_eligible": 42.7536231884058
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 54.54545454545454,
+          "pct_bar_informative": 12.72727272727272,
+          "pct_only_informative": 32.72727272727272,
+          "pct_eligible": 40.44117647058823
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 31.70731707317073,
+          "pct_bar_informative": 12.19512195121951,
+          "pct_only_informative": 56.09756097560976,
+          "pct_eligible": 34.74576271186441
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 39.58333333333333,
+          "pct_bar_informative": 10.41666666666666,
+          "pct_only_informative": 50,
+          "pct_eligible": 41.02564102564102
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 34.328358208955216,
+          "pct_bar_informative": 10.44776119402985,
+          "pct_only_informative": 55.223880597014926,
+          "pct_eligible": 41.61490683229814
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "clin_exp_pharmacol_p",
+      "name": "CLIN EXP PHARMACOL P",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 93.75,
+          "pct_bar_informative": 2.67857142857142,
+          "pct_only_informative": 3.57142857142857,
+          "pct_eligible": 75.67567567567568
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 97.26027397260275,
+          "pct_bar_informative": 2.73972602739726,
+          "pct_only_informative": 0,
+          "pct_eligible": 82.02247191011236
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 92.42424242424242,
+          "pct_bar_informative": 4.54545454545454,
+          "pct_only_informative": 3.03030303030303,
+          "pct_eligible": 83.54430379746836
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 75,
+          "pct_bar_informative": 11.53846153846153,
+          "pct_only_informative": 13.461538461538462,
+          "pct_eligible": 81.25
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 89.28571428571429,
+          "pct_bar_informative": 4.76190476190476,
+          "pct_only_informative": 5.95238095238095,
+          "pct_eligible": 77.06422018348624
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 82.14285714285714,
+          "pct_bar_informative": 9.82142857142857,
+          "pct_only_informative": 8.03571428571428,
+          "pct_eligible": 81.75182481751825
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 67.96116504854369,
+          "pct_bar_informative": 22.33009708737864,
+          "pct_only_informative": 9.70873786407767,
+          "pct_eligible": 88.79310344827587
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 68.46846846846847,
+          "pct_bar_informative": 22.52252252252252,
+          "pct_only_informative": 9.009009009009,
+          "pct_eligible": 90.24390243902441
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 76.92307692307693,
+          "pct_bar_informative": 17.3076923076923,
+          "pct_only_informative": 5.769230769230759,
+          "pct_eligible": 87.39495798319328
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 71.27659574468085,
+          "pct_bar_informative": 22.34042553191489,
+          "pct_only_informative": 6.382978723404251,
+          "pct_eligible": 91.2621359223301
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 65.18987341772153,
+          "pct_bar_informative": 27.848101265822777,
+          "pct_only_informative": 6.962025316455691,
+          "pct_eligible": 92.39766081871345
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 64.46280991735537,
+          "pct_bar_informative": 20.66115702479339,
+          "pct_only_informative": 14.87603305785124,
+          "pct_eligible": 85.81560283687944
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 54.63917525773196,
+          "pct_bar_informative": 32.98969072164948,
+          "pct_only_informative": 12.37113402061855,
+          "pct_eligible": 92.3809523809524
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 52.112676056338024,
+          "pct_bar_informative": 35.2112676056338,
+          "pct_only_informative": 12.676056338028168,
+          "pct_eligible": 87.65432098765432
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 42.1875,
+          "pct_bar_informative": 26.5625,
+          "pct_only_informative": 31.25,
+          "pct_eligible": 90.14084507042254
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 46.551724137931025,
+          "pct_bar_informative": 29.3103448275862,
+          "pct_only_informative": 24.137931034482758,
+          "pct_eligible": 80.55555555555556
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "clin_physiol_funct_i",
+      "name": "CLIN PHYSIOL FUNCT I",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 9.09090909090909,
+          "pct_only_informative": 40.909090909090914,
+          "pct_eligible": 34.375
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 56.00000000000001,
+          "pct_bar_informative": 4,
+          "pct_only_informative": 40,
+          "pct_eligible": 37.3134328358209
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 86.66666666666667,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 13.33333333333333,
+          "pct_eligible": 22.72727272727272
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 79.16666666666666,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 20.83333333333333,
+          "pct_eligible": 41.37931034482758
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 76.19047619047619,
+          "pct_bar_informative": 4.76190476190476,
+          "pct_only_informative": 19.04761904761904,
+          "pct_eligible": 39.62264150943396
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 68.96551724137932,
+          "pct_bar_informative": 3.44827586206896,
+          "pct_only_informative": 27.58620689655172,
+          "pct_eligible": 50
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 54.166666666666664,
+          "pct_bar_informative": 12.5,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 39.34426229508196
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 63.1578947368421,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 36.84210526315789,
+          "pct_eligible": 39.175257731958766
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 56.41025641025641,
+          "pct_bar_informative": 15.38461538461538,
+          "pct_only_informative": 28.2051282051282,
+          "pct_eligible": 33.620689655172406
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 33.33333333333333,
+          "pct_bar_informative": 6.66666666666666,
+          "pct_only_informative": 60,
+          "pct_eligible": 34.883720930232556
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 40,
+          "pct_eligible": 25
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 35.29411764705882,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 64.70588235294117,
+          "pct_eligible": 34
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 26.66666666666666,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 73.33333333333333,
+          "pct_eligible": 34.090909090909086
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 38.46153846153846,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 53.84615384615385,
+          "pct_eligible": 27.659574468085108
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 13.33333333333333,
+          "pct_bar_informative": 13.33333333333333,
+          "pct_only_informative": 73.33333333333333,
+          "pct_eligible": 35.71428571428571
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 27.77777777777778,
+          "pct_bar_informative": 11.11111111111111,
+          "pct_only_informative": 61.111111111111114,
+          "pct_eligible": 31.57894736842105
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "comp_biochem_phys_a",
+      "name": "COMP BIOCHEM PHYS A",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 91.2280701754386,
+          "pct_bar_informative": 6.14035087719298,
+          "pct_only_informative": 2.63157894736842,
+          "pct_eligible": 68.26347305389223
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 86.29032258064517,
+          "pct_bar_informative": 7.25806451612903,
+          "pct_only_informative": 6.451612903225799,
+          "pct_eligible": 72.09302325581395
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 80.8695652173913,
+          "pct_bar_informative": 9.56521739130434,
+          "pct_only_informative": 9.56521739130434,
+          "pct_eligible": 72.32704402515722
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 85.33333333333334,
+          "pct_bar_informative": 8.66666666666666,
+          "pct_only_informative": 6,
+          "pct_eligible": 73.89162561576354
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 80.85106382978722,
+          "pct_bar_informative": 12.76595744680851,
+          "pct_only_informative": 6.382978723404251,
+          "pct_eligible": 78.99159663865547
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 84.61538461538461,
+          "pct_bar_informative": 7.05128205128205,
+          "pct_only_informative": 8.33333333333333,
+          "pct_eligible": 80
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 87.75510204081633,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 5.10204081632653,
+          "pct_eligible": 74.24242424242425
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 81.10236220472441,
+          "pct_bar_informative": 7.87401574803149,
+          "pct_only_informative": 11.023622047244091,
+          "pct_eligible": 76.50602409638554
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 76.5432098765432,
+          "pct_bar_informative": 14.814814814814811,
+          "pct_only_informative": 8.641975308641971,
+          "pct_eligible": 88.04347826086956
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 77.20588235294117,
+          "pct_bar_informative": 11.02941176470588,
+          "pct_only_informative": 11.76470588235294,
+          "pct_eligible": 81.437125748503
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 54.90196078431373,
+          "pct_bar_informative": 14.705882352941169,
+          "pct_only_informative": 30.39215686274509,
+          "pct_eligible": 80.31496062992126
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 55.55555555555556,
+          "pct_bar_informative": 11.11111111111111,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 83.07692307692308
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 62.616822429906534,
+          "pct_bar_informative": 10.2803738317757,
+          "pct_only_informative": 27.10280373831775,
+          "pct_eligible": 81.06060606060606
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 57.74647887323944,
+          "pct_bar_informative": 12.676056338028168,
+          "pct_only_informative": 29.57746478873239,
+          "pct_eligible": 75.53191489361703
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 51.9607843137255,
+          "pct_bar_informative": 11.76470588235294,
+          "pct_only_informative": 36.27450980392157,
+          "pct_eligible": 80.95238095238095
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 30.76923076923077,
+          "pct_bar_informative": 20.51282051282051,
+          "pct_only_informative": 48.71794871794871,
+          "pct_eligible": 85.40145985401459
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "conserv_physiol",
+      "name": "CONSERV PHYSIOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2013,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 6.66666666666666,
+          "pct_only_informative": 26.66666666666666,
+          "pct_eligible": 50
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 2.94117647058823,
+          "pct_only_informative": 47.05882352941176,
+          "pct_eligible": 55.73770491803278
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 45.16129032258064,
+          "pct_bar_informative": 12.90322580645161,
+          "pct_only_informative": 41.93548387096774,
+          "pct_eligible": 50
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 48.93617021276595,
+          "pct_bar_informative": 12.76595744680851,
+          "pct_only_informative": 38.297872340425535,
+          "pct_eligible": 59.49367088607595
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 43.24324324324324,
+          "pct_bar_informative": 18.91891891891892,
+          "pct_only_informative": 37.83783783783784,
+          "pct_eligible": 62.71186440677966
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 44.44444444444444,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 38.88888888888889,
+          "pct_eligible": 56.25
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 35.82089552238806,
+          "pct_bar_informative": 10.44776119402985,
+          "pct_only_informative": 53.73134328358209,
+          "pct_eligible": 69.79166666666666
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 24.35897435897435,
+          "pct_bar_informative": 10.25641025641025,
+          "pct_only_informative": 65.38461538461539,
+          "pct_eligible": 64.46280991735537
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 16.66666666666666,
+          "pct_bar_informative": 9.25925925925925,
+          "pct_only_informative": 74.07407407407408,
+          "pct_eligible": 50.467289719626166
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 23.52941176470588,
+          "pct_bar_informative": 17.64705882352941,
+          "pct_only_informative": 58.82352941176471,
+          "pct_eligible": 47.88732394366197
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 11.47540983606557,
+          "pct_bar_informative": 14.754098360655728,
+          "pct_only_informative": 73.77049180327869,
+          "pct_eligible": 57.009345794392516
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 13.72549019607843,
+          "pct_bar_informative": 9.80392156862745,
+          "pct_only_informative": 76.47058823529412,
+          "pct_eligible": 56.666666666666664
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 11.11111111111111,
+          "pct_bar_informative": 5.55555555555555,
+          "pct_only_informative": 83.33333333333334,
+          "pct_eligible": 65.06024096385542
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "eur_j_appl_physiol",
+      "name": "EUR J APPL PHYSIOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 78.01047120418848,
+          "pct_bar_informative": 7.329842931937169,
+          "pct_only_informative": 14.659685863874339,
+          "pct_eligible": 51.206434316353885
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 84.35374149659864,
+          "pct_bar_informative": 8.16326530612244,
+          "pct_only_informative": 7.48299319727891,
+          "pct_eligible": 50.689655172413794
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 79.3103448275862,
+          "pct_bar_informative": 9.359605911330041,
+          "pct_only_informative": 11.33004926108374,
+          "pct_eligible": 49.27184466019417
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 83.00653594771242,
+          "pct_bar_informative": 6.5359477124183,
+          "pct_only_informative": 10.45751633986928,
+          "pct_eligible": 54.83870967741935
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 74.26470588235294,
+          "pct_bar_informative": 6.61764705882353,
+          "pct_only_informative": 19.11764705882352,
+          "pct_eligible": 59.388646288209614
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 71.63120567375887,
+          "pct_bar_informative": 7.8014184397163095,
+          "pct_only_informative": 20.567375886524818,
+          "pct_eligible": 58.50622406639005
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 67.44186046511628,
+          "pct_bar_informative": 13.95348837209302,
+          "pct_only_informative": 18.604651162790688,
+          "pct_eligible": 60.280373831775705
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 65.04065040650406,
+          "pct_bar_informative": 9.75609756097561,
+          "pct_only_informative": 25.203252032520318,
+          "pct_eligible": 55.65610859728507
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 60,
+          "pct_bar_informative": 16.15384615384615,
+          "pct_only_informative": 23.84615384615384,
+          "pct_eligible": 57.77777777777777
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 55.72519083969466,
+          "pct_bar_informative": 11.45038167938931,
+          "pct_only_informative": 32.82442748091603,
+          "pct_eligible": 59.54545454545455
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 46.80851063829787,
+          "pct_bar_informative": 12.05673758865248,
+          "pct_only_informative": 41.134751773049636,
+          "pct_eligible": 64.97695852534562
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 39.568345323741,
+          "pct_bar_informative": 14.38848920863309,
+          "pct_only_informative": 46.043165467625904,
+          "pct_eligible": 58.89830508474576
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 28.037383177570092,
+          "pct_bar_informative": 11.21495327102803,
+          "pct_only_informative": 60.747663551401864,
+          "pct_eligible": 64.07185628742515
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 16.66666666666666,
+          "pct_bar_informative": 11.66666666666666,
+          "pct_only_informative": 71.66666666666667,
+          "pct_eligible": 64.86486486486487
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 27.485380116959057,
+          "pct_bar_informative": 9.35672514619883,
+          "pct_only_informative": 63.1578947368421,
+          "pct_eligible": 66.53696498054474
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 19.18819188191882,
+          "pct_bar_informative": 12.54612546125461,
+          "pct_only_informative": 68.26568265682657,
+          "pct_eligible": 67.75
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "exp_physiol",
+      "name": "EXP PHYSIOL",
+      "hasPolicy": true,
+      "policyYear": 2021,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 82.25806451612904,
+          "pct_bar_informative": 11.29032258064516,
+          "pct_only_informative": 6.451612903225799,
+          "pct_eligible": 71.26436781609196
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 86.58536585365853,
+          "pct_bar_informative": 4.8780487804878,
+          "pct_only_informative": 8.53658536585365,
+          "pct_eligible": 81.1881188118812
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 83.9080459770115,
+          "pct_bar_informative": 10.34482758620689,
+          "pct_only_informative": 5.7471264367816,
+          "pct_eligible": 87
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 88.57142857142857,
+          "pct_bar_informative": 3.8095238095238098,
+          "pct_only_informative": 7.6190476190476195,
+          "pct_eligible": 81.3953488372093
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 70.73170731707317,
+          "pct_bar_informative": 14.634146341463412,
+          "pct_only_informative": 14.634146341463412,
+          "pct_eligible": 73.87387387387388
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 79.26829268292683,
+          "pct_bar_informative": 8.53658536585365,
+          "pct_only_informative": 12.19512195121951,
+          "pct_eligible": 85.41666666666666
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 58.82352941176471,
+          "pct_bar_informative": 21.17647058823529,
+          "pct_only_informative": 20,
+          "pct_eligible": 84.15841584158416
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 67.3913043478261,
+          "pct_bar_informative": 11.95652173913043,
+          "pct_only_informative": 20.65217391304347,
+          "pct_eligible": 78.63247863247864
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 56.36363636363636,
+          "pct_bar_informative": 17.27272727272727,
+          "pct_only_informative": 26.36363636363636,
+          "pct_eligible": 79.13669064748201
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 55.833333333333336,
+          "pct_bar_informative": 15.83333333333333,
+          "pct_only_informative": 28.333333333333332,
+          "pct_eligible": 78.43137254901961
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 37.593984962406005,
+          "pct_bar_informative": 18.796992481203002,
+          "pct_only_informative": 43.60902255639097,
+          "pct_eligible": 81.09756097560977
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 23.333333333333332,
+          "pct_bar_informative": 14.66666666666666,
+          "pct_only_informative": 62,
+          "pct_eligible": 84.7457627118644
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 6.75675675675675,
+          "pct_bar_informative": 5.4054054054054,
+          "pct_only_informative": 87.83783783783784,
+          "pct_eligible": 82.22222222222221
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 4.70588235294117,
+          "pct_bar_informative": 5.88235294117647,
+          "pct_only_informative": 89.41176470588236,
+          "pct_eligible": 85
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 1.0869565217391302,
+          "pct_bar_informative": 14.130434782608688,
+          "pct_only_informative": 84.78260869565217,
+          "pct_eligible": 73.6
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 6.91489361702127,
+          "pct_bar_informative": 11.70212765957446,
+          "pct_only_informative": 81.38297872340425,
+          "pct_eligible": 74.30830039525692
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2021,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "front_physiol",
+      "name": "FRONT PHYSIOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 76.47058823529412,
+          "pct_bar_informative": 11.76470588235294,
+          "pct_only_informative": 11.76470588235294,
+          "pct_eligible": 41.46341463414634
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 9.52380952380952,
+          "pct_only_informative": 23.8095238095238,
+          "pct_eligible": 40
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 61.43790849673203,
+          "pct_bar_informative": 12.41830065359477,
+          "pct_only_informative": 26.1437908496732,
+          "pct_eligible": 34.69387755102041
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 65.74074074074075,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 17.59259259259259,
+          "pct_eligible": 42.85714285714285
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 61.97183098591549,
+          "pct_bar_informative": 19.01408450704225,
+          "pct_only_informative": 19.01408450704225,
+          "pct_eligible": 60.16949152542372
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 69.79865771812081,
+          "pct_bar_informative": 15.43624161073825,
+          "pct_only_informative": 14.76510067114094,
+          "pct_eligible": 68.98148148148148
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 68.42105263157895,
+          "pct_bar_informative": 13.765182186234808,
+          "pct_only_informative": 17.81376518218623,
+          "pct_eligible": 71.38728323699422
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 60.76158940397352,
+          "pct_bar_informative": 18.046357615894042,
+          "pct_only_informative": 21.192052980132452,
+          "pct_eligible": 71.73396674584322
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 56.6543438077634,
+          "pct_bar_informative": 18.94639556377079,
+          "pct_only_informative": 24.3992606284658,
+          "pct_eligible": 71.32498352010546
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 52.21729490022173,
+          "pct_bar_informative": 19.95565410199556,
+          "pct_only_informative": 27.8270509977827,
+          "pct_eligible": 71.6441620333598
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 48.31704668838219,
+          "pct_bar_informative": 20.52117263843648,
+          "pct_only_informative": 31.161780673181326,
+          "pct_eligible": 71.28482972136223
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 41.53726708074534,
+          "pct_bar_informative": 20.65217391304347,
+          "pct_only_informative": 37.81055900621118,
+          "pct_eligible": 70.07616974972797
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 36.0219263899765,
+          "pct_bar_informative": 19.96867658574784,
+          "pct_only_informative": 44.00939702427565,
+          "pct_eligible": 66.37214137214137
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 32.0659062103929,
+          "pct_bar_informative": 19.64512040557668,
+          "pct_only_informative": 48.28897338403042,
+          "pct_eligible": 64.67213114754098
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 30.78758949880668,
+          "pct_bar_informative": 18.13842482100238,
+          "pct_only_informative": 51.07398568019092,
+          "pct_eligible": 62.351190476190474
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 33.33333333333333,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 66.66666666666666,
+          "pct_eligible": 50
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "int_j_behav_nutr_phy",
+      "name": "INT J BEHAV NUTR PHY",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 77.77777777777779,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 22.22222222222222,
+          "pct_eligible": 10.8433734939759
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 76.92307692307693,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 15.38461538461538,
+          "pct_eligible": 11.30434782608695
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 88.88888888888889,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 11.11111111111111,
+          "pct_eligible": 7.25806451612903
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 72.72727272727273,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 27.27272727272727,
+          "pct_eligible": 9.016393442622949
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 62.5,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 37.5,
+          "pct_eligible": 5.7971014492753605
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 81.81818181818183,
+          "pct_bar_informative": 9.09090909090909,
+          "pct_only_informative": 9.09090909090909,
+          "pct_eligible": 7.85714285714285
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 69.23076923076923,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 30.76923076923077,
+          "pct_eligible": 12.74509803921568
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 13.138686131386859
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 60,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 40,
+          "pct_eligible": 4.8076923076923
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 28.57142857142857,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 64.28571428571429,
+          "pct_eligible": 12.96296296296296
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 43.75,
+          "pct_bar_informative": 6.25,
+          "pct_only_informative": 50,
+          "pct_eligible": 14.41441441441441
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 68.18181818181817,
+          "pct_bar_informative": 4.54545454545454,
+          "pct_only_informative": 27.27272727272727,
+          "pct_eligible": 17.46031746031746
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 41.66666666666667,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 41.66666666666667,
+          "pct_eligible": 10.52631578947368
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 52.94117647058824,
+          "pct_bar_informative": 5.88235294117647,
+          "pct_only_informative": 41.17647058823529,
+          "pct_eligible": 15.04424778761062
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 30.43478260869565,
+          "pct_bar_informative": 13.04347826086956,
+          "pct_only_informative": 56.52173913043478,
+          "pct_eligible": 21.69811320754717
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 37.5,
+          "pct_bar_informative": 6.25,
+          "pct_only_informative": 56.25,
+          "pct_eligible": 13.4453781512605
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "int_j_psychophysiol",
+      "name": "INT J PSYCHOPHYSIOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 76.74418604651163,
+          "pct_bar_informative": 9.30232558139534,
+          "pct_only_informative": 13.95348837209302,
+          "pct_eligible": 40.18691588785046
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 87.27272727272727,
+          "pct_bar_informative": 3.63636363636363,
+          "pct_only_informative": 9.09090909090909,
+          "pct_eligible": 39.28571428571428
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 89.83050847457628,
+          "pct_bar_informative": 1.69491525423728,
+          "pct_only_informative": 8.47457627118644,
+          "pct_eligible": 46.45669291338583
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 9.23076923076923,
+          "pct_only_informative": 10.76923076923077,
+          "pct_eligible": 42.2077922077922
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 87.75510204081633,
+          "pct_bar_informative": 4.08163265306122,
+          "pct_only_informative": 8.16326530612244,
+          "pct_eligible": 40.16393442622951
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 79.66101694915254,
+          "pct_bar_informative": 3.38983050847457,
+          "pct_only_informative": 16.94915254237288,
+          "pct_eligible": 42.14285714285714
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 84.48275862068965,
+          "pct_bar_informative": 6.89655172413793,
+          "pct_only_informative": 8.620689655172411,
+          "pct_eligible": 48.33333333333333
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 72.09302325581395,
+          "pct_bar_informative": 6.97674418604651,
+          "pct_only_informative": 20.93023255813953,
+          "pct_eligible": 39.090909090909086
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 70.88607594936708,
+          "pct_bar_informative": 8.86075949367088,
+          "pct_only_informative": 20.25316455696202,
+          "pct_eligible": 50.967741935483865
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 64.28571428571429,
+          "pct_bar_informative": 12.5,
+          "pct_only_informative": 23.214285714285708,
+          "pct_eligible": 47.45762711864407
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 70.58823529411765,
+          "pct_bar_informative": 8.23529411764705,
+          "pct_only_informative": 21.17647058823529,
+          "pct_eligible": 50.29585798816568
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 60,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 30,
+          "pct_eligible": 37.3134328358209
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 58.82352941176471,
+          "pct_bar_informative": 11.76470588235294,
+          "pct_only_informative": 29.411764705882348,
+          "pct_eligible": 50
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 44,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 46,
+          "pct_eligible": 54.347826086956516
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 58.620689655172406,
+          "pct_bar_informative": 8.620689655172411,
+          "pct_only_informative": 32.758620689655174,
+          "pct_eligible": 61.05263157894737
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 49.019607843137244,
+          "pct_bar_informative": 11.76470588235294,
+          "pct_only_informative": 39.2156862745098,
+          "pct_eligible": 48.113207547169814
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "j_appl_physiol",
+      "name": "J APPL PHYSIOL",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 75.1937984496124,
+          "pct_bar_informative": 10.07751937984496,
+          "pct_only_informative": 14.728682170542632,
+          "pct_eligible": 65.48223350253807
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 73.64341085271317,
+          "pct_bar_informative": 12.01550387596899,
+          "pct_only_informative": 14.34108527131783,
+          "pct_eligible": 69.91869918699187
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 73.28990228013029,
+          "pct_bar_informative": 12.703583061889251,
+          "pct_only_informative": 14.006514657980452,
+          "pct_eligible": 72.92161520190024
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 71.7948717948718,
+          "pct_bar_informative": 16.11721611721611,
+          "pct_only_informative": 12.08791208791208,
+          "pct_eligible": 75.62326869806094
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 65.58139534883722,
+          "pct_bar_informative": 16.74418604651162,
+          "pct_only_informative": 17.67441860465116,
+          "pct_eligible": 69.35483870967742
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 72.81105990783409,
+          "pct_bar_informative": 8.75576036866359,
+          "pct_only_informative": 18.4331797235023,
+          "pct_eligible": 73.06397306397307
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 64.60674157303372,
+          "pct_bar_informative": 14.606741573033698,
+          "pct_only_informative": 20.78651685393258,
+          "pct_eligible": 69.26070038910505
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 56.94444444444444,
+          "pct_bar_informative": 20.37037037037037,
+          "pct_only_informative": 22.68518518518518,
+          "pct_eligible": 75.78947368421053
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 58.77551020408164,
+          "pct_bar_informative": 15.91836734693877,
+          "pct_only_informative": 25.30612244897959,
+          "pct_eligible": 75.38461538461539
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 39.91596638655462,
+          "pct_bar_informative": 26.05042016806723,
+          "pct_only_informative": 34.03361344537815,
+          "pct_eligible": 75.55555555555556
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 23.94366197183098,
+          "pct_bar_informative": 29.10798122065727,
+          "pct_only_informative": 46.948356807511736,
+          "pct_eligible": 74.73684210526315
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 17.77777777777777,
+          "pct_bar_informative": 16.44444444444444,
+          "pct_only_informative": 65.77777777777779,
+          "pct_eligible": 69.65944272445822
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 7.90960451977401,
+          "pct_bar_informative": 13.5593220338983,
+          "pct_only_informative": 78.53107344632768,
+          "pct_eligible": 76.95652173913044
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 8.90052356020942,
+          "pct_bar_informative": 11.51832460732984,
+          "pct_only_informative": 79.58115183246073,
+          "pct_eligible": 74.31906614785993
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 8.04597701149425,
+          "pct_bar_informative": 18.39080459770115,
+          "pct_only_informative": 73.5632183908046,
+          "pct_eligible": 71.900826446281
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 7.0754716981132,
+          "pct_bar_informative": 10.84905660377358,
+          "pct_only_informative": 82.0754716981132,
+          "pct_eligible": 81.22605363984674
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "j_biol_rhythm",
+      "name": "J BIOL RHYTHM",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 60.71428571428571,
+          "pct_bar_informative": 21.42857142857142,
+          "pct_only_informative": 17.85714285714285,
+          "pct_eligible": 68.29268292682927
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 70.27027027027027,
+          "pct_bar_informative": 10.81081081081081,
+          "pct_only_informative": 18.91891891891892,
+          "pct_eligible": 77.08333333333334
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 16.66666666666666,
+          "pct_eligible": 83.72093023255815
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 72.72727272727273,
+          "pct_bar_informative": 9.09090909090909,
+          "pct_only_informative": 18.18181818181818,
+          "pct_eligible": 61.111111111111114
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 82.14285714285714,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 10.71428571428571,
+          "pct_eligible": 80
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 52.63157894736842,
+          "pct_bar_informative": 36.84210526315789,
+          "pct_only_informative": 10.52631578947368,
+          "pct_eligible": 65.51724137931035
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 58.333333333333336,
+          "pct_bar_informative": 20.83333333333333,
+          "pct_only_informative": 20.83333333333333,
+          "pct_eligible": 64.86486486486487
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 34.48275862068966,
+          "pct_bar_informative": 20.68965517241379,
+          "pct_only_informative": 44.827586206896555,
+          "pct_eligible": 63.04347826086957
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 40.625,
+          "pct_bar_informative": 18.75,
+          "pct_only_informative": 40.625,
+          "pct_eligible": 76.19047619047619
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 48.38709677419355,
+          "pct_bar_informative": 16.12903225806451,
+          "pct_only_informative": 35.483870967741936,
+          "pct_eligible": 72.09302325581395
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 32.14285714285714,
+          "pct_bar_informative": 25,
+          "pct_only_informative": 42.85714285714285,
+          "pct_eligible": 70
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 35,
+          "pct_bar_informative": 15,
+          "pct_only_informative": 50,
+          "pct_eligible": 68.96551724137932
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 17.391304347826082,
+          "pct_bar_informative": 17.391304347826082,
+          "pct_only_informative": 65.21739130434783,
+          "pct_eligible": 60.526315789473685
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 26.31578947368421,
+          "pct_bar_informative": 15.78947368421052,
+          "pct_only_informative": 57.89473684210527,
+          "pct_eligible": 63.33333333333333
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 22.22222222222222,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 61.111111111111114,
+          "pct_eligible": 64.28571428571429
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 26.923076923076923,
+          "pct_bar_informative": 11.53846153846153,
+          "pct_only_informative": 61.53846153846154,
+          "pct_eligible": 70.27027027027027
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "j_electromyogr_kines",
+      "name": "J ELECTROMYOGR KINES",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 67.07317073170732,
+          "pct_bar_informative": 6.09756097560975,
+          "pct_only_informative": 26.82926829268293,
+          "pct_eligible": 53.59477124183007
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 70.3125,
+          "pct_bar_informative": 7.8125,
+          "pct_only_informative": 21.875,
+          "pct_eligible": 46.043165467625904
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 76.36363636363637,
+          "pct_bar_informative": 3.63636363636363,
+          "pct_only_informative": 20,
+          "pct_eligible": 50.45871559633027
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 70.65217391304348,
+          "pct_bar_informative": 8.695652173913041,
+          "pct_only_informative": 20.65217391304347,
+          "pct_eligible": 47.42268041237113
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 77.19298245614034,
+          "pct_bar_informative": 7.01754385964912,
+          "pct_only_informative": 15.78947368421052,
+          "pct_eligible": 47.5
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 86.27450980392157,
+          "pct_bar_informative": 3.9215686274509802,
+          "pct_only_informative": 9.80392156862745,
+          "pct_eligible": 41.12903225806452
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 70.6896551724138,
+          "pct_bar_informative": 6.89655172413793,
+          "pct_only_informative": 22.41379310344827,
+          "pct_eligible": 47.15447154471545
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 72.72727272727273,
+          "pct_bar_informative": 9.09090909090909,
+          "pct_only_informative": 18.18181818181818,
+          "pct_eligible": 53.01204819277109
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 67.1875,
+          "pct_bar_informative": 6.25,
+          "pct_only_informative": 26.5625,
+          "pct_eligible": 52.459016393442624
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 64.70588235294117,
+          "pct_bar_informative": 5.88235294117647,
+          "pct_only_informative": 29.411764705882348,
+          "pct_eligible": 47.88732394366197
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 41.17647058823529,
+          "pct_bar_informative": 11.76470588235294,
+          "pct_only_informative": 47.05882352941176,
+          "pct_eligible": 48.57142857142857
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 51.35135135135135,
+          "pct_bar_informative": 10.81081081081081,
+          "pct_only_informative": 37.83783783783784,
+          "pct_eligible": 51.388888888888886
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 47.36842105263157,
+          "pct_bar_informative": 10.52631578947368,
+          "pct_only_informative": 42.105263157894726,
+          "pct_eligible": 53.52112676056338
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 27.27272727272727,
+          "pct_bar_informative": 6.06060606060606,
+          "pct_only_informative": 66.66666666666666,
+          "pct_eligible": 52.38095238095239
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 41.93548387096774,
+          "pct_bar_informative": 3.2258064516128995,
+          "pct_only_informative": 54.83870967741935,
+          "pct_eligible": 53.44827586206896
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 24.137931034482758,
+          "pct_bar_informative": 17.24137931034483,
+          "pct_only_informative": 58.620689655172406,
+          "pct_eligible": 72.5
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "j_gen_physiol",
+      "name": "J GEN PHYSIOL",
+      "hasPolicy": true,
+      "policyYear": 2021,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 59.32203389830508,
+          "pct_bar_informative": 22.03389830508474,
+          "pct_only_informative": 18.64406779661017,
+          "pct_eligible": 73.75
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 47.82608695652174,
+          "pct_bar_informative": 32.60869565217391,
+          "pct_only_informative": 19.565217391304348,
+          "pct_eligible": 68.65671641791045
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 45.23809523809524,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 21.42857142857142,
+          "pct_eligible": 59.154929577464785
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 59.32203389830508,
+          "pct_bar_informative": 23.728813559322028,
+          "pct_only_informative": 16.94915254237288,
+          "pct_eligible": 67.81609195402298
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 38.33333333333333,
+          "pct_bar_informative": 40,
+          "pct_only_informative": 21.66666666666666,
+          "pct_eligible": 77.92207792207793
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 52.083333333333336,
+          "pct_bar_informative": 22.91666666666666,
+          "pct_only_informative": 25,
+          "pct_eligible": 78.68852459016394
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 48.93617021276595,
+          "pct_bar_informative": 31.914893617021278,
+          "pct_only_informative": 19.14893617021276,
+          "pct_eligible": 83.92857142857143
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 47.22222222222222,
+          "pct_bar_informative": 36.11111111111111,
+          "pct_only_informative": 16.66666666666666,
+          "pct_eligible": 75
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 54.83870967741935,
+          "pct_bar_informative": 22.58064516129032,
+          "pct_only_informative": 22.58064516129032,
+          "pct_eligible": 69.66292134831461
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 40.67796610169492,
+          "pct_bar_informative": 25.423728813559322,
+          "pct_only_informative": 33.89830508474576,
+          "pct_eligible": 70.23809523809523
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 31.11111111111111,
+          "pct_bar_informative": 44.44444444444444,
+          "pct_only_informative": 24.44444444444444,
+          "pct_eligible": 83.33333333333334
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 24,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 56.00000000000001,
+          "pct_eligible": 85.22727272727273
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 8.33333333333333,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 58.333333333333336,
+          "pct_eligible": 80
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 11.26760563380281,
+          "pct_bar_informative": 29.57746478873239,
+          "pct_only_informative": 59.154929577464785,
+          "pct_eligible": 78.02197802197803
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 5.4054054054054,
+          "pct_bar_informative": 24.32432432432432,
+          "pct_only_informative": 70.27027027027027,
+          "pct_eligible": 74
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 5.71428571428571,
+          "pct_bar_informative": 34.28571428571428,
+          "pct_only_informative": 60,
+          "pct_eligible": 71.42857142857143
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2021,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "j_mammary_gland_biol",
+      "name": "J MAMMARY GLAND BIOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 100
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 66.66666666666666
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 0,
+          "pct_eligible": 66.66666666666666
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 53.84615384615385,
+          "pct_bar_informative": 38.46153846153846,
+          "pct_only_informative": 7.69230769230769,
+          "pct_eligible": 100
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 70,
+          "pct_bar_informative": 30,
+          "pct_only_informative": 0,
+          "pct_eligible": 90.90909090909092
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 18.18181818181818,
+          "pct_bar_informative": 45.454545454545446,
+          "pct_only_informative": 36.36363636363636,
+          "pct_eligible": 84.61538461538461
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 16.66666666666666,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 50,
+          "pct_eligible": 92.30769230769232
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 23.07692307692307,
+          "pct_bar_informative": 38.46153846153846,
+          "pct_only_informative": 38.46153846153846,
+          "pct_eligible": 86.66666666666667
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 10,
+          "pct_bar_informative": 40,
+          "pct_only_informative": 50,
+          "pct_eligible": 83.33333333333334
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 0,
+          "pct_bar_informative": 58.333333333333336,
+          "pct_only_informative": 41.66666666666667,
+          "pct_eligible": 75
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 20,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 70,
+          "pct_eligible": 83.33333333333334
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 20,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 80,
+          "pct_eligible": 71.42857142857143
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "j_neurophysiol",
+      "name": "J NEUROPHYSIOL",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 48.35390946502058,
+          "pct_bar_informative": 23.04526748971193,
+          "pct_only_informative": 28.600823045267482,
+          "pct_eligible": 79.02439024390245
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 43.34140435835351,
+          "pct_bar_informative": 33.41404358353511,
+          "pct_only_informative": 23.24455205811138,
+          "pct_eligible": 78.51711026615969
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 47.722342733188725,
+          "pct_bar_informative": 29.50108459869848,
+          "pct_only_informative": 22.7765726681128,
+          "pct_eligible": 79.20962199312714
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 42.51207729468599,
+          "pct_bar_informative": 29.468599033816425,
+          "pct_only_informative": 28.01932367149758,
+          "pct_eligible": 80.54474708171206
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 44.53125,
+          "pct_bar_informative": 28.125,
+          "pct_only_informative": 27.34375,
+          "pct_eligible": 79.33884297520662
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 43.58974358974359,
+          "pct_bar_informative": 29.059829059829063,
+          "pct_only_informative": 27.35042735042735,
+          "pct_eligible": 77.74086378737542
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 42.54742547425474,
+          "pct_bar_informative": 30.081300813008134,
+          "pct_only_informative": 27.37127371273712,
+          "pct_eligible": 77.52100840336135
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 31.49847094801223,
+          "pct_bar_informative": 30.58103975535168,
+          "pct_only_informative": 37.92048929663608,
+          "pct_eligible": 78.22966507177034
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 36.78929765886287,
+          "pct_bar_informative": 23.41137123745819,
+          "pct_only_informative": 39.79933110367893,
+          "pct_eligible": 74.37810945273633
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 25.91240875912409,
+          "pct_bar_informative": 29.92700729927007,
+          "pct_only_informative": 44.16058394160584,
+          "pct_eligible": 78.28571428571428
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 14.925373134328352,
+          "pct_bar_informative": 33.582089552238806,
+          "pct_only_informative": 51.49253731343284,
+          "pct_eligible": 82.20858895705521
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 13.43873517786561,
+          "pct_bar_informative": 24.90118577075099,
+          "pct_only_informative": 61.6600790513834,
+          "pct_eligible": 82.14285714285714
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 9.375,
+          "pct_bar_informative": 24.47916666666666,
+          "pct_only_informative": 66.14583333333334,
+          "pct_eligible": 79.33884297520662
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 13.157894736842099,
+          "pct_bar_informative": 19.473684210526308,
+          "pct_only_informative": 67.36842105263158,
+          "pct_eligible": 82.25108225108225
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 10.8695652173913,
+          "pct_bar_informative": 23.3695652173913,
+          "pct_only_informative": 65.76086956521739,
+          "pct_eligible": 77.63713080168776
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 10.4602510460251,
+          "pct_bar_informative": 15.062761506276152,
+          "pct_only_informative": 74.47698744769873,
+          "pct_eligible": 82.13058419243985
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "j_physiol_anthropol",
+      "name": "J PHYSIOL ANTHROPOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 75,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 25,
+          "pct_eligible": 38.09523809523809
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 92.85714285714286,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 7.14285714285714,
+          "pct_eligible": 48.275862068965516
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 60,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 30,
+          "pct_eligible": 43.47826086956521
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 11.11111111111111,
+          "pct_only_informative": 22.22222222222222,
+          "pct_eligible": 40.909090909090914
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 92.85714285714286,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 0,
+          "pct_eligible": 42.42424242424242
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 86.66666666666667,
+          "pct_bar_informative": 6.66666666666666,
+          "pct_only_informative": 6.66666666666666,
+          "pct_eligible": 42.85714285714285
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 84.61538461538461,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 7.69230769230769,
+          "pct_eligible": 41.93548387096774
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 56.25,
+          "pct_bar_informative": 6.25,
+          "pct_only_informative": 37.5,
+          "pct_eligible": 50
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 69.23076923076923,
+          "pct_bar_informative": 15.38461538461538,
+          "pct_only_informative": 15.38461538461538,
+          "pct_eligible": 52
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 0,
+          "pct_eligible": 41.66666666666667
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 75,
+          "pct_bar_informative": 8.33333333333333,
+          "pct_only_informative": 16.66666666666666,
+          "pct_eligible": 34.28571428571428
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 42.85714285714285,
+          "pct_bar_informative": 14.28571428571428,
+          "pct_only_informative": 42.85714285714285,
+          "pct_eligible": 41.17647058823529
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 52.94117647058824
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 63.63636363636363,
+          "pct_bar_informative": 18.18181818181818,
+          "pct_only_informative": 18.18181818181818,
+          "pct_eligible": 47.82608695652174
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 61.53846153846154,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 38.46153846153846,
+          "pct_eligible": 44.827586206896555
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 53.84615384615385,
+          "pct_bar_informative": 15.38461538461538,
+          "pct_only_informative": 30.76923076923077,
+          "pct_eligible": 43.33333333333333
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "j_physiol_biochem",
+      "name": "J PHYSIOL BIOCHEM",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 92.30769230769232,
+          "pct_bar_informative": 3.84615384615384,
+          "pct_only_informative": 3.84615384615384,
+          "pct_eligible": 66.66666666666666
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 96.07843137254902,
+          "pct_bar_informative": 3.9215686274509802,
+          "pct_only_informative": 0,
+          "pct_eligible": 83.60655737704919
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 84.31372549019608,
+          "pct_bar_informative": 5.88235294117647,
+          "pct_only_informative": 9.80392156862745,
+          "pct_eligible": 82.25806451612904
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 91.42857142857143,
+          "pct_bar_informative": 5.71428571428571,
+          "pct_only_informative": 2.85714285714285,
+          "pct_eligible": 85.36585365853658
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 82.66666666666667,
+          "pct_bar_informative": 13.33333333333333,
+          "pct_only_informative": 4,
+          "pct_eligible": 86.20689655172413
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 86.4406779661017,
+          "pct_bar_informative": 11.86440677966101,
+          "pct_only_informative": 1.69491525423728,
+          "pct_eligible": 92.1875
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 81.15942028985508,
+          "pct_bar_informative": 13.04347826086956,
+          "pct_only_informative": 5.7971014492753605,
+          "pct_eligible": 90.78947368421052
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 93.93939393939394,
+          "pct_bar_informative": 6.06060606060606,
+          "pct_only_informative": 0,
+          "pct_eligible": 84.61538461538461
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 78,
+          "pct_bar_informative": 18,
+          "pct_only_informative": 4,
+          "pct_eligible": 84.7457627118644
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 76.74418604651163,
+          "pct_bar_informative": 20.93023255813953,
+          "pct_only_informative": 2.32558139534883,
+          "pct_eligible": 93.47826086956522
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 83.78378378378379,
+          "pct_bar_informative": 10.81081081081081,
+          "pct_only_informative": 5.4054054054054,
+          "pct_eligible": 92.5
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 75.60975609756098,
+          "pct_bar_informative": 17.07317073170731,
+          "pct_only_informative": 7.3170731707317,
+          "pct_eligible": 93.18181818181817
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 58.490566037735846,
+          "pct_bar_informative": 24.528301886792452,
+          "pct_only_informative": 16.981132075471688,
+          "pct_eligible": 98.14814814814817
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 54.347826086956516,
+          "pct_bar_informative": 30.43478260869565,
+          "pct_only_informative": 15.217391304347819,
+          "pct_eligible": 93.87755102040816
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 34.04255319148936,
+          "pct_bar_informative": 42.5531914893617,
+          "pct_only_informative": 23.40425531914893,
+          "pct_eligible": 95.91836734693877
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 27.659574468085108,
+          "pct_bar_informative": 38.297872340425535,
+          "pct_only_informative": 34.04255319148936,
+          "pct_eligible": 90.3846153846154
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "j_physiol_pharmacol",
+      "name": "J PHYSIOL PHARMACOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2018,
+          "pct_only_bar": 78.18181818181819,
+          "pct_bar_informative": 10.9090909090909,
+          "pct_only_informative": 10.9090909090909,
+          "pct_eligible": 78.57142857142857
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 72.1311475409836,
+          "pct_bar_informative": 8.1967213114754,
+          "pct_only_informative": 19.67213114754098,
+          "pct_eligible": 75.30864197530865
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 13.33333333333333,
+          "pct_only_informative": 20,
+          "pct_eligible": 74.07407407407408
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 64.51612903225806,
+          "pct_bar_informative": 17.741935483870968,
+          "pct_only_informative": 17.741935483870968,
+          "pct_eligible": 77.5
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 56.25,
+          "pct_bar_informative": 14.583333333333329,
+          "pct_only_informative": 29.166666666666668,
+          "pct_eligible": 69.56521739130434
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 63.829787234042556,
+          "pct_bar_informative": 23.40425531914893,
+          "pct_only_informative": 12.76595744680851,
+          "pct_eligible": 85.45454545454545
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 48.888888888888886,
+          "pct_bar_informative": 31.11111111111111,
+          "pct_only_informative": 20,
+          "pct_eligible": 84.90566037735849
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 23.91304347826087,
+          "pct_only_informative": 26.08695652173913,
+          "pct_eligible": 90.19607843137256
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "j_physiol_sci",
+      "name": "J PHYSIOL SCI",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 81.81818181818183,
+          "pct_bar_informative": 12.12121212121212,
+          "pct_only_informative": 6.06060606060606,
+          "pct_eligible": 66
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 79.06976744186046,
+          "pct_bar_informative": 13.95348837209302,
+          "pct_only_informative": 6.97674418604651,
+          "pct_eligible": 74.13793103448276
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 93.33333333333333,
+          "pct_bar_informative": 6.66666666666666,
+          "pct_only_informative": 0,
+          "pct_eligible": 71.42857142857143
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 77.77777777777779,
+          "pct_bar_informative": 11.11111111111111,
+          "pct_only_informative": 11.11111111111111,
+          "pct_eligible": 76.59574468085107
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 94.87179487179488,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 5.12820512820512,
+          "pct_eligible": 88.63636363636364
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 89.47368421052632,
+          "pct_bar_informative": 2.63157894736842,
+          "pct_only_informative": 7.89473684210526,
+          "pct_eligible": 74.50980392156863
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 15,
+          "pct_only_informative": 5,
+          "pct_eligible": 66.66666666666666
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 85,
+          "pct_bar_informative": 7.5,
+          "pct_only_informative": 7.5,
+          "pct_eligible": 80
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 79.3103448275862,
+          "pct_bar_informative": 18.96551724137931,
+          "pct_only_informative": 1.72413793103448,
+          "pct_eligible": 82.85714285714286
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 69.33333333333334,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 10.66666666666666,
+          "pct_eligible": 86.20689655172413
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 19.44444444444444,
+          "pct_only_informative": 13.88888888888889,
+          "pct_eligible": 78.26086956521739
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 37.93103448275862,
+          "pct_bar_informative": 41.37931034482758,
+          "pct_only_informative": 20.68965517241379,
+          "pct_eligible": 87.87878787878788
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 32,
+          "pct_bar_informative": 16,
+          "pct_only_informative": 52,
+          "pct_eligible": 92.59259259259261
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 40.909090909090914,
+          "pct_bar_informative": 9.09090909090909,
+          "pct_only_informative": 50,
+          "pct_eligible": 81.48148148148148
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 39.28571428571428,
+          "pct_bar_informative": 21.42857142857142,
+          "pct_only_informative": 39.28571428571428,
+          "pct_eligible": 71.7948717948718
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 27.58620689655172,
+          "pct_bar_informative": 17.24137931034483,
+          "pct_only_informative": 55.172413793103445,
+          "pct_eligible": 90.625
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "j_physiol_london",
+      "name": "J PHYSIOL LONDON",
+      "hasPolicy": true,
+      "policyYear": 2019,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 63.48547717842323,
+          "pct_bar_informative": 24.89626556016597,
+          "pct_only_informative": 11.61825726141078,
+          "pct_eligible": 77.24358974358975
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 67.65676567656766,
+          "pct_bar_informative": 22.77227722772277,
+          "pct_only_informative": 9.57095709570957,
+          "pct_eligible": 83.24175824175825
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 61.27946127946128,
+          "pct_bar_informative": 25.25252525252525,
+          "pct_only_informative": 13.46801346801346,
+          "pct_eligible": 84.13597733711048
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 62.58741258741259,
+          "pct_bar_informative": 27.97202797202797,
+          "pct_only_informative": 9.44055944055944,
+          "pct_eligible": 83.87096774193549
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 53.75,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 12.916666666666659,
+          "pct_eligible": 86.33093525179856
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 54.22222222222223,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 12.44444444444444,
+          "pct_eligible": 84.58646616541353
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 49.61538461538461,
+          "pct_bar_informative": 34.23076923076923,
+          "pct_only_informative": 16.15384615384615,
+          "pct_eligible": 87.24832214765101
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 49.67320261437908,
+          "pct_bar_informative": 31.372549019607842,
+          "pct_only_informative": 18.954248366013072,
+          "pct_eligible": 88.4393063583815
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 41.76245210727969,
+          "pct_bar_informative": 29.50191570881226,
+          "pct_only_informative": 28.735632183908038,
+          "pct_eligible": 90
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 30.303030303030297,
+          "pct_bar_informative": 31.439393939393938,
+          "pct_only_informative": 38.25757575757575,
+          "pct_eligible": 91.03448275862068
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 7.9295154185022,
+          "pct_bar_informative": 29.074889867841406,
+          "pct_only_informative": 62.99559471365639,
+          "pct_eligible": 85.66037735849056
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 5.91133004926108,
+          "pct_bar_informative": 27.58620689655172,
+          "pct_only_informative": 66.50246305418719,
+          "pct_eligible": 87.5
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 2.3391812865497,
+          "pct_bar_informative": 22.22222222222222,
+          "pct_only_informative": 75.43859649122807,
+          "pct_eligible": 82.21153846153845
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 4.32432432432432,
+          "pct_bar_informative": 20.54054054054054,
+          "pct_only_informative": 75.13513513513513,
+          "pct_eligible": 82.95964125560538
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 2.9661016949152503,
+          "pct_bar_informative": 21.61016949152542,
+          "pct_only_informative": 75.42372881355932,
+          "pct_eligible": 88.38951310861424
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 1.96629213483146,
+          "pct_bar_informative": 25.28089887640449,
+          "pct_only_informative": 72.75280898876404,
+          "pct_eligible": 90.12658227848101
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2019,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "j_pineal_res",
+      "name": "J PINEAL RES",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 92.1875,
+          "pct_bar_informative": 4.6875,
+          "pct_only_informative": 3.125,
+          "pct_eligible": 84.21052631578947
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 92.30769230769232,
+          "pct_bar_informative": 5.12820512820512,
+          "pct_only_informative": 2.56410256410256,
+          "pct_eligible": 88.63636363636364
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 87.01298701298701,
+          "pct_bar_informative": 7.79220779220779,
+          "pct_only_informative": 5.19480519480519,
+          "pct_eligible": 91.66666666666666
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 89.74358974358975,
+          "pct_bar_informative": 8.974358974358971,
+          "pct_only_informative": 1.28205128205128,
+          "pct_eligible": 92.85714285714286
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 84.50704225352112,
+          "pct_bar_informative": 15.492957746478869,
+          "pct_only_informative": 0,
+          "pct_eligible": 91.02564102564102
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 91.66666666666666,
+          "pct_bar_informative": 5.55555555555555,
+          "pct_only_informative": 2.77777777777777,
+          "pct_eligible": 93.5064935064935
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 71.64179104477611,
+          "pct_bar_informative": 26.86567164179104,
+          "pct_only_informative": 1.4925373134328301,
+          "pct_eligible": 100
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 0,
+          "pct_eligible": 98.36065573770492
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 73.84615384615385,
+          "pct_bar_informative": 26.15384615384615,
+          "pct_only_informative": 0,
+          "pct_eligible": 98.48484848484847
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 54.385964912280706,
+          "pct_bar_informative": 38.59649122807017,
+          "pct_only_informative": 7.01754385964912,
+          "pct_eligible": 83.82352941176471
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 58.69565217391305,
+          "pct_bar_informative": 21.7391304347826,
+          "pct_only_informative": 19.565217391304348,
+          "pct_eligible": 86.79245283018868
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 39.130434782608695,
+          "pct_bar_informative": 41.30434782608695,
+          "pct_only_informative": 19.565217391304348,
+          "pct_eligible": 85.18518518518519
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 35.8974358974359,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 30.76923076923077,
+          "pct_eligible": 84.78260869565217
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 43.58974358974359,
+          "pct_bar_informative": 35.8974358974359,
+          "pct_only_informative": 20.51282051282051,
+          "pct_eligible": 90.69767441860463
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 23.07692307692307,
+          "pct_bar_informative": 36.92307692307692,
+          "pct_only_informative": 40,
+          "pct_eligible": 91.54929577464787
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 30.61224489795918,
+          "pct_bar_informative": 40.81632653061224,
+          "pct_only_informative": 28.57142857142857,
+          "pct_eligible": 84.48275862068965
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "kidney_blood_press_r",
+      "name": "KIDNEY BLOOD PRESS R",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 84.21052631578947,
+          "pct_bar_informative": 10.52631578947368,
+          "pct_only_informative": 5.26315789473684,
+          "pct_eligible": 45.23809523809524
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 77.27272727272727,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 22.72727272727272,
+          "pct_eligible": 55.00000000000001
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 63.26530612244898,
+          "pct_bar_informative": 4.08163265306122,
+          "pct_only_informative": 32.65306122448979,
+          "pct_eligible": 44.54545454545454
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 64.28571428571429,
+          "pct_bar_informative": 19.04761904761904,
+          "pct_only_informative": 16.66666666666666,
+          "pct_eligible": 54.54545454545454
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 84.61538461538461,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 7.69230769230769,
+          "pct_eligible": 52
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 77.41935483870968,
+          "pct_bar_informative": 16.12903225806451,
+          "pct_only_informative": 6.451612903225799,
+          "pct_eligible": 57.407407407407405
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 61.53846153846154,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 30.76923076923077,
+          "pct_eligible": 55.91397849462365
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 62.06896551724138,
+          "pct_bar_informative": 10.34482758620689,
+          "pct_only_informative": 27.58620689655172,
+          "pct_eligible": 53.70370370370371
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 63.1578947368421,
+          "pct_bar_informative": 9.21052631578947,
+          "pct_only_informative": 27.631578947368418,
+          "pct_eligible": 52.41379310344828
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 52.63157894736842,
+          "pct_bar_informative": 14.03508771929824,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 52.77777777777778
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 34.782608695652165,
+          "pct_bar_informative": 26.08695652173913,
+          "pct_only_informative": 39.130434782608695,
+          "pct_eligible": 36.5079365079365
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 43.18181818181818,
+          "pct_bar_informative": 13.63636363636363,
+          "pct_only_informative": 43.18181818181818,
+          "pct_eligible": 70.96774193548387
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 25.71428571428571,
+          "pct_bar_informative": 37.14285714285714,
+          "pct_only_informative": 37.14285714285714,
+          "pct_eligible": 66.0377358490566
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 20,
+          "pct_bar_informative": 26.66666666666666,
+          "pct_only_informative": 53.333333333333336,
+          "pct_eligible": 47.61904761904761
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 23.07692307692307,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 43.58974358974359,
+          "pct_eligible": 53.42465753424658
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 15.38461538461538,
+          "pct_bar_informative": 15.38461538461538,
+          "pct_only_informative": 69.23076923076923,
+          "pct_eligible": 53.06122448979592
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "lymphat_res_biol",
+      "name": "LYMPHAT RES BIOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 85.71428571428571,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 14.28571428571428,
+          "pct_eligible": 46.666666666666664
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 60
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 44.44444444444444
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 54.54545454545454,
+          "pct_bar_informative": 9.09090909090909,
+          "pct_only_informative": 36.36363636363636,
+          "pct_eligible": 57.89473684210527
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 81.81818181818183,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 18.18181818181818,
+          "pct_eligible": 37.93103448275862
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 57.14285714285714,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 35.71428571428571,
+          "pct_eligible": 46.666666666666664
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 71.42857142857143,
+          "pct_bar_informative": 14.28571428571428,
+          "pct_only_informative": 14.28571428571428,
+          "pct_eligible": 31.818181818181817
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 68.75,
+          "pct_bar_informative": 12.5,
+          "pct_only_informative": 18.75,
+          "pct_eligible": 53.333333333333336
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 25,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 55.00000000000001,
+          "pct_eligible": 39.2156862745098
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 55.55555555555556,
+          "pct_bar_informative": 5.55555555555555,
+          "pct_only_informative": 38.88888888888889,
+          "pct_eligible": 32.14285714285714
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 43.47826086956521,
+          "pct_bar_informative": 8.695652173913041,
+          "pct_only_informative": 47.82608695652174,
+          "pct_eligible": 45.09803921568627
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 33.33333333333333,
+          "pct_bar_informative": 22.22222222222222,
+          "pct_only_informative": 44.44444444444444,
+          "pct_eligible": 16.36363636363636
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 44.44444444444444,
+          "pct_bar_informative": 11.11111111111111,
+          "pct_only_informative": 44.44444444444444,
+          "pct_eligible": 33.33333333333333
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 30.76923076923077,
+          "pct_bar_informative": 23.07692307692307,
+          "pct_only_informative": 46.15384615384615,
+          "pct_eligible": 28.888888888888882
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 25,
+          "pct_bar_informative": 8.33333333333333,
+          "pct_only_informative": 66.66666666666666,
+          "pct_eligible": 44.44444444444444
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 30
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "neurophysiol_clin",
+      "name": "NEUROPHYSIOL CLIN",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 33.33333333333333,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 66.66666666666666,
+          "pct_eligible": 30
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 11.11111111111111
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 50,
+          "pct_eligible": 12.5
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 20,
+          "pct_eligible": 33.33333333333333
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 88.88888888888889,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 11.11111111111111,
+          "pct_eligible": 33.33333333333333
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 20,
+          "pct_eligible": 27.77777777777778
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 15.38461538461538
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 55.55555555555556,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 44.44444444444444,
+          "pct_eligible": 33.33333333333333
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 29.411764705882348
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 72.72727272727273,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 27.27272727272727,
+          "pct_eligible": 39.28571428571428
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 58.333333333333336,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 41.66666666666667,
+          "pct_eligible": 41.37931034482758
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 5.55555555555555,
+          "pct_only_informative": 44.44444444444444,
+          "pct_eligible": 48.64864864864865
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 42.85714285714285,
+          "pct_eligible": 38.88888888888889
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 31.25,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 68.75,
+          "pct_eligible": 51.61290322580645
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 14.28571428571428,
+          "pct_bar_informative": 7.14285714285714,
+          "pct_only_informative": 78.57142857142857,
+          "pct_eligible": 48.275862068965516
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 0,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 100,
+          "pct_eligible": 45.454545454545446
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "pestic_biochem_phys",
+      "name": "PESTIC BIOCHEM PHYS",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 33.33333333333333
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 100
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 92.85714285714286,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 7.14285714285714,
+          "pct_eligible": 58.333333333333336
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 93.75,
+          "pct_bar_informative": 3.125,
+          "pct_only_informative": 3.125,
+          "pct_eligible": 66.66666666666666
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 94.11764705882352,
+          "pct_bar_informative": 2.94117647058823,
+          "pct_only_informative": 2.94117647058823,
+          "pct_eligible": 66.66666666666666
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 87.8048780487805,
+          "pct_bar_informative": 10.97560975609756,
+          "pct_only_informative": 1.21951219512195,
+          "pct_eligible": 73.87387387387388
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 86,
+          "pct_bar_informative": 12,
+          "pct_only_informative": 2,
+          "pct_eligible": 65.359477124183
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 85.98130841121495,
+          "pct_bar_informative": 13.084112149532709,
+          "pct_only_informative": 0.93457943925233,
+          "pct_eligible": 76.42857142857142
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 91.12903225806453,
+          "pct_bar_informative": 7.25806451612903,
+          "pct_only_informative": 1.6129032258064497,
+          "pct_eligible": 76.5432098765432
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 80.50314465408806,
+          "pct_bar_informative": 14.46540880503144,
+          "pct_only_informative": 5.0314465408805,
+          "pct_eligible": 77.18446601941747
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 79.88826815642457,
+          "pct_bar_informative": 13.40782122905028,
+          "pct_only_informative": 6.70391061452514,
+          "pct_eligible": 88.61386138613861
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 76.59574468085107,
+          "pct_bar_informative": 17.5531914893617,
+          "pct_only_informative": 5.85106382978723,
+          "pct_eligible": 81.73913043478261
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 72.47386759581882,
+          "pct_bar_informative": 21.95121951219512,
+          "pct_only_informative": 5.5749128919860595,
+          "pct_eligible": 88.3076923076923
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 62.18487394957983,
+          "pct_bar_informative": 29.9719887955182,
+          "pct_only_informative": 7.8431372549019605,
+          "pct_eligible": 87.28606356968214
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 60.22727272727273,
+          "pct_bar_informative": 34.090909090909086,
+          "pct_only_informative": 5.68181818181818,
+          "pct_eligible": 88.44221105527639
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "pflug_arch_eur_j_phy",
+      "name": "PFLUG ARCH EUR J PHY",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 89.39393939393939,
+          "pct_bar_informative": 7.575757575757571,
+          "pct_only_informative": 3.03030303030303,
+          "pct_eligible": 82.5
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 77.10843373493977,
+          "pct_bar_informative": 16.867469879518072,
+          "pct_only_informative": 6.02409638554216,
+          "pct_eligible": 85.56701030927834
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 83.9506172839506,
+          "pct_bar_informative": 13.58024691358024,
+          "pct_only_informative": 2.46913580246913,
+          "pct_eligible": 87.09677419354838
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 73.49397590361446,
+          "pct_bar_informative": 16.867469879518072,
+          "pct_only_informative": 9.63855421686747,
+          "pct_eligible": 91.2087912087912
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 74.76635514018692,
+          "pct_bar_informative": 23.364485981308412,
+          "pct_only_informative": 1.86915887850467,
+          "pct_eligible": 95.53571428571428
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 74.80314960629921,
+          "pct_bar_informative": 18.89763779527559,
+          "pct_only_informative": 6.29921259842519,
+          "pct_eligible": 92.02898550724636
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 74.76635514018692,
+          "pct_bar_informative": 23.364485981308412,
+          "pct_only_informative": 1.86915887850467,
+          "pct_eligible": 90.67796610169492
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 70.58823529411765,
+          "pct_bar_informative": 29.411764705882348,
+          "pct_only_informative": 0,
+          "pct_eligible": 90.66666666666666
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 72.5,
+          "pct_bar_informative": 17.5,
+          "pct_only_informative": 10,
+          "pct_eligible": 87.91208791208791
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 61.904761904761905,
+          "pct_bar_informative": 22.22222222222222,
+          "pct_only_informative": 15.87301587301587,
+          "pct_eligible": 88.73239436619718
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 62.31884057971014,
+          "pct_bar_informative": 23.18840579710145,
+          "pct_only_informative": 14.4927536231884,
+          "pct_eligible": 92
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 42.85714285714285,
+          "pct_bar_informative": 23.8095238095238,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 86.3013698630137
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 18.18181818181818,
+          "pct_bar_informative": 25,
+          "pct_only_informative": 56.81818181818182,
+          "pct_eligible": 91.66666666666666
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 36.36363636363636,
+          "pct_bar_informative": 21.21212121212121,
+          "pct_only_informative": 42.42424242424242,
+          "pct_eligible": 86.8421052631579
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 25.352112676056336,
+          "pct_bar_informative": 18.30985915492957,
+          "pct_only_informative": 56.33802816901409,
+          "pct_eligible": 86.58536585365853
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 27.69230769230769,
+          "pct_bar_informative": 18.46153846153846,
+          "pct_only_informative": 53.84615384615385,
+          "pct_eligible": 86.66666666666667
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "physiol_genomics",
+      "name": "PHYSIOL GENOMICS",
+      "hasPolicy": true,
+      "policyYear": 2017,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 71.91011235955057,
+          "pct_bar_informative": 12.35955056179775,
+          "pct_only_informative": 15.73033707865168,
+          "pct_eligible": 76.06837606837607
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 77.64705882352942,
+          "pct_bar_informative": 14.117647058823529,
+          "pct_only_informative": 8.23529411764705,
+          "pct_eligible": 72.03389830508475
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 70.37037037037037,
+          "pct_bar_informative": 16.04938271604938,
+          "pct_only_informative": 13.58024691358024,
+          "pct_eligible": 77.14285714285715
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 54.11764705882353,
+          "pct_bar_informative": 28.235294117647058,
+          "pct_only_informative": 17.64705882352941,
+          "pct_eligible": 81.73076923076923
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 58.82352941176471,
+          "pct_bar_informative": 25.49019607843137,
+          "pct_only_informative": 15.686274509803921,
+          "pct_eligible": 77.27272727272727
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 61.53846153846154,
+          "pct_bar_informative": 20.51282051282051,
+          "pct_only_informative": 17.94871794871795,
+          "pct_eligible": 70.9090909090909
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 58.92857142857143,
+          "pct_bar_informative": 21.42857142857142,
+          "pct_only_informative": 19.64285714285714,
+          "pct_eligible": 70
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 62.16216216216216,
+          "pct_bar_informative": 18.91891891891892,
+          "pct_only_informative": 18.91891891891892,
+          "pct_eligible": 77.08333333333334
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 56.451612903225815,
+          "pct_bar_informative": 20.96774193548387,
+          "pct_only_informative": 22.58064516129032,
+          "pct_eligible": 80.51948051948052
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 28.888888888888882,
+          "pct_bar_informative": 26.66666666666666,
+          "pct_only_informative": 44.44444444444444,
+          "pct_eligible": 80.35714285714286
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 37.14285714285714,
+          "pct_bar_informative": 22.85714285714285,
+          "pct_only_informative": 40,
+          "pct_eligible": 71.42857142857143
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 11.11111111111111,
+          "pct_bar_informative": 25.92592592592592,
+          "pct_only_informative": 62.96296296296296,
+          "pct_eligible": 75
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 11.76470588235294,
+          "pct_bar_informative": 20.58823529411764,
+          "pct_only_informative": 67.64705882352942,
+          "pct_eligible": 89.47368421052632
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 5.12820512820512,
+          "pct_bar_informative": 23.07692307692307,
+          "pct_only_informative": 71.7948717948718,
+          "pct_eligible": 86.66666666666667
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 8.695652173913041,
+          "pct_bar_informative": 26.08695652173913,
+          "pct_only_informative": 65.21739130434783,
+          "pct_eligible": 73.01587301587301
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 14.705882352941169,
+          "pct_bar_informative": 20.58823529411764,
+          "pct_only_informative": 64.70588235294117,
+          "pct_eligible": 68
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2017,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "physiol_meas",
+      "name": "PHYSIOL MEAS",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 46.51162790697674,
+          "pct_bar_informative": 4.65116279069767,
+          "pct_only_informative": 48.837209302325576,
+          "pct_eligible": 31.851851851851848
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 37.25490196078431,
+          "pct_bar_informative": 5.88235294117647,
+          "pct_only_informative": 56.86274509803921,
+          "pct_eligible": 35.66433566433566
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 40.81632653061224,
+          "pct_bar_informative": 4.08163265306122,
+          "pct_only_informative": 55.10204081632652,
+          "pct_eligible": 32.88590604026846
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 36.58536585365853,
+          "pct_bar_informative": 7.3170731707317,
+          "pct_only_informative": 56.09756097560976,
+          "pct_eligible": 32.03125
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 29.87012987012987,
+          "pct_bar_informative": 11.68831168831168,
+          "pct_only_informative": 58.44155844155844,
+          "pct_eligible": 42.5414364640884
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 26.31578947368421,
+          "pct_bar_informative": 8.7719298245614,
+          "pct_only_informative": 64.91228070175438,
+          "pct_eligible": 32.947976878612714
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 25.80645161290322,
+          "pct_bar_informative": 4.83870967741935,
+          "pct_only_informative": 69.35483870967742,
+          "pct_eligible": 38.036809815950924
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 28.947368421052634,
+          "pct_bar_informative": 6.5789473684210495,
+          "pct_only_informative": 64.47368421052632,
+          "pct_eligible": 45.23809523809524
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 20.98765432098765,
+          "pct_bar_informative": 12.34567901234567,
+          "pct_only_informative": 66.66666666666666,
+          "pct_eligible": 39.51219512195122
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 26.984126984126984,
+          "pct_bar_informative": 4.76190476190476,
+          "pct_only_informative": 68.25396825396825,
+          "pct_eligible": 40.64516129032258
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 20.96774193548387,
+          "pct_bar_informative": 6.451612903225799,
+          "pct_only_informative": 72.58064516129032,
+          "pct_eligible": 43.661971830985905
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 17.14285714285714,
+          "pct_bar_informative": 5.71428571428571,
+          "pct_only_informative": 77.14285714285715,
+          "pct_eligible": 44.0251572327044
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 19.565217391304348,
+          "pct_bar_informative": 4.347826086956521,
+          "pct_only_informative": 76.08695652173914,
+          "pct_eligible": 40.35087719298245
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 21.31147540983606,
+          "pct_bar_informative": 4.91803278688524,
+          "pct_only_informative": 73.77049180327869,
+          "pct_eligible": 53.98230088495575
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 14.66666666666666,
+          "pct_bar_informative": 5.33333333333333,
+          "pct_only_informative": 80,
+          "pct_eligible": 56.390977443609025
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 9.43396226415094,
+          "pct_bar_informative": 5.66037735849056,
+          "pct_only_informative": 84.90566037735849,
+          "pct_eligible": 53.535353535353536
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "physiol_res",
+      "name": "PHYSIOL RES",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 87.5,
+          "pct_bar_informative": 4.6875,
+          "pct_only_informative": 7.8125,
+          "pct_eligible": 62.745098039215684
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 73.58490566037736,
+          "pct_bar_informative": 7.54716981132075,
+          "pct_only_informative": 18.86792452830188,
+          "pct_eligible": 57.608695652173914
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 89.83050847457628,
+          "pct_bar_informative": 1.69491525423728,
+          "pct_only_informative": 8.47457627118644,
+          "pct_eligible": 67.04545454545455
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 88.52459016393442,
+          "pct_bar_informative": 3.27868852459016,
+          "pct_only_informative": 8.1967213114754,
+          "pct_eligible": 67.77777777777779
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 77.96610169491525,
+          "pct_bar_informative": 8.47457627118644,
+          "pct_only_informative": 13.5593220338983,
+          "pct_eligible": 57.28155339805825
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 82.02247191011236,
+          "pct_bar_informative": 4.49438202247191,
+          "pct_only_informative": 13.48314606741573,
+          "pct_eligible": 59.333333333333336
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 83.69565217391305,
+          "pct_bar_informative": 6.52173913043478,
+          "pct_only_informative": 9.78260869565217,
+          "pct_eligible": 69.17293233082707
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 78.66666666666666,
+          "pct_bar_informative": 5.33333333333333,
+          "pct_only_informative": 16,
+          "pct_eligible": 65.78947368421053
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 78.04878048780488,
+          "pct_bar_informative": 6.09756097560975,
+          "pct_only_informative": 15.85365853658536,
+          "pct_eligible": 65.60000000000001
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 77.5,
+          "pct_bar_informative": 6.25,
+          "pct_only_informative": 16.25,
+          "pct_eligible": 60.60606060606061
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 69.73684210526315,
+          "pct_bar_informative": 9.21052631578947,
+          "pct_only_informative": 21.05263157894736,
+          "pct_eligible": 70.37037037037037
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 72.58064516129032,
+          "pct_bar_informative": 8.06451612903225,
+          "pct_only_informative": 19.35483870967742,
+          "pct_eligible": 67.3913043478261
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 72.22222222222221,
+          "pct_bar_informative": 5.55555555555555,
+          "pct_only_informative": 22.22222222222222,
+          "pct_eligible": 61.36363636363637
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 59.42028985507246,
+          "pct_bar_informative": 10.144927536231881,
+          "pct_only_informative": 30.43478260869565,
+          "pct_eligible": 78.4090909090909
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 47.22222222222222,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 36.11111111111111,
+          "pct_eligible": 87.8048780487805
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 66.12903225806451,
+          "pct_bar_informative": 9.67741935483871,
+          "pct_only_informative": 24.19354838709677,
+          "pct_eligible": 72.94117647058823
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "psychophysiology",
+      "name": "PSYCHOPHYSIOLOGY",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 90,
+          "pct_bar_informative": 6,
+          "pct_only_informative": 4,
+          "pct_eligible": 45.87155963302752
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 85.91549295774648,
+          "pct_bar_informative": 4.22535211267605,
+          "pct_only_informative": 9.85915492957746,
+          "pct_eligible": 41.52046783625731
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 82.85714285714286,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 7.14285714285714,
+          "pct_eligible": 45.454545454545446
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 79.3103448275862,
+          "pct_bar_informative": 1.72413793103448,
+          "pct_only_informative": 18.96551724137931,
+          "pct_eligible": 48.73949579831932
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 72.91666666666666,
+          "pct_bar_informative": 4.16666666666666,
+          "pct_only_informative": 22.91666666666666,
+          "pct_eligible": 39.6694214876033
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 76.81159420289855,
+          "pct_bar_informative": 8.695652173913041,
+          "pct_only_informative": 14.4927536231884,
+          "pct_eligible": 43.125
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 77.94117647058823,
+          "pct_bar_informative": 5.88235294117647,
+          "pct_only_informative": 16.17647058823529,
+          "pct_eligible": 41.21212121212121
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 76.5432098765432,
+          "pct_bar_informative": 9.876543209876539,
+          "pct_only_informative": 13.58024691358024,
+          "pct_eligible": 51.26582278481012
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 72.3076923076923,
+          "pct_bar_informative": 10.76923076923077,
+          "pct_only_informative": 16.92307692307692,
+          "pct_eligible": 47.44525547445255
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 61.42857142857143,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 28.57142857142857,
+          "pct_eligible": 47.61904761904761
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 61.386138613861384,
+          "pct_bar_informative": 13.86138613861386,
+          "pct_only_informative": 24.75247524752475,
+          "pct_eligible": 52.879581151832454
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 58.620689655172406,
+          "pct_bar_informative": 12.93103448275862,
+          "pct_only_informative": 28.44827586206896,
+          "pct_eligible": 56.038647342995176
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 51.61290322580645,
+          "pct_bar_informative": 16.12903225806451,
+          "pct_only_informative": 32.25806451612903,
+          "pct_eligible": 53.142857142857146
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 36.48648648648648,
+          "pct_bar_informative": 12.837837837837828,
+          "pct_only_informative": 50.67567567567568,
+          "pct_eligible": 62.447257383966246
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 28.35820895522388,
+          "pct_bar_informative": 11.19402985074626,
+          "pct_only_informative": 60.447761194029844,
+          "pct_eligible": 57.02127659574469
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 25.78616352201258,
+          "pct_bar_informative": 17.61006289308176,
+          "pct_only_informative": 56.60377358490566,
+          "pct_eligible": 60.91954022988506
+        }
+      ],
+      "policyLines": []
+    }
+  ]
+}

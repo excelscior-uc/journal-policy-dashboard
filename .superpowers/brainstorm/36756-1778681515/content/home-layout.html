@@ -1,0 +1,109 @@
+<h2>Home Screen Layout</h2>
+<p class="subtitle">Which home screen layout fits the dashboard best?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="hero-cards" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#2c3e50;color:#fff;padding:14px 18px;font-size:13px;font-weight:700;letter-spacing:0.02em;">
+        Tracking the Shift: Bar Graphs → Informative Plots
+      </div>
+      <div style="background:#f8f9fa;padding:12px 18px;font-size:11px;color:#555;border-bottom:1px solid #dee2e6;">
+        Impact of journal policies on biomedical data visualization
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 18px;background:#f8f9fa;">
+        <div style="background:#fff;border:1px solid #dee2e6;border-radius:5px;padding:10px;text-align:center;font-size:10px;">
+          <div style="font-size:18px;font-weight:700;color:#2c3e50;">12</div>
+          <div style="color:#888;">Research Fields</div>
+        </div>
+        <div style="background:#fff;border:1px solid #dee2e6;border-radius:5px;padding:10px;text-align:center;font-size:10px;">
+          <div style="font-size:18px;font-weight:700;color:#2c3e50;">335</div>
+          <div style="color:#888;">Charts</div>
+        </div>
+        <div style="background:#fff;border:1px solid #dee2e6;border-radius:5px;padding:10px;text-align:center;font-size:10px;">
+          <div style="font-size:18px;font-weight:700;color:#2c3e50;">2008–2024</div>
+          <div style="color:#888;">Time span</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0 18px 12px;background:#f8f9fa;">
+        <div style="background:#2c3e50;color:#fff;border-radius:5px;padding:8px;font-size:10px;text-align:center;">Cardiac &amp; CV</div>
+        <div style="background:#34495e;color:#fff;border-radius:5px;padding:8px;font-size:10px;text-align:center;">Oncology</div>
+        <div style="background:#1a252f;color:#fff;border-radius:5px;padding:8px;font-size:10px;text-align:center;">Neurosciences</div>
+        <div style="background:#2c3e50;color:#fff;border-radius:5px;padding:8px;font-size:10px;text-align:center;">Immunology</div>
+        <div style="background:#34495e;color:#fff;border-radius:5px;padding:8px;font-size:10px;text-align:center;">Genetics</div>
+        <div style="background:#1a252f;color:#fff;border-radius:5px;padding:8px;font-size:10px;text-align:center;">+ 7 more…</div>
+      </div>
+      <div style="background:#fff;border-top:1px solid #dee2e6;padding:6px 18px;font-size:9px;color:#aaa;text-align:center;">
+        [Funded by logos here]
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Hero + Field Cards</h3>
+      <p>Title banner, key stats, then clickable cards per research field. Clean entry point.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="magazine" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#2c3e50;color:#fff;padding:14px 18px;font-size:13px;font-weight:700;">
+        Journal Policy Dashboard
+      </div>
+      <div style="display:flex;background:#f8f9fa;border-bottom:1px solid #dee2e6;">
+        <div style="flex:2;padding:12px 18px;font-size:10px;">
+          <div style="font-weight:700;color:#2c3e50;margin-bottom:4px;">About this study</div>
+          <div style="color:#555;line-height:1.5;">Tracks how biomedical journals adopted policies shifting from bar graphs to informative plots for continuous data (2008–2024).</div>
+          <div style="margin-top:8px;display:flex;gap:6px;">
+            <span style="background:#2c3e50;color:#fff;border-radius:3px;padding:3px 7px;font-size:9px;">Explore All Fields</span>
+          </div>
+        </div>
+        <div style="flex:1;padding:12px;border-left:1px solid #dee2e6;">
+          <div style="font-size:9px;font-weight:700;color:#888;margin-bottom:5px;">FIELDS</div>
+          <div style="font-size:9px;color:#495057;line-height:1.7;">
+            Cardiac &amp; CV<br>Oncology<br>Neurosciences<br>Immunology<br>Genetics &amp; Heredity<br>Clinical Neurology<br>
+            <span style="color:#2c3e50;font-weight:600;">+ 6 more →</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff;border-top:1px solid #dee2e6;padding:6px 18px;font-size:9px;color:#aaa;text-align:center;">
+        [Funded by logos here]
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Editorial / Magazine</h3>
+      <p>Two-column: study description left, field index right. More text, feels like a paper abstract.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="minimal-nav" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#2c3e50;color:#fff;padding:14px 18px;font-size:13px;font-weight:700;">
+        Tracking the Shift from Bar Graphs to Informative Plots
+      </div>
+      <div style="background:#f8f9fa;padding:10px 18px;font-size:10px;color:#555;border-bottom:1px solid #dee2e6;">
+        Select a research field to explore visualisation trends and policy impact
+      </div>
+      <div style="background:#f8f9fa;padding:10px 18px;">
+        <div style="display:flex;flex-direction:column;gap:5px;">
+          <div style="background:#fff;border:1px solid #dee2e6;border-left:3px solid #2c3e50;padding:8px 12px;border-radius:3px;font-size:10px;display:flex;justify-content:space-between;align-items:center;">
+            <span>All Research Fields</span><span style="color:#2c3e50;">→</span>
+          </div>
+          <div style="background:#fff;border:1px solid #dee2e6;border-left:3px solid #34495e;padding:8px 12px;border-radius:3px;font-size:10px;display:flex;justify-content:space-between;align-items:center;">
+            <span>Cardiac &amp; Cardiovascular Systems</span><span style="color:#888;">→</span>
+          </div>
+          <div style="background:#fff;border:1px solid #dee2e6;border-left:3px solid #34495e;padding:8px 12px;border-radius:3px;font-size:10px;display:flex;justify-content:space-between;align-items:center;">
+            <span>Oncology</span><span style="color:#888;">→</span>
+          </div>
+          <div style="color:#888;font-size:9px;padding:4px 12px;">+ 10 more fields…</div>
+        </div>
+      </div>
+      <div style="background:#fff;border-top:1px solid #dee2e6;padding:6px 18px;font-size:9px;color:#aaa;text-align:center;">
+        [Funded by logos here]
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Minimal List Nav</h3>
+      <p>Title + short intro + vertical list of fields. Fastest to navigate, lowest friction.</p>
+    </div>
+  </div>
+
+</div>

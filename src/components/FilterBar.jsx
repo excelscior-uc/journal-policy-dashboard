@@ -16,15 +16,21 @@ export default function FilterBar({ visibleSeries, onToggleSeries, policyFilter,
       ))}
       <span className="filter-sep">|</span>
       <span className="filter-bar__label">Journals:</span>
-      <select
-        className="filter-select"
-        value={policyFilter}
-        onChange={e => onPolicyFilter(e.target.value)}
-      >
-        <option value="all">All (Policy + Non-Policy)</option>
-        <option value="policy">Policy journals only</option>
-        <option value="nopolicy">Non-Policy journals only</option>
-      </select>
+      <div className="seg-switch">
+        {[
+          { value: 'all',      label: 'All' },
+          { value: 'policy',   label: 'Policy' },
+          { value: 'nopolicy', label: 'Non-Policy' },
+        ].map(opt => (
+          <button
+            key={opt.value}
+            className={`seg-switch__btn${policyFilter === opt.value ? ' active' : ''}`}
+            onClick={() => onPolicyFilter(opt.value)}
+          >
+            {opt.label}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }
