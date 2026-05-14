@@ -50,7 +50,7 @@ step2_build_aggregated_dataset_v3.py
     → diag_missing_issns_TIMESTAMP.csv           (if any unmatched ISSNs)
     → diag_unmatched_rows_TIMESTAMP.csv          (if any unmatched rows)
 
-step3_generate_dashboard_v8.py
+step3_generate_dashboard_v9.py
     → dashboard_output/index_TIMESTAMP.html      (~3.6 MB, self-contained)
 ```
 
@@ -104,7 +104,7 @@ Add `--no-crossref` to skip the Crossref API lookup for missing publication year
 Reads the aggregated CSV and writes a fully self-contained HTML dashboard.
 
 ```bash
-python step3_generate_dashboard_v8.py \
+python step3_generate_dashboard_v9.py \
     --csv    path/to/bz_journal_year_percentages_All_Fields_TIMESTAMP.csv \
     --output dashboard_output/
 ```
@@ -176,7 +176,7 @@ The pipeline produces one row per journal per year (3,211 rows total, covering 2
 | `sum_bar`, `sum_inf`, `sum_only_bar`, `sum_only_inf`, `sum_bar_and_inf`, `sum_eligible` | Article counts for each category                                                                 |
 | `Cardiac & Cardiovascular Systems` … `Urology & Nephrology`                             | Binary field indicators (12 columns; 1 if the journal's `All_Fields` string contains that field) |
 
-> **Note:** `n_articles` and `n_bar_or_informative` are distinct. `n_articles` is the total number of screened articles per journal-year before the eligibility filter; `n_bar_or_informative` is the eligible subset. `p_eligible` therefore reflects the true fraction of all screened articles that contain at least one bar or informative chart.
+> **Note:** `n_articles` and `n_bar_or_informative` are distinct. `n_articles` is the total number of screened articles per journal-year before the eligibility filter; `n_bar_or_informative` is the eligible subset. `p_eligible` therefore reflects the true fraction of all screened articles that contain at least one bar or informative chart. This column is retained in the CSV for reference but is not plotted in the dashboard.
 >
 > Proportions in the CSV (0–1) are scaled to percentages (0–100) by the dashboard script before charting.
 
@@ -237,9 +237,6 @@ Chart titles wrap and shrink as cards narrow. In multi-column grids, the top mar
 **Policy year markers**
 Per-journal charts show a single vertical yellow line at the year of policy adoption. Aggregated charts show semi-transparent yellow bands whose width reflects the proportion of journals adopting a policy in a given year.
 
-**Eligible articles line**
-A dotted grey line showing `% eligible articles` (proportion of all screened articles that are eligible) is available on all charts; it is hidden by default and can be toggled via the legend.
-
 **Collapsible About sections**
 The About tab contains collapsible sections covering study background, metric definitions, and a references list — all expandable/collapsible without page reload.
 
@@ -262,7 +259,7 @@ The About tab contains collapsible sections covering study background, metric de
 
 **No-results filter applied after the join.** Only rows where all figure-type count columns are NULL (no BZ match at all) are removed at stage C. Rows where all counts are zero are valid BZ results — the tool ran and found no matching chart types — and are retained until the eligibility filter at stage E.
 
-**Denominator for proportions.** The denominator for all proportion columns except `p_eligible` is `n_bar_or_informative` — the count of eligible articles (those containing at least one bar or informative chart) per journal × year. `p_eligible` uses `n_articles` (total screened articles per journal-year, captured before the eligibility filter) as its denominator, making it a meaningful measure of how much of a journal's output the analysis covers.
+**Denominator for proportions.** The denominator for all proportion columns except `p_eligible` is `n_bar_or_informative` — the count of eligible articles (those containing at least one bar or informative chart) per journal × year. `p_eligible` uses `n_articles` (total screened articles per journal-year, captured before the eligibility filter) as its denominator, making it a meaningful measure of how much of a journal's output the analysis covers. This column is retained in the CSV for reference but is not displayed in the dashboard.
 
 **Journal mapping not deduplicated.** The mapping file has 214 rows for 213 journals (two rows for JID 114, one per ISSN). All 214 ISSNs are unique, so no deduplication is applied; removing one row would silently discard a valid ISSN-to-journal mapping.
 
