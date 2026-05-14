@@ -47,8 +47,9 @@ export default function TopNav() {
                 key={f.slug}
                 className="top-nav__dropdown-item"
                 onClick={() => handleSelect(f.slug)}
+                onMouseDown={e => e.preventDefault()}
               >
-                <span>{f.icon}</span> {f.name}
+                <span aria-hidden="true">{f.icon}</span> {f.name}
               </li>
             ))}
           </ul>
