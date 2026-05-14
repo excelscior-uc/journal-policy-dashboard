@@ -120,19 +120,41 @@ export default function FieldPage() {
                 )}
               </div>
 
-              <div className="chart-section-title">Per-Journal Charts</div>
-              <div className="chart-grid">
-                {filteredJournals.map(j => (
-                  <ChartCard
-                    key={j.id}
-                    title={j.name}
-                    meta={j.hasPolicy ? `Policy ${j.policyYear}` : 'No policy'}
-                    chartData={j.chartData}
-                    policyLines={j.policyLines}
-                    visibleSeries={visibleSeries}
-                  />
-                ))}
-              </div>
+              {data.fields?.length > 0 ? (
+                <>
+                  <div className="chart-section-title">Per-Field Charts</div>
+                  <div className="chart-grid">
+                    {data.fields.map(f => {
+                      const meta = FIELDS.find(x => x.slug === f.slug)
+                      return (
+                        <ChartCard
+                          key={f.slug}
+                          title={`${meta?.icon ?? ''} ${f.field}`}
+                          chartData={f.aggAll?.chartData}
+                          policyLines={f.aggAll?.policyLines}
+                          visibleSeries={visibleSeries}
+                        />
+                      )
+                    })}
+                  </div>
+                </>
+              ) : filteredJournals.length > 0 ? (
+                <>
+                  <div className="chart-section-title">Per-Journal Charts</div>
+                  <div className="chart-grid">
+                    {filteredJournals.map(j => (
+                      <ChartCard
+                        key={j.id}
+                        title={j.name}
+                        meta={j.hasPolicy ? `Policy ${j.policyYear}` : 'No policy'}
+                        chartData={j.chartData}
+                        policyLines={j.policyLines}
+                        visibleSeries={visibleSeries}
+                      />
+                    ))}
+                  </div>
+                </>
+              ) : null}
             </>
           )}
 

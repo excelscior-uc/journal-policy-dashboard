@@ -151,7 +151,7 @@ function buildFieldJson(slug, fieldKey, plots) {
   }
 }
 
-function buildAllFieldsJson(plots) {
+function buildAllFieldsJson(plots, fieldJsons) {
   const p = plots['plot_global_agg_global']
   if (!p) return null
   return {
@@ -165,6 +165,7 @@ function buildAllFieldsJson(plots) {
       ? { chartData: tracesToChartData(plots['plot_global_agg_npo'].data), policyLines: tracesToPolicyLines(plots['plot_global_agg_npo'].data) }
       : null,
     journals: [],
+    fields: fieldJsons.map(f => ({ slug: f.slug, field: f.field, aggAll: f.aggAll })),
   }
 }
 
@@ -175,13 +176,14 @@ if (process.argv[1] && process.argv[1].endsWith('extract-data.js')) {
   const outDir = join(__dirname, '../public/data')
   mkdirSync(outDir, { recursive: true })
 
+  const fieldJsons = []
   for (const [fieldKey, slug] of Object.entries(FIELD_SLUG_MAP)) {
     const json = buildFieldJson(slug, fieldKey, plots)
     writeFileSync(join(outDir, `${slug}.json`), JSON.stringify(json, null, 2))
     console.log(`✓ ${slug}.json`)
+    fieldJsons.push(json)
   }
-
-  const allFields = buildAllFieldsJson(plots)
+  const allFields = buildAllFieldsJson(plots, fieldJsons)
   writeFileSync(join(outDir, 'all-fields.json'), JSON.stringify(allFields, null, 2))
   console.log('✓ all-fields.json')
 }
