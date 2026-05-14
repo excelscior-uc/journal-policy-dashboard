@@ -1,9 +1,10 @@
 import { useState, useEffect, useMemo } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { FIELDS, SERIES_CONFIG } from '../data/fields'
 import ChartCard from '../components/ChartCard'
 import FilterBar from '../components/FilterBar'
 import JournalSidebar from '../components/JournalSidebar'
+import FieldSwitcherBar from '../components/FieldSwitcherBar'
 
 const DEFAULT_VISIBLE = new Set(SERIES_CONFIG.map(s => s.key))
 
@@ -58,20 +59,7 @@ export default function FieldPage() {
 
   return (
     <>
-      {/* breadcrumb */}
-      <div className="breadcrumb">
-        <Link to="/" className="breadcrumb__home">← Home</Link>
-        <span className="breadcrumb__sep">/</span>
-        <span>{field ? `${field.icon} ${field.name}` : slug}</span>
-      </div>
-
-      {/* field header */}
-      {field && (
-        <div className="field-header">
-          <div className="field-header__icon">{field.icon}</div>
-          <h2>{field.name}</h2>
-        </div>
-      )}
+      <FieldSwitcherBar currentSlug={slug} />
 
       {/* filter bar */}
       <FilterBar
