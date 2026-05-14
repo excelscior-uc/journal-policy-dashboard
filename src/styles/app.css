@@ -1,1 +1,198 @@
-/* app.css - placeholder, will be filled in Task 4 */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f0f2f5;
+  color: #212529;
+}
+
+/* ── TYPOGRAPHY ── */
+h1 { font-size: 28px; font-weight: 800; line-height: 1.25; }
+h2 { font-size: 17px; font-weight: 700; color: #2c3e50; }
+h3 { font-size: 14px; font-weight: 700; color: #2c3e50; }
+p  { font-size: 13px; line-height: 1.7; color: #495057; }
+a  { color: #2c3e50; }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #1a252f 0%, #2c3e50 60%, #34495e 100%);
+  color: #fff;
+  padding: 64px 48px 56px;
+  text-align: center;
+}
+.hero__eyebrow {
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); margin-bottom: 16px;
+}
+.hero__title { color: #fff; max-width: 640px; margin: 0 auto 16px; }
+.hero__title em { font-style: normal; color: #76b5b2; }
+.hero__sub {
+  font-size: 14px; color: rgba(255,255,255,0.72);
+  max-width: 520px; margin: 0 auto 32px;
+}
+.hero__cta {
+  display: inline-block; background: #76b5b2; color: #1a252f;
+  font-weight: 700; font-size: 13px; padding: 11px 28px;
+  border-radius: 6px; text-decoration: none; margin-right: 10px;
+  border: none; cursor: pointer;
+}
+.hero__cta-ghost {
+  display: inline-block; border: 1px solid rgba(255,255,255,0.35);
+  color: #fff; font-size: 13px; padding: 11px 24px;
+  border-radius: 6px; text-decoration: none; background: none; cursor: pointer;
+}
+
+/* ── STATS STRIP ── */
+.stats-strip {
+  background: #fff; border-bottom: 1px solid #dee2e6;
+  display: flex; justify-content: center;
+}
+.stats-strip__item {
+  flex: 1; max-width: 180px; text-align: center;
+  padding: 20px 16px; border-right: 1px solid #dee2e6;
+}
+.stats-strip__item:last-child { border-right: none; }
+.stats-strip__num { font-size: 24px; font-weight: 800; color: #2c3e50; }
+.stats-strip__lbl {
+  font-size: 10px; color: #6c757d; margin-top: 3px;
+  text-transform: uppercase; letter-spacing: 0.07em;
+}
+
+/* ── ACCORDION ── */
+.accordion { background: #fff; border: 1px solid #dee2e6; border-radius: 7px; overflow: hidden; margin-bottom: 10px; }
+.accordion__toggle {
+  width: 100%; text-align: left; background: #fff; border: none;
+  padding: 14px 18px; font-size: 14px; font-weight: 600; color: #2c3e50;
+  cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+}
+.accordion__toggle:hover { background: #f8f9fa; }
+.accordion__icon { font-size: 12px; color: #6c757d; transition: transform 0.2s; }
+.accordion__icon--closed { transform: rotate(-90deg); }
+.accordion__body { padding: 4px 18px 18px; border-top: 1px solid #f1f3f5; }
+
+/* ── FIELD GRID ── */
+.field-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.field-card {
+  background: #fff; border: 1px solid #dee2e6; border-radius: 7px;
+  padding: 14px; cursor: pointer; text-decoration: none; display: block;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field-card:hover { border-color: #2c3e50; box-shadow: 0 2px 8px rgba(44,62,80,0.10); }
+.field-card__icon { font-size: 20px; margin-bottom: 6px; }
+.field-card__name { font-size: 11px; font-weight: 700; color: #2c3e50; line-height: 1.3; }
+.field-card__arrow { font-size: 11px; color: #adb5bd; margin-top: 6px; }
+
+/* ── METRIC SWATCH (in accordion) ── */
+.metric-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+.metric-item:last-child { margin-bottom: 0; }
+.metric-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; margin-top: 3px; }
+.metric-label { font-weight: 700; font-size: 13px; color: #212529; margin-bottom: 3px; }
+.metric-desc { font-size: 12px; color: #6c757d; line-height: 1.5; }
+
+/* ── REF LIST ── */
+.ref-list { list-style: none; padding: 0; }
+.ref-list li { font-size: 12px; color: #495057; padding: 6px 0; border-bottom: 1px solid #f1f3f5; line-height: 1.5; }
+.ref-list li:last-child { border-bottom: none; }
+
+/* ── FOOTER ── */
+.footer { background: #fff; border-top: 1px solid #dee2e6; padding: 24px 32px; text-align: center; }
+.footer__label { font-size: 10px; color: #adb5bd; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 12px; }
+.footer__logos { display: flex; gap: 20px; align-items: center; justify-content: center; }
+.footer__logos img { max-height: 48px; max-width: 120px; object-fit: contain; }
+
+/* ── SECTION WRAPPER ── */
+.section-wrap { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  background: #2c3e50; color: #fff;
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 24px; font-size: 13px;
+}
+.breadcrumb__home { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; }
+.breadcrumb__sep { color: rgba(255,255,255,0.3); }
+
+/* ── FILTER BAR ── */
+.filter-bar {
+  background: #f8f9fa; border-bottom: 1px solid #dee2e6;
+  padding: 8px 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.filter-bar__label { font-size: 12px; font-weight: 600; color: #2c3e50; }
+.filter-chip {
+  padding: 3px 12px; border-radius: 14px; border: 1px solid #ced4da;
+  background: #fff; font-size: 11px; cursor: pointer; color: #495057;
+  display: inline-flex; align-items: center; gap: 5px; user-select: none;
+}
+.filter-chip.active { background: #2c3e50; color: #fff; border-color: #2c3e50; }
+.filter-chip__swatch { width: 10px; height: 3px; border-radius: 2px; display: inline-block; }
+.filter-sep { color: #dee2e6; }
+.filter-select {
+  padding: 3px 10px; border: 1px solid #ced4da; border-radius: 5px;
+  font-size: 11px; background: #fff; color: #495057;
+}
+
+/* ── FIELD PAGE LAYOUT ── */
+.field-layout { display: flex; height: calc(100vh - 130px); min-height: 400px; }
+
+/* ── JOURNAL SIDEBAR ── */
+.journal-sidebar {
+  width: 220px; flex-shrink: 0; background: #fff;
+  border-right: 1px solid #dee2e6; overflow-y: auto; padding: 12px 8px;
+}
+.journal-sidebar__title {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.09em;
+  color: #adb5bd; padding: 0 8px 8px; font-weight: 600;
+}
+.journal-link {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 10px; border-radius: 5px; font-size: 11px;
+  color: #495057; cursor: pointer; margin-bottom: 2px; text-decoration: none;
+}
+.journal-link:hover { background: #f1f3f5; }
+.journal-link.active { background: #2c3e50; color: #fff; font-weight: 600; }
+.policy-dot { width: 6px; height: 6px; border-radius: 50%; background: #76b5b2; flex-shrink: 0; }
+.policy-dot--none { background: #dee2e6; }
+
+/* ── CHART AREA ── */
+.chart-area { flex: 1; overflow-y: auto; padding: 20px 24px; }
+.chart-section-title {
+  font-size: 13px; font-weight: 700; color: #2c3e50;
+  margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #dee2e6;
+  margin-top: 20px;
+}
+.chart-section-title:first-child { margin-top: 0; }
+.chart-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+.chart-grid--full { grid-template-columns: 1fr; }
+
+/* ── CHART CARD ── */
+.chart-card { background: #fff; border: 1px solid #dee2e6; border-radius: 7px; overflow: hidden; }
+.chart-card__header {
+  padding: 10px 14px 8px; border-bottom: 1px solid #f1f3f5;
+  font-size: 12px; font-weight: 600; color: #2c3e50;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.chart-card__meta { font-size: 10px; color: #6c757d; font-weight: 400; }
+.chart-card__body { height: 260px; }
+.chart-card__body--agg { height: 300px; }
+.chart-card__skeleton { height: 100%; background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+.policy-badge {
+  font-size: 9px; background: #e8f5e9; color: #2e7d32;
+  border-radius: 3px; padding: 1px 5px; margin-left: 4px; font-weight: 600;
+}
+
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* ── FIELD HEADER ── */
+.field-header { background: #fff; border-bottom: 1px solid #dee2e6; padding: 18px 24px; }
+.field-header__icon { font-size: 24px; margin-bottom: 4px; }
+
+/* ── HOME SECTIONS ── */
+.home-section { padding: 32px 0 0; }
+
+@media (max-width: 768px) {
+  .field-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding: 40px 24px 36px; }
+  .field-layout { flex-direction: column; height: auto; }
+  .journal-sidebar { width: 100%; border-right: none; border-bottom: 1px solid #dee2e6; }
+  .chart-grid { grid-template-columns: 1fr; }
+}
