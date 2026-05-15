@@ -54,6 +54,7 @@ export default function FieldPage() {
     setError(null)
     setSelectedJournal('__agg__')
     setPolicyFilter('all')
+    setPrerenderAll(false)
 
     const cached = fieldCache.get(slug)
     if (cached) {
