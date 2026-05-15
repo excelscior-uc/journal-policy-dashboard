@@ -9,7 +9,6 @@ const SIDEBAR_WIDTH_MAX = 520
 const SIDEBAR_NAV_PAD_X = 20
 
 export default function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, policyFilter = 'all' }) {
-  console.log('[Sidebar] policyFilter =', policyFilter)
   const [search, setSearch] = useState('')
   const [fieldsOpen, setFieldsOpen] = useState(false)
   const [flyoutMounted, setFlyoutMounted] = useState(false)
@@ -101,7 +100,9 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
                   {allMeta?.name}
                   <span className="journal-sidebar__subfield-tags">
                     <span className="sf-tag sf-tag--journals">{allMeta?.totalJournals} journals</span>
-                    {allMeta?.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{allMeta.withPolicy} with policy</span>}
+                    {policyFilter === 'nopolicy'
+                      ? <span className="sf-tag sf-tag--no-policy">{(allMeta?.totalJournals ?? 0) - (allMeta?.withPolicy ?? 0)} without policy</span>
+                      : allMeta?.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{allMeta.withPolicy} with policy</span>}
                     {allStats && <span className="sf-tag sf-tag--total">{allStats.totalArticles.toLocaleString()} total</span>}
                     {allStats && <span className="sf-tag sf-tag--eligible">{allStats.eligibleArticles.toLocaleString()} eligible</span>}
                   </span>
@@ -124,7 +125,9 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
                       {f.name}
                       <span className="journal-sidebar__subfield-tags">
                         <span className="sf-tag sf-tag--journals">{f.totalJournals} journals</span>
-                        {f.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{f.withPolicy} with policy</span>}
+                        {policyFilter === 'nopolicy'
+                          ? <span className="sf-tag sf-tag--no-policy">{(f.totalJournals ?? 0) - (f.withPolicy ?? 0)} without policy</span>
+                          : f.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{f.withPolicy} with policy</span>}
                         {stats && <span className="sf-tag sf-tag--total">{stats.totalArticles.toLocaleString()} total</span>}
                         {stats && <span className="sf-tag sf-tag--eligible">{stats.eligibleArticles.toLocaleString()} eligible</span>}
                       </span>
@@ -188,7 +191,9 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
                       {f.name}
                       <span className="journal-sidebar__subfield-tags">
                         <span className="sf-tag sf-tag--journals">{f.totalJournals} journals</span>
-                        {f.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{f.withPolicy} with policy</span>}
+                        {policyFilter === 'nopolicy'
+                          ? <span className="sf-tag sf-tag--no-policy">{(f.totalJournals ?? 0) - (f.withPolicy ?? 0)} without policy</span>
+                          : f.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{f.withPolicy} with policy</span>}
                       </span>
                     </span>
                   </button>
