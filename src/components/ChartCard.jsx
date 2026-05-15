@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect, useMemo } from 'react'
-
-const EMPTY_POLICY_LINES = []
 import { toPng } from 'html-to-image'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -8,6 +6,8 @@ import {
 } from 'recharts'
 import { useVisible } from '../hooks/useVisible'
 import { SERIES_CONFIG } from '../data/fields'
+
+const EMPTY_POLICY_LINES = []
 
 function CustomTooltip({ active, payload, label }) {
   if (!active || !payload?.length) return null
