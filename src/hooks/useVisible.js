@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
-export function useVisible(ref, options = { threshold: 0.1 }) {
+const DEFAULT_OPTIONS = { threshold: 0.1, rootMargin: '300px' }
+
+export function useVisible(ref, options = DEFAULT_OPTIONS) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {

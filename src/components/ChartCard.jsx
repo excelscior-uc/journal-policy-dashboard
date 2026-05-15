@@ -242,6 +242,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                   x={pl.year}
                   stroke="rgba(253,231,37,0.7)"
                   strokeWidth={4}
+                  isAnimationActive={false}
                 />
               ))}
               {SERIES_CONFIG.filter(s => !visibleSeries || visibleSeries.has(s.key)).map(s => (
@@ -254,6 +255,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                   strokeDasharray={s.dashed ? '4 2' : undefined}
                   dot={{ r: 3 }}
                   connectNulls
+                  isAnimationActive={false}
                 />
               ))}
             </LineChart>
