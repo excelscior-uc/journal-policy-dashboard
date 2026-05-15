@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { FIELDS, SERIES_CONFIG } from '../data/fields'
 import ChartCard from '../components/ChartCard'
@@ -18,21 +18,17 @@ export default function FieldPage() {
   const [journalCols, setJournalCols] = useState(2)
   const [fieldCols, setFieldCols] = useState(2)
   const [policyFilter, setPolicyFilter] = useState('all')
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(
-    () => localStorage.getItem('sidebar-collapsed') === 'true'
-  )
+  const [isCapturing, setIsCapturing] = useState(false)
+  const captureRegistryRef = useRef([])
+
+  const registerCapture = useCallback((entry) => {
+    if (entry) captureRegistryRef.current.push(entry)
+  }, [])
 
   const field = FIELDS.find(f => f.slug === slug)
 
-  function toggleSidebar() {
-    setSidebarCollapsed(prev => {
-      const next = !prev
-      localStorage.setItem('sidebar-collapsed', String(next))
-      return next
-    })
-  }
-
   useEffect(() => {
+    captureRegistryRef.current = []
     window.scrollTo(0, 0)
     setData(null)
     setError(null)
@@ -105,8 +101,7 @@ export default function FieldPage() {
             journals={filteredJournals}
             selectedId={selectedJournal}
             onSelect={setSelectedJournal}
-            collapsed={sidebarCollapsed}
-            onToggle={toggleSidebar}
+
           />
         )}
 
