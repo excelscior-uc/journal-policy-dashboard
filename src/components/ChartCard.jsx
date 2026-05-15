@@ -114,6 +114,12 @@ export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData,
     return () => document.removeEventListener('mousedown', close)
   }, [menuOpen])
 
+  useEffect(() => {
+    if (!onMount) return
+    onMount({ title, capture: () => toPng(cardRef.current, { cacheBust: true, pixelRatio: 2 }) })
+    return () => onMount(null)
+  }, [onMount, title])
+
   async function captureCard() {
     return toPng(cardRef.current, { cacheBust: true, pixelRatio: 2 })
   }
