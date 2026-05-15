@@ -7,3 +7,7 @@
 /dashboard_output
 /images
 /assets
+/node_modules
+node_modules/
+/dist
+.superpowers/
