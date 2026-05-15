@@ -688,6 +688,325 @@
             "label": "6% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 65.38718373852512,
+            "pct_bar_informative": 13.46807835823252,
+            "pct_only_informative": 21.144737903242355,
+            "pct_eligible": 57.347617766508215,
+            "eligibleArticles": 1185,
+            "totalArticles": 1753
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 63.04108888907902,
+            "pct_bar_informative": 14.042599472944568,
+            "pct_only_informative": 22.916311637976406,
+            "pct_eligible": 59.41206416112274,
+            "eligibleArticles": 1141,
+            "totalArticles": 1676
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 56.12620140980012,
+            "pct_bar_informative": 16.342863252689718,
+            "pct_only_informative": 27.530935337510158,
+            "pct_eligible": 59.36075399243505,
+            "eligibleArticles": 1118,
+            "totalArticles": 1713
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 59.733379239610485,
+            "pct_bar_informative": 14.166072091456533,
+            "pct_only_informative": 26.10054866893297,
+            "pct_eligible": 59.0334607526864,
+            "eligibleArticles": 1130,
+            "totalArticles": 1742
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 47.87273315271674,
+            "pct_bar_informative": 17.60882611939466,
+            "pct_only_informative": 34.518440727888596,
+            "pct_eligible": 55.22442669578743,
+            "eligibleArticles": 1079,
+            "totalArticles": 1780
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 45.238577029282034,
+            "pct_bar_informative": 19.92206418488037,
+            "pct_only_informative": 34.83935878583758,
+            "pct_eligible": 53.0195013597151,
+            "eligibleArticles": 1103,
+            "totalArticles": 1847
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 42.735997136360005,
+            "pct_bar_informative": 19.607414416233542,
+            "pct_only_informative": 37.65658844740645,
+            "pct_eligible": 51.88813333718003,
+            "eligibleArticles": 1059,
+            "totalArticles": 1925
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 34.46490486195831,
+            "pct_bar_informative": 23.58067224058072,
+            "pct_only_informative": 41.95442289746096,
+            "pct_eligible": 53.86042785129405,
+            "eligibleArticles": 1096,
+            "totalArticles": 2000
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 33.02140832719824,
+            "pct_bar_informative": 21.678205598921036,
+            "pct_only_informative": 45.30038607388072,
+            "pct_eligible": 52.72811657843928,
+            "eligibleArticles": 1183,
+            "totalArticles": 2131
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 25.77501583962944,
+            "pct_bar_informative": 20.553422895357105,
+            "pct_only_informative": 53.67156126501345,
+            "pct_eligible": 49.83444240274293,
+            "eligibleArticles": 1105,
+            "totalArticles": 2105
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 22.668460720859972,
+            "pct_bar_informative": 17.296519665047015,
+            "pct_only_informative": 60.035019614093,
+            "pct_eligible": 49.92432415239591,
+            "eligibleArticles": 1148,
+            "totalArticles": 2204
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 23.05865242305907,
+            "pct_bar_informative": 15.541145147166661,
+            "pct_only_informative": 61.40020242977426,
+            "pct_eligible": 52.214797107105774,
+            "eligibleArticles": 1194,
+            "totalArticles": 2271
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 15.3207295303251,
+            "pct_bar_informative": 12.031250717922308,
+            "pct_only_informative": 72.64801975175259,
+            "pct_eligible": 49.184184850173295,
+            "eligibleArticles": 954,
+            "totalArticles": 1910
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 11.095413169167944,
+            "pct_bar_informative": 14.847056788489754,
+            "pct_only_informative": 74.05753004234231,
+            "pct_eligible": 48.70384200198429,
+            "eligibleArticles": 879,
+            "totalArticles": 1852
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 12.294354673884099,
+            "pct_bar_informative": 15.57221221097775,
+            "pct_only_informative": 72.13343311513815,
+            "pct_eligible": 50.62806484497413,
+            "eligibleArticles": 1050,
+            "totalArticles": 2211
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 14.891563871119285,
+            "pct_bar_informative": 14.03631591649371,
+            "pct_only_informative": 71.072120212387,
+            "pct_eligible": 52.15110472849129,
+            "eligibleArticles": 1106,
+            "totalArticles": 2350
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2014,
+            "label": "8% of journals adopted"
+          },
+          {
+            "year": 2017,
+            "label": "8% of journals adopted"
+          },
+          {
+            "year": 2019,
+            "label": "62% of journals adopted"
+          },
+          {
+            "year": 2020,
+            "label": "8% of journals adopted"
+          },
+          {
+            "year": 2021,
+            "label": "15% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 66.85836845975939,
+            "pct_bar_informative": 6.7761864005921355,
+            "pct_only_informative": 26.36544513964847,
+            "pct_eligible": 40.2065479653867,
+            "eligibleArticles": 975,
+            "totalArticles": 2411
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 61.034466396712915,
+            "pct_bar_informative": 9.991698335138867,
+            "pct_only_informative": 28.973835268148214,
+            "pct_eligible": 37.430531531525155,
+            "eligibleArticles": 1029,
+            "totalArticles": 2618
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 60.676407041904156,
+            "pct_bar_informative": 7.613777697407238,
+            "pct_only_informative": 31.709815260688597,
+            "pct_eligible": 36.002934976857325,
+            "eligibleArticles": 1038,
+            "totalArticles": 2850
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 59.33441099167542,
+            "pct_bar_informative": 7.2211994734752265,
+            "pct_only_informative": 33.44438953484935,
+            "pct_eligible": 36.02588770205395,
+            "eligibleArticles": 1021,
+            "totalArticles": 2879
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 54.87175290553611,
+            "pct_bar_informative": 11.665740416464512,
+            "pct_only_informative": 33.46250667799938,
+            "pct_eligible": 37.13572561848726,
+            "eligibleArticles": 1082,
+            "totalArticles": 3009
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 51.83986765807959,
+            "pct_bar_informative": 9.600265050397052,
+            "pct_only_informative": 38.559867291523354,
+            "pct_eligible": 37.285191849568356,
+            "eligibleArticles": 1087,
+            "totalArticles": 2977
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 50.47289764053292,
+            "pct_bar_informative": 11.020322912667195,
+            "pct_only_informative": 38.506779446799875,
+            "pct_eligible": 35.42959377328393,
+            "eligibleArticles": 1070,
+            "totalArticles": 3084
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 45.32237673306541,
+            "pct_bar_informative": 13.146399014755001,
+            "pct_only_informative": 41.531224252179584,
+            "pct_eligible": 36.76451557686777,
+            "eligibleArticles": 990,
+            "totalArticles": 2869
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 47.06567960921475,
+            "pct_bar_informative": 12.865189642816633,
+            "pct_only_informative": 40.06913074796861,
+            "pct_eligible": 34.60250485573693,
+            "eligibleArticles": 1005,
+            "totalArticles": 3024
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 39.10906648315677,
+            "pct_bar_informative": 12.86754361980181,
+            "pct_only_informative": 48.02338989704142,
+            "pct_eligible": 36.23947126599162,
+            "eligibleArticles": 949,
+            "totalArticles": 2803
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 34.09531447276015,
+            "pct_bar_informative": 12.000269255907533,
+            "pct_only_informative": 53.90441627133231,
+            "pct_eligible": 36.95896435260687,
+            "eligibleArticles": 1155,
+            "totalArticles": 3282
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 29.4961284644177,
+            "pct_bar_informative": 14.693384027784457,
+            "pct_only_informative": 55.81048750779784,
+            "pct_eligible": 34.74318216129756,
+            "eligibleArticles": 1781,
+            "totalArticles": 4927
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 28.102571534831707,
+            "pct_bar_informative": 12.437203662244512,
+            "pct_only_informative": 59.46022480292377,
+            "pct_eligible": 33.81911545281847,
+            "eligibleArticles": 2124,
+            "totalArticles": 5823
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 28.02765080843243,
+            "pct_bar_informative": 11.67534951033244,
+            "pct_only_informative": 60.29699968123512,
+            "pct_eligible": 36.053546362704466,
+            "eligibleArticles": 1654,
+            "totalArticles": 4655
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 23.221499539804213,
+            "pct_bar_informative": 9.46494354620991,
+            "pct_only_informative": 67.31355691398586,
+            "pct_eligible": 35.19351488879656,
+            "eligibleArticles": 1426,
+            "totalArticles": 4107
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 23.80097896829768,
+            "pct_bar_informative": 9.512322305156518,
+            "pct_only_informative": 66.68669872654579,
+            "pct_eligible": 37.47038927824504,
+            "eligibleArticles": 1743,
+            "totalArticles": 4791
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -850,6 +1169,313 @@
             "label": "11% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 61.649177538287006,
+            "pct_bar_informative": 17.259878994138774,
+            "pct_only_informative": 21.090943467574203,
+            "pct_eligible": 49.39077458659703,
+            "eligibleArticles": 295,
+            "totalArticles": 641
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 61.27519924988279,
+            "pct_bar_informative": 12.83403656821378,
+            "pct_only_informative": 25.89076418190342,
+            "pct_eligible": 49.12116240918678,
+            "eligibleArticles": 320,
+            "totalArticles": 710
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 57.08901363271852,
+            "pct_bar_informative": 15.745789895749795,
+            "pct_only_informative": 27.16519647153167,
+            "pct_eligible": 50.84541062801932,
+            "eligibleArticles": 317,
+            "totalArticles": 672
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 64.16887709991158,
+            "pct_bar_informative": 14.49160035366932,
+            "pct_only_informative": 21.339522546419097,
+            "pct_eligible": 50.314845834108816,
+            "eligibleArticles": 301,
+            "totalArticles": 641
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 54.50446105618519,
+            "pct_bar_informative": 18.72679045092838,
+            "pct_only_informative": 26.768748492886424,
+            "pct_eligible": 50.372997431820956,
+            "eligibleArticles": 288,
+            "totalArticles": 628
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 53.599156118143455,
+            "pct_bar_informative": 21.675105485232066,
+            "pct_only_informative": 24.725738396624465,
+            "pct_eligible": 51.391801618397764,
+            "eligibleArticles": 308,
+            "totalArticles": 648
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 45.52223582211342,
+            "pct_bar_informative": 21.51162790697674,
+            "pct_only_informative": 32.96613627090983,
+            "pct_eligible": 47.30443974630021,
+            "eligibleArticles": 243,
+            "totalArticles": 585
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 44.320925553319924,
+            "pct_bar_informative": 23.797786720321923,
+            "pct_only_informative": 31.881287726358146,
+            "pct_eligible": 50.673172494804376,
+            "eligibleArticles": 282,
+            "totalArticles": 638
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 29.672043010752684,
+            "pct_bar_informative": 23.360215053763433,
+            "pct_only_informative": 46.96774193548387,
+            "pct_eligible": 55.84319526627219,
+            "eligibleArticles": 274,
+            "totalArticles": 538
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 19.175170068027207,
+            "pct_bar_informative": 12.7125850340136,
+            "pct_only_informative": 68.11224489795919,
+            "pct_eligible": 48.979665940450246,
+            "eligibleArticles": 266,
+            "totalArticles": 583
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 16.922440142638816,
+            "pct_bar_informative": 14.79559347936831,
+            "pct_only_informative": 68.28196637799287,
+            "pct_eligible": 50.30247308389298,
+            "eligibleArticles": 255,
+            "totalArticles": 566
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 12.007096663423566,
+            "pct_bar_informative": 12.877010244377036,
+            "pct_only_informative": 75.1158930921994,
+            "pct_eligible": 51.319513819513816,
+            "eligibleArticles": 274,
+            "totalArticles": 595
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 10.54838880925837,
+            "pct_bar_informative": 11.94988586292934,
+            "pct_only_informative": 77.5017253278123,
+            "pct_eligible": 50.561484549219486,
+            "eligibleArticles": 298,
+            "totalArticles": 593
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 9.928080050031264,
+            "pct_bar_informative": 16.0636111855624,
+            "pct_only_informative": 74.00830876440634,
+            "pct_eligible": 54.303160919540225,
+            "eligibleArticles": 337,
+            "totalArticles": 588
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 12.62167423750811,
+            "pct_bar_informative": 17.30117528300526,
+            "pct_only_informative": 70.07715047948662,
+            "pct_eligible": 54.63799912242212,
+            "eligibleArticles": 274,
+            "totalArticles": 480
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 7.2860364391308945,
+            "pct_bar_informative": 16.28485520993664,
+            "pct_only_informative": 76.42910835093245,
+            "pct_eligible": 53.94298856139926,
+            "eligibleArticles": 398,
+            "totalArticles": 690
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2013,
+            "label": "50% of journals adopted"
+          },
+          {
+            "year": 2019,
+            "label": "50% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 53.076589252155905,
+            "pct_bar_informative": 16.87137786446276,
+            "pct_only_informative": 30.05203288338132,
+            "pct_eligible": 49.10940619170869,
+            "eligibleArticles": 359,
+            "totalArticles": 758
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 64.72116533736579,
+            "pct_bar_informative": 16.505185799716873,
+            "pct_only_informative": 18.77364886291733,
+            "pct_eligible": 53.62199625522125,
+            "eligibleArticles": 387,
+            "totalArticles": 665
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 56.64445094487293,
+            "pct_bar_informative": 18.134873375822462,
+            "pct_only_informative": 25.2206756793046,
+            "pct_eligible": 57.66606987969727,
+            "eligibleArticles": 330,
+            "totalArticles": 577
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 61.03935364692679,
+            "pct_bar_informative": 20.669270488547593,
+            "pct_only_informative": 18.291375864525605,
+            "pct_eligible": 57.068519346409985,
+            "eligibleArticles": 329,
+            "totalArticles": 583
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 63.84244172150519,
+            "pct_bar_informative": 17.739614745419697,
+            "pct_only_informative": 18.41794353307511,
+            "pct_eligible": 53.099916144294475,
+            "eligibleArticles": 294,
+            "totalArticles": 594
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 55.802576702346975,
+            "pct_bar_informative": 20.061230567271576,
+            "pct_only_informative": 24.13619273038145,
+            "pct_eligible": 58.0504394163653,
+            "eligibleArticles": 330,
+            "totalArticles": 612
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 60.53440838173481,
+            "pct_bar_informative": 22.56764176260207,
+            "pct_only_informative": 16.89794985566311,
+            "pct_eligible": 55.84241347490195,
+            "eligibleArticles": 292,
+            "totalArticles": 530
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 45.6247223262454,
+            "pct_bar_informative": 21.17614644581,
+            "pct_only_informative": 33.19913122794459,
+            "pct_eligible": 57.87834590990623,
+            "eligibleArticles": 310,
+            "totalArticles": 554
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 45.24962220958764,
+            "pct_bar_informative": 26.124475083288445,
+            "pct_only_informative": 28.625902707123906,
+            "pct_eligible": 59.87020909881662,
+            "eligibleArticles": 344,
+            "totalArticles": 565
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 37.74710479529153,
+            "pct_bar_informative": 22.585305564668413,
+            "pct_only_informative": 39.66758964004005,
+            "pct_eligible": 64.8844139112803,
+            "eligibleArticles": 351,
+            "totalArticles": 573
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 32.04157752128424,
+            "pct_bar_informative": 26.494608916785264,
+            "pct_only_informative": 41.4638135619305,
+            "pct_eligible": 64.37311580302392,
+            "eligibleArticles": 418,
+            "totalArticles": 710
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 23.911931141535756,
+            "pct_bar_informative": 24.704156236204238,
+            "pct_only_informative": 51.38391262225999,
+            "pct_eligible": 65.3304991503518,
+            "eligibleArticles": 521,
+            "totalArticles": 834
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 22.843650305078764,
+            "pct_bar_informative": 28.951848122250986,
+            "pct_only_informative": 48.204501572670246,
+            "pct_eligible": 62.964163236925636,
+            "eligibleArticles": 446,
+            "totalArticles": 732
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 18.12560336739224,
+            "pct_bar_informative": 23.195938458861097,
+            "pct_only_informative": 58.678458173746655,
+            "pct_eligible": 65.51460973624621,
+            "eligibleArticles": 479,
+            "totalArticles": 773
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 10.679390814680216,
+            "pct_bar_informative": 19.825139969282016,
+            "pct_only_informative": 69.49546921603776,
+            "pct_eligible": 64.71153520876392,
+            "eligibleArticles": 473,
+            "totalArticles": 751
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 9.603169180155083,
+            "pct_bar_informative": 18.95403342365775,
+            "pct_only_informative": 71.44279739618716,
+            "pct_eligible": 65.249869348982,
+            "eligibleArticles": 658,
+            "totalArticles": 1030
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -1024,6 +1650,325 @@
             "label": "6% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 81.1169099050796,
+            "pct_bar_informative": 11.91417341426099,
+            "pct_only_informative": 6.968916680659415,
+            "pct_eligible": 75.22637904901164,
+            "eligibleArticles": 1115,
+            "totalArticles": 1553
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 82.36863819580978,
+            "pct_bar_informative": 11.151431728598013,
+            "pct_only_informative": 6.479930075592196,
+            "pct_eligible": 75.96209986625065,
+            "eligibleArticles": 1288,
+            "totalArticles": 1705
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 78.85354423167128,
+            "pct_bar_informative": 13.082165744534953,
+            "pct_only_informative": 8.06429002379376,
+            "pct_eligible": 73.04494093239126,
+            "eligibleArticles": 1198,
+            "totalArticles": 1616
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 76.53083282426668,
+            "pct_bar_informative": 14.248432756790919,
+            "pct_only_informative": 9.220734418942394,
+            "pct_eligible": 74.48944995998764,
+            "eligibleArticles": 1329,
+            "totalArticles": 1738
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 74.51686237067351,
+            "pct_bar_informative": 17.442173745897275,
+            "pct_only_informative": 8.040963883429217,
+            "pct_eligible": 74.65394645012717,
+            "eligibleArticles": 1294,
+            "totalArticles": 1709
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 73.69236173243509,
+            "pct_bar_informative": 16.241002798544898,
+            "pct_only_informative": 10.066635469020005,
+            "pct_eligible": 76.62551790932791,
+            "eligibleArticles": 1215,
+            "totalArticles": 1582
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 71.18243907141192,
+            "pct_bar_informative": 19.48252336536305,
+            "pct_only_informative": 9.335037563225024,
+            "pct_eligible": 77.11240757171025,
+            "eligibleArticles": 1058,
+            "totalArticles": 1383
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 65.83091181009594,
+            "pct_bar_informative": 22.34286404732069,
+            "pct_only_informative": 11.826224142583364,
+            "pct_eligible": 71.4221247970462,
+            "eligibleArticles": 1041,
+            "totalArticles": 1460
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 54.65896293321756,
+            "pct_bar_informative": 26.529259011248357,
+            "pct_only_informative": 18.811778055534084,
+            "pct_eligible": 71.05648343466254,
+            "eligibleArticles": 874,
+            "totalArticles": 1270
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 40.29909736777684,
+            "pct_bar_informative": 29.93053405930191,
+            "pct_only_informative": 29.77036857292124,
+            "pct_eligible": 75.82462793996169,
+            "eligibleArticles": 992,
+            "totalArticles": 1362
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 27.693340460177627,
+            "pct_bar_informative": 29.706565718074664,
+            "pct_only_informative": 42.6000938217477,
+            "pct_eligible": 71.99173106308929,
+            "eligibleArticles": 960,
+            "totalArticles": 1365
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 16.755714850160114,
+            "pct_bar_informative": 26.14912993641243,
+            "pct_only_informative": 57.09515521342745,
+            "pct_eligible": 74.38279222257383,
+            "eligibleArticles": 981,
+            "totalArticles": 1401
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 14.304514838829714,
+            "pct_bar_informative": 22.703107042590652,
+            "pct_only_informative": 62.99237811857962,
+            "pct_eligible": 73.32586105847577,
+            "eligibleArticles": 780,
+            "totalArticles": 1132
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 12.416815934658612,
+            "pct_bar_informative": 25.11411577765833,
+            "pct_only_informative": 62.469068287683044,
+            "pct_eligible": 72.73607068968809,
+            "eligibleArticles": 700,
+            "totalArticles": 980
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 11.097133860327745,
+            "pct_bar_informative": 25.401471911702338,
+            "pct_only_informative": 63.50139422796991,
+            "pct_eligible": 72.83340491971715,
+            "eligibleArticles": 761,
+            "totalArticles": 1109
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 12.127261011906167,
+            "pct_bar_informative": 25.520064014907703,
+            "pct_only_informative": 62.35267497318612,
+            "pct_eligible": 74.30734955956214,
+            "eligibleArticles": 963,
+            "totalArticles": 1380
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2013,
+            "label": "30% of journals adopted"
+          },
+          {
+            "year": 2017,
+            "label": "20% of journals adopted"
+          },
+          {
+            "year": 2018,
+            "label": "20% of journals adopted"
+          },
+          {
+            "year": 2019,
+            "label": "10% of journals adopted"
+          },
+          {
+            "year": 2020,
+            "label": "20% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 77.7608495447477,
+            "pct_bar_informative": 8.754009130026287,
+            "pct_only_informative": 13.485141325226001,
+            "pct_eligible": 57.92679542228116,
+            "eligibleArticles": 1772,
+            "totalArticles": 2923
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 76.84124265716214,
+            "pct_bar_informative": 8.539876868144441,
+            "pct_only_informative": 14.618880474693418,
+            "pct_eligible": 54.43186815191997,
+            "eligibleArticles": 1774,
+            "totalArticles": 3128
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 75.17411966109455,
+            "pct_bar_informative": 9.12802756186969,
+            "pct_only_informative": 15.697852777035754,
+            "pct_eligible": 53.17817958278239,
+            "eligibleArticles": 1872,
+            "totalArticles": 3249
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 75.39012456748927,
+            "pct_bar_informative": 7.612631801118051,
+            "pct_only_informative": 16.997243631392685,
+            "pct_eligible": 55.16012111912935,
+            "eligibleArticles": 1869,
+            "totalArticles": 3406
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 73.82492816100466,
+            "pct_bar_informative": 11.27120319457703,
+            "pct_only_informative": 14.903868644418301,
+            "pct_eligible": 58.066366184397324,
+            "eligibleArticles": 1869,
+            "totalArticles": 3126
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 73.06554251816934,
+            "pct_bar_informative": 11.087454336426925,
+            "pct_only_informative": 15.847003145403733,
+            "pct_eligible": 58.13730817016044,
+            "eligibleArticles": 1784,
+            "totalArticles": 2918
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 67.78044693513093,
+            "pct_bar_informative": 15.03109517784082,
+            "pct_only_informative": 17.188457887028246,
+            "pct_eligible": 57.70016208336929,
+            "eligibleArticles": 1763,
+            "totalArticles": 2915
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 64.81918363592939,
+            "pct_bar_informative": 16.38437608357472,
+            "pct_only_informative": 18.79644028049588,
+            "pct_eligible": 59.79468467806439,
+            "eligibleArticles": 1740,
+            "totalArticles": 2836
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 61.2786442398979,
+            "pct_bar_informative": 16.072377063806027,
+            "pct_only_informative": 22.648978696296073,
+            "pct_eligible": 59.50633785542891,
+            "eligibleArticles": 1962,
+            "totalArticles": 3366
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 51.72202521104228,
+            "pct_bar_informative": 19.858141986148095,
+            "pct_only_informative": 28.41983280280962,
+            "pct_eligible": 57.56938733064519,
+            "eligibleArticles": 1882,
+            "totalArticles": 3299
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 50.49691735329618,
+            "pct_bar_informative": 17.620572440379135,
+            "pct_only_informative": 31.882510206324675,
+            "pct_eligible": 57.75057235649438,
+            "eligibleArticles": 1978,
+            "totalArticles": 3764
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 41.79606412866272,
+            "pct_bar_informative": 21.800524397380205,
+            "pct_only_informative": 36.403411473957064,
+            "pct_eligible": 57.20027211918084,
+            "eligibleArticles": 2283,
+            "totalArticles": 4377
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 36.131357401188204,
+            "pct_bar_informative": 19.669994361921507,
+            "pct_only_informative": 44.198648236890286,
+            "pct_eligible": 55.359169254456646,
+            "eligibleArticles": 2842,
+            "totalArticles": 5425
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 34.44712089791205,
+            "pct_bar_informative": 23.66201991281922,
+            "pct_only_informative": 41.89085918926873,
+            "pct_eligible": 57.4099158712035,
+            "eligibleArticles": 2564,
+            "totalArticles": 5099
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 28.25277896505795,
+            "pct_bar_informative": 20.113050803591317,
+            "pct_only_informative": 51.63417023135073,
+            "pct_eligible": 59.33000727092653,
+            "eligibleArticles": 2491,
+            "totalArticles": 5044
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 28.380967284824226,
+            "pct_bar_informative": 21.24194240873949,
+            "pct_only_informative": 50.37709030643628,
+            "pct_eligible": 57.272821137894155,
+            "eligibleArticles": 2834,
+            "totalArticles": 5565
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -1190,6 +2135,317 @@
             "label": "4% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 70.34995306803171,
+            "pct_bar_informative": 18.228823098710844,
+            "pct_only_informative": 11.421223833257445,
+            "pct_eligible": 69.22531045452513,
+            "eligibleArticles": 1201,
+            "totalArticles": 1539
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 61.930456093575366,
+            "pct_bar_informative": 17.737000958035257,
+            "pct_only_informative": 20.332542948389367,
+            "pct_eligible": 71.05609062302776,
+            "eligibleArticles": 1177,
+            "totalArticles": 1513
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 64.85975386793685,
+            "pct_bar_informative": 25.27673366395634,
+            "pct_only_informative": 9.863512468106817,
+            "pct_eligible": 73.20610327999802,
+            "eligibleArticles": 1344,
+            "totalArticles": 1655
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 61.72388795492977,
+            "pct_bar_informative": 22.932237435547155,
+            "pct_only_informative": 15.343874609523066,
+            "pct_eligible": 75.28433886928816,
+            "eligibleArticles": 1560,
+            "totalArticles": 1903
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 62.190036214302474,
+            "pct_bar_informative": 22.538281609059062,
+            "pct_only_informative": 15.27168217663846,
+            "pct_eligible": 74.31353433831961,
+            "eligibleArticles": 1475,
+            "totalArticles": 1800
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 53.72750486414287,
+            "pct_bar_informative": 29.36480353021888,
+            "pct_only_informative": 16.90769160563824,
+            "pct_eligible": 73.67569206001934,
+            "eligibleArticles": 1478,
+            "totalArticles": 1767
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 53.935169054801364,
+            "pct_bar_informative": 24.859416210873356,
+            "pct_only_informative": 21.20541473432527,
+            "pct_eligible": 70.03424498342564,
+            "eligibleArticles": 1451,
+            "totalArticles": 1738
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 47.27625246624247,
+            "pct_bar_informative": 27.03842106856568,
+            "pct_only_informative": 25.685326465191846,
+            "pct_eligible": 74.93730452545609,
+            "eligibleArticles": 1391,
+            "totalArticles": 1655
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 39.749808931032916,
+            "pct_bar_informative": 32.54195212332017,
+            "pct_only_informative": 27.708238945646904,
+            "pct_eligible": 72.63568978615854,
+            "eligibleArticles": 1263,
+            "totalArticles": 1559
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 31.36668543543676,
+            "pct_bar_informative": 34.626260621908365,
+            "pct_only_informative": 34.00705394265486,
+            "pct_eligible": 71.6057011692584,
+            "eligibleArticles": 1319,
+            "totalArticles": 1687
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 30.862147844807208,
+            "pct_bar_informative": 34.18288096474851,
+            "pct_only_informative": 34.954971190444276,
+            "pct_eligible": 73.0767781801031,
+            "eligibleArticles": 1378,
+            "totalArticles": 1704
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 22.308978021122215,
+            "pct_bar_informative": 38.781694629518775,
+            "pct_only_informative": 38.909327349359,
+            "pct_eligible": 75.13875816718075,
+            "eligibleArticles": 1501,
+            "totalArticles": 1886
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 22.206419838522493,
+            "pct_bar_informative": 35.528108214293255,
+            "pct_only_informative": 42.26547194718425,
+            "pct_eligible": 76.70273085555894,
+            "eligibleArticles": 1469,
+            "totalArticles": 1804
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 17.68748376929213,
+            "pct_bar_informative": 33.92523131463149,
+            "pct_only_informative": 48.38728491607638,
+            "pct_eligible": 77.09415460160284,
+            "eligibleArticles": 1243,
+            "totalArticles": 1498
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 14.706633489097559,
+            "pct_bar_informative": 35.6265886344102,
+            "pct_only_informative": 49.66677787649223,
+            "pct_eligible": 76.81200984142862,
+            "eligibleArticles": 1240,
+            "totalArticles": 1487
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 16.669672228711228,
+            "pct_bar_informative": 37.2774218294294,
+            "pct_only_informative": 46.052905941859365,
+            "pct_eligible": 72.5435743870649,
+            "eligibleArticles": 1362,
+            "totalArticles": 1655
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2013,
+            "label": "70% of journals adopted"
+          },
+          {
+            "year": 2017,
+            "label": "20% of journals adopted"
+          },
+          {
+            "year": 2019,
+            "label": "10% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 50.5540554287508,
+            "pct_bar_informative": 15.101301985403977,
+            "pct_only_informative": 34.344642585845214,
+            "pct_eligible": 52.49392532534056,
+            "eligibleArticles": 1312,
+            "totalArticles": 2213
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 54.7766871763765,
+            "pct_bar_informative": 16.54801412711832,
+            "pct_only_informative": 28.675298696505173,
+            "pct_eligible": 51.099252975810074,
+            "eligibleArticles": 1385,
+            "totalArticles": 2291
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 52.070413080314,
+            "pct_bar_informative": 17.653575169000547,
+            "pct_only_informative": 30.276011750685456,
+            "pct_eligible": 55.831674911088854,
+            "eligibleArticles": 1527,
+            "totalArticles": 2377
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 49.61342468068723,
+            "pct_bar_informative": 19.493752820969252,
+            "pct_only_informative": 30.89282249834351,
+            "pct_eligible": 59.834321686979266,
+            "eligibleArticles": 1480,
+            "totalArticles": 2227
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 48.48979961893663,
+            "pct_bar_informative": 20.395492710748485,
+            "pct_only_informative": 31.114707670314875,
+            "pct_eligible": 60.75057287917569,
+            "eligibleArticles": 1625,
+            "totalArticles": 2383
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 47.722574111503874,
+            "pct_bar_informative": 21.04321702186177,
+            "pct_only_informative": 31.234208866634347,
+            "pct_eligible": 58.65817510398262,
+            "eligibleArticles": 1668,
+            "totalArticles": 2435
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 45.78723300974408,
+            "pct_bar_informative": 20.29751810036808,
+            "pct_only_informative": 33.91524888988784,
+            "pct_eligible": 64.35440345113383,
+            "eligibleArticles": 1575,
+            "totalArticles": 2205
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 39.50369654508617,
+            "pct_bar_informative": 22.944801481622378,
+            "pct_only_informative": 37.551501973291444,
+            "pct_eligible": 64.49800627220867,
+            "eligibleArticles": 1571,
+            "totalArticles": 2159
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 37.784353685160596,
+            "pct_bar_informative": 25.305002950284333,
+            "pct_only_informative": 36.91064336455506,
+            "pct_eligible": 67.77298154988722,
+            "eligibleArticles": 1587,
+            "totalArticles": 2168
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 32.89795442192397,
+            "pct_bar_informative": 26.30357187093221,
+            "pct_only_informative": 40.79847370714381,
+            "pct_eligible": 68.3532419427324,
+            "eligibleArticles": 1641,
+            "totalArticles": 2331
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 28.49774435425781,
+            "pct_bar_informative": 25.621795329333867,
+            "pct_only_informative": 45.88046031640832,
+            "pct_eligible": 69.02030709906973,
+            "eligibleArticles": 1903,
+            "totalArticles": 2746
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 24.863083662972418,
+            "pct_bar_informative": 26.99702528853265,
+            "pct_only_informative": 48.139891048494924,
+            "pct_eligible": 67.74960510696825,
+            "eligibleArticles": 2187,
+            "totalArticles": 3088
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 20.49307405760419,
+            "pct_bar_informative": 29.724971522495057,
+            "pct_only_informative": 49.78195441990076,
+            "pct_eligible": 72.02709812719428,
+            "eligibleArticles": 1990,
+            "totalArticles": 2711
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 17.75452549444348,
+            "pct_bar_informative": 30.45077275121149,
+            "pct_only_informative": 51.79470175434502,
+            "pct_eligible": 70.9758480486454,
+            "eligibleArticles": 1825,
+            "totalArticles": 2545
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 13.901681402837287,
+            "pct_bar_informative": 35.480524788798746,
+            "pct_only_informative": 50.61779380836396,
+            "pct_eligible": 73.1179372129069,
+            "eligibleArticles": 1877,
+            "totalArticles": 2452
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 14.055244083391676,
+            "pct_bar_informative": 30.581349691893067,
+            "pct_only_informative": 55.36340622471525,
+            "pct_eligible": 73.01382266986685,
+            "eligibleArticles": 2232,
+            "totalArticles": 2938
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -1356,6 +2612,317 @@
             "label": "4% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 49.591750841750844,
+            "pct_bar_informative": 30.010521885521882,
+            "pct_only_informative": 20.397727272727273,
+            "pct_eligible": 76.73536631601945,
+            "eligibleArticles": 217,
+            "totalArticles": 365
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 45.15404043066994,
+            "pct_bar_informative": 36.307766259969696,
+            "pct_only_informative": 18.53819330936036,
+            "pct_eligible": 73.31273463019843,
+            "eligibleArticles": 210,
+            "totalArticles": 358
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 32.31866566189573,
+            "pct_bar_informative": 30.80466795757014,
+            "pct_only_informative": 36.87666638053413,
+            "pct_eligible": 81.15396690076997,
+            "eligibleArticles": 202,
+            "totalArticles": 335
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 39.538847085938954,
+            "pct_bar_informative": 37.505872184656056,
+            "pct_only_informative": 22.955280729404986,
+            "pct_eligible": 79.6714776835771,
+            "eligibleArticles": 281,
+            "totalArticles": 431
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 35.00679875679876,
+            "pct_bar_informative": 46.59760227695009,
+            "pct_only_informative": 18.39559896625114,
+            "pct_eligible": 81.1606709800336,
+            "eligibleArticles": 373,
+            "totalArticles": 515
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 31.223672749029873,
+            "pct_bar_informative": 51.62506228179586,
+            "pct_only_informative": 17.15126496917426,
+            "pct_eligible": 81.7204529241812,
+            "eligibleArticles": 395,
+            "totalArticles": 539
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 27.689709605560147,
+            "pct_bar_informative": 41.215488701916215,
+            "pct_only_informative": 31.094801692523642,
+            "pct_eligible": 80.09470853509092,
+            "eligibleArticles": 433,
+            "totalArticles": 557
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 23.813590988519547,
+            "pct_bar_informative": 46.439425590723644,
+            "pct_only_informative": 29.7469834207568,
+            "pct_eligible": 82.34471415610946,
+            "eligibleArticles": 436,
+            "totalArticles": 565
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 21.22859764549696,
+            "pct_bar_informative": 44.278547130767336,
+            "pct_only_informative": 34.492855223735695,
+            "pct_eligible": 84.578287344477,
+            "eligibleArticles": 465,
+            "totalArticles": 569
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 15.15504347215175,
+            "pct_bar_informative": 40.98963161822183,
+            "pct_only_informative": 43.85532490962642,
+            "pct_eligible": 81.34915626970822,
+            "eligibleArticles": 503,
+            "totalArticles": 654
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 14.326426525030046,
+            "pct_bar_informative": 45.8648243218084,
+            "pct_only_informative": 39.80874915316155,
+            "pct_eligible": 84.92926870452023,
+            "eligibleArticles": 544,
+            "totalArticles": 692
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 9.174843510701908,
+            "pct_bar_informative": 41.47240733140028,
+            "pct_only_informative": 49.35274915789781,
+            "pct_eligible": 85.40157228616593,
+            "eligibleArticles": 681,
+            "totalArticles": 892
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 9.823296400668,
+            "pct_bar_informative": 38.65813966681101,
+            "pct_only_informative": 51.518563932520976,
+            "pct_eligible": 85.37766078798863,
+            "eligibleArticles": 550,
+            "totalArticles": 695
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 4.55038121082897,
+            "pct_bar_informative": 35.56887959026973,
+            "pct_only_informative": 59.88073919890129,
+            "pct_eligible": 83.82313479677566,
+            "eligibleArticles": 530,
+            "totalArticles": 648
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 5.3496232225265725,
+            "pct_bar_informative": 36.31524113188287,
+            "pct_only_informative": 58.33513564559055,
+            "pct_eligible": 82.8875284753237,
+            "eligibleArticles": 647,
+            "totalArticles": 825
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 3.623020777849099,
+            "pct_bar_informative": 32.909692670875025,
+            "pct_only_informative": 63.46728655127587,
+            "pct_eligible": 84.48310649242752,
+            "eligibleArticles": 741,
+            "totalArticles": 900
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2013,
+            "label": "71% of journals adopted"
+          },
+          {
+            "year": 2016,
+            "label": "14% of journals adopted"
+          },
+          {
+            "year": 2021,
+            "label": "14% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 49.320602824384004,
+            "pct_bar_informative": 31.39351920382427,
+            "pct_only_informative": 19.28587797179172,
+            "pct_eligible": 73.43680837726615,
+            "eligibleArticles": 2617,
+            "totalArticles": 3190
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 46.8257290375869,
+            "pct_bar_informative": 36.07743946865358,
+            "pct_only_informative": 17.096831493759506,
+            "pct_eligible": 73.49166049081687,
+            "eligibleArticles": 2598,
+            "totalArticles": 3195
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 45.98028482479798,
+            "pct_bar_informative": 36.47612991288751,
+            "pct_only_informative": 17.54358526231451,
+            "pct_eligible": 71.10870742686737,
+            "eligibleArticles": 2623,
+            "totalArticles": 3637
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 39.58782020956475,
+            "pct_bar_informative": 35.46216378921885,
+            "pct_only_informative": 24.950016001216408,
+            "pct_eligible": 70.67977851543604,
+            "eligibleArticles": 2631,
+            "totalArticles": 3445
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 37.77289709935738,
+            "pct_bar_informative": 34.6145319269581,
+            "pct_only_informative": 27.61257097368452,
+            "pct_eligible": 70.60126244816249,
+            "eligibleArticles": 2528,
+            "totalArticles": 3247
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 39.31278513823205,
+            "pct_bar_informative": 37.5643943268387,
+            "pct_only_informative": 23.122820534929247,
+            "pct_eligible": 72.01332896587165,
+            "eligibleArticles": 2656,
+            "totalArticles": 3440
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 31.939863276219196,
+            "pct_bar_informative": 39.09384835052279,
+            "pct_only_informative": 28.96628837325801,
+            "pct_eligible": 68.30113784637837,
+            "eligibleArticles": 2744,
+            "totalArticles": 3634
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 32.18083548366017,
+            "pct_bar_informative": 40.1229761306239,
+            "pct_only_informative": 27.69618838571592,
+            "pct_eligible": 72.1522048627528,
+            "eligibleArticles": 3501,
+            "totalArticles": 4472
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 30.961724563422788,
+            "pct_bar_informative": 40.42750318178972,
+            "pct_only_informative": 28.61077225478749,
+            "pct_eligible": 72.61947564406397,
+            "eligibleArticles": 4232,
+            "totalArticles": 5311
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 27.27585501889199,
+            "pct_bar_informative": 38.220000539313624,
+            "pct_only_informative": 34.50414444179438,
+            "pct_eligible": 75.54231625137022,
+            "eligibleArticles": 4068,
+            "totalArticles": 5198
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 24.00058498548553,
+            "pct_bar_informative": 36.72025757602856,
+            "pct_only_informative": 39.2791574384859,
+            "pct_eligible": 72.12585736752585,
+            "eligibleArticles": 4511,
+            "totalArticles": 6039
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 19.19244524853979,
+            "pct_bar_informative": 35.63998653892361,
+            "pct_only_informative": 45.167568212536594,
+            "pct_eligible": 74.51096526769838,
+            "eligibleArticles": 6255,
+            "totalArticles": 8304
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 16.165846597384125,
+            "pct_bar_informative": 32.80258027190408,
+            "pct_only_informative": 51.03157313071179,
+            "pct_eligible": 74.05438425303197,
+            "eligibleArticles": 7065,
+            "totalArticles": 8897
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 15.64073699440423,
+            "pct_bar_informative": 32.79021471992453,
+            "pct_only_informative": 51.56904828567124,
+            "pct_eligible": 75.68772008714348,
+            "eligibleArticles": 5538,
+            "totalArticles": 7286
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 15.076902513714323,
+            "pct_bar_informative": 32.70117701675273,
+            "pct_only_informative": 52.22192046953293,
+            "pct_eligible": 73.96987621516138,
+            "eligibleArticles": 4800,
+            "totalArticles": 6284
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 10.489183610859124,
+            "pct_bar_informative": 32.390111902743996,
+            "pct_only_informative": 57.12070448639687,
+            "pct_eligible": 76.6578397814623,
+            "eligibleArticles": 5662,
+            "totalArticles": 7301
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -1526,6 +3093,321 @@
             "label": "5% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 59.969843750127,
+            "pct_bar_informative": 23.56587220559399,
+            "pct_only_informative": 16.464284044278997,
+            "pct_eligible": 76.86872101667316,
+            "eligibleArticles": 1160,
+            "totalArticles": 1508
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 60.99231563659811,
+            "pct_bar_informative": 22.619244802608982,
+            "pct_only_informative": 16.38843956079291,
+            "pct_eligible": 76.78363171791084,
+            "eligibleArticles": 1184,
+            "totalArticles": 1530
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 57.55298027607971,
+            "pct_bar_informative": 24.06904550717293,
+            "pct_only_informative": 18.377974216747354,
+            "pct_eligible": 77.52497572190337,
+            "eligibleArticles": 1165,
+            "totalArticles": 1491
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 55.474020025259236,
+            "pct_bar_informative": 25.82622722140969,
+            "pct_only_informative": 18.699752753331072,
+            "pct_eligible": 79.49931546399549,
+            "eligibleArticles": 1191,
+            "totalArticles": 1494
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 49.83165562620768,
+            "pct_bar_informative": 30.036906361851017,
+            "pct_only_informative": 20.131438011941306,
+            "pct_eligible": 79.93830034063265,
+            "eligibleArticles": 1084,
+            "totalArticles": 1358
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 49.63058172386735,
+            "pct_bar_informative": 29.418289572389735,
+            "pct_only_informative": 20.9511287037429,
+            "pct_eligible": 76.10186650138532,
+            "eligibleArticles": 1174,
+            "totalArticles": 1512
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 44.09384348127216,
+            "pct_bar_informative": 27.309155616811353,
+            "pct_only_informative": 28.597000901916484,
+            "pct_eligible": 73.50992700977253,
+            "eligibleArticles": 995,
+            "totalArticles": 1277
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 35.8175515113331,
+            "pct_bar_informative": 30.200340284410856,
+            "pct_only_informative": 33.98210820425603,
+            "pct_eligible": 70.97285517008542,
+            "eligibleArticles": 1164,
+            "totalArticles": 1460
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 31.08509094251054,
+            "pct_bar_informative": 21.968398435702277,
+            "pct_only_informative": 46.946510621787176,
+            "pct_eligible": 75.33043065520476,
+            "eligibleArticles": 990,
+            "totalArticles": 1247
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 23.032163058810518,
+            "pct_bar_informative": 24.016545824874957,
+            "pct_only_informative": 52.95129111631451,
+            "pct_eligible": 74.14646992927378,
+            "eligibleArticles": 1059,
+            "totalArticles": 1333
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 16.284419625894255,
+            "pct_bar_informative": 22.93682705849813,
+            "pct_only_informative": 60.77875331560761,
+            "pct_eligible": 75.17705360452871,
+            "eligibleArticles": 980,
+            "totalArticles": 1231
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 10.039119010042034,
+            "pct_bar_informative": 23.396556835709738,
+            "pct_only_informative": 66.56432415424821,
+            "pct_eligible": 77.78860701619433,
+            "eligibleArticles": 1078,
+            "totalArticles": 1363
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 7.310687777878243,
+            "pct_bar_informative": 23.450870944616856,
+            "pct_only_informative": 69.2384412775049,
+            "pct_eligible": 74.32155845977128,
+            "eligibleArticles": 944,
+            "totalArticles": 1262
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 8.578665340969396,
+            "pct_bar_informative": 19.876769948368253,
+            "pct_only_informative": 71.54456471066234,
+            "pct_eligible": 76.81204350217918,
+            "eligibleArticles": 1055,
+            "totalArticles": 1368
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 6.612544597673987,
+            "pct_bar_informative": 24.23732380486026,
+            "pct_only_informative": 69.15013159746574,
+            "pct_eligible": 78.98195427749788,
+            "eligibleArticles": 1132,
+            "totalArticles": 1417
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 5.82123189178197,
+            "pct_bar_informative": 23.658695024878746,
+            "pct_only_informative": 70.52007308333927,
+            "pct_eligible": 79.6542315874239,
+            "eligibleArticles": 1596,
+            "totalArticles": 1987
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2013,
+            "label": "57% of journals adopted"
+          },
+          {
+            "year": 2017,
+            "label": "14% of journals adopted"
+          },
+          {
+            "year": 2018,
+            "label": "14% of journals adopted"
+          },
+          {
+            "year": 2019,
+            "label": "14% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 65.4663869308563,
+            "pct_bar_informative": 12.93120904769955,
+            "pct_only_informative": 21.60240402144414,
+            "pct_eligible": 61.675252358264515,
+            "eligibleArticles": 805,
+            "totalArticles": 1241
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 72.37083445046049,
+            "pct_bar_informative": 13.367112383526045,
+            "pct_only_informative": 14.262053166013459,
+            "pct_eligible": 61.07734966100003,
+            "eligibleArticles": 971,
+            "totalArticles": 1458
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 69.68880798457022,
+            "pct_bar_informative": 14.412323049269814,
+            "pct_only_informative": 15.898868966159958,
+            "pct_eligible": 64.6435185678108,
+            "eligibleArticles": 1054,
+            "totalArticles": 1472
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 68.27134115342241,
+            "pct_bar_informative": 16.376148066081477,
+            "pct_only_informative": 15.352510780496102,
+            "pct_eligible": 65.91797574948686,
+            "eligibleArticles": 998,
+            "totalArticles": 1464
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 69.05538513711478,
+            "pct_bar_informative": 15.683716047530215,
+            "pct_only_informative": 15.260898815354995,
+            "pct_eligible": 64.25768276942487,
+            "eligibleArticles": 1032,
+            "totalArticles": 1492
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 64.09560792629655,
+            "pct_bar_informative": 19.307574188318444,
+            "pct_only_informative": 16.596817885385,
+            "pct_eligible": 68.17238374150756,
+            "eligibleArticles": 1128,
+            "totalArticles": 1593
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 63.65804839618441,
+            "pct_bar_informative": 22.207091517930195,
+            "pct_only_informative": 14.134860085885387,
+            "pct_eligible": 67.46761517862043,
+            "eligibleArticles": 1172,
+            "totalArticles": 1630
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 57.60109645140076,
+            "pct_bar_informative": 21.028784025661235,
+            "pct_only_informative": 21.370119522938,
+            "pct_eligible": 68.73202584155423,
+            "eligibleArticles": 1125,
+            "totalArticles": 1536
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 53.97677673897858,
+            "pct_bar_informative": 24.422138935064396,
+            "pct_only_informative": 21.601084325957014,
+            "pct_eligible": 70.0524458145929,
+            "eligibleArticles": 1319,
+            "totalArticles": 1742
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 42.999842498818445,
+            "pct_bar_informative": 24.44554989372274,
+            "pct_only_informative": 32.55460760745881,
+            "pct_eligible": 71.26321072034018,
+            "eligibleArticles": 990,
+            "totalArticles": 1352
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 38.97948609528618,
+            "pct_bar_informative": 24.0223312530621,
+            "pct_only_informative": 36.998182651651724,
+            "pct_eligible": 72.94927909692332,
+            "eligibleArticles": 1298,
+            "totalArticles": 1735
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 30.023574568990778,
+            "pct_bar_informative": 25.453187570134144,
+            "pct_only_informative": 44.52323786087508,
+            "pct_eligible": 72.12908124173121,
+            "eligibleArticles": 1517,
+            "totalArticles": 2041
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 26.278028997990422,
+            "pct_bar_informative": 27.463048091334247,
+            "pct_only_informative": 46.258922910675324,
+            "pct_eligible": 71.06484170327016,
+            "eligibleArticles": 1251,
+            "totalArticles": 1688
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 20.86294390471094,
+            "pct_bar_informative": 23.48820838531159,
+            "pct_only_informative": 55.64884770997747,
+            "pct_eligible": 73.5921007844277,
+            "eligibleArticles": 1316,
+            "totalArticles": 1748
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 17.415290134999204,
+            "pct_bar_informative": 20.65000611238534,
+            "pct_only_informative": 61.93470375261545,
+            "pct_eligible": 74.11730204670937,
+            "eligibleArticles": 1341,
+            "totalArticles": 1745
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 14.040036158689317,
+            "pct_bar_informative": 22.274876832431545,
+            "pct_only_informative": 63.68508700887914,
+            "pct_eligible": 74.07005224331526,
+            "eligibleArticles": 1609,
+            "totalArticles": 2106
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -1696,6 +3578,321 @@
             "label": "2% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 57.00582989697994,
+            "pct_bar_informative": 19.732742334954942,
+            "pct_only_informative": 23.261427768065115,
+            "pct_eligible": 58.413119226472304,
+            "eligibleArticles": 2284,
+            "totalArticles": 3538
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 57.254907506337005,
+            "pct_bar_informative": 22.380302094932794,
+            "pct_only_informative": 20.364790398730193,
+            "pct_eligible": 62.57883434183452,
+            "eligibleArticles": 2088,
+            "totalArticles": 3270
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 51.98124462444832,
+            "pct_bar_informative": 28.76025256621462,
+            "pct_only_informative": 19.258502809337045,
+            "pct_eligible": 63.7432530127902,
+            "eligibleArticles": 1993,
+            "totalArticles": 3306
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 49.206472399340186,
+            "pct_bar_informative": 32.01416920702219,
+            "pct_only_informative": 18.77935839363761,
+            "pct_eligible": 65.42867454488974,
+            "eligibleArticles": 2232,
+            "totalArticles": 3473
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 42.76079539953609,
+            "pct_bar_informative": 36.756368979574276,
+            "pct_only_informative": 20.482835620889624,
+            "pct_eligible": 66.97443591839627,
+            "eligibleArticles": 2225,
+            "totalArticles": 3306
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 34.489711602271875,
+            "pct_bar_informative": 39.908213834311645,
+            "pct_only_informative": 25.602074563416473,
+            "pct_eligible": 64.12761460253225,
+            "eligibleArticles": 1978,
+            "totalArticles": 2990
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 37.39260207776389,
+            "pct_bar_informative": 38.6062847364013,
+            "pct_only_informative": 24.001113185834804,
+            "pct_eligible": 62.347910496646435,
+            "eligibleArticles": 2083,
+            "totalArticles": 3020
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 33.91138198252369,
+            "pct_bar_informative": 40.711150796138995,
+            "pct_only_informative": 25.377467221337305,
+            "pct_eligible": 64.16285328597006,
+            "eligibleArticles": 2342,
+            "totalArticles": 3463
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 28.439146674013802,
+            "pct_bar_informative": 41.51026139673047,
+            "pct_only_informative": 30.050591929255713,
+            "pct_eligible": 66.30475910414526,
+            "eligibleArticles": 2022,
+            "totalArticles": 2961
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 27.085833724522104,
+            "pct_bar_informative": 41.101440931716354,
+            "pct_only_informative": 31.81272534376154,
+            "pct_eligible": 63.7425288129674,
+            "eligibleArticles": 2050,
+            "totalArticles": 2941
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 21.383915630900674,
+            "pct_bar_informative": 44.769476708232226,
+            "pct_only_informative": 33.84660766086709,
+            "pct_eligible": 63.52386051635327,
+            "eligibleArticles": 2057,
+            "totalArticles": 3084
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 15.916703164035663,
+            "pct_bar_informative": 44.90194963871928,
+            "pct_only_informative": 39.18134719724505,
+            "pct_eligible": 64.92634778128105,
+            "eligibleArticles": 2131,
+            "totalArticles": 3268
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 16.104449450325067,
+            "pct_bar_informative": 41.61234420754425,
+            "pct_only_informative": 42.283206342130676,
+            "pct_eligible": 64.46344294583963,
+            "eligibleArticles": 1913,
+            "totalArticles": 2897
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 15.293810949204362,
+            "pct_bar_informative": 36.54360436845171,
+            "pct_only_informative": 48.16258468234392,
+            "pct_eligible": 64.63366379677794,
+            "eligibleArticles": 1651,
+            "totalArticles": 2498
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 10.432749243044166,
+            "pct_bar_informative": 37.904313976297985,
+            "pct_only_informative": 51.662936780657844,
+            "pct_eligible": 62.669134592216544,
+            "eligibleArticles": 1794,
+            "totalArticles": 2800
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 10.147902858993792,
+            "pct_bar_informative": 35.921349729014686,
+            "pct_only_informative": 53.93074741199151,
+            "pct_eligible": 65.71863168757655,
+            "eligibleArticles": 2171,
+            "totalArticles": 3251
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2013,
+            "label": "62% of journals adopted"
+          },
+          {
+            "year": 2016,
+            "label": "25% of journals adopted"
+          },
+          {
+            "year": 2018,
+            "label": "6% of journals adopted"
+          },
+          {
+            "year": 2021,
+            "label": "6% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 57.70750420842644,
+            "pct_bar_informative": 19.35595578857422,
+            "pct_only_informative": 22.936540002999326,
+            "pct_eligible": 49.860911710011614,
+            "eligibleArticles": 1619,
+            "totalArticles": 3257
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 62.96256556095462,
+            "pct_bar_informative": 19.071411681728534,
+            "pct_only_informative": 17.966022757316843,
+            "pct_eligible": 49.61800711581806,
+            "eligibleArticles": 1419,
+            "totalArticles": 3116
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 47.00829932082639,
+            "pct_bar_informative": 25.16768996316771,
+            "pct_only_informative": 27.824010716005894,
+            "pct_eligible": 50.60745049789838,
+            "eligibleArticles": 1604,
+            "totalArticles": 3666
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 42.576741961572566,
+            "pct_bar_informative": 30.915660391769084,
+            "pct_only_informative": 26.507597646658343,
+            "pct_eligible": 53.87057800594796,
+            "eligibleArticles": 1526,
+            "totalArticles": 3213
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 51.901732506350946,
+            "pct_bar_informative": 28.19472937137264,
+            "pct_only_informative": 19.90353812227641,
+            "pct_eligible": 57.94192039804683,
+            "eligibleArticles": 1447,
+            "totalArticles": 2943
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 40.39095558934279,
+            "pct_bar_informative": 28.470404302535954,
+            "pct_only_informative": 31.13864010812125,
+            "pct_eligible": 55.310153779651046,
+            "eligibleArticles": 1685,
+            "totalArticles": 3152
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 37.40524848296351,
+            "pct_bar_informative": 36.56999562789837,
+            "pct_only_informative": 26.024755889138117,
+            "pct_eligible": 58.146213170860584,
+            "eligibleArticles": 1691,
+            "totalArticles": 3128
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 33.8310911241599,
+            "pct_bar_informative": 35.1293451275003,
+            "pct_only_informative": 31.03956374833979,
+            "pct_eligible": 58.69145127986098,
+            "eligibleArticles": 1674,
+            "totalArticles": 3180
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 32.55689930537616,
+            "pct_bar_informative": 39.06029221704541,
+            "pct_only_informative": 28.382808477578422,
+            "pct_eligible": 57.08267345482434,
+            "eligibleArticles": 1984,
+            "totalArticles": 3472
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 20.346509161373802,
+            "pct_bar_informative": 42.10919205835144,
+            "pct_only_informative": 37.54429878027475,
+            "pct_eligible": 59.170358225843906,
+            "eligibleArticles": 2352,
+            "totalArticles": 3741
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 21.077268173878934,
+            "pct_bar_informative": 42.90521648978589,
+            "pct_only_informative": 36.01751533633517,
+            "pct_eligible": 58.73883005309287,
+            "eligibleArticles": 2313,
+            "totalArticles": 3941
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 17.207659279037472,
+            "pct_bar_informative": 38.511137236645695,
+            "pct_only_informative": 44.281203484316826,
+            "pct_eligible": 60.41557301735322,
+            "eligibleArticles": 2497,
+            "totalArticles": 4152
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 12.04825940955942,
+            "pct_bar_informative": 38.886277708491036,
+            "pct_only_informative": 49.06546288194954,
+            "pct_eligible": 61.52034442317464,
+            "eligibleArticles": 2349,
+            "totalArticles": 3661
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 13.299876933429713,
+            "pct_bar_informative": 38.92385310032784,
+            "pct_only_informative": 47.77626996624244,
+            "pct_eligible": 63.15483987896827,
+            "eligibleArticles": 2265,
+            "totalArticles": 3523
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 12.680370314835283,
+            "pct_bar_informative": 33.99860163975155,
+            "pct_only_informative": 53.32102804541316,
+            "pct_eligible": 60.54009905522127,
+            "eligibleArticles": 2196,
+            "totalArticles": 3655
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 14.178285399119837,
+            "pct_bar_informative": 31.559049378042623,
+            "pct_only_informative": 54.26266522283754,
+            "pct_eligible": 59.617967898083705,
+            "eligibleArticles": 2654,
+            "totalArticles": 4501
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -1836,6 +4033,264 @@
             "label": "33% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2012,
+            "pct_only_bar": 46.15384615384615,
+            "pct_bar_informative": 7.69230769230769,
+            "pct_only_informative": 46.15384615384615,
+            "pct_eligible": 30.95238095238095,
+            "eligibleArticles": 13,
+            "totalArticles": 42
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 58.333333333333336,
+            "pct_bar_informative": 8.33333333333333,
+            "pct_only_informative": 33.33333333333333,
+            "pct_eligible": 37.5,
+            "eligibleArticles": 12,
+            "totalArticles": 32
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 60,
+            "pct_bar_informative": 0,
+            "pct_only_informative": 40,
+            "pct_eligible": 55.55555555555556,
+            "eligibleArticles": 20,
+            "totalArticles": 36
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 16.66666666666666,
+            "pct_bar_informative": 16.66666666666666,
+            "pct_only_informative": 66.66666666666666,
+            "pct_eligible": 28.57142857142857,
+            "eligibleArticles": 6,
+            "totalArticles": 21
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 60,
+            "pct_bar_informative": 10,
+            "pct_only_informative": 30,
+            "pct_eligible": 40.54054054054054,
+            "eligibleArticles": 30,
+            "totalArticles": 74
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 66.66666666666666,
+            "pct_bar_informative": 12.82051282051282,
+            "pct_only_informative": 20.51282051282051,
+            "pct_eligible": 54.166666666666664,
+            "eligibleArticles": 39,
+            "totalArticles": 72
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 55.00000000000001,
+            "pct_bar_informative": 2.5,
+            "pct_only_informative": 42.5,
+            "pct_eligible": 55.55555555555556,
+            "eligibleArticles": 40,
+            "totalArticles": 72
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 63.63636363636363,
+            "pct_bar_informative": 12.12121212121212,
+            "pct_only_informative": 24.24242424242424,
+            "pct_eligible": 54.09836065573771,
+            "eligibleArticles": 33,
+            "totalArticles": 61
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 61.224489795918366,
+            "pct_bar_informative": 18.367346938775512,
+            "pct_only_informative": 20.40816326530612,
+            "pct_eligible": 58.333333333333336,
+            "eligibleArticles": 49,
+            "totalArticles": 84
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 57.99999999999999,
+            "pct_bar_informative": 26,
+            "pct_only_informative": 16,
+            "pct_eligible": 64.93506493506493,
+            "eligibleArticles": 50,
+            "totalArticles": 77
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 34.615384615384606,
+            "pct_bar_informative": 23.07692307692307,
+            "pct_only_informative": 42.30769230769231,
+            "pct_eligible": 68.42105263157895,
+            "eligibleArticles": 52,
+            "totalArticles": 76
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 31.57894736842105,
+            "pct_bar_informative": 28.947368421052634,
+            "pct_only_informative": 39.47368421052631,
+            "pct_eligible": 61.29032258064516,
+            "eligibleArticles": 38,
+            "totalArticles": 62
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 41.46341463414634,
+            "pct_bar_informative": 19.51219512195122,
+            "pct_only_informative": 39.02439024390244,
+            "pct_eligible": 61.19402985074627,
+            "eligibleArticles": 41,
+            "totalArticles": 67
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 29.03225806451613,
+            "pct_bar_informative": 14.51612903225806,
+            "pct_only_informative": 56.451612903225815,
+            "pct_eligible": 63.91752577319587,
+            "eligibleArticles": 62,
+            "totalArticles": 97
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2021,
+            "label": "100% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2013,
+            "pct_only_bar": 48.275862068965516,
+            "pct_bar_informative": 0,
+            "pct_only_informative": 51.724137931034484,
+            "pct_eligible": 28.431372549019603,
+            "eligibleArticles": 58,
+            "totalArticles": 204
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 65.15151515151516,
+            "pct_bar_informative": 6.06060606060606,
+            "pct_only_informative": 28.78787878787879,
+            "pct_eligible": 32.638888888888886,
+            "eligibleArticles": 34,
+            "totalArticles": 218
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 49.81132075471698,
+            "pct_bar_informative": 14.716981132075471,
+            "pct_only_informative": 35.47169811320755,
+            "pct_eligible": 29.687499999999993,
+            "eligibleArticles": 58,
+            "totalArticles": 238
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 59.51374207188161,
+            "pct_bar_informative": 4.545454545454545,
+            "pct_only_informative": 35.940803382663844,
+            "pct_eligible": 40.745129015271196,
+            "eligibleArticles": 54,
+            "totalArticles": 229
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 47.5,
+            "pct_bar_informative": 2.2222222222222197,
+            "pct_only_informative": 50.27777777777778,
+            "pct_eligible": 38.75231910946196,
+            "eligibleArticles": 57,
+            "totalArticles": 218
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 46.75324675324675,
+            "pct_bar_informative": 11.688311688311686,
+            "pct_only_informative": 41.55844155844156,
+            "pct_eligible": 39.950980392156865,
+            "eligibleArticles": 58,
+            "totalArticles": 228
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 56.5,
+            "pct_bar_informative": 10.142857142857139,
+            "pct_only_informative": 33.35714285714286,
+            "pct_eligible": 42.7390180878553,
+            "eligibleArticles": 78,
+            "totalArticles": 260
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 38.53107344632768,
+            "pct_bar_informative": 13.917137476459505,
+            "pct_only_informative": 47.5517890772128,
+            "pct_eligible": 41.6600790513834,
+            "eligibleArticles": 104,
+            "totalArticles": 328
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 44.5029624753127,
+            "pct_bar_informative": 13.75905200789993,
+            "pct_only_informative": 41.737985516787354,
+            "pct_eligible": 46.475074404761905,
+            "eligibleArticles": 111,
+            "totalArticles": 340
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 27.678571428571423,
+            "pct_bar_informative": 22.32142857142857,
+            "pct_only_informative": 49.99999999999999,
+            "pct_eligible": 50.70028011204481,
+            "eligibleArticles": 84,
+            "totalArticles": 215
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 29.56896551724138,
+            "pct_bar_informative": 25.11494252873563,
+            "pct_only_informative": 45.31609195402299,
+            "pct_eligible": 58.292322834645674,
+            "eligibleArticles": 89,
+            "totalArticles": 191
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 19.14706914706914,
+            "pct_bar_informative": 24.727974727974726,
+            "pct_only_informative": 56.12495612495613,
+            "pct_eligible": 55.67375886524822,
+            "eligibleArticles": 114,
+            "totalArticles": 272
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 24.962406015037594,
+            "pct_bar_informative": 25.714285714285708,
+            "pct_only_informative": 49.32330827067669,
+            "pct_eligible": 55.84415584415585,
+            "eligibleArticles": 130,
+            "totalArticles": 270
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -1998,6 +4453,313 @@
             "label": "11% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 82.77847309136419,
+            "pct_bar_informative": 15.335836462244469,
+            "pct_only_informative": 1.885690446391315,
+            "pct_eligible": 84.70633104500382,
+            "eligibleArticles": 481,
+            "totalArticles": 562
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 86.24635761589404,
+            "pct_bar_informative": 12.456953642384105,
+            "pct_only_informative": 1.29668874172185,
+            "pct_eligible": 85.53216148348466,
+            "eligibleArticles": 427,
+            "totalArticles": 489
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 82.51696566552442,
+            "pct_bar_informative": 12.316065309413425,
+            "pct_only_informative": 5.166969025062145,
+            "pct_eligible": 85.72237170232313,
+            "eligibleArticles": 486,
+            "totalArticles": 553
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 80.90513582342953,
+            "pct_bar_informative": 16.091893039049236,
+            "pct_only_informative": 3.0029711375212154,
+            "pct_eligible": 87.93142341529438,
+            "eligibleArticles": 428,
+            "totalArticles": 484
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 82.75963345864662,
+            "pct_bar_informative": 16.66911419172932,
+            "pct_only_informative": 0.57125234962406,
+            "pct_eligible": 88.61712677875413,
+            "eligibleArticles": 389,
+            "totalArticles": 440
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 78.65674286726917,
+            "pct_bar_informative": 16.83856104908736,
+            "pct_only_informative": 4.50469608364345,
+            "pct_eligible": 86.17764862954527,
+            "eligibleArticles": 392,
+            "totalArticles": 440
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 73.5299059139785,
+            "pct_bar_informative": 21.328965053763433,
+            "pct_only_informative": 5.1411290322580605,
+            "pct_eligible": 90.86055058595105,
+            "eligibleArticles": 316,
+            "totalArticles": 347
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 74.02087587928295,
+            "pct_bar_informative": 22.78647606081234,
+            "pct_only_informative": 3.19264805990469,
+            "pct_eligible": 89.62707786526684,
+            "eligibleArticles": 308,
+            "totalArticles": 343
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 64.65272591486183,
+            "pct_bar_informative": 26.20238984316654,
+            "pct_only_informative": 9.144884241971615,
+            "pct_eligible": 90.75281382618857,
+            "eligibleArticles": 336,
+            "totalArticles": 371
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 52.96248433583959,
+            "pct_bar_informative": 32.5422932330827,
+            "pct_only_informative": 14.495222431077691,
+            "pct_eligible": 93.17363846258318,
+            "eligibleArticles": 325,
+            "totalArticles": 347
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 54.27413411938099,
+            "pct_bar_informative": 32.13338246131172,
+            "pct_only_informative": 13.592483419307294,
+            "pct_eligible": 93.24307022597785,
+            "eligibleArticles": 351,
+            "totalArticles": 373
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 36.71614161515321,
+            "pct_bar_informative": 34.56084096393508,
+            "pct_only_informative": 28.723017420911702,
+            "pct_eligible": 95.14435302916979,
+            "eligibleArticles": 348,
+            "totalArticles": 366
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 23.105034500383333,
+            "pct_bar_informative": 38.87298747763864,
+            "pct_only_informative": 38.02197802197802,
+            "pct_eligible": 94.18396482958666,
+            "eligibleArticles": 397,
+            "totalArticles": 421
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 19.0439555869755,
+            "pct_bar_informative": 36.27687445419387,
+            "pct_only_informative": 44.67916995883063,
+            "pct_eligible": 95.92676207239612,
+            "eligibleArticles": 312,
+            "totalArticles": 325
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 13.947232438675947,
+            "pct_bar_informative": 33.73962734429618,
+            "pct_only_informative": 52.31314021702788,
+            "pct_eligible": 94.85844673990272,
+            "eligibleArticles": 364,
+            "totalArticles": 385
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 9.877558479532158,
+            "pct_bar_informative": 35.54459064327485,
+            "pct_only_informative": 54.57785087719297,
+            "pct_eligible": 94.91185952397285,
+            "eligibleArticles": 516,
+            "totalArticles": 544
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2013,
+            "label": "50% of journals adopted"
+          },
+          {
+            "year": 2017,
+            "label": "50% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 75.53975741239893,
+            "pct_bar_informative": 6.566561844863726,
+            "pct_only_informative": 17.89368074273734,
+            "pct_eligible": 52.63739277366792,
+            "eligibleArticles": 459,
+            "totalArticles": 738
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 75.71087161523411,
+            "pct_bar_informative": 9.486273658839865,
+            "pct_only_informative": 14.802854725926018,
+            "pct_eligible": 52.419202910775944,
+            "eligibleArticles": 404,
+            "totalArticles": 636
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 78.22668069409879,
+            "pct_bar_informative": 10.712158798632906,
+            "pct_only_informative": 11.06116050726829,
+            "pct_eligible": 62.76132162776887,
+            "eligibleArticles": 499,
+            "totalArticles": 723
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 56.95806680881308,
+            "pct_bar_informative": 11.601747932238334,
+            "pct_only_informative": 31.44018525894858,
+            "pct_eligible": 50.47713349079215,
+            "eligibleArticles": 399,
+            "totalArticles": 616
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 73.06115092766915,
+            "pct_bar_informative": 9.197224120463307,
+            "pct_only_informative": 17.74162495186754,
+            "pct_eligible": 52.05213030814521,
+            "eligibleArticles": 436,
+            "totalArticles": 666
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 63.98531972869058,
+            "pct_bar_informative": 9.61597092565212,
+            "pct_only_informative": 26.39870934565729,
+            "pct_eligible": 58.04567137817353,
+            "eligibleArticles": 598,
+            "totalArticles": 842
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 58.70440850894963,
+            "pct_bar_informative": 17.808047374565806,
+            "pct_only_informative": 23.48754411648456,
+            "pct_eligible": 62.83699023201121,
+            "eligibleArticles": 601,
+            "totalArticles": 814
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 53.51811886880734,
+            "pct_bar_informative": 23.12559362903597,
+            "pct_only_informative": 23.356287502156693,
+            "pct_eligible": 56.11568381763668,
+            "eligibleArticles": 575,
+            "totalArticles": 826
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 60.290628329229726,
+            "pct_bar_informative": 22.819392571812376,
+            "pct_only_informative": 16.88997909895789,
+            "pct_eligible": 60.36784298780655,
+            "eligibleArticles": 723,
+            "totalArticles": 1064
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 53.740088370077956,
+            "pct_bar_informative": 17.354646897593216,
+            "pct_only_informative": 28.905264732328813,
+            "pct_eligible": 63.37039746971993,
+            "eligibleArticles": 934,
+            "totalArticles": 1319
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 51.41623056173086,
+            "pct_bar_informative": 23.281445089871834,
+            "pct_only_informative": 25.302324348397285,
+            "pct_eligible": 65.92273490717234,
+            "eligibleArticles": 1349,
+            "totalArticles": 1812
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 46.381021930598195,
+            "pct_bar_informative": 25.426701777148782,
+            "pct_only_informative": 28.192276292253023,
+            "pct_eligible": 65.09377107079351,
+            "eligibleArticles": 1811,
+            "totalArticles": 2541
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 39.34515703605003,
+            "pct_bar_informative": 28.44447031111279,
+            "pct_only_informative": 32.21037265283717,
+            "pct_eligible": 64.41791959804335,
+            "eligibleArticles": 2248,
+            "totalArticles": 2933
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 42.83164021577448,
+            "pct_bar_informative": 26.045767877864616,
+            "pct_only_informative": 31.1225919063609,
+            "pct_eligible": 64.62075337399106,
+            "eligibleArticles": 2076,
+            "totalArticles": 2716
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 42.35146302110588,
+            "pct_bar_informative": 22.94716127961926,
+            "pct_only_informative": 34.701375699274855,
+            "pct_eligible": 63.79003648916936,
+            "eligibleArticles": 1586,
+            "totalArticles": 2062
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 36.02930007358093,
+            "pct_bar_informative": 27.446217843274944,
+            "pct_only_informative": 36.52448208314413,
+            "pct_eligible": 67.52455923266515,
+            "eligibleArticles": 1875,
+            "totalArticles": 2375
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -2164,6 +4926,317 @@
             "label": "5% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 76.41245969687063,
+            "pct_bar_informative": 14.239657562010002,
+            "pct_only_informative": 9.347882741119374,
+            "pct_eligible": 82.94218738776206,
+            "eligibleArticles": 3005,
+            "totalArticles": 3620
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 76.66479167967483,
+            "pct_bar_informative": 15.329235897748125,
+            "pct_only_informative": 8.005972422577036,
+            "pct_eligible": 84.10300685036268,
+            "eligibleArticles": 2954,
+            "totalArticles": 3498
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 73.10356583854966,
+            "pct_bar_informative": 18.18273164517775,
+            "pct_only_informative": 8.713702516272589,
+            "pct_eligible": 84.35995010507416,
+            "eligibleArticles": 3047,
+            "totalArticles": 3588
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 72.05058958270848,
+            "pct_bar_informative": 19.420775500415758,
+            "pct_only_informative": 8.528634916875758,
+            "pct_eligible": 85.12297859347788,
+            "eligibleArticles": 2754,
+            "totalArticles": 3230
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 67.56672256830443,
+            "pct_bar_informative": 21.457222993999576,
+            "pct_only_informative": 10.976054437695987,
+            "pct_eligible": 85.14099728472446,
+            "eligibleArticles": 2494,
+            "totalArticles": 2925
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 67.21689860991067,
+            "pct_bar_informative": 20.83433252970538,
+            "pct_only_informative": 11.948768860383941,
+            "pct_eligible": 86.18649475428946,
+            "eligibleArticles": 2449,
+            "totalArticles": 2861
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 63.81376740835053,
+            "pct_bar_informative": 22.9056091702098,
+            "pct_only_informative": 13.280623421439666,
+            "pct_eligible": 85.49304978088792,
+            "eligibleArticles": 2300,
+            "totalArticles": 2708
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 57.76346613757232,
+            "pct_bar_informative": 24.18717856520033,
+            "pct_only_informative": 18.04935529722733,
+            "pct_eligible": 86.18017440488588,
+            "eligibleArticles": 1974,
+            "totalArticles": 2306
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 53.26250702055165,
+            "pct_bar_informative": 25.78794310814217,
+            "pct_only_informative": 20.94954987130617,
+            "pct_eligible": 85.69329280483886,
+            "eligibleArticles": 2171,
+            "totalArticles": 2560
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 39.92524132614895,
+            "pct_bar_informative": 28.02820760885138,
+            "pct_only_informative": 32.04655106499967,
+            "pct_eligible": 85.8157395359486,
+            "eligibleArticles": 2170,
+            "totalArticles": 2528
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 25.08292712925599,
+            "pct_bar_informative": 28.483107070911025,
+            "pct_only_informative": 46.433965799832976,
+            "pct_eligible": 84.97355452254149,
+            "eligibleArticles": 2013,
+            "totalArticles": 2366
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 15.350813552654122,
+            "pct_bar_informative": 24.183252973990328,
+            "pct_only_informative": 60.46593347335555,
+            "pct_eligible": 84.83851172148626,
+            "eligibleArticles": 1860,
+            "totalArticles": 2215
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 8.514194324953682,
+            "pct_bar_informative": 19.685236090273342,
+            "pct_only_informative": 71.80056958477297,
+            "pct_eligible": 88.14182331484011,
+            "eligibleArticles": 1395,
+            "totalArticles": 1618
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 6.984156298557625,
+            "pct_bar_informative": 20.846173294957946,
+            "pct_only_informative": 72.16967040648443,
+            "pct_eligible": 86.18286952282541,
+            "eligibleArticles": 1467,
+            "totalArticles": 1735
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 6.841306657316027,
+            "pct_bar_informative": 22.367311321030247,
+            "pct_only_informative": 70.79138202165372,
+            "pct_eligible": 84.05641853749907,
+            "eligibleArticles": 1649,
+            "totalArticles": 1957
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 8.129730197589147,
+            "pct_bar_informative": 19.189832981967108,
+            "pct_only_informative": 72.68043682044373,
+            "pct_eligible": 85.40371551072059,
+            "eligibleArticles": 2002,
+            "totalArticles": 2325
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2017,
+            "label": "77% of journals adopted"
+          },
+          {
+            "year": 2019,
+            "label": "8% of journals adopted"
+          },
+          {
+            "year": 2021,
+            "label": "15% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 78.2850635622542,
+            "pct_bar_informative": 6.091496587152374,
+            "pct_only_informative": 15.62343985059343,
+            "pct_eligible": 54.43189238782227,
+            "eligibleArticles": 1132,
+            "totalArticles": 2078
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 79.99573609573764,
+            "pct_bar_informative": 5.580076835697597,
+            "pct_only_informative": 14.42418706856476,
+            "pct_eligible": 57.897765449461254,
+            "eligibleArticles": 1189,
+            "totalArticles": 2175
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 77.54714329902413,
+            "pct_bar_informative": 6.986398171909615,
+            "pct_only_informative": 15.46645852906625,
+            "pct_eligible": 54.31762898848897,
+            "eligibleArticles": 1336,
+            "totalArticles": 2633
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 74.73132811078621,
+            "pct_bar_informative": 8.041205852397647,
+            "pct_only_informative": 17.22746603681614,
+            "pct_eligible": 58.08657175334405,
+            "eligibleArticles": 1355,
+            "totalArticles": 2418
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 77.2244194528659,
+            "pct_bar_informative": 8.00656342980842,
+            "pct_only_informative": 14.769017117325674,
+            "pct_eligible": 58.855887039895855,
+            "eligibleArticles": 1424,
+            "totalArticles": 2444
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 76.08694225146705,
+            "pct_bar_informative": 9.328824963475427,
+            "pct_only_informative": 14.584232785057518,
+            "pct_eligible": 59.26363775054563,
+            "eligibleArticles": 1561,
+            "totalArticles": 2645
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 72.4404342757973,
+            "pct_bar_informative": 11.866478744556131,
+            "pct_only_informative": 15.693086979646559,
+            "pct_eligible": 59.62980604732536,
+            "eligibleArticles": 1573,
+            "totalArticles": 2576
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 66.99112549059784,
+            "pct_bar_informative": 12.341395243287742,
+            "pct_only_informative": 20.66747926611442,
+            "pct_eligible": 62.86285309117797,
+            "eligibleArticles": 1956,
+            "totalArticles": 3149
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 66.57603071241363,
+            "pct_bar_informative": 14.178843334131011,
+            "pct_only_informative": 19.24512595345536,
+            "pct_eligible": 63.462584997136645,
+            "eligibleArticles": 2609,
+            "totalArticles": 4070
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 59.25113702170021,
+            "pct_bar_informative": 14.22129478708946,
+            "pct_only_informative": 26.52756819121032,
+            "pct_eligible": 63.13051663110026,
+            "eligibleArticles": 2395,
+            "totalArticles": 3680
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 54.368584617134246,
+            "pct_bar_informative": 14.99259107684683,
+            "pct_only_informative": 30.638824306018915,
+            "pct_eligible": 63.54285961510431,
+            "eligibleArticles": 2457,
+            "totalArticles": 3752
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 48.46460251711421,
+            "pct_bar_informative": 16.89468378598923,
+            "pct_only_informative": 34.64071369689655,
+            "pct_eligible": 63.901323736452966,
+            "eligibleArticles": 2798,
+            "totalArticles": 4271
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 42.417704907534755,
+            "pct_bar_informative": 17.993579267028426,
+            "pct_only_informative": 39.58871582543681,
+            "pct_eligible": 63.63811583306542,
+            "eligibleArticles": 2708,
+            "totalArticles": 4220
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 39.34277531874267,
+            "pct_bar_informative": 18.26310257588489,
+            "pct_only_informative": 42.39412210537244,
+            "pct_eligible": 64.42841788275832,
+            "eligibleArticles": 2292,
+            "totalArticles": 3510
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 34.13772046865209,
+            "pct_bar_informative": 16.86913785587232,
+            "pct_only_informative": 48.99314167547558,
+            "pct_eligible": 67.13022793751549,
+            "eligibleArticles": 2116,
+            "totalArticles": 3130
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 32.480128559866266,
+            "pct_bar_informative": 16.26594249976768,
+            "pct_only_informative": 51.253928940366045,
+            "pct_eligible": 65.08121703056878,
+            "eligibleArticles": 1786,
+            "totalArticles": 2636
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -2326,6 +5399,313 @@
             "label": "17% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 39.603960396039604,
+            "pct_bar_informative": 15.84158415841584,
+            "pct_only_informative": 44.55445544554455,
+            "pct_eligible": 37.4074074074074,
+            "eligibleArticles": 101,
+            "totalArticles": 270
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 55.12820512820513,
+            "pct_bar_informative": 10.25641025641025,
+            "pct_only_informative": 34.615384615384606,
+            "pct_eligible": 32.09876543209876,
+            "eligibleArticles": 78,
+            "totalArticles": 243
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 35.13513513513513,
+            "pct_bar_informative": 13.513513513513509,
+            "pct_only_informative": 51.35135135135135,
+            "pct_eligible": 32.314410480349345,
+            "eligibleArticles": 74,
+            "totalArticles": 229
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 45.3125,
+            "pct_bar_informative": 7.8125,
+            "pct_only_informative": 46.875,
+            "pct_eligible": 32.1608040201005,
+            "eligibleArticles": 64,
+            "totalArticles": 199
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 46.98848238482384,
+            "pct_bar_informative": 24.579945799457995,
+            "pct_only_informative": 28.431571815718154,
+            "pct_eligible": 47.9211351262168,
+            "eligibleArticles": 277,
+            "totalArticles": 547
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 37.73080010703773,
+            "pct_bar_informative": 22.190259566497186,
+            "pct_only_informative": 40.07894032646507,
+            "pct_eligible": 48.33842627960276,
+            "eligibleArticles": 276,
+            "totalArticles": 546
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 41,
+            "pct_bar_informative": 28.03448275862069,
+            "pct_only_informative": 30.96551724137931,
+            "pct_eligible": 42.392708352284096,
+            "eligibleArticles": 208,
+            "totalArticles": 472
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 38.40177580466148,
+            "pct_bar_informative": 25.82844458538132,
+            "pct_only_informative": 35.76977960995719,
+            "pct_eligible": 44.54444864252173,
+            "eligibleArticles": 172,
+            "totalArticles": 385
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 33.5,
+            "pct_bar_informative": 28.5,
+            "pct_only_informative": 38,
+            "pct_eligible": 42.789279636982414,
+            "eligibleArticles": 145,
+            "totalArticles": 336
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 31.236559139784937,
+            "pct_bar_informative": 26.075268817204297,
+            "pct_only_informative": 42.68817204301075,
+            "pct_eligible": 34.963976192962306,
+            "eligibleArticles": 123,
+            "totalArticles": 340
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 19.78603049680275,
+            "pct_bar_informative": 25.061485489424495,
+            "pct_only_informative": 55.15248401377275,
+            "pct_eligible": 41.81403212172442,
+            "eligibleArticles": 145,
+            "totalArticles": 344
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 31.848417657730295,
+            "pct_bar_informative": 13.182826043136458,
+            "pct_only_informative": 54.96875629913323,
+            "pct_eligible": 42.008069522036,
+            "eligibleArticles": 162,
+            "totalArticles": 377
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 27.901785714285715,
+            "pct_bar_informative": 16.294642857142854,
+            "pct_only_informative": 55.80357142857142,
+            "pct_eligible": 41.53846153846154,
+            "eligibleArticles": 124,
+            "totalArticles": 286
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 29.464285714285708,
+            "pct_bar_informative": 11.369047619047615,
+            "pct_only_informative": 59.166666666666664,
+            "pct_eligible": 42.68774703557312,
+            "eligibleArticles": 142,
+            "totalArticles": 314
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 23.80681818181818,
+            "pct_bar_informative": 15.795454545454545,
+            "pct_only_informative": 60.397727272727266,
+            "pct_eligible": 40.1058201058201,
+            "eligibleArticles": 102,
+            "totalArticles": 240
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 26.694677871148457,
+            "pct_bar_informative": 10.084033613445376,
+            "pct_only_informative": 63.22128851540616,
+            "pct_eligible": 36.485426347233116,
+            "eligibleArticles": 149,
+            "totalArticles": 373
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2019,
+            "label": "50% of journals adopted"
+          },
+          {
+            "year": 2020,
+            "label": "50% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 40.051772202309834,
+            "pct_bar_informative": 16.96933492632417,
+            "pct_only_informative": 42.978892871365986,
+            "pct_eligible": 43.736586467863994,
+            "eligibleArticles": 248,
+            "totalArticles": 519
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 41.07692307692307,
+            "pct_bar_informative": 20.119658119658116,
+            "pct_only_informative": 38.8034188034188,
+            "pct_eligible": 45.54898644995827,
+            "eligibleArticles": 233,
+            "totalArticles": 491
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 40.919368697146474,
+            "pct_bar_informative": 18.557805363360917,
+            "pct_only_informative": 40.522825939492606,
+            "pct_eligible": 43.6381526563319,
+            "eligibleArticles": 279,
+            "totalArticles": 544
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 35.66564260112647,
+            "pct_bar_informative": 21.70848267622461,
+            "pct_only_informative": 42.625874722648916,
+            "pct_eligible": 47.026185314400855,
+            "eligibleArticles": 243,
+            "totalArticles": 503
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 37.656565656565654,
+            "pct_bar_informative": 18.216450216450212,
+            "pct_only_informative": 44.12698412698413,
+            "pct_eligible": 47.48160993098133,
+            "eligibleArticles": 267,
+            "totalArticles": 518
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 34.89496959646213,
+            "pct_bar_informative": 20.494748479823105,
+            "pct_only_informative": 44.61028192371476,
+            "pct_eligible": 44.67893217893217,
+            "eligibleArticles": 300,
+            "totalArticles": 607
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 27.685358201552532,
+            "pct_bar_informative": 24.189418318972972,
+            "pct_only_informative": 48.12522347947449,
+            "pct_eligible": 42.453341279085514,
+            "eligibleArticles": 260,
+            "totalArticles": 536
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 29.76178050804916,
+            "pct_bar_informative": 21.063347929019567,
+            "pct_only_informative": 49.17487156293126,
+            "pct_eligible": 41.59511031604055,
+            "eligibleArticles": 231,
+            "totalArticles": 513
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 37.96185140722955,
+            "pct_bar_informative": 18.57409630518874,
+            "pct_only_informative": 43.464052287581694,
+            "pct_eligible": 41.67846418575222,
+            "eligibleArticles": 232,
+            "totalArticles": 500
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 26.250450937950937,
+            "pct_bar_informative": 15.21915584415584,
+            "pct_only_informative": 58.53039321789321,
+            "pct_eligible": 41.98348624645794,
+            "eligibleArticles": 250,
+            "totalArticles": 532
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 31.467295588228076,
+            "pct_bar_informative": 18.515012926741917,
+            "pct_only_informative": 50.01769148503,
+            "pct_eligible": 37.631170509077485,
+            "eligibleArticles": 289,
+            "totalArticles": 695
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 22.905180300527867,
+            "pct_bar_informative": 11.735271138961753,
+            "pct_only_informative": 65.35954856051038,
+            "pct_eligible": 38.92904996806558,
+            "eligibleArticles": 368,
+            "totalArticles": 918
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 16.792380794125556,
+            "pct_bar_informative": 17.008003766478343,
+            "pct_only_informative": 66.1996154393961,
+            "pct_eligible": 36.43695909261947,
+            "eligibleArticles": 332,
+            "totalArticles": 814
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 26.031426303165432,
+            "pct_bar_informative": 11.566965643052598,
+            "pct_only_informative": 62.40160805378196,
+            "pct_eligible": 40.53559273550316,
+            "eligibleArticles": 325,
+            "totalArticles": 693
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 15.015629440181868,
+            "pct_bar_informative": 12.9923273657289,
+            "pct_only_informative": 71.99204319408923,
+            "pct_eligible": 37.28137773965407,
+            "eligibleArticles": 256,
+            "totalArticles": 642
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 17.62946088529401,
+            "pct_bar_informative": 15.9287888859774,
+            "pct_only_informative": 66.44175022872858,
+            "pct_eligible": 39.676164943005546,
+            "eligibleArticles": 434,
+            "totalArticles": 1141
+          }
+        ],
+        "policyLines": []
       }
     },
     {
@@ -2492,6 +5872,317 @@
             "label": "12% of journals adopted"
           }
         ]
+      },
+      "aggPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 71.1749680715198,
+            "pct_bar_informative": 10.021285653469556,
+            "pct_only_informative": 18.80374627501064,
+            "pct_eligible": 63.258768071949184,
+            "eligibleArticles": 406,
+            "totalArticles": 512
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 72.70696961072638,
+            "pct_bar_informative": 8.869072088880452,
+            "pct_only_informative": 18.42395830039317,
+            "pct_eligible": 65.3111088026425,
+            "eligibleArticles": 392,
+            "totalArticles": 504
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 68.76417233560092,
+            "pct_bar_informative": 16.485260770975056,
+            "pct_only_informative": 14.750566893424034,
+            "pct_eligible": 62.95704473073892,
+            "eligibleArticles": 428,
+            "totalArticles": 551
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 65.67060196953436,
+            "pct_bar_informative": 20.549718503455157,
+            "pct_only_informative": 13.779679527010487,
+            "pct_eligible": 63.051981541802384,
+            "eligibleArticles": 423,
+            "totalArticles": 549
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 58.205421417758465,
+            "pct_bar_informative": 20.10150183509219,
+            "pct_only_informative": 21.693076747149345,
+            "pct_eligible": 62.73946163977141,
+            "eligibleArticles": 383,
+            "totalArticles": 510
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 53.209956709956714,
+            "pct_bar_informative": 16.13744588744589,
+            "pct_only_informative": 30.652597402597404,
+            "pct_eligible": 60.74673176314895,
+            "eligibleArticles": 323,
+            "totalArticles": 433
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 57.03664921465969,
+            "pct_bar_informative": 23.396509598603842,
+            "pct_only_informative": 19.56684118673647,
+            "pct_eligible": 55.505714537879705,
+            "eligibleArticles": 324,
+            "totalArticles": 467
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 47.250149377808945,
+            "pct_bar_informative": 25.671160990309918,
+            "pct_only_informative": 27.07868963188112,
+            "pct_eligible": 63.45136395526392,
+            "eligibleArticles": 338,
+            "totalArticles": 452
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 44.44035483578443,
+            "pct_bar_informative": 26.687897069884297,
+            "pct_only_informative": 28.871748094331267,
+            "pct_eligible": 55.70944700030577,
+            "eligibleArticles": 357,
+            "totalArticles": 492
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 30.73286973852386,
+            "pct_bar_informative": 20.928633839532647,
+            "pct_only_informative": 48.33849642194349,
+            "pct_eligible": 57.49670887314485,
+            "eligibleArticles": 347,
+            "totalArticles": 477
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 25.30074191838897,
+            "pct_bar_informative": 22.616410528175233,
+            "pct_only_informative": 52.08284755343578,
+            "pct_eligible": 58.722010588358806,
+            "eligibleArticles": 328,
+            "totalArticles": 472
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 14.140482695810563,
+            "pct_bar_informative": 23.62704918032787,
+            "pct_only_informative": 62.232468123861565,
+            "pct_eligible": 58.299112551986106,
+            "eligibleArticles": 238,
+            "totalArticles": 378
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 20.127278981768143,
+            "pct_bar_informative": 9.232886136910905,
+            "pct_only_informative": 70.63983488132095,
+            "pct_eligible": 69.70120392789885,
+            "eligibleArticles": 219,
+            "totalArticles": 295
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 13.66786140979689,
+            "pct_bar_informative": 19.4026284348865,
+            "pct_only_informative": 66.9295101553166,
+            "pct_eligible": 61.41232612447965,
+            "eligibleArticles": 195,
+            "totalArticles": 291
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 9.65119949494949,
+            "pct_bar_informative": 16.800820707070702,
+            "pct_only_informative": 73.54797979797979,
+            "pct_eligible": 56.14621157104816,
+            "eligibleArticles": 228,
+            "totalArticles": 358
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 13.163891200314586,
+            "pct_bar_informative": 18.515397606182216,
+            "pct_only_informative": 68.3207111935032,
+            "pct_eligible": 62.68678411535554,
+            "eligibleArticles": 202,
+            "totalArticles": 313
+          }
+        ],
+        "policyLines": [
+          {
+            "year": 2013,
+            "label": "33% of journals adopted"
+          },
+          {
+            "year": 2017,
+            "label": "33% of journals adopted"
+          },
+          {
+            "year": 2018,
+            "label": "33% of journals adopted"
+          }
+        ]
+      },
+      "aggNoPolicy": {
+        "chartData": [
+          {
+            "year": 2010,
+            "pct_only_bar": 71.36021872863978,
+            "pct_bar_informative": 4.46115288220551,
+            "pct_only_informative": 24.1786283891547,
+            "pct_eligible": 33.176504134587965,
+            "eligibleArticles": 65,
+            "totalArticles": 242
+          },
+          {
+            "year": 2011,
+            "pct_only_bar": 58.113391984359716,
+            "pct_bar_informative": 9.286412512218964,
+            "pct_only_informative": 32.600195503421304,
+            "pct_eligible": 34.82498421988868,
+            "eligibleArticles": 64,
+            "totalArticles": 234
+          },
+          {
+            "year": 2012,
+            "pct_only_bar": 65.08103241296519,
+            "pct_bar_informative": 6.062424969987992,
+            "pct_only_informative": 28.856542617046813,
+            "pct_eligible": 31.99506129362244,
+            "eligibleArticles": 100,
+            "totalArticles": 301
+          },
+          {
+            "year": 2013,
+            "pct_only_bar": 67.99450549450549,
+            "pct_bar_informative": 8.608058608058606,
+            "pct_only_informative": 23.397435897435898,
+            "pct_eligible": 32.12859974670998,
+            "eligibleArticles": 81,
+            "totalArticles": 252
+          },
+          {
+            "year": 2014,
+            "pct_only_bar": 74.60839160839161,
+            "pct_bar_informative": 4.9230769230769225,
+            "pct_only_informative": 20.468531468531467,
+            "pct_eligible": 30.81970649895178,
+            "eligibleArticles": 67,
+            "totalArticles": 265
+          },
+          {
+            "year": 2015,
+            "pct_only_bar": 73.08860494344366,
+            "pct_bar_informative": 11.012777545035604,
+            "pct_only_informative": 15.898617511520735,
+            "pct_eligible": 32.06922986334751,
+            "eligibleArticles": 70,
+            "totalArticles": 251
+          },
+          {
+            "year": 2016,
+            "pct_only_bar": 68.14323607427056,
+            "pct_bar_informative": 10.371352785145888,
+            "pct_only_informative": 21.485411140583555,
+            "pct_eligible": 34.44826586548598,
+            "eligibleArticles": 93,
+            "totalArticles": 280
+          },
+          {
+            "year": 2017,
+            "pct_only_bar": 64.72359058565955,
+            "pct_bar_informative": 5.086206896551722,
+            "pct_only_informative": 30.19020251778872,
+            "pct_eligible": 38.19261144628791,
+            "eligibleArticles": 104,
+            "totalArticles": 262
+          },
+          {
+            "year": 2018,
+            "pct_only_bar": 52.49016480595428,
+            "pct_bar_informative": 11.236044657097285,
+            "pct_only_informative": 36.273790536948425,
+            "pct_eligible": 34.24505938299041,
+            "eligibleArticles": 120,
+            "totalArticles": 346
+          },
+          {
+            "year": 2019,
+            "pct_only_bar": 40.773790536948425,
+            "pct_bar_informative": 11.99893673577884,
+            "pct_only_informative": 47.22727272727273,
+            "pct_eligible": 30.77637457623313,
+            "eligibleArticles": 99,
+            "totalArticles": 302
+          },
+          {
+            "year": 2020,
+            "pct_only_bar": 47.439176339432095,
+            "pct_bar_informative": 14.10879401927995,
+            "pct_only_informative": 38.45202964128795,
+            "pct_eligible": 30.39457618677461,
+            "eligibleArticles": 106,
+            "totalArticles": 408
+          },
+          {
+            "year": 2021,
+            "pct_only_bar": 34.468805704099815,
+            "pct_bar_informative": 9.074866310160425,
+            "pct_only_informative": 56.45632798573975,
+            "pct_eligible": 35.054183725992985,
+            "eligibleArticles": 95,
+            "totalArticles": 267
+          },
+          {
+            "year": 2022,
+            "pct_only_bar": 17.49579831932773,
+            "pct_bar_informative": 10.605042016806722,
+            "pct_only_informative": 71.89915966386555,
+            "pct_eligible": 31.872190073584655,
+            "eligibleArticles": 77,
+            "totalArticles": 234
+          },
+          {
+            "year": 2023,
+            "pct_only_bar": 36.80952380952381,
+            "pct_bar_informative": 9.857142857142854,
+            "pct_only_informative": 53.33333333333333,
+            "pct_eligible": 29.64900412681938,
+            "eligibleArticles": 74,
+            "totalArticles": 239
+          },
+          {
+            "year": 2024,
+            "pct_only_bar": 23.649776149776148,
+            "pct_bar_informative": 13.148148148148147,
+            "pct_only_informative": 63.2020757020757,
+            "pct_eligible": 32.81164863608957,
+            "eligibleArticles": 103,
+            "totalArticles": 316
+          },
+          {
+            "year": 2025,
+            "pct_only_bar": 30.021367521367516,
+            "pct_bar_informative": 10.299145299145298,
+            "pct_only_informative": 59.67948717948718,
+            "pct_eligible": 30.242899725694297,
+            "eligibleArticles": 107,
+            "totalArticles": 350
+          }
+        ],
+        "policyLines": []
       }
     }
   ]

@@ -174,7 +174,7 @@ function buildAllFieldsJson(plots, fieldJsons) {
       ? { chartData: tracesToChartData(plots['plot_global_agg_npo'].data), policyLines: tracesToPolicyLines(plots['plot_global_agg_npo'].data) }
       : null,
     journals: [],
-    fields: fieldJsons.map(f => ({ slug: f.slug, field: f.field, aggAll: f.aggAll })),
+    fields: fieldJsons.map(f => ({ slug: f.slug, field: f.field, aggAll: f.aggAll, aggPolicy: f.aggPolicy ?? null, aggNoPolicy: f.aggNoPolicy ?? null })),
   }
 }
 

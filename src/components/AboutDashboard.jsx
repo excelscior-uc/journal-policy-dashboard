@@ -22,6 +22,11 @@ export default function AboutDashboard() {
           violin plots
         </li>
       </ul>
+      <img
+        src={`${import.meta.env.BASE_URL}bz_graphs_for_continuous_data.png`}
+        alt="Barzooka graph types for continuous data"
+        style={{ maxWidth: '100%', marginTop: '1rem' }}
+      />
     </CollapsibleHomeSection>
   )
 }

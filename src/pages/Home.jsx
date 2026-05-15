@@ -40,10 +40,8 @@ export default function Home() {
       <div className="section-wrap" style={{ marginTop: 24, paddingBottom: 0 }}>
         <AboutDashboard />
         <WhyPolicyMatters />
-        <WhatMetricsMean />
-      </div>
-      <div className="section-wrap" style={{ marginTop: 24, paddingBottom: 0 }}>
         <FieldGrid />
+        <WhatMetricsMean />
       </div>
       <div className="section-wrap" style={{ marginTop: 24, paddingBottom: 0 }}>
         <CollapsibleHomeSection
@@ -52,7 +50,7 @@ export default function Home() {
           headingId="refs-heading"
           panelId="refs-panel"
           title="References & Bibliography"
-          defaultOpen={false}
+          defaultOpen={true}
         >
           <ul className="ref-list">
             {REFS.map((r, i) => (

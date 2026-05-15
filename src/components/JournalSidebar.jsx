@@ -8,7 +8,8 @@ const SIDEBAR_WIDTH_MIN = 300
 const SIDEBAR_WIDTH_MAX = 520
 const SIDEBAR_NAV_PAD_X = 20
 
-export default function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {} }) {
+export default function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, policyFilter = 'all' }) {
+  console.log('[Sidebar] policyFilter =', policyFilter)
   const [search, setSearch] = useState('')
   const [fieldsOpen, setFieldsOpen] = useState(false)
   const [flyoutMounted, setFlyoutMounted] = useState(false)
@@ -150,7 +151,13 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
               <span className="journal-link__name">{currentField?.name}</span>
               <span className="journal-link__tags">
                 <span className="sf-tag sf-tag--journals">{journals.length} journals</span>
-                {currentField?.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{currentField.withPolicy} with policy</span>}
+                {policyFilter === 'nopolicy' ? (
+                  <span className="sf-tag sf-tag--no-policy">
+                    {(currentField?.totalJournals ?? 0) - (currentField?.withPolicy ?? 0)} without policy
+                  </span>
+                ) : currentField?.withPolicy > 0 ? (
+                  <span className="sf-tag sf-tag--policy">{currentField.withPolicy} with policy</span>
+                ) : null}
                 <span className="sf-tag sf-tag--total">
                   {journals.reduce((s, j) => s + (j.chartData ?? []).reduce((a, r) => a + (r.totalArticles ?? 0), 0), 0).toLocaleString()} total
                 </span>
