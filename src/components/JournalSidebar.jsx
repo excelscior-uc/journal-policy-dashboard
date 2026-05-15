@@ -64,7 +64,7 @@ export default function JournalSidebar({ journals, selectedId, onSelect, collaps
           <button
             type="button"
             className="journal-sidebar__toggle"
-            onClick={onToggle}
+            onClick={() => onToggle?.()}
             aria-label="Expand sidebar"
           >›</button>
           {currentField && (
@@ -76,7 +76,7 @@ export default function JournalSidebar({ journals, selectedId, onSelect, collaps
           <button
             type="button"
             className="journal-sidebar__toggle"
-            onClick={onToggle}
+            onClick={() => onToggle?.()}
             aria-label="Collapse sidebar"
           >‹</button>
         </div>
@@ -155,14 +155,14 @@ export default function JournalSidebar({ journals, selectedId, onSelect, collaps
           {filtered.length === 0 && search && (
             <div className="journal-sidebar__no-results">No journals match "{search}"</div>
           )}
-              <div className="journal-sidebar__legend">
-                <span className="journal-sidebar__legend-item">
-                  <span className="policy-badge policy-badge--legend" aria-hidden>2023</span>
-                  has policy
-                </span>
-              </div>
-            </>
-          )}
+          <div className="journal-sidebar__legend">
+            <span className="journal-sidebar__legend-item">
+              <span className="policy-badge policy-badge--legend" aria-hidden>2023</span>
+              has policy
+            </span>
+          </div>
+        </>
+      )}
         </>
       )}
     </nav>
