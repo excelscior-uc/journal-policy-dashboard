@@ -142,6 +142,8 @@ export default function FieldPage() {
                     visibleSeries={visibleSeries}
                     showPolicyLines={showPolicyLines}
                     tall
+                    forceVisible={isCapturing}
+                    onMount={registerCapture}
                   />
                 )}
               </div>
@@ -186,6 +188,8 @@ export default function FieldPage() {
                             policyLines={f.aggAll?.policyLines}
                             visibleSeries={visibleSeries}
                             showPolicyLines={showPolicyLines}
+                            forceVisible={isCapturing}
+                            onMount={registerCapture}
                           />
                         </div>
                       )
@@ -220,6 +224,8 @@ export default function FieldPage() {
                         policyLines={j.policyLines}
                         visibleSeries={visibleSeries}
                         showPolicyLines={showPolicyLines}
+                        forceVisible={isCapturing}
+                        onMount={registerCapture}
                       />
                     ))}
                   </div>
@@ -245,6 +251,8 @@ export default function FieldPage() {
                   visibleSeries={visibleSeries}
                   showPolicyLines={showPolicyLines}
                   tall
+                  forceVisible={isCapturing}
+                  onMount={registerCapture}
                 />
               </div>
             </>
