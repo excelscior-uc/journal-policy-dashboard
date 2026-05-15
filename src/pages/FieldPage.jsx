@@ -4,6 +4,7 @@ import { FIELDS, SERIES_CONFIG } from '../data/fields'
 import ChartCard from '../components/ChartCard'
 import FilterBar from '../components/FilterBar'
 import JournalSidebar from '../components/JournalSidebar'
+import JSZip from 'jszip'
 
 const DEFAULT_VISIBLE = new Set(SERIES_CONFIG.map(s => s.key))
 
@@ -83,6 +84,53 @@ export default function FieldPage() {
       : (field?.journals ?? '—')
     return `n = ${n.toLocaleString()} eligible articles; ${pct}% of total | ${journalCount} journals`
   }, [aggData, field, policyFilter])
+
+  useEffect(() => {
+    if (!isCapturing) return
+    let cancelled = false
+
+    function waitFrames(n) {
+      return new Promise(resolve => {
+        let count = 0
+        function tick() { ++count >= n ? resolve() : requestAnimationFrame(tick) }
+        requestAnimationFrame(tick)
+      })
+    }
+
+    async function run() {
+      await waitFrames(2)
+      if (cancelled) return
+
+      const registry = captureRegistryRef.current
+      const results = await Promise.all(
+        registry.map(async entry => {
+          const dataUrl = await entry.capture()
+          const safeName = entry.title.replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').toLowerCase()
+          return { name: `${safeName}.png`, dataUrl }
+        })
+      )
+
+      const zip = new JSZip()
+      for (const { name, dataUrl } of results) {
+        const base64 = dataUrl.split(',')[1]
+        zip.file(name, base64, { base64: true })
+      }
+
+      const blob = await zip.generateAsync({ type: 'blob' })
+      const fieldName = (field?.name ?? slug).replace(/\s+/g, '-').toLowerCase()
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `${fieldName}-charts.zip`
+      a.click()
+      URL.revokeObjectURL(url)
+
+      if (!cancelled) setIsCapturing(false)
+    }
+
+    run()
+    return () => { cancelled = true }
+  }, [isCapturing, field, slug])
 
   function journalSubtitle(j) {
     const n = j.chartData?.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0) ?? 0
