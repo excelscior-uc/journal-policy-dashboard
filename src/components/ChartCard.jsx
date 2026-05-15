@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useMemo } from 'react'
 import { toPng } from 'html-to-image'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -100,7 +100,7 @@ export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData,
   const ref = useRef()
   const cardRef = useRef()
   const visible = useVisible(ref)
-  const policyYears = new Set(policyLines.map(pl => pl.year))
+  const policyYears = useMemo(() => new Set(policyLines.map(pl => pl.year)), [policyLines])
   const [menuOpen, setMenuOpen] = useState(false)
   const [busy, setBusy] = useState(false)
   const menuRef = useRef()
@@ -151,9 +151,9 @@ export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData,
     }
   }
 
-  const extendedData = chartData?.length
+  const extendedData = useMemo(() => chartData?.length
     ? [{ year: chartData[0].year - 1 }, ...chartData, { year: chartData[chartData.length - 1].year + 1 }]
-    : chartData
+    : chartData, [chartData])
 
   return (
     <div className="chart-card" ref={cardRef}>
@@ -252,6 +252,7 @@ export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData,
                   strokeDasharray={s.dashed ? '4 2' : undefined}
                   dot={{ r: 3 }}
                   connectNulls
+                  isAnimationActive={false}
                 />
               ))}
             </LineChart>
