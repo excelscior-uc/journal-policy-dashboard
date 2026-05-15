@@ -58,6 +58,7 @@ export default function FieldPage() {
     const cached = fieldCache.get(slug)
     if (cached) {
       setData(cached)
+      prefetchOthers(slug)
       return
     }
 
