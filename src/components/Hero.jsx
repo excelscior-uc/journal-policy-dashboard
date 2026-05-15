@@ -6,17 +6,14 @@ export default function Hero() {
     <div className="hero">
       <div className="hero__inner">
         <div className="hero__text">
-          <div className="hero__eyebrow">Biomedical Research · 2008 – 2024</div>
-          <h1 className="hero__title">
-            Tracking the Shift from <em>Bar Graphs</em> to Informative Plots
+<h1 className="hero__title">
+            Tracking the Shift from <em>Bar Graphs</em> to <em>Informative Plots</em>
           </h1>
           <p className="hero__sub">
             Bar charts that reduce continuous data to a mean and error bar are widely criticised for
             concealing distributional features. This dashboard tracks how{' '}
             <strong>journal editorial policies</strong> are driving the shift toward more informative
-            visualisations across 213 journals and 12 biomedical research fields.
-          </p>
-          <p className="hero__preref">
+            visualisations across 213 journals and 12 biomedical research fields.{' '}
             Pre-registered study protocol:{' '}
             <a href="https://osf.io/tcyxg" target="_blank" rel="noreferrer" className="hero__link">
               osf.io/tcyxg

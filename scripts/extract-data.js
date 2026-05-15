@@ -41,6 +41,8 @@ export function tracesToChartData(traces) {
   if (!dataTraces.length) return []
 
   const years = decodeAxis(dataTraces[0].x)
+  const countTrace = dataTraces.find(t => Array.isArray(t.customdata) && t.customdata.length > 0)
+
   return years.map((year, i) => {
     const point = { year: Math.round(year) }
     for (const trace of dataTraces) {
@@ -48,6 +50,13 @@ export function tracesToChartData(traces) {
       if (key) {
         const vals = decodeAxis(trace.y)
         point[key] = vals[i] ?? null
+      }
+    }
+    if (countTrace) {
+      const row = countTrace.customdata[i]
+      if (Array.isArray(row)) {
+        point.eligibleArticles = row[0] ?? null
+        point.totalArticles = row[1] ?? null
       }
     }
     return point

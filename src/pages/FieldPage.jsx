@@ -19,23 +19,12 @@ export default function FieldPage() {
   const [journalCols, setJournalCols] = useState(2)
   const [fieldCols, setFieldCols] = useState(2)
   const [policyFilter, setPolicyFilter] = useState('all')
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(
-    () => localStorage.getItem('sidebar-collapsed') === 'true'
-  )
   const [isCapturing, setIsCapturing] = useState(false)
   const captureRegistryRef = useRef([])
 
   const registerCapture = useCallback((entry) => {
     if (entry) captureRegistryRef.current.push(entry)
   }, [])
-
-  function toggleSidebar() {
-    setSidebarCollapsed(prev => {
-      const next = !prev
-      localStorage.setItem('sidebar-collapsed', String(next))
-      return next
-    })
-  }
 
   const field = FIELDS.find(f => f.slug === slug)
 
@@ -78,21 +67,34 @@ export default function FieldPage() {
     return data.journals.find(j => j.id === selectedJournal)
   }, [data, selectedJournal])
 
-  const fieldTotal = useMemo(() => {
-    if (!data?.aggAll?.chartData) return 0
-    return data.aggAll.chartData.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
+  const fieldStats = useMemo(() => {
+    if (!data?.fields) return {}
+    const perField = Object.fromEntries(data.fields.map(f => {
+      const rows = f.aggAll?.chartData ?? []
+      return [f.slug, {
+        totalArticles: rows.reduce((s, r) => s + (r.totalArticles ?? 0), 0),
+        eligibleArticles: rows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0),
+      }]
+    }))
+    const globalRows = data.aggAll?.chartData ?? []
+    perField['all-fields'] = {
+      totalArticles: globalRows.reduce((s, r) => s + (r.totalArticles ?? 0), 0),
+      eligibleArticles: globalRows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0),
+    }
+    return perField
   }, [data])
 
   const aggSubtitle = useMemo(() => {
-    if (!aggData?.chartData) return null
-    const n = aggData.chartData.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
-    const nTotal = aggData.chartData.reduce((s, r) => s + (r.totalArticles ?? 0), 0)
+    if (!aggData?.chartData?.length) return null
+    const rows = aggData.chartData
+    const n = rows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
+    const nTotal = rows.reduce((s, r) => s + (r.totalArticles ?? 0), 0)
     const pct = nTotal > 0 ? ((n / nTotal) * 100).toFixed(1) : '—'
     const journalCount = policyFilter === 'policy'
-      ? (field?.policyJournals ?? '—')
+      ? (field?.withPolicy ?? '—')
       : policyFilter === 'nopolicy'
-      ? ((field?.journals ?? 0) - (field?.policyJournals ?? 0)) || '—'
-      : (field?.journals ?? '—')
+      ? ((field?.totalJournals ?? 0) - (field?.withPolicy ?? 0)) || '—'
+      : (field?.totalJournals ?? '—')
     return `n = ${n.toLocaleString()} eligible articles; ${pct}% of total | ${journalCount} journals`
   }, [aggData, field, policyFilter])
 
@@ -155,8 +157,9 @@ export default function FieldPage() {
   }, [isCapturing, slug])
 
   function journalSubtitle(j) {
-    const n = j.chartData?.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0) ?? 0
-    const nTotal = j.chartData?.reduce((s, r) => s + (r.totalArticles ?? 0), 0) ?? 0
+    const rows = j.chartData ?? []
+    const n = rows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
+    const nTotal = rows.reduce((s, r) => s + (r.totalArticles ?? 0), 0)
     const pct = nTotal > 0 ? ((n / nTotal) * 100).toFixed(1) : '—'
     return `n = ${n.toLocaleString()} eligible articles; ${pct}% of total`
   }
@@ -171,8 +174,7 @@ export default function FieldPage() {
             journals={filteredJournals}
             selectedId={selectedJournal}
             onSelect={setSelectedJournal}
-            collapsed={sidebarCollapsed}
-            onToggle={toggleSidebar}
+            fieldStats={fieldStats}
           />
         )}
 
@@ -254,10 +256,11 @@ export default function FieldPage() {
                   <div className={`chart-grid${fieldCols === 1 ? ' chart-grid--full' : ''}`}>
                     {data.fields.map(f => {
                       const meta = FIELDS.find(x => x.slug === f.slug)
-                      const n = f.aggAll?.chartData?.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0) ?? 0
-                      const nTotal = f.aggAll?.chartData?.reduce((s, r) => s + (r.totalArticles ?? 0), 0) ?? 0
+                      const rows = f.aggAll?.chartData ?? []
+                      const n = rows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
+                      const nTotal = rows.reduce((s, r) => s + (r.totalArticles ?? 0), 0)
                       const pct = nTotal > 0 ? ((n / nTotal) * 100).toFixed(1) : '—'
-                      const jCount = f.fieldJournalTotal ?? '—'
+                      const jCount = meta?.totalJournals ?? '—'
                       const fieldSub = `n = ${n.toLocaleString()} eligible articles; ${pct}% of total | ${jCount} journals`
                       return (
                         <div
@@ -269,7 +272,7 @@ export default function FieldPage() {
                           onKeyDown={e => e.key === 'Enter' && navigate(`/field/${f.slug}`)}
                         >
                           <ChartCard
-                            title={`${meta?.icon ?? ''} ${f.field}`}
+                            title={f.field}
                             subtitle={fieldSub}
                             chartData={f.aggAll?.chartData}
                             policyLines={f.aggAll?.policyLines}

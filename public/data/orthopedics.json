@@ -8,98 +8,126 @@
         "pct_only_bar": 46.15384615384615,
         "pct_bar_informative": 7.69230769230769,
         "pct_only_informative": 46.15384615384615,
-        "pct_eligible": 30.95238095238095
+        "pct_eligible": 30.95238095238095,
+        "eligibleArticles": 13,
+        "totalArticles": 42
       },
       {
         "year": 2013,
         "pct_only_bar": 53.304597701149426,
         "pct_bar_informative": 4.166666666666665,
         "pct_only_informative": 42.52873563218391,
-        "pct_eligible": 32.9656862745098
+        "pct_eligible": 32.9656862745098,
+        "eligibleArticles": 70,
+        "totalArticles": 236
       },
       {
         "year": 2014,
         "pct_only_bar": 63.43434343434344,
         "pct_bar_informative": 4.04040404040404,
         "pct_only_informative": 32.525252525252526,
-        "pct_eligible": 40.27777777777778
+        "pct_eligible": 40.27777777777778,
+        "eligibleArticles": 54,
+        "totalArticles": 254
       },
       {
         "year": 2015,
         "pct_only_bar": 38.76310272536687,
         "pct_bar_informative": 15.366876310272536,
         "pct_only_informative": 45.870020964360585,
-        "pct_eligible": 29.315476190476186
+        "pct_eligible": 29.315476190476186,
+        "eligibleArticles": 64,
+        "totalArticles": 259
       },
       {
         "year": 2016,
         "pct_only_bar": 59.67582804792107,
         "pct_bar_informative": 6.363636363636363,
         "pct_only_informative": 33.96053558844256,
-        "pct_eligible": 40.676932857027644
+        "pct_eligible": 40.676932857027644,
+        "eligibleArticles": 84,
+        "totalArticles": 303
       },
       {
         "year": 2017,
         "pct_only_bar": 53.888888888888886,
         "pct_bar_informative": 5.7549857549857535,
         "pct_only_informative": 40.356125356125354,
-        "pct_eligible": 43.89043496186353
+        "pct_eligible": 43.89043496186353,
+        "eligibleArticles": 96,
+        "totalArticles": 290
       },
       {
         "year": 2018,
         "pct_only_bar": 49.502164502164504,
         "pct_bar_informative": 8.625541125541124,
         "pct_only_informative": 41.87229437229437,
-        "pct_eligible": 45.15250544662309
+        "pct_eligible": 45.15250544662309,
+        "eligibleArticles": 98,
+        "totalArticles": 300
       },
       {
         "year": 2019,
         "pct_only_bar": 58.878787878787875,
         "pct_bar_informative": 10.8023088023088,
         "pct_only_informative": 30.31890331890332,
-        "pct_eligible": 46.52546561048277
+        "pct_eligible": 46.52546561048277,
+        "eligibleArticles": 111,
+        "totalArticles": 321
       },
       {
         "year": 2020,
         "pct_only_bar": 46.095545562857914,
         "pct_bar_informative": 15.40054063056484,
         "pct_only_informative": 38.503913806577245,
-        "pct_eligible": 47.217830478700044
+        "pct_eligible": 47.217830478700044,
+        "eligibleArticles": 153,
+        "totalArticles": 412
       },
       {
         "year": 2021,
         "pct_only_bar": 49.0019749835418,
         "pct_bar_informative": 17.83936800526662,
         "pct_only_informative": 33.15865701119157,
-        "pct_eligible": 52.62840458152957
+        "pct_eligible": 52.62840458152957,
+        "eligibleArticles": 161,
+        "totalArticles": 417
       },
       {
         "year": 2022,
         "pct_only_bar": 29.990842490842482,
         "pct_bar_informative": 22.57326007326007,
         "pct_only_informative": 47.43589743589743,
-        "pct_eligible": 56.60720428522285
+        "pct_eligible": 56.60720428522285,
+        "eligibleArticles": 136,
+        "totalArticles": 291
       },
       {
         "year": 2023,
         "pct_only_bar": 30.2389594676346,
         "pct_bar_informative": 26.392417826174633,
         "pct_only_informative": 43.36862270619076,
-        "pct_eligible": 59.29165608331217
+        "pct_eligible": 59.29165608331217,
+        "eligibleArticles": 127,
+        "totalArticles": 253
       },
       {
         "year": 2024,
         "pct_only_bar": 26.58585097609487,
         "pct_bar_informative": 22.98938152596689,
         "pct_only_informative": 50.42476749793823,
-        "pct_eligible": 57.51384919374757
+        "pct_eligible": 57.51384919374757,
+        "eligibleArticles": 155,
+        "totalArticles": 339
       },
       {
         "year": 2025,
         "pct_only_bar": 26.31902336486377,
         "pct_bar_informative": 21.981566820276495,
         "pct_only_informative": 51.699409814859735,
-        "pct_eligible": 58.53527915383586
+        "pct_eligible": 58.53527915383586,
+        "eligibleArticles": 192,
+        "totalArticles": 367
       }
     ],
     "policyLines": [
@@ -116,98 +144,126 @@
         "pct_only_bar": 46.15384615384615,
         "pct_bar_informative": 7.69230769230769,
         "pct_only_informative": 46.15384615384615,
-        "pct_eligible": 30.95238095238095
+        "pct_eligible": 30.95238095238095,
+        "eligibleArticles": 13,
+        "totalArticles": 42
       },
       {
         "year": 2013,
         "pct_only_bar": 58.333333333333336,
         "pct_bar_informative": 8.33333333333333,
         "pct_only_informative": 33.33333333333333,
-        "pct_eligible": 37.5
+        "pct_eligible": 37.5,
+        "eligibleArticles": 12,
+        "totalArticles": 32
       },
       {
         "year": 2014,
         "pct_only_bar": 60,
         "pct_bar_informative": 0,
         "pct_only_informative": 40,
-        "pct_eligible": 55.55555555555556
+        "pct_eligible": 55.55555555555556,
+        "eligibleArticles": 20,
+        "totalArticles": 36
       },
       {
         "year": 2015,
         "pct_only_bar": 16.66666666666666,
         "pct_bar_informative": 16.66666666666666,
         "pct_only_informative": 66.66666666666666,
-        "pct_eligible": 28.57142857142857
+        "pct_eligible": 28.57142857142857,
+        "eligibleArticles": 6,
+        "totalArticles": 21
       },
       {
         "year": 2016,
         "pct_only_bar": 60,
         "pct_bar_informative": 10,
         "pct_only_informative": 30,
-        "pct_eligible": 40.54054054054054
+        "pct_eligible": 40.54054054054054,
+        "eligibleArticles": 30,
+        "totalArticles": 74
       },
       {
         "year": 2017,
         "pct_only_bar": 66.66666666666666,
         "pct_bar_informative": 12.82051282051282,
         "pct_only_informative": 20.51282051282051,
-        "pct_eligible": 54.166666666666664
+        "pct_eligible": 54.166666666666664,
+        "eligibleArticles": 39,
+        "totalArticles": 72
       },
       {
         "year": 2018,
         "pct_only_bar": 55.00000000000001,
         "pct_bar_informative": 2.5,
         "pct_only_informative": 42.5,
-        "pct_eligible": 55.55555555555556
+        "pct_eligible": 55.55555555555556,
+        "eligibleArticles": 40,
+        "totalArticles": 72
       },
       {
         "year": 2019,
         "pct_only_bar": 63.63636363636363,
         "pct_bar_informative": 12.12121212121212,
         "pct_only_informative": 24.24242424242424,
-        "pct_eligible": 54.09836065573771
+        "pct_eligible": 54.09836065573771,
+        "eligibleArticles": 33,
+        "totalArticles": 61
       },
       {
         "year": 2020,
         "pct_only_bar": 61.224489795918366,
         "pct_bar_informative": 18.367346938775512,
         "pct_only_informative": 20.40816326530612,
-        "pct_eligible": 58.333333333333336
+        "pct_eligible": 58.333333333333336,
+        "eligibleArticles": 49,
+        "totalArticles": 84
       },
       {
         "year": 2021,
         "pct_only_bar": 57.99999999999999,
         "pct_bar_informative": 26,
         "pct_only_informative": 16,
-        "pct_eligible": 64.93506493506493
+        "pct_eligible": 64.93506493506493,
+        "eligibleArticles": 50,
+        "totalArticles": 77
       },
       {
         "year": 2022,
         "pct_only_bar": 34.615384615384606,
         "pct_bar_informative": 23.07692307692307,
         "pct_only_informative": 42.30769230769231,
-        "pct_eligible": 68.42105263157895
+        "pct_eligible": 68.42105263157895,
+        "eligibleArticles": 52,
+        "totalArticles": 76
       },
       {
         "year": 2023,
         "pct_only_bar": 31.57894736842105,
         "pct_bar_informative": 28.947368421052634,
         "pct_only_informative": 39.47368421052631,
-        "pct_eligible": 61.29032258064516
+        "pct_eligible": 61.29032258064516,
+        "eligibleArticles": 38,
+        "totalArticles": 62
       },
       {
         "year": 2024,
         "pct_only_bar": 41.46341463414634,
         "pct_bar_informative": 19.51219512195122,
         "pct_only_informative": 39.02439024390244,
-        "pct_eligible": 61.19402985074627
+        "pct_eligible": 61.19402985074627,
+        "eligibleArticles": 41,
+        "totalArticles": 67
       },
       {
         "year": 2025,
         "pct_only_bar": 29.03225806451613,
         "pct_bar_informative": 14.51612903225806,
         "pct_only_informative": 56.451612903225815,
-        "pct_eligible": 63.91752577319587
+        "pct_eligible": 63.91752577319587,
+        "eligibleArticles": 62,
+        "totalArticles": 97
       }
     ],
     "policyLines": [
@@ -224,91 +280,117 @@
         "pct_only_bar": 48.275862068965516,
         "pct_bar_informative": 0,
         "pct_only_informative": 51.724137931034484,
-        "pct_eligible": 28.431372549019603
+        "pct_eligible": 28.431372549019603,
+        "eligibleArticles": 58,
+        "totalArticles": 204
       },
       {
         "year": 2014,
         "pct_only_bar": 65.15151515151516,
         "pct_bar_informative": 6.06060606060606,
         "pct_only_informative": 28.78787878787879,
-        "pct_eligible": 32.638888888888886
+        "pct_eligible": 32.638888888888886,
+        "eligibleArticles": 34,
+        "totalArticles": 218
       },
       {
         "year": 2015,
         "pct_only_bar": 49.81132075471698,
         "pct_bar_informative": 14.716981132075471,
         "pct_only_informative": 35.47169811320755,
-        "pct_eligible": 29.687499999999993
+        "pct_eligible": 29.687499999999993,
+        "eligibleArticles": 58,
+        "totalArticles": 238
       },
       {
         "year": 2016,
         "pct_only_bar": 59.51374207188161,
         "pct_bar_informative": 4.545454545454545,
         "pct_only_informative": 35.940803382663844,
-        "pct_eligible": 40.745129015271196
+        "pct_eligible": 40.745129015271196,
+        "eligibleArticles": 54,
+        "totalArticles": 229
       },
       {
         "year": 2017,
         "pct_only_bar": 47.5,
         "pct_bar_informative": 2.2222222222222197,
         "pct_only_informative": 50.27777777777778,
-        "pct_eligible": 38.75231910946196
+        "pct_eligible": 38.75231910946196,
+        "eligibleArticles": 57,
+        "totalArticles": 218
       },
       {
         "year": 2018,
         "pct_only_bar": 46.75324675324675,
         "pct_bar_informative": 11.688311688311686,
         "pct_only_informative": 41.55844155844156,
-        "pct_eligible": 39.950980392156865
+        "pct_eligible": 39.950980392156865,
+        "eligibleArticles": 58,
+        "totalArticles": 228
       },
       {
         "year": 2019,
         "pct_only_bar": 56.5,
         "pct_bar_informative": 10.142857142857139,
         "pct_only_informative": 33.35714285714286,
-        "pct_eligible": 42.7390180878553
+        "pct_eligible": 42.7390180878553,
+        "eligibleArticles": 78,
+        "totalArticles": 260
       },
       {
         "year": 2020,
         "pct_only_bar": 38.53107344632768,
         "pct_bar_informative": 13.917137476459505,
         "pct_only_informative": 47.5517890772128,
-        "pct_eligible": 41.6600790513834
+        "pct_eligible": 41.6600790513834,
+        "eligibleArticles": 104,
+        "totalArticles": 328
       },
       {
         "year": 2021,
         "pct_only_bar": 44.5029624753127,
         "pct_bar_informative": 13.75905200789993,
         "pct_only_informative": 41.737985516787354,
-        "pct_eligible": 46.475074404761905
+        "pct_eligible": 46.475074404761905,
+        "eligibleArticles": 111,
+        "totalArticles": 340
       },
       {
         "year": 2022,
         "pct_only_bar": 27.678571428571423,
         "pct_bar_informative": 22.32142857142857,
         "pct_only_informative": 49.99999999999999,
-        "pct_eligible": 50.70028011204481
+        "pct_eligible": 50.70028011204481,
+        "eligibleArticles": 84,
+        "totalArticles": 215
       },
       {
         "year": 2023,
         "pct_only_bar": 29.56896551724138,
         "pct_bar_informative": 25.11494252873563,
         "pct_only_informative": 45.31609195402299,
-        "pct_eligible": 58.292322834645674
+        "pct_eligible": 58.292322834645674,
+        "eligibleArticles": 89,
+        "totalArticles": 191
       },
       {
         "year": 2024,
         "pct_only_bar": 19.14706914706914,
         "pct_bar_informative": 24.727974727974726,
         "pct_only_informative": 56.12495612495613,
-        "pct_eligible": 55.67375886524822
+        "pct_eligible": 55.67375886524822,
+        "eligibleArticles": 114,
+        "totalArticles": 272
       },
       {
         "year": 2025,
         "pct_only_bar": 24.962406015037594,
         "pct_bar_informative": 25.714285714285708,
         "pct_only_informative": 49.32330827067669,
-        "pct_eligible": 55.84415584415585
+        "pct_eligible": 55.84415584415585,
+        "eligibleArticles": 130,
+        "totalArticles": 270
       }
     ],
     "policyLines": []
@@ -325,91 +407,117 @@
           "pct_only_bar": 48.275862068965516,
           "pct_bar_informative": 0,
           "pct_only_informative": 51.724137931034484,
-          "pct_eligible": 28.431372549019603
+          "pct_eligible": 28.431372549019603,
+          "eligibleArticles": 58,
+          "totalArticles": 204
         },
         {
           "year": 2014,
           "pct_only_bar": 30.303030303030297,
           "pct_bar_informative": 12.12121212121212,
           "pct_only_informative": 57.57575757575758,
-          "pct_eligible": 15.277777777777779
+          "pct_eligible": 15.277777777777779,
+          "eligibleArticles": 33,
+          "totalArticles": 216
         },
         {
           "year": 2015,
           "pct_only_bar": 39.62264150943396,
           "pct_bar_informative": 9.43396226415094,
           "pct_only_informative": 50.943396226415096,
-          "pct_eligible": 23.660714285714278
+          "pct_eligible": 23.660714285714278,
+          "eligibleArticles": 53,
+          "totalArticles": 224
         },
         {
           "year": 2016,
           "pct_only_bar": 37.20930232558139,
           "pct_bar_informative": 0,
           "pct_only_informative": 62.7906976744186,
-          "pct_eligible": 20.379146919431278
+          "pct_eligible": 20.379146919431278,
+          "eligibleArticles": 43,
+          "totalArticles": 211
         },
         {
           "year": 2017,
           "pct_only_bar": 20,
           "pct_bar_informative": 4.444444444444439,
           "pct_only_informative": 75.55555555555556,
-          "pct_eligible": 22.95918367346938
+          "pct_eligible": 22.95918367346938,
+          "eligibleArticles": 45,
+          "totalArticles": 196
         },
         {
           "year": 2018,
           "pct_only_bar": 36.36363636363636,
           "pct_bar_informative": 9.09090909090909,
           "pct_only_informative": 54.54545454545454,
-          "pct_eligible": 21.56862745098039
+          "pct_eligible": 21.56862745098039,
+          "eligibleArticles": 44,
+          "totalArticles": 204
         },
         {
           "year": 2019,
           "pct_only_bar": 38,
           "pct_bar_informative": 6,
           "pct_only_informative": 56.00000000000001,
-          "pct_eligible": 23.25581395348837
+          "pct_eligible": 23.25581395348837,
+          "eligibleArticles": 50,
+          "totalArticles": 215
         },
         {
           "year": 2020,
           "pct_only_bar": 23.728813559322028,
           "pct_bar_informative": 3.38983050847457,
           "pct_only_informative": 72.88135593220339,
-          "pct_eligible": 23.3201581027668
+          "pct_eligible": 23.3201581027668,
+          "eligibleArticles": 59,
+          "totalArticles": 253
         },
         {
           "year": 2021,
           "pct_only_bar": 24.489795918367342,
           "pct_bar_informative": 8.16326530612244,
           "pct_only_informative": 67.3469387755102,
-          "pct_eligible": 19.140625
+          "pct_eligible": 19.140625,
+          "eligibleArticles": 49,
+          "totalArticles": 256
         },
         {
           "year": 2022,
           "pct_only_bar": 14.28571428571428,
           "pct_bar_informative": 7.14285714285714,
           "pct_only_informative": 78.57142857142857,
-          "pct_eligible": 19.04761904761904
+          "pct_eligible": 19.04761904761904,
+          "eligibleArticles": 28,
+          "totalArticles": 147
         },
         {
           "year": 2023,
           "pct_only_bar": 24.137931034482758,
           "pct_bar_informative": 6.89655172413793,
           "pct_only_informative": 68.96551724137932,
-          "pct_eligible": 22.83464566929134
+          "pct_eligible": 22.83464566929134,
+          "eligibleArticles": 29,
+          "totalArticles": 127
         },
         {
           "year": 2024,
           "pct_only_bar": 16.21621621621621,
           "pct_bar_informative": 2.7027027027027,
           "pct_only_informative": 81.08108108108108,
-          "pct_eligible": 19.68085106382978
+          "pct_eligible": 19.68085106382978,
+          "eligibleArticles": 37,
+          "totalArticles": 188
         },
         {
           "year": 2025,
           "pct_only_bar": 25.71428571428571,
           "pct_bar_informative": 11.42857142857142,
           "pct_only_informative": 62.857142857142854,
-          "pct_eligible": 21.21212121212121
+          "pct_eligible": 21.21212121212121,
+          "eligibleArticles": 35,
+          "totalArticles": 165
         }
       ],
       "policyLines": []
@@ -425,98 +533,126 @@
           "pct_only_bar": 46.15384615384615,
           "pct_bar_informative": 7.69230769230769,
           "pct_only_informative": 46.15384615384615,
-          "pct_eligible": 30.95238095238095
+          "pct_eligible": 30.95238095238095,
+          "eligibleArticles": 13,
+          "totalArticles": 42
         },
         {
           "year": 2013,
           "pct_only_bar": 58.333333333333336,
           "pct_bar_informative": 8.33333333333333,
           "pct_only_informative": 33.33333333333333,
-          "pct_eligible": 37.5
+          "pct_eligible": 37.5,
+          "eligibleArticles": 12,
+          "totalArticles": 32
         },
         {
           "year": 2014,
           "pct_only_bar": 60,
           "pct_bar_informative": 0,
           "pct_only_informative": 40,
-          "pct_eligible": 55.55555555555556
+          "pct_eligible": 55.55555555555556,
+          "eligibleArticles": 20,
+          "totalArticles": 36
         },
         {
           "year": 2015,
           "pct_only_bar": 16.66666666666666,
           "pct_bar_informative": 16.66666666666666,
           "pct_only_informative": 66.66666666666666,
-          "pct_eligible": 28.57142857142857
+          "pct_eligible": 28.57142857142857,
+          "eligibleArticles": 6,
+          "totalArticles": 21
         },
         {
           "year": 2016,
           "pct_only_bar": 60,
           "pct_bar_informative": 10,
           "pct_only_informative": 30,
-          "pct_eligible": 40.54054054054054
+          "pct_eligible": 40.54054054054054,
+          "eligibleArticles": 30,
+          "totalArticles": 74
         },
         {
           "year": 2017,
           "pct_only_bar": 66.66666666666666,
           "pct_bar_informative": 12.82051282051282,
           "pct_only_informative": 20.51282051282051,
-          "pct_eligible": 54.166666666666664
+          "pct_eligible": 54.166666666666664,
+          "eligibleArticles": 39,
+          "totalArticles": 72
         },
         {
           "year": 2018,
           "pct_only_bar": 55.00000000000001,
           "pct_bar_informative": 2.5,
           "pct_only_informative": 42.5,
-          "pct_eligible": 55.55555555555556
+          "pct_eligible": 55.55555555555556,
+          "eligibleArticles": 40,
+          "totalArticles": 72
         },
         {
           "year": 2019,
           "pct_only_bar": 63.63636363636363,
           "pct_bar_informative": 12.12121212121212,
           "pct_only_informative": 24.24242424242424,
-          "pct_eligible": 54.09836065573771
+          "pct_eligible": 54.09836065573771,
+          "eligibleArticles": 33,
+          "totalArticles": 61
         },
         {
           "year": 2020,
           "pct_only_bar": 61.224489795918366,
           "pct_bar_informative": 18.367346938775512,
           "pct_only_informative": 20.40816326530612,
-          "pct_eligible": 58.333333333333336
+          "pct_eligible": 58.333333333333336,
+          "eligibleArticles": 49,
+          "totalArticles": 84
         },
         {
           "year": 2021,
           "pct_only_bar": 57.99999999999999,
           "pct_bar_informative": 26,
           "pct_only_informative": 16,
-          "pct_eligible": 64.93506493506493
+          "pct_eligible": 64.93506493506493,
+          "eligibleArticles": 50,
+          "totalArticles": 77
         },
         {
           "year": 2022,
           "pct_only_bar": 34.615384615384606,
           "pct_bar_informative": 23.07692307692307,
           "pct_only_informative": 42.30769230769231,
-          "pct_eligible": 68.42105263157895
+          "pct_eligible": 68.42105263157895,
+          "eligibleArticles": 52,
+          "totalArticles": 76
         },
         {
           "year": 2023,
           "pct_only_bar": 31.57894736842105,
           "pct_bar_informative": 28.947368421052634,
           "pct_only_informative": 39.47368421052631,
-          "pct_eligible": 61.29032258064516
+          "pct_eligible": 61.29032258064516,
+          "eligibleArticles": 38,
+          "totalArticles": 62
         },
         {
           "year": 2024,
           "pct_only_bar": 41.46341463414634,
           "pct_bar_informative": 19.51219512195122,
           "pct_only_informative": 39.02439024390244,
-          "pct_eligible": 61.19402985074627
+          "pct_eligible": 61.19402985074627,
+          "eligibleArticles": 41,
+          "totalArticles": 67
         },
         {
           "year": 2025,
           "pct_only_bar": 29.03225806451613,
           "pct_bar_informative": 14.51612903225806,
           "pct_only_informative": 56.451612903225815,
-          "pct_eligible": 63.91752577319587
+          "pct_eligible": 63.91752577319587,
+          "eligibleArticles": 62,
+          "totalArticles": 97
         }
       ],
       "policyLines": [
@@ -537,84 +673,108 @@
           "pct_only_bar": 100,
           "pct_bar_informative": 0,
           "pct_only_informative": 0,
-          "pct_eligible": 50
+          "pct_eligible": 50,
+          "eligibleArticles": 1,
+          "totalArticles": 2
         },
         {
           "year": 2015,
           "pct_only_bar": 60,
           "pct_bar_informative": 20,
           "pct_only_informative": 20,
-          "pct_eligible": 35.71428571428571
+          "pct_eligible": 35.71428571428571,
+          "eligibleArticles": 5,
+          "totalArticles": 14
         },
         {
           "year": 2016,
           "pct_only_bar": 81.81818181818183,
           "pct_bar_informative": 9.09090909090909,
           "pct_only_informative": 9.09090909090909,
-          "pct_eligible": 61.111111111111114
+          "pct_eligible": 61.111111111111114,
+          "eligibleArticles": 11,
+          "totalArticles": 18
         },
         {
           "year": 2017,
           "pct_only_bar": 75,
           "pct_bar_informative": 0,
           "pct_only_informative": 25,
-          "pct_eligible": 54.54545454545454
+          "pct_eligible": 54.54545454545454,
+          "eligibleArticles": 12,
+          "totalArticles": 22
         },
         {
           "year": 2018,
           "pct_only_bar": 57.14285714285714,
           "pct_bar_informative": 14.28571428571428,
           "pct_only_informative": 28.57142857142857,
-          "pct_eligible": 58.333333333333336
+          "pct_eligible": 58.333333333333336,
+          "eligibleArticles": 14,
+          "totalArticles": 24
         },
         {
           "year": 2019,
           "pct_only_bar": 75,
           "pct_bar_informative": 14.28571428571428,
           "pct_only_informative": 10.71428571428571,
-          "pct_eligible": 62.22222222222222
+          "pct_eligible": 62.22222222222222,
+          "eligibleArticles": 28,
+          "totalArticles": 45
         },
         {
           "year": 2020,
           "pct_only_bar": 53.333333333333336,
           "pct_bar_informative": 24.44444444444444,
           "pct_only_informative": 22.22222222222222,
-          "pct_eligible": 60
+          "pct_eligible": 60,
+          "eligibleArticles": 45,
+          "totalArticles": 75
         },
         {
           "year": 2021,
           "pct_only_bar": 64.51612903225806,
           "pct_bar_informative": 19.35483870967742,
           "pct_only_informative": 16.12903225806451,
-          "pct_eligible": 73.80952380952381
+          "pct_eligible": 73.80952380952381,
+          "eligibleArticles": 62,
+          "totalArticles": 84
         },
         {
           "year": 2022,
           "pct_only_bar": 41.07142857142857,
           "pct_bar_informative": 37.5,
           "pct_only_informative": 21.42857142857142,
-          "pct_eligible": 82.35294117647058
+          "pct_eligible": 82.35294117647058,
+          "eligibleArticles": 56,
+          "totalArticles": 68
         },
         {
           "year": 2023,
           "pct_only_bar": 35,
           "pct_bar_informative": 43.33333333333333,
           "pct_only_informative": 21.66666666666666,
-          "pct_eligible": 93.75
+          "pct_eligible": 93.75,
+          "eligibleArticles": 60,
+          "totalArticles": 64
         },
         {
           "year": 2024,
           "pct_only_bar": 22.077922077922068,
           "pct_bar_informative": 46.75324675324675,
           "pct_only_informative": 31.16883116883117,
-          "pct_eligible": 91.66666666666666
+          "pct_eligible": 91.66666666666666,
+          "eligibleArticles": 77,
+          "totalArticles": 84
         },
         {
           "year": 2025,
           "pct_only_bar": 24.210526315789473,
           "pct_bar_informative": 40,
           "pct_only_informative": 35.78947368421052,
-          "pct_eligible": 90.47619047619048
+          "pct_eligible": 90.47619047619048,
+          "eligibleArticles": 95,
+          "totalArticles": 105
         }
       ],
       "policyLines": []

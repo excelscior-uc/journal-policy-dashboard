@@ -16,10 +16,9 @@ function PageShell({ children }) {
 export default function App() {
   return (
     <HashRouter>
-      <TopNav />
       <Routes>
         <Route path="/" element={<PageShell><Home /></PageShell>} />
-        <Route path="/field/:slug" element={<PageShell><FieldPage /></PageShell>} />
+        <Route path="/field/:slug" element={<><TopNav /><PageShell><FieldPage /></PageShell></>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>
