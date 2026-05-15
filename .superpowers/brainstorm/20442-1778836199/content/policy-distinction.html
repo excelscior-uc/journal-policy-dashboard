@@ -1,0 +1,153 @@
+<h2>How to distinguish "has policy" vs "no policy"?</h2>
+<p class="subtitle">4 approaches — click to select your favourite</p>
+
+<style>
+  .mockup-sidebar {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    width: 220px;
+  }
+  .sb-header {
+    background: #2c3e50;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+  .sb-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    border-bottom: 1px solid #f1f3f5;
+    color: #2c3e50;
+    gap: 8px;
+  }
+  .sb-row:last-child { border-bottom: none; }
+  .sb-name { flex: 1; font-size: 12px; letter-spacing: .3px; }
+
+  /* A — dot (current) */
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .dot-yes { background: #76b5b2; }
+  .dot-no  { background: #dee2e6; }
+
+  /* B — year badge */
+  .badge {
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 1px 6px;
+    flex-shrink: 0;
+  }
+  .badge-yes { background: #d1fadf; color: #166534; }
+  .badge-no  { background: #f1f3f5; color: #adb5bd; }
+
+  /* C — icon */
+  .icon-yes { color: #16a34a; font-size: 13px; flex-shrink: 0; }
+  .icon-no  { color: #cbd5e1; font-size: 13px; flex-shrink: 0; }
+
+  /* D — dimmed rows for no-policy */
+  .sb-row-dim { opacity: .38; }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-image {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 8px;
+  }
+  .legend {
+    font-size: 11px;
+    color: #6c757d;
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+    align-items: center;
+  }
+  .legend span { display: flex; align-items: center; gap: 4px; }
+</style>
+
+<div class="cards">
+
+  <!-- A — current dots -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="card-image">
+      <div class="mockup-sidebar">
+        <div class="sb-header">Neurosciences</div>
+        <div class="sb-row"><span class="sb-name">BRAIN</span><span class="dot dot-yes"></span></div>
+        <div class="sb-row"><span class="sb-name">STROKE</span><span class="dot dot-yes"></span></div>
+        <div class="sb-row"><span class="sb-name">ANN NEUROL</span><span class="dot dot-no"></span></div>
+        <div class="sb-row"><span class="sb-name">MOVEMENT DISORD</span><span class="dot dot-no"></span></div>
+        <div class="sb-row"><span class="sb-name">NEUROTHERAPEUTICS</span><span class="dot dot-no"></span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Current — colored dots</h3>
+      <p>Teal = has policy, gray = none. Minimal but low contrast — easy to miss.</p>
+    </div>
+  </div>
+
+  <!-- B — year badge -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="card-image">
+      <div class="mockup-sidebar">
+        <div class="sb-header">Neurosciences</div>
+        <div class="sb-row"><span class="sb-name">BRAIN</span><span class="badge badge-yes">2022</span></div>
+        <div class="sb-row"><span class="sb-name">STROKE</span><span class="badge badge-yes">2023</span></div>
+        <div class="sb-row"><span class="sb-name">ANN NEUROL</span><span class="badge badge-no">none</span></div>
+        <div class="sb-row"><span class="sb-name">MOVEMENT DISORD</span><span class="badge badge-no">none</span></div>
+        <div class="sb-row"><span class="sb-name">NEUROTHERAPEUTICS</span><span class="badge badge-no">none</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Year badge</h3>
+      <p>Green pill shows policy year. Also surfaces <em>when</em> the policy was adopted — more information, same space.</p>
+    </div>
+  </div>
+
+  <!-- C — checkmark icon -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="card-image">
+      <div class="mockup-sidebar">
+        <div class="sb-header">Neurosciences</div>
+        <div class="sb-row"><span class="sb-name">BRAIN</span><span class="icon-yes">✓</span></div>
+        <div class="sb-row"><span class="sb-name">STROKE</span><span class="icon-yes">✓</span></div>
+        <div class="sb-row"><span class="sb-name">ANN NEUROL</span><span class="icon-no">—</span></div>
+        <div class="sb-row"><span class="sb-name">MOVEMENT DISORD</span><span class="icon-no">—</span></div>
+        <div class="sb-row"><span class="sb-name">NEUROTHERAPEUTICS</span><span class="icon-no">—</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Checkmark / dash icon</h3>
+      <p>Universally understood symbols. High contrast, accessible without color, works for colorblind users.</p>
+    </div>
+  </div>
+
+  <!-- D — dim no-policy rows -->
+  <div class="card" data-choice="d" onclick="toggleSelect(this)">
+    <div class="letter">D</div>
+    <div class="card-image">
+      <div class="mockup-sidebar">
+        <div class="sb-header">Neurosciences</div>
+        <div class="sb-row"><span class="sb-name">BRAIN</span><span class="dot dot-yes"></span></div>
+        <div class="sb-row"><span class="sb-name">STROKE</span><span class="dot dot-yes"></span></div>
+        <div class="sb-row sb-row-dim"><span class="sb-name">ANN NEUROL</span></div>
+        <div class="sb-row sb-row-dim"><span class="sb-name">MOVEMENT DISORD</span></div>
+        <div class="sb-row sb-row-dim"><span class="sb-name">NEUROTHERAPEUTICS</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Dim no-policy rows</h3>
+      <p>No-policy journals fade out. Policy journals pop without any extra indicator. Clean, but hides journals that are still navigable.</p>
+    </div>
+  </div>
+
+</div>

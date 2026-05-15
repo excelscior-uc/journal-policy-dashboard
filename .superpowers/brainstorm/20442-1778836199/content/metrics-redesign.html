@@ -1,0 +1,164 @@
+<h2>How should "What the Metrics Mean" look?</h2>
+<p class="subtitle">3 directions — each handles the same 3 metric definitions differently</p>
+
+<style>
+  /* Shared reset for mockups */
+  .mx { font-family: 'Georgia', serif; }
+  .mx-sans { font-family: system-ui, sans-serif; }
+
+  /* --- Option A: Compact Legend Strip --- */
+  .legend-strip {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .legend-row {
+    display: grid;
+    grid-template-columns: 4px 1fr 2fr;
+    align-items: center;
+    gap: 12px 16px;
+    padding: 14px 18px;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+  }
+  .legend-row:last-child { border-bottom: none; }
+  .legend-accent { border-radius: 2px; align-self: stretch; }
+  .legend-label { font-weight: 700; font-size: 13px; font-family: system-ui; letter-spacing: 0.02em; }
+  .legend-desc { font-size: 13px; color: #555; font-family: system-ui; line-height: 1.5; }
+
+  /* --- Option B: Definition Cards with Left Border --- */
+  .def-cards { display: flex; flex-direction: column; gap: 10px; }
+  .def-card {
+    display: flex;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .def-bar { width: 5px; flex-shrink: 0; }
+  .def-body { padding: 14px 18px; }
+  .def-title { font-weight: 700; font-size: 14px; font-family: system-ui; margin-bottom: 6px; }
+  .def-text { font-size: 13px; color: #555; font-family: system-ui; line-height: 1.55; margin: 0; }
+
+  /* --- Option C: Glossary with Large Swatch + Italic Term --- */
+  .glossary { display: flex; flex-direction: column; gap: 20px; }
+  .gloss-item { display: flex; gap: 16px; align-items: flex-start; }
+  .gloss-dot {
+    width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+    margin-top: 2px; display: flex; align-items: center; justify-content: center;
+  }
+  .gloss-dot svg { width: 16px; height: 16px; }
+  .gloss-content {}
+  .gloss-term { font-style: italic; font-weight: 700; font-size: 15px; font-family: Georgia, serif; margin-bottom: 4px; }
+  .gloss-def { font-size: 13px; color: #555; font-family: system-ui; line-height: 1.6; margin: 0; }
+  .gloss-divider { border: none; border-top: 1px solid #eee; margin: 0; }
+</style>
+
+<div class="cards" style="display:flex;flex-direction:column;gap:28px;margin-top:8px;">
+
+  <!-- OPTION A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)" style="padding:0;overflow:hidden;">
+    <div class="card-body" style="padding:16px 20px 10px;">
+      <h3 style="margin:0 0 4px;">A — Compact table strip</h3>
+      <p style="margin:0 0 14px;font-size:13px;color:#666;">Dense, scannable. No extra chrome. Best when space is tight.</p>
+    </div>
+    <div style="padding:0 20px 20px;">
+      <div class="legend-strip">
+        <div class="legend-row">
+          <div class="legend-accent" style="background:#c0392b;"></div>
+          <span class="legend-label" style="color:#c0392b;">% only bar</span>
+          <span class="legend-desc">Papers using bar graphs only, out of all eligible papers that year.</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-accent" style="background:#e8998d;"></div>
+          <span class="legend-label" style="color:#e8998d;">% bar and informative</span>
+          <span class="legend-desc">Papers using both bar and informative graphs that year.</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-accent" style="background:#76b5b2;"></div>
+          <span class="legend-label" style="color:#76b5b2;">% only informative</span>
+          <span class="legend-desc">Papers using informative graphs only, out of eligible papers.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)" style="padding:0;overflow:hidden;">
+    <div class="card-body" style="padding:16px 20px 10px;">
+      <h3 style="margin:0 0 4px;">B — Left-border definition cards</h3>
+      <p style="margin:0 0 14px;font-size:13px;color:#666;">Each metric gets its own card. Color accent is a strong left border. Clean and readable.</p>
+    </div>
+    <div style="padding:0 20px 20px;">
+      <div class="def-cards">
+        <div class="def-card">
+          <div class="def-bar" style="background:#c0392b;"></div>
+          <div class="def-body">
+            <div class="def-title" style="color:#c0392b;">% only bar</div>
+            <p class="def-text">Percentage of eligible papers in that year using bar graphs only for continuous data, as detected by the barzooka screening tool.</p>
+          </div>
+        </div>
+        <div class="def-card">
+          <div class="def-bar" style="background:#e8998d;"></div>
+          <div class="def-body">
+            <div class="def-title" style="color:#e8998d;">% bar and informative</div>
+            <p class="def-text">Percentage of eligible papers using both bar and informative visualisation types for continuous data that year.</p>
+          </div>
+        </div>
+        <div class="def-card">
+          <div class="def-bar" style="background:#76b5b2;"></div>
+          <div class="def-body">
+            <div class="def-title" style="color:#76b5b2;">% only informative</div>
+            <p class="def-text">Percentage of eligible papers using informative graphs only for continuous data, as detected by barzooka.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)" style="padding:0;overflow:hidden;">
+    <div class="card-body" style="padding:16px 20px 10px;">
+      <h3 style="margin:0 0 4px;">C — Glossary with circle icon</h3>
+      <p style="margin:0 0 14px;font-size:13px;color:#666;">Feels editorial. Large coloured dot + italic serif term. Works well with academic tone.</p>
+    </div>
+    <div style="padding:0 20px 20px;">
+      <div class="glossary">
+        <div class="gloss-item">
+          <div class="gloss-dot" style="background:#fde8e6;">
+            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#c0392b"/></svg>
+          </div>
+          <div class="gloss-content">
+            <div class="gloss-term" style="color:#c0392b;">% only bar</div>
+            <p class="gloss-def">Percentage of eligible papers in that year using only bar graphs for continuous data, as detected by barzooka.</p>
+          </div>
+        </div>
+        <hr class="gloss-divider"/>
+        <div class="gloss-item">
+          <div class="gloss-dot" style="background:#fcecea;">
+            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#e8998d"/></svg>
+          </div>
+          <div class="gloss-content">
+            <div class="gloss-term" style="color:#c47a70;">% bar and informative</div>
+            <p class="gloss-def">Percentage of eligible papers using both bar and informative visualisation types that year.</p>
+          </div>
+        </div>
+        <hr class="gloss-divider"/>
+        <div class="gloss-item">
+          <div class="gloss-dot" style="background:#e6f2f2;">
+            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#76b5b2"/></svg>
+          </div>
+          <div class="gloss-content">
+            <div class="gloss-term" style="color:#76b5b2;">% only informative</div>
+            <p class="gloss-def">Percentage of eligible papers using only informative graphs for continuous data, as detected by barzooka.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

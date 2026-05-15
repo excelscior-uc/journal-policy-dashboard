@@ -19,12 +19,23 @@ export default function FieldPage() {
   const [journalCols, setJournalCols] = useState(2)
   const [fieldCols, setFieldCols] = useState(2)
   const [policyFilter, setPolicyFilter] = useState('all')
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(
+    () => localStorage.getItem('sidebar-collapsed') === 'true'
+  )
   const [isCapturing, setIsCapturing] = useState(false)
   const captureRegistryRef = useRef([])
 
   const registerCapture = useCallback((entry) => {
     if (entry) captureRegistryRef.current.push(entry)
   }, [])
+
+  function toggleSidebar() {
+    setSidebarCollapsed(prev => {
+      const next = !prev
+      localStorage.setItem('sidebar-collapsed', String(next))
+      return next
+    })
+  }
 
   const field = FIELDS.find(f => f.slug === slug)
 
@@ -98,39 +109,50 @@ export default function FieldPage() {
     }
 
     async function run() {
-      await waitFrames(2)
-      if (cancelled) return
+      try {
+        await waitFrames(2)
+        if (cancelled) return
 
-      const registry = captureRegistryRef.current
-      const results = await Promise.all(
-        registry.map(async entry => {
-          const dataUrl = await entry.capture()
-          const safeName = entry.title.replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').toLowerCase()
+        const registry = captureRegistryRef.current
+        if (registry.length === 0) return
+
+        const captured = await Promise.all(
+          registry.map(entry => entry.capture().then(dataUrl => ({ entry, dataUrl })))
+        )
+
+        const seen = new Map()
+        const results = captured.map(({ entry, dataUrl }) => {
+          const base = entry.title.replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').toLowerCase()
+          const count = (seen.get(base) ?? 0) + 1
+          seen.set(base, count)
+          const safeName = count > 1 ? `${base}-${count}` : base
           return { name: `${safeName}.png`, dataUrl }
         })
-      )
 
-      const zip = new JSZip()
-      for (const { name, dataUrl } of results) {
-        const base64 = dataUrl.split(',')[1]
-        zip.file(name, base64, { base64: true })
+        const zip = new JSZip()
+        for (const { name, dataUrl } of results) {
+          const base64 = dataUrl.split(',')[1]
+          zip.file(name, base64, { base64: true })
+        }
+
+        const blob = await zip.generateAsync({ type: 'blob' })
+        const fieldName = (field?.name ?? slug).replace(/\s+/g, '-').toLowerCase()
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = `${fieldName}-charts.zip`
+        a.click()
+        URL.revokeObjectURL(url)
+      } catch (err) {
+        console.error('[download-zip] capture failed:', err)
+      } finally {
+        if (!cancelled) setIsCapturing(false)
       }
-
-      const blob = await zip.generateAsync({ type: 'blob' })
-      const fieldName = (field?.name ?? slug).replace(/\s+/g, '-').toLowerCase()
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = `${fieldName}-charts.zip`
-      a.click()
-      URL.revokeObjectURL(url)
-
-      if (!cancelled) setIsCapturing(false)
     }
 
     run()
     return () => { cancelled = true }
-  }, [isCapturing, field, slug])
+  }, [isCapturing, slug])
 
   function journalSubtitle(j) {
     const n = j.chartData?.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0) ?? 0
@@ -149,7 +171,8 @@ export default function FieldPage() {
             journals={filteredJournals}
             selectedId={selectedJournal}
             onSelect={setSelectedJournal}
-
+            collapsed={sidebarCollapsed}
+            onToggle={toggleSidebar}
           />
         )}
 
