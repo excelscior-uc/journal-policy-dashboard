@@ -58,8 +58,8 @@ describe('ChartCard', () => {
     const { rerender } = render(<Wrapper counter={0} />)
     const initialCallCount = renderSpy.mock.calls.length
     rerender(<Wrapper counter={1} />)
-    // Wrapper re-renders but ChartCard should not (memo)
-    // We verify by checking the DOM didn't change (title still present once)
+    // Regression guard: Wrapper re-renders don't corrupt ChartCard DOM
+    // (React.memo enforcement is added in Task 2)
     expect(screen.getAllByText('Test Journal')).toHaveLength(1)
     expect(renderSpy.mock.calls.length).toBeGreaterThan(initialCallCount)
   })

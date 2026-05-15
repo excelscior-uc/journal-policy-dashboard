@@ -1,4 +1,6 @@
 import { useRef, useState, useEffect, useMemo } from 'react'
+
+const EMPTY_POLICY_LINES = []
 import { toPng } from 'html-to-image'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -96,7 +98,7 @@ function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines }) {
   )
 }
 
-export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = [], visibleSeries, showPolicyLines = true, tall = false, forceVisible = false, onMount }) {
+export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = EMPTY_POLICY_LINES, visibleSeries, showPolicyLines = true, tall = false, forceVisible = false, onMount }) {
   const ref = useRef()
   const cardRef = useRef()
   const visible = useVisible(ref)
@@ -252,7 +254,6 @@ export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData,
                   strokeDasharray={s.dashed ? '4 2' : undefined}
                   dot={{ r: 3 }}
                   connectNulls
-                  isAnimationActive={false}
                 />
               ))}
             </LineChart>
