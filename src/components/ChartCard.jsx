@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useMemo } from 'react'
+import React, { useRef, useState, useEffect, useMemo } from 'react'
 
 const EMPTY_POLICY_LINES = []
 import { toPng } from 'html-to-image'
@@ -98,7 +98,7 @@ function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines }) {
   )
 }
 
-export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = EMPTY_POLICY_LINES, visibleSeries, showPolicyLines = true, tall = false, forceVisible = false, onMount }) {
+function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = EMPTY_POLICY_LINES, visibleSeries, showPolicyLines = true, tall = false, forceVisible = false, onMount }) {
   const ref = useRef()
   const cardRef = useRef()
   const visible = useVisible(ref)
@@ -265,3 +265,5 @@ export default function ChartCard({ title, meta, hasPolicy, subtitle, chartData,
     </div>
   )
 }
+
+export default React.memo(ChartCard)
