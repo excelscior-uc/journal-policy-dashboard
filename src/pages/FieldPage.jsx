@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
+import { useState, useEffect, useMemo, useRef, useCallback, startTransition } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { FIELDS, SERIES_CONFIG } from '../data/fields'
 import ChartCard from '../components/ChartCard'
@@ -8,10 +8,29 @@ import JSZip from 'jszip'
 
 const DEFAULT_VISIBLE = new Set(SERIES_CONFIG.map(s => s.key))
 
+const fieldCache = new Map()
+
+function fetchField(slug) {
+  if (fieldCache.has(slug)) return Promise.resolve(fieldCache.get(slug))
+  return fetch(`${import.meta.env.BASE_URL}data/${slug}.json`)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json() })
+    .then(json => { fieldCache.set(slug, json); return json })
+}
+
+function prefetchOthers(currentSlug) {
+  const others = FIELDS.filter(f => f.slug !== currentSlug && !fieldCache.has(f.slug))
+  let i = 0
+  function next() {
+    if (i >= others.length) return
+    fetchField(others[i++].slug).catch(() => {}).finally(next)
+  }
+  next(); next()
+}
+
 export default function FieldPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(() => fieldCache.get(slug) ?? null)
   const [error, setError] = useState(null)
   const [selectedJournal, setSelectedJournal] = useState('__agg__')
   const [visibleSeries, setVisibleSeries] = useState(DEFAULT_VISIBLE)
@@ -20,6 +39,7 @@ export default function FieldPage() {
   const [fieldCols, setFieldCols] = useState(2)
   const [policyFilter, setPolicyFilter] = useState('all')
   const [isCapturing, setIsCapturing] = useState(false)
+  const [prerenderAll, setPrerenderAll] = useState(false)
   const captureRegistryRef = useRef([])
 
   const registerCapture = useCallback((entry) => {
@@ -31,14 +51,31 @@ export default function FieldPage() {
   useEffect(() => {
     captureRegistryRef.current = []
     window.scrollTo(0, 0)
-    setData(null)
     setError(null)
     setSelectedJournal('__agg__')
-    fetch(`${import.meta.env.BASE_URL}data/${slug}.json`)
-      .then(r => { if (!r.ok) throw new Error(r.status); return r.json() })
-      .then(setData)
+    setPolicyFilter('all')
+
+    const cached = fieldCache.get(slug)
+    if (cached) {
+      setData(cached)
+      return
+    }
+
+    setPrerenderAll(false)
+    setData(null)
+    fetchField(slug)
+      .then(json => { setData(json); prefetchOthers(slug) })
       .catch(e => setError(e.message))
   }, [slug])
+
+  useEffect(() => {
+    if (!data) return
+    const id = requestIdleCallback(
+      () => startTransition(() => setPrerenderAll(true)),
+      { timeout: 1500 }
+    )
+    return () => cancelIdleCallback(id)
+  }, [data])
 
   function toggleSeries(key) {
     setVisibleSeries(prev => {
@@ -178,7 +215,7 @@ export default function FieldPage() {
           />
         )}
 
-        <div className="field-main">
+        <div key={slug} className="field-main">
           <FilterBar
             visibleSeries={visibleSeries}
             onToggleSeries={toggleSeries}
@@ -231,7 +268,7 @@ export default function FieldPage() {
                     visibleSeries={visibleSeries}
                     showPolicyLines={showPolicyLines}
                     tall
-                    forceVisible={isCapturing}
+                    forceVisible={isCapturing || prerenderAll}
                     onMount={registerCapture}
                   />
                 )}
@@ -278,7 +315,7 @@ export default function FieldPage() {
                             policyLines={f.aggAll?.policyLines}
                             visibleSeries={visibleSeries}
                             showPolicyLines={showPolicyLines}
-                            forceVisible={isCapturing}
+                            forceVisible={isCapturing || prerenderAll}
                             onMount={registerCapture}
                           />
                         </div>
@@ -314,7 +351,7 @@ export default function FieldPage() {
                         policyLines={j.policyLines}
                         visibleSeries={visibleSeries}
                         showPolicyLines={showPolicyLines}
-                        forceVisible={isCapturing}
+                        forceVisible={isCapturing || prerenderAll}
                         onMount={registerCapture}
                       />
                     ))}
@@ -341,7 +378,7 @@ export default function FieldPage() {
                   visibleSeries={visibleSeries}
                   showPolicyLines={showPolicyLines}
                   tall
-                  forceVisible={isCapturing}
+                  forceVisible={isCapturing || prerenderAll}
                   onMount={registerCapture}
                 />
               </div>
