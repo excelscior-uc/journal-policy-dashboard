@@ -2,19 +2,19 @@ import CollapsibleHomeSection from './CollapsibleHomeSection'
 
 const METRICS = [
   {
-    color: '#c0392b',
+    color: '#d55e00',
     label: '% only bar',
     desc:
       'Percentage of eligible papers (papers with bar or informative graphs) in that year using this visualisation type for continuous data, as detected by the barzooka screening tool.',
   },
   {
-    color: '#e8998d',
+    color: '#e69f00',
     label: '% bar and informative',
     desc:
       'Percentage of eligible papers (papers with bar or informative graphs) in that year using both visualisation types for continuous data, as detected by the barzooka screening tool.',
   },
   {
-    color: '#76b5b2',
+    color: '#0072b2',
     label: '% only informative',
     desc:
       'Percentage of eligible papers (papers with informative graphs) in that year using this visualisation type for continuous data, as detected by the barzooka screening tool.',

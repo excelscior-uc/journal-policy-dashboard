@@ -1,16 +1,16 @@
 const METRICS = [
   {
-    color: '#c0392b',
+    color: '#d55e00',
     label: '% only bar graphs',
     desc: 'Papers using only bar graphs for continuous data, as detected by the Barzooka screening tool.',
   },
   {
-    color: '#e8998d',
+    color: '#e69f00',
     label: '% bar and informative',
     desc: 'Papers using both bar and informative visualisation types for continuous data.',
   },
   {
-    color: '#76b5b2',
+    color: '#0072b2',
     label: '% only informative',
     desc: 'Papers using only informative types (dot plots, violin plots, box plots) for continuous data.',
   },

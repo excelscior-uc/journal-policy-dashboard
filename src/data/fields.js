@@ -15,7 +15,7 @@ export const FIELDS = [
 ]
 
 export const SERIES_CONFIG = [
-  { key: 'pct_only_bar',         name: '% only bar',            color: '#c0392b' },
-  { key: 'pct_bar_informative',  name: '% bar and informative', color: '#e8998d' },
-  { key: 'pct_only_informative', name: '% only informative',    color: '#76b5b2' },
+  { key: 'pct_only_bar',         name: '% only bar',            color: '#d55e00' },
+  { key: 'pct_bar_informative',  name: '% bar and informative', color: '#e69f00' },
+  { key: 'pct_only_informative', name: '% only informative',    color: '#0072b2' },
 ]
