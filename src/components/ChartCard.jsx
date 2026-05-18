@@ -83,17 +83,19 @@ function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines }) {
       <div style={{ display: 'flex', gap: '6px 12px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
         {line1.map(s => <LegendItem key={s.key} s={s} />)}
       </div>
-      <div style={{ display: 'flex', gap: '6px 12px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-        {line2.map(s => <LegendItem key={s.key} s={s} />)}
-        {showPolicyLines && hasPolicyLines && (
-          <span style={{ display: 'flex', alignItems: 'center', gap: 4, color: '#6d5f00' }}>
-            <svg width="10" height="14">
-              <rect x="3" y="0" width="4" height="14" rx="1" fill="rgba(253,231,37,0.7)" />
-            </svg>
-            Policy Year
-          </span>
-        )}
-      </div>
+      {(line2.length > 0 || (showPolicyLines && hasPolicyLines)) && (
+        <div style={{ display: 'flex', gap: '6px 12px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+          {line2.map(s => <LegendItem key={s.key} s={s} />)}
+          {showPolicyLines && hasPolicyLines && (
+            <span style={{ display: 'flex', alignItems: 'center', gap: 4, color: '#6d5f00' }}>
+              <svg width="10" height="14">
+                <rect x="3" y="0" width="4" height="14" rx="1" fill="rgba(253,231,37,0.7)" />
+              </svg>
+              Policy Year
+            </span>
+          )}
+        </div>
+      )}
     </div>
   )
 }
@@ -232,9 +234,11 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
               />
               <Tooltip content={<CustomTooltip />} />
               <Legend
+                key={`legend-${showPolicyLines && policyLines.length > 0 ? 'p' : 'np'}`}
                 content={<CustomLegend visibleSeries={visibleSeries} showPolicyLines={showPolicyLines} hasPolicyLines={policyLines.length > 0} />}
                 verticalAlign="top"
                 align="right"
+                height={showPolicyLines && policyLines.length > 0 ? 44 : 22}
               />
               {showPolicyLines && policyLines.map(pl => (
                 <ReferenceLine
