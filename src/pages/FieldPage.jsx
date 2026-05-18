@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef, useCallback, startTransition } from 'react'
+import { useState, useEffect, useMemo, useRef, useCallback, useDeferredValue, startTransition } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { FIELDS, SERIES_CONFIG } from '../data/fields'
 import ChartCard from '../components/ChartCard'
@@ -39,12 +39,15 @@ export default function FieldPage() {
   const [fieldCols, setFieldCols] = useState(2)
   const [policyFilter, setPolicyFilter] = useState('all')
   const [isCapturing, setIsCapturing] = useState(false)
-  const [prerenderAll, setPrerenderAll] = useState(false)
   const captureRegistryRef = useRef([])
 
   const registerCapture = useCallback((entry) => {
     if (entry) captureRegistryRef.current.push(entry)
   }, [])
+
+  const deferredVisibleSeries = useDeferredValue(visibleSeries)
+  const deferredShowPolicyLines = useDeferredValue(showPolicyLines)
+  const deferredPolicyFilter = useDeferredValue(policyFilter)
 
   const field = FIELDS.find(f => f.slug === slug)
 
@@ -54,7 +57,6 @@ export default function FieldPage() {
     setError(null)
     setSelectedJournal('__agg__')
     setPolicyFilter('all')
-    setPrerenderAll(false)
 
     const cached = fieldCache.get(slug)
     if (cached) {
@@ -63,21 +65,11 @@ export default function FieldPage() {
       return
     }
 
-    setPrerenderAll(false)
     setData(null)
     fetchField(slug)
       .then(json => { setData(json); prefetchOthers(slug) })
       .catch(e => setError(e.message))
   }, [slug])
-
-  useEffect(() => {
-    if (!data) return
-    const id = requestIdleCallback(
-      () => startTransition(() => setPrerenderAll(true)),
-      { timeout: 1500 }
-    )
-    return () => cancelIdleCallback(id)
-  }, [data])
 
   function toggleSeries(key) {
     setVisibleSeries(prev => {
@@ -89,17 +81,17 @@ export default function FieldPage() {
 
   const filteredJournals = useMemo(() => {
     if (!data) return []
-    if (policyFilter === 'policy') return data.journals.filter(j => j.hasPolicy)
-    if (policyFilter === 'nopolicy') return data.journals.filter(j => !j.hasPolicy)
+    if (deferredPolicyFilter === 'policy') return data.journals.filter(j => j.hasPolicy)
+    if (deferredPolicyFilter === 'nopolicy') return data.journals.filter(j => !j.hasPolicy)
     return data.journals
-  }, [data, policyFilter])
+  }, [data, deferredPolicyFilter])
 
   const aggData = useMemo(() => {
     if (!data) return null
-    if (policyFilter === 'policy') return data.aggPolicy
-    if (policyFilter === 'nopolicy') return data.aggNoPolicy
+    if (deferredPolicyFilter === 'policy') return data.aggPolicy
+    if (deferredPolicyFilter === 'nopolicy') return data.aggNoPolicy
     return data.aggAll
-  }, [data, policyFilter])
+  }, [data, deferredPolicyFilter])
 
   const activeJournal = useMemo(() => {
     if (!data || selectedJournal === '__agg__') return null
@@ -108,9 +100,9 @@ export default function FieldPage() {
 
   const fieldStats = useMemo(() => {
     if (!data?.fields) return {}
-    const pickAgg = f => policyFilter === 'policy'
+    const pickAgg = f => deferredPolicyFilter === 'policy'
       ? (f.aggPolicy ?? f.aggAll)
-      : policyFilter === 'nopolicy'
+      : deferredPolicyFilter === 'nopolicy'
       ? (f.aggNoPolicy ?? f.aggAll)
       : f.aggAll
     const perField = Object.fromEntries(data.fields.map(f => {
@@ -126,7 +118,7 @@ export default function FieldPage() {
       eligibleArticles: globalRows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0),
     }
     return perField
-  }, [data, policyFilter, aggData])
+  }, [data, deferredPolicyFilter, aggData])
 
   const aggSubtitle = useMemo(() => {
     if (!aggData?.chartData?.length) return null
@@ -134,13 +126,13 @@ export default function FieldPage() {
     const n = rows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
     const nTotal = rows.reduce((s, r) => s + (r.totalArticles ?? 0), 0)
     const pct = nTotal > 0 ? ((n / nTotal) * 100).toFixed(1) : '—'
-    const journalCount = policyFilter === 'policy'
+    const journalCount = deferredPolicyFilter === 'policy'
       ? (field?.withPolicy ?? '—')
-      : policyFilter === 'nopolicy'
+      : deferredPolicyFilter === 'nopolicy'
       ? ((field?.totalJournals ?? 0) - (field?.withPolicy ?? 0)) || '—'
       : (field?.totalJournals ?? '—')
     return `n = ${n.toLocaleString()} eligible articles; ${pct}% of total | ${journalCount} journals`
-  }, [aggData, field, policyFilter])
+  }, [aggData, field, deferredPolicyFilter])
 
   useEffect(() => {
     if (!isCapturing) return
@@ -219,7 +211,7 @@ export default function FieldPage() {
             selectedId={selectedJournal}
             onSelect={setSelectedJournal}
             fieldStats={fieldStats}
-            policyFilter={policyFilter}
+            policyFilter={deferredPolicyFilter}
           />
         )}
 
@@ -273,10 +265,10 @@ export default function FieldPage() {
                     subtitle={aggSubtitle}
                     chartData={aggData.chartData}
                     policyLines={aggData.policyLines}
-                    visibleSeries={visibleSeries}
-                    showPolicyLines={showPolicyLines}
+                    visibleSeries={deferredVisibleSeries}
+                    showPolicyLines={deferredShowPolicyLines}
                     tall
-                    forceVisible={isCapturing || prerenderAll}
+                    forceVisible={isCapturing}
                     onMount={registerCapture}
                   />
                 )}
@@ -301,18 +293,18 @@ export default function FieldPage() {
                   <div className={`chart-grid${fieldCols === 1 ? ' chart-grid--full' : ''}`}>
                     {data.fields.map(f => {
                       const meta = FIELDS.find(x => x.slug === f.slug)
-                      const fieldAgg = policyFilter === 'policy'
+                      const fieldAgg = deferredPolicyFilter === 'policy'
                         ? (f.aggPolicy ?? f.aggAll)
-                        : policyFilter === 'nopolicy'
+                        : deferredPolicyFilter === 'nopolicy'
                         ? (f.aggNoPolicy ?? f.aggAll)
                         : f.aggAll
                       const rows = fieldAgg?.chartData ?? []
                       const n = rows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
                       const nTotal = rows.reduce((s, r) => s + (r.totalArticles ?? 0), 0)
                       const pct = nTotal > 0 ? ((n / nTotal) * 100).toFixed(1) : '—'
-                      const jCount = policyFilter === 'policy'
+                      const jCount = deferredPolicyFilter === 'policy'
                         ? (meta?.withPolicy ?? '—')
-                        : policyFilter === 'nopolicy'
+                        : deferredPolicyFilter === 'nopolicy'
                         ? ((meta?.totalJournals ?? 0) - (meta?.withPolicy ?? 0)) || '—'
                         : (meta?.totalJournals ?? '—')
                       const fieldSub = `n = ${n.toLocaleString()} eligible articles; ${pct}% of total | ${jCount} journals`
@@ -330,9 +322,9 @@ export default function FieldPage() {
                             subtitle={fieldSub}
                             chartData={fieldAgg?.chartData}
                             policyLines={fieldAgg?.policyLines}
-                            visibleSeries={visibleSeries}
-                            showPolicyLines={showPolicyLines}
-                            forceVisible={isCapturing || prerenderAll}
+                            visibleSeries={deferredVisibleSeries}
+                            showPolicyLines={deferredShowPolicyLines}
+                            forceVisible={isCapturing}
                             onMount={registerCapture}
                           />
                         </div>
@@ -357,21 +349,27 @@ export default function FieldPage() {
                     </span>
                   </div>
                   <div className={`chart-grid${journalCols === 1 ? ' chart-grid--full' : ''}`}>
-                    {filteredJournals.map(j => (
-                      <ChartCard
-                        key={j.id}
-                        title={j.name}
-                        meta={j.hasPolicy ? `Policy ${j.policyYear}` : 'No policy'}
-                        hasPolicy={j.hasPolicy}
-                        subtitle={journalSubtitle(j)}
-                        chartData={j.chartData}
-                        policyLines={j.policyLines}
-                        visibleSeries={visibleSeries}
-                        showPolicyLines={showPolicyLines}
-                        forceVisible={isCapturing || prerenderAll}
-                        onMount={registerCapture}
-                      />
-                    ))}
+                    {data.journals.map(j => {
+                      const show =
+                        deferredPolicyFilter === 'all' ||
+                        (deferredPolicyFilter === 'policy' ? j.hasPolicy : !j.hasPolicy)
+                      return (
+                        <div key={j.id} style={show ? undefined : { display: 'none' }}>
+                          <ChartCard
+                            title={j.name}
+                            meta={j.hasPolicy ? `Policy ${j.policyYear}` : 'No policy'}
+                            hasPolicy={j.hasPolicy}
+                            subtitle={journalSubtitle(j)}
+                            chartData={j.chartData}
+                            policyLines={j.policyLines}
+                            visibleSeries={deferredVisibleSeries}
+                            showPolicyLines={deferredShowPolicyLines}
+                            forceVisible={isCapturing}
+                            onMount={registerCapture}
+                          />
+                        </div>
+                      )
+                    })}
                   </div>
                 </>
               ) : null}
@@ -392,10 +390,10 @@ export default function FieldPage() {
                   subtitle={journalSubtitle(activeJournal)}
                   chartData={activeJournal.chartData}
                   policyLines={activeJournal.policyLines}
-                  visibleSeries={visibleSeries}
-                  showPolicyLines={showPolicyLines}
+                  visibleSeries={deferredVisibleSeries}
+                  showPolicyLines={deferredShowPolicyLines}
                   tall
-                  forceVisible={isCapturing || prerenderAll}
+                  forceVisible={isCapturing}
                   onMount={registerCapture}
                 />
               </div>

@@ -1,14 +1,77 @@
-import { useState, useLayoutEffect, useRef, useEffect } from 'react'
+import { memo, useState, useLayoutEffect, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FIELDS } from '../data/fields'
 
 const FIELDS_EXCEPT_ALL = FIELDS.filter(f => f.slug !== 'all-fields')
+
+function ArticlesBar({ total = 0, eligible = 0 }) {
+  const nonElig = Math.max(0, total - eligible)
+  const ePct = total > 0 ? (eligible / total) * 100 : 0
+  const nPct = total > 0 ? (nonElig / total) * 100 : 0
+  const fmt = n => n.toLocaleString()
+  return (
+    <div className="articles-bar" aria-label={`${fmt(total)} total articles, ${fmt(eligible)} eligible`}>
+      <span className="policy-bar__total articles-bar__total">{fmt(total)} total</span>
+      <div className="policy-bar__track">
+        {ePct > 0 && (
+          <div
+            className="policy-bar__seg articles-bar__seg--eligible"
+            style={{ flexBasis: `${ePct}%` }}
+            title={`${fmt(eligible)} eligible`}
+          >
+            <span className="policy-bar__lbl">{fmt(eligible)}</span>
+          </div>
+        )}
+        {nPct > 0 && (
+          <div
+            className="policy-bar__seg articles-bar__seg--non"
+            style={{ flexBasis: `${nPct}%` }}
+            title={`${fmt(nonElig)} not eligible`}
+          >
+            <span className="policy-bar__lbl articles-bar__lbl--dark">{fmt(nonElig)}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function PolicyBar({ total = 0, withPolicy = 0, filter = 'all' }) {
+  const without = Math.max(0, total - withPolicy)
+  const pPct = total > 0 ? (withPolicy / total) * 100 : 0
+  const nPct = total > 0 ? (without / total) * 100 : 0
+  return (
+    <div className="policy-bar" data-filter={filter} aria-label={`${total} journals: ${withPolicy} with policy, ${without} without`}>
+      <span className="policy-bar__total">{total} journals</span>
+      <div className="policy-bar__track">
+        {pPct > 0 && (
+          <div
+            className="policy-bar__seg policy-bar__seg--policy"
+            style={{ width: `${pPct}%` }}
+            title={`${withPolicy} with policy`}
+          >
+            {pPct >= 14 && <span className="policy-bar__lbl">{withPolicy}</span>}
+          </div>
+        )}
+        {nPct > 0 && (
+          <div
+            className="policy-bar__seg policy-bar__seg--no"
+            style={{ width: `${nPct}%` }}
+            title={`${without} without policy`}
+          >
+            {nPct >= 14 && <span className="policy-bar__lbl">{without}</span>}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
 const SIDEBAR_WIDTH_MIN = 300
 const SIDEBAR_WIDTH_MAX = 520
 const SIDEBAR_NAV_PAD_X = 20
 
-export default function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, policyFilter = 'all' }) {
+function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, policyFilter = 'all' }) {
   const [search, setSearch] = useState('')
   const [fieldsOpen, setFieldsOpen] = useState(false)
   const [flyoutMounted, setFlyoutMounted] = useState(false)
@@ -85,6 +148,22 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
       {routeSlug === 'all-fields' && (
         <div className="journal-sidebar__subfields" aria-label="Research fields">
           <div className="journal-sidebar__subfields-hint">All research fields — open one</div>
+          <div className="bar-legend" aria-label="Bar color legend">
+            <div className="bar-legend__item">
+              <span className="bar-legend__label">Journals</span>
+              <div className="bar-legend__bar">
+                <div className="bar-legend__seg bar-legend__seg--policy">with policy</div>
+                <div className="bar-legend__seg bar-legend__seg--no">no policy</div>
+              </div>
+            </div>
+            <div className="bar-legend__item">
+              <span className="bar-legend__label">Articles</span>
+              <div className="bar-legend__bar">
+                <div className="bar-legend__seg bar-legend__seg--eligible">eligible</div>
+                <div className="bar-legend__seg bar-legend__seg--non bar-legend__seg--dark">not eligible</div>
+              </div>
+            </div>
+          </div>
           {(() => {
             const allMeta = FIELDS.find(f => f.slug === 'all-fields')
             const allStats = fieldStats['all-fields']
@@ -99,12 +178,8 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
                 <span className="journal-sidebar__subfield-name">
                   {allMeta?.name}
                   <span className="journal-sidebar__subfield-tags">
-                    <span className="sf-tag sf-tag--journals">{allMeta?.totalJournals} journals</span>
-                    {policyFilter === 'nopolicy'
-                      ? <span className="sf-tag sf-tag--no-policy">{(allMeta?.totalJournals ?? 0) - (allMeta?.withPolicy ?? 0)} without policy</span>
-                      : allMeta?.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{allMeta.withPolicy} with policy</span>}
-                    {allStats && <span className="sf-tag sf-tag--total">{allStats.totalArticles.toLocaleString()} total</span>}
-                    {allStats && <span className="sf-tag sf-tag--eligible">{allStats.eligibleArticles.toLocaleString()} eligible</span>}
+                    <PolicyBar total={allMeta?.totalJournals ?? 0} withPolicy={allMeta?.withPolicy ?? 0} filter={policyFilter} />
+                    {allStats && <ArticlesBar total={allStats.totalArticles} eligible={allStats.eligibleArticles} />}
                   </span>
                 </span>
               </button>
@@ -124,12 +199,8 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
                     <span className="journal-sidebar__subfield-name">
                       {f.name}
                       <span className="journal-sidebar__subfield-tags">
-                        <span className="sf-tag sf-tag--journals">{f.totalJournals} journals</span>
-                        {policyFilter === 'nopolicy'
-                          ? <span className="sf-tag sf-tag--no-policy">{(f.totalJournals ?? 0) - (f.withPolicy ?? 0)} without policy</span>
-                          : f.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{f.withPolicy} with policy</span>}
-                        {stats && <span className="sf-tag sf-tag--total">{stats.totalArticles.toLocaleString()} total</span>}
-                        {stats && <span className="sf-tag sf-tag--eligible">{stats.eligibleArticles.toLocaleString()} eligible</span>}
+                        <PolicyBar total={f.totalJournals ?? 0} withPolicy={f.withPolicy ?? 0} filter={policyFilter} />
+                        {stats && <ArticlesBar total={stats.totalArticles} eligible={stats.eligibleArticles} />}
                       </span>
                     </span>
                   </button>
@@ -148,28 +219,26 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
           <div
             className={`journal-link journal-link--agg${selectedId === '__agg__' ? ' active' : ''}`}
             style={{ marginBottom: 4 }}
-            onClick={() => { onSelect('__agg__'); fieldsOpen ? closeFlyout() : openFlyout() }}
+            onClick={() => onSelect('__agg__')}
           >
             <div className="journal-link__body">
               <span className="journal-link__name">{currentField?.name}</span>
               <span className="journal-link__tags">
-                <span className="sf-tag sf-tag--journals">{journals.length} journals</span>
-                {policyFilter === 'nopolicy' ? (
-                  <span className="sf-tag sf-tag--no-policy">
-                    {(currentField?.totalJournals ?? 0) - (currentField?.withPolicy ?? 0)} without policy
-                  </span>
-                ) : currentField?.withPolicy > 0 ? (
-                  <span className="sf-tag sf-tag--policy">{currentField.withPolicy} with policy</span>
-                ) : null}
-                <span className="sf-tag sf-tag--total">
-                  {journals.reduce((s, j) => s + (j.chartData ?? []).reduce((a, r) => a + (r.totalArticles ?? 0), 0), 0).toLocaleString()} total
-                </span>
-                <span className="sf-tag sf-tag--eligible">
-                  {journals.reduce((s, j) => s + (j.chartData ?? []).reduce((a, r) => a + (r.eligibleArticles ?? 0), 0), 0).toLocaleString()} eligible
-                </span>
+                <PolicyBar total={currentField?.totalJournals ?? journals.length} withPolicy={currentField?.withPolicy ?? 0} filter={policyFilter} />
+                <ArticlesBar
+                  total={journals.reduce((s, j) => s + (j.chartData ?? []).reduce((a, r) => a + (r.totalArticles ?? 0), 0), 0)}
+                  eligible={journals.reduce((s, j) => s + (j.chartData ?? []).reduce((a, r) => a + (r.eligibleArticles ?? 0), 0), 0)}
+                />
               </span>
             </div>
-            <span className="journal-link__chevron">{fieldsOpen ? '▲' : '▼'}</span>
+            <button
+              type="button"
+              className="journal-link__chevron"
+              onClick={(e) => { e.stopPropagation(); fieldsOpen ? closeFlyout() : openFlyout() }}
+              aria-label={fieldsOpen ? 'Close fields menu' : 'Open fields menu'}
+            >
+              {fieldsOpen ? '▲' : '▼'}
+            </button>
           </div>
           </div>
           {flyoutMounted && createPortal(
@@ -190,10 +259,7 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
                     <span className="journal-sidebar__subfield-name">
                       {f.name}
                       <span className="journal-sidebar__subfield-tags">
-                        <span className="sf-tag sf-tag--journals">{f.totalJournals} journals</span>
-                        {policyFilter === 'nopolicy'
-                          ? <span className="sf-tag sf-tag--no-policy">{(f.totalJournals ?? 0) - (f.withPolicy ?? 0)} without policy</span>
-                          : f.withPolicy > 0 && <span className="sf-tag sf-tag--policy">{f.withPolicy} with policy</span>}
+                        <PolicyBar total={f.totalJournals ?? 0} withPolicy={f.withPolicy ?? 0} filter={policyFilter} />
                       </span>
                     </span>
                   </button>
@@ -225,8 +291,7 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
                 <div className="journal-link__body">
                   <span className="journal-link__name">{j.name}</span>
                   <span className="journal-link__tags">
-                    <span className="sf-tag sf-tag--total">{total.toLocaleString()} total</span>
-                    <span className="sf-tag sf-tag--eligible">{eligible.toLocaleString()} eligible</span>
+                    <ArticlesBar total={total} eligible={eligible} />
                   </span>
                 </div>
                 {j.hasPolicy && (
@@ -245,3 +310,5 @@ export default function JournalSidebar({ journals, selectedId, onSelect, fieldSt
     </nav>
   )
 }
+
+export default memo(JournalSidebar)

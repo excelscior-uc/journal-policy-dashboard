@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useState, useEffect, useLayoutEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { SERIES_CONFIG } from '../data/fields'
 
@@ -9,26 +9,24 @@ const OPTS = [
 ]
 
 function SegSwitch({ value, onChange }) {
-  const containerRef = useRef(null)
   const btnRefs = useRef([])
-  const [pill, setPill] = useState({ left: 0, width: 0 })
+  const pillRef = useRef(null)
 
-  useEffect(() => {
-    const idx = OPTS.findIndex(o => o.value === value)
+  function positionPill(idx) {
     const btn = btnRefs.current[idx]
-    const container = containerRef.current
-    if (!btn || !container) return
-    const bRect = btn.getBoundingClientRect()
-    const cRect = container.getBoundingClientRect()
-    setPill({ left: bRect.left - cRect.left, width: bRect.width })
+    const pill = pillRef.current
+    if (!btn || !pill) return
+    pill.style.transform = `translate3d(${btn.offsetLeft}px,0,0)`
+    pill.style.width = `${btn.offsetWidth}px`
+  }
+
+  useLayoutEffect(() => {
+    positionPill(OPTS.findIndex(o => o.value === value))
   }, [value])
 
   return (
-    <div className="seg-switch" ref={containerRef}>
-      <span
-        className="seg-switch__pill"
-        style={{ left: pill.left, width: pill.width }}
-      />
+    <div className="seg-switch">
+      <span ref={pillRef} className="seg-switch__pill" />
       {OPTS.map((opt, i) => (
         <button
           key={opt.value}
@@ -44,7 +42,11 @@ function SegSwitch({ value, onChange }) {
 }
 
 export default function FilterBar({ visibleSeries, onToggleSeries, showPolicyLines, onTogglePolicyLines, policyFilter, onPolicyFilter }) {
-  const slot = document.getElementById('nav-filter-slot')
+  const [slot, setSlot] = useState(() => document.getElementById('nav-filter-slot'))
+  useEffect(() => {
+    if (slot) return
+    setSlot(document.getElementById('nav-filter-slot'))
+  }, [slot])
   if (!slot) return null
 
   return createPortal(
