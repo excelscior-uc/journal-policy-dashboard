@@ -28,9 +28,15 @@ function CustomTooltip({ active, payload, label }) {
           {p.name} : {p.value?.toFixed(1)}%
         </div>
       ))}
-      {d?.totalArticles != null && (
+      {(d?.totalArticles != null || d?.eligibleArticles != null) && (
         <div style={{ marginTop: 4, borderTop: '1px solid #fef08a', paddingTop: 3, color: '#713f12', fontWeight: 600 }}>
-          <div>Total articles: {d.totalArticles.toLocaleString()}</div>
+          {d?.totalArticles != null && <div>Total articles: {d.totalArticles.toLocaleString()}</div>}
+          {d?.eligibleArticles != null && (
+            <div>
+              Included articles: {d.eligibleArticles.toLocaleString()}
+              {d?.totalArticles ? ` (${(d.eligibleArticles / d.totalArticles * 100).toFixed(1)}%)` : ''}
+            </div>
+          )}
         </div>
       )}
     </div>

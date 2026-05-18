@@ -354,7 +354,15 @@ export default function FieldPage() {
                         deferredPolicyFilter === 'all' ||
                         (deferredPolicyFilter === 'policy' ? j.hasPolicy : !j.hasPolicy)
                       return (
-                        <div key={j.id} style={show ? undefined : { display: 'none' }}>
+                        <div
+                          key={j.id}
+                          style={show ? undefined : { display: 'none' }}
+                          role="button"
+                          tabIndex={0}
+                          className="field-chart-link"
+                          onClick={() => setSelectedJournal(j.id)}
+                          onKeyDown={e => e.key === 'Enter' && setSelectedJournal(j.id)}
+                        >
                           <ChartCard
                             title={j.name}
                             meta={j.hasPolicy ? `Policy ${j.policyYear}` : 'No policy'}
