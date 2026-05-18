@@ -213,6 +213,22 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
       {/* Per-field page: current field header + collapsible other fields */}
       {routeSlug !== 'all-fields' && (
         <>
+          <div className="bar-legend" aria-label="Bar color legend">
+            <div className="bar-legend__item">
+              <span className="bar-legend__label">Journals</span>
+              <div className="bar-legend__bar">
+                <div className="bar-legend__seg bar-legend__seg--policy">with policy</div>
+                <div className="bar-legend__seg bar-legend__seg--no">no policy</div>
+              </div>
+            </div>
+            <div className="bar-legend__item">
+              <span className="bar-legend__label">Articles</span>
+              <div className="bar-legend__bar">
+                <div className="bar-legend__seg bar-legend__seg--eligible">eligible</div>
+                <div className="bar-legend__seg bar-legend__seg--non bar-legend__seg--dark">not eligible</div>
+              </div>
+            </div>
+          </div>
           {/* Current field + All Journals (aggregated) — combined */}
           <div ref={triggerRef}>
           <div
