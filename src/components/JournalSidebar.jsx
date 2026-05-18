@@ -3,8 +3,45 @@ import { createPortal } from 'react-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FIELDS } from '../data/fields'
 import { useJournalNames } from '../data/journalNames'
+import Tooltip from './Tooltip'
 
 const FIELDS_EXCEPT_ALL = FIELDS.filter(f => f.slug !== 'all-fields')
+
+const LEGEND_TIPS = {
+  withPolicy:  'Journals that have published an editorial policy on data visualisation.',
+  noPolicy:    'Journals without a published data visualisation policy.',
+  eligible:    'Articles screened by Barzooka that contain figures with continuous data.',
+  notEligible: 'Articles excluded from the metric. No relevant figures detected\nor not parseable by Barzooka.',
+}
+
+function BarLegend() {
+  return (
+    <div className="bar-legend" aria-label="Bar color legend">
+      <div className="bar-legend__item">
+        <span className="bar-legend__label">Journals</span>
+        <div className="bar-legend__bar">
+          <Tooltip content={LEGEND_TIPS.withPolicy}>
+            <div className="bar-legend__seg bar-legend__seg--policy" tabIndex={0}>with policy</div>
+          </Tooltip>
+          <Tooltip content={LEGEND_TIPS.noPolicy}>
+            <div className="bar-legend__seg bar-legend__seg--no" tabIndex={0}>no policy</div>
+          </Tooltip>
+        </div>
+      </div>
+      <div className="bar-legend__item">
+        <span className="bar-legend__label">Articles</span>
+        <div className="bar-legend__bar">
+          <Tooltip content={LEGEND_TIPS.eligible}>
+            <div className="bar-legend__seg bar-legend__seg--eligible" tabIndex={0}>eligible</div>
+          </Tooltip>
+          <Tooltip content={LEGEND_TIPS.notEligible}>
+            <div className="bar-legend__seg bar-legend__seg--non bar-legend__seg--dark" tabIndex={0}>not eligible</div>
+          </Tooltip>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function ArticlesBar({ total = 0, eligible = 0 }) {
   const nonElig = Math.max(0, total - eligible)
@@ -152,22 +189,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
       {/* All-fields page: "All Research Fields" entry + field list */}
       {routeSlug === 'all-fields' && (
         <div className="journal-sidebar__subfields" aria-label="Research fields">
-          <div className="bar-legend" aria-label="Bar color legend">
-            <div className="bar-legend__item">
-              <span className="bar-legend__label">Journals</span>
-              <div className="bar-legend__bar">
-                <div className="bar-legend__seg bar-legend__seg--policy">with policy</div>
-                <div className="bar-legend__seg bar-legend__seg--no">no policy</div>
-              </div>
-            </div>
-            <div className="bar-legend__item">
-              <span className="bar-legend__label">Articles</span>
-              <div className="bar-legend__bar">
-                <div className="bar-legend__seg bar-legend__seg--eligible">eligible</div>
-                <div className="bar-legend__seg bar-legend__seg--non bar-legend__seg--dark">not eligible</div>
-              </div>
-            </div>
-          </div>
+          <BarLegend />
           {(() => {
             const allMeta = FIELDS.find(f => f.slug === 'all-fields')
             const allStats = fieldStats['all-fields']
@@ -218,22 +240,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
       {/* Per-field page: current field header + collapsible other fields */}
       {routeSlug !== 'all-fields' && (
         <>
-          <div className="bar-legend" aria-label="Bar color legend">
-            <div className="bar-legend__item">
-              <span className="bar-legend__label">Journals</span>
-              <div className="bar-legend__bar">
-                <div className="bar-legend__seg bar-legend__seg--policy">with policy</div>
-                <div className="bar-legend__seg bar-legend__seg--no">no policy</div>
-              </div>
-            </div>
-            <div className="bar-legend__item">
-              <span className="bar-legend__label">Articles</span>
-              <div className="bar-legend__bar">
-                <div className="bar-legend__seg bar-legend__seg--eligible">eligible</div>
-                <div className="bar-legend__seg bar-legend__seg--non bar-legend__seg--dark">not eligible</div>
-              </div>
-            </div>
-          </div>
+          <BarLegend />
           {/* Current field + All Journals (aggregated) — combined */}
           <div ref={triggerRef}>
           <div
