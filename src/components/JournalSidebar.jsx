@@ -2,6 +2,7 @@ import { memo, useState, useLayoutEffect, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FIELDS } from '../data/fields'
+import { useJournalNames } from '../data/journalNames'
 
 const FIELDS_EXCEPT_ALL = FIELDS.filter(f => f.slug !== 'all-fields')
 
@@ -72,6 +73,7 @@ const SIDEBAR_WIDTH_MAX = 520
 const SIDEBAR_NAV_PAD_X = 20
 
 function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, policyFilter = 'all' }) {
+  const getFullName = useJournalNames()
   const [search, setSearch] = useState('')
   const [fieldsOpen, setFieldsOpen] = useState(false)
   const [flyoutMounted, setFlyoutMounted] = useState(false)
@@ -130,7 +132,10 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
   }, [routeSlug])
 
   const filtered = search.trim()
-    ? journals.filter(j => j.name.toLowerCase().includes(search.toLowerCase()))
+    ? journals.filter(j => {
+        const q = search.toLowerCase()
+        return j.name.toLowerCase().includes(q) || getFullName(j.name, j.name).toLowerCase().includes(q)
+      })
     : journals
 
   const currentField = FIELDS.find(f => f.slug === routeSlug)
@@ -304,7 +309,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
                 onClick={() => onSelect(j.id)}
               >
                 <div className="journal-link__body">
-                  <span className="journal-link__name">{j.name}</span>
+                  <span className="journal-link__name" title={j.name}>{getFullName(j.name, j.name)}</span>
                   <span className="journal-link__tags">
                     <ArticlesBar total={total} eligible={eligible} />
                   </span>

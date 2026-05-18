@@ -1,9 +1,10 @@
 import { useState, useEffect, useMemo, useRef, useCallback, useDeferredValue, startTransition } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { FIELDS, SERIES_CONFIG } from '../data/fields'
 import ChartCard from '../components/ChartCard'
 import FilterBar from '../components/FilterBar'
 import JournalSidebar from '../components/JournalSidebar'
+import { useJournalNames } from '../data/journalNames'
 import JSZip from 'jszip'
 
 const DEFAULT_VISIBLE = new Set(SERIES_CONFIG.map(s => s.key))
@@ -30,6 +31,8 @@ function prefetchOthers(currentSlug) {
 export default function FieldPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
+  const getFullName = useJournalNames()
   const [data, setData] = useState(() => fieldCache.get(slug) ?? null)
   const [error, setError] = useState(null)
   const [selectedJournal, setSelectedJournal] = useState('__agg__')
@@ -38,6 +41,7 @@ export default function FieldPage() {
   const [journalCols, setJournalCols] = useState(2)
   const [fieldCols, setFieldCols] = useState(2)
   const [policyFilter, setPolicyFilter] = useState('all')
+  const [journalSearch, setJournalSearch] = useState('')
   const [isCapturing, setIsCapturing] = useState(false)
   const captureRegistryRef = useRef([])
 
@@ -55,8 +59,10 @@ export default function FieldPage() {
     captureRegistryRef.current = []
     window.scrollTo(0, 0)
     setError(null)
-    setSelectedJournal('__agg__')
+    const journalParam = new URLSearchParams(location.search).get('journal')
+    setSelectedJournal(journalParam || '__agg__')
     setPolicyFilter('all')
+    setJournalSearch('')
 
     const cached = fieldCache.get(slug)
     if (cached) {
@@ -69,7 +75,7 @@ export default function FieldPage() {
     fetchField(slug)
       .then(json => { setData(json); prefetchOthers(slug) })
       .catch(e => setError(e.message))
-  }, [slug])
+  }, [slug, location.search])
 
   function toggleSeries(key) {
     setVisibleSeries(prev => {
@@ -350,9 +356,14 @@ export default function FieldPage() {
                   </div>
                   <div className={`chart-grid${journalCols === 1 ? ' chart-grid--full' : ''}`}>
                     {data.journals.map(j => {
-                      const show =
+                      const q = journalSearch.trim().toLowerCase()
+                      const matchesQuery = !q ||
+                        j.name.toLowerCase().includes(q) ||
+                        getFullName(j.name, j.name).toLowerCase().includes(q)
+                      const show = matchesQuery && (
                         deferredPolicyFilter === 'all' ||
                         (deferredPolicyFilter === 'policy' ? j.hasPolicy : !j.hasPolicy)
+                      )
                       return (
                         <div
                           key={j.id}
@@ -364,7 +375,7 @@ export default function FieldPage() {
                           onKeyDown={e => e.key === 'Enter' && setSelectedJournal(j.id)}
                         >
                           <ChartCard
-                            title={j.name}
+                            title={getFullName(j.name, j.name)}
                             meta={j.hasPolicy ? `Policy ${j.policyYear}` : 'No policy'}
                             hasPolicy={j.hasPolicy}
                             subtitle={journalSubtitle(j)}
@@ -386,15 +397,15 @@ export default function FieldPage() {
 
           {data && activeJournal && (
             <>
-              <div className="chart-section-title">
-                {activeJournal.name}
+              <div className="chart-section-title" title={activeJournal.name}>
+                {getFullName(activeJournal.name, activeJournal.name)}
                 {activeJournal.hasPolicy && (
                   <span className="policy-badge">Policy {activeJournal.policyYear}</span>
                 )}
               </div>
               <div className="chart-grid chart-grid--full">
                 <ChartCard
-                  title={activeJournal.name}
+                  title={getFullName(activeJournal.name, activeJournal.name)}
                   subtitle={journalSubtitle(activeJournal)}
                   chartData={activeJournal.chartData}
                   policyLines={activeJournal.policyLines}

@@ -71,6 +71,11 @@ a  { color: #2c3e50; }
 .hero__sub {
   font-size: 13px; color: rgba(255,255,255,0.72);
   line-height: 1.65; margin-bottom: 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: manual;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 .hero__sub strong { color: #fff; }
 .hero__cta {
@@ -217,8 +222,20 @@ a  { color: #2c3e50; }
 }
 .filter-bar {
   display: flex; align-items: center; justify-content: flex-end;
-  gap: 8px; flex-wrap: wrap;
+  gap: 8px; flex-wrap: wrap; row-gap: 6px;
   width: 100%;
+}
+@media (max-width: 1100px) {
+  .filter-bar { justify-content: flex-start; }
+}
+@media (max-width: 760px) {
+  .filter-bar { gap: 6px; }
+  .filter-chip { padding: 4px 10px; font-size: 11px; }
+  .filter-bar__label { font-size: 11px; }
+  .filter-sep { display: none; }
+}
+@media (max-width: 520px) {
+  .filter-bar__label { display: none; }
 }
 .filter-bar__journals {
   display: flex; align-items: center; gap: 10px;
@@ -234,6 +251,71 @@ a  { color: #2c3e50; }
 .filter-chip.active { background: #fff; color: #1a252f; border-color: #fff; font-weight: 600; }
 .filter-chip__swatch { width: 10px; height: 3px; border-radius: 2px; display: inline-block; }
 .filter-sep { color: rgba(255,255,255,0.35); }
+/* ── GLOBAL JOURNAL SEARCH (top nav) ── */
+.global-search { position: relative; margin-left: auto; flex: 0 1 300px; min-width: 200px; }
+.global-search__pill {
+  display: flex; align-items: center; gap: 7px;
+  padding: 6px 12px 6px 14px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 999px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.global-search__pill:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.4); }
+.global-search__pill:focus-within { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.6); }
+.global-search__icon { color: rgba(255,255,255,0.6); flex-shrink: 0; }
+.global-search__input {
+  flex: 1; min-width: 0;
+  background: transparent; border: none; outline: none;
+  color: #fff; font-family: inherit; font-size: 12px;
+  padding: 0; margin: 0;
+}
+.global-search__input::placeholder { color: rgba(255,255,255,0.55); }
+.global-search__clear {
+  background: none; border: none; color: rgba(255,255,255,0.6);
+  cursor: pointer; font-size: 14px; line-height: 1;
+  width: 16px; height: 16px; padding: 0; display: inline-flex;
+  align-items: center; justify-content: center; flex-shrink: 0;
+}
+.global-search__clear:hover { color: #fff; }
+.global-search__pill { min-height: 30px; box-sizing: border-box; }
+.global-search__input { line-height: 16px; }
+.global-search__dropdown {
+  position: absolute; top: calc(100% + 6px); right: 0; left: auto;
+  width: 100%; min-width: 280px; max-width: 420px;
+  background: #fff; border: 1px solid #dee2e6; border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  max-height: 420px; overflow-y: auto;
+  z-index: 1000;
+}
+.global-search__empty {
+  padding: 14px 16px; font-size: 12px; color: #868e96; font-style: italic;
+}
+.global-search__item {
+  display: flex; flex-direction: column; gap: 2px;
+  width: 100%; text-align: left;
+  padding: 8px 14px;
+  background: none; border: none; cursor: pointer;
+  font-family: inherit;
+  border-bottom: 1px solid #f1f3f5;
+}
+.global-search__item:last-child { border-bottom: none; }
+.global-search__item.active, .global-search__item:hover {
+  background: #f1f5f7;
+}
+.global-search__item-name { font-size: 13px; font-weight: 600; color: #2c3e50; line-height: 1.3; }
+.global-search__item-meta {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  font-size: 11px; color: #6c757d;
+}
+.global-search__item-abbrev { font-family: ui-monospace, monospace; font-size: 10px; color: #868e96; }
+.global-search__item-sep { color: #ced4da; }
+.global-search__item-field { color: #495057; }
+.global-search__item-policy {
+  background: #d1ecf1; color: #0c5460;
+  padding: 1px 6px; border-radius: 8px; font-size: 10px; font-weight: 600;
+  margin-left: auto;
+}
 .filter-select {
   padding: 3px 10px; border: 1px solid #ced4da; border-radius: 5px;
   font-size: 11px; background: #fff; color: #495057;
@@ -1089,6 +1171,11 @@ a  { color: #2c3e50; }
   white-space: nowrap;
   flex-shrink: 0;
 }
+@media (max-width: 760px) {
+  .top-nav { padding: 8px 14px; gap: 10px; }
+  .global-search { flex-basis: 100%; min-width: 0; margin-left: 0; order: 3; }
+  .top-nav__filter-slot { order: 2; flex-basis: 100%; }
+}
 
 /* ── HERO (two-column) ── */
 .hero__inner {
@@ -1098,10 +1185,23 @@ a  { color: #2c3e50; }
   gap: 32px;
   align-items: flex-start;
 }
-.hero__text { flex: 1; }
+.hero__text { flex: 1; max-width: 680px; }
 .hero__link { color: #76b5b2; }
-.hero__actions { display: flex; gap: 10px; }
-.hero__stats { display: flex; flex-direction: column; gap: 10px; min-width: 130px; flex-shrink: 0; }
+.hero__actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.hero__or {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  padding: 0 2px;
+  flex-shrink: 0;
+}
+.hero__search { flex: 1 1 300px; min-width: 220px; }
+.hero__search .global-search { margin-left: 0; flex: 1 1 auto; min-width: 0; }
+.hero__search .global-search__pill { padding: 9px 14px; border-radius: 6px; }
+.hero__search .global-search__input { font-size: 14px; line-height: 18px; }
+.hero__search .global-search__icon { width: 15px; height: 15px; }
+.hero__stats { display: flex; flex-direction: column; gap: 10px; min-width: 130px; flex-shrink: 0; margin-left: auto; }
 .hero__stat-card {
   background: rgba(255,255,255,0.08);
   border-radius: 8px;

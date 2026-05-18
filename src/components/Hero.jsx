@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router-dom'
+import GlobalJournalSearch from './GlobalJournalSearch'
 
 export default function Hero() {
-  const navigate = useNavigate()
   return (
     <div className="hero">
       <div className="hero__inner">
@@ -26,9 +25,10 @@ export default function Hero() {
             >
               Explore by Research Field
             </button>
-            <button className="hero__cta-ghost" onClick={() => navigate('/field/all-fields')}>
-              View All Fields →
-            </button>
+            <span className="hero__or" aria-hidden="true">or</span>
+            <div className="hero__search">
+              <GlobalJournalSearch />
+            </div>
           </div>
         </div>
         <div className="hero__stats">
