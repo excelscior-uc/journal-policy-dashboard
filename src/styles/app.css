@@ -607,8 +607,17 @@ a  { color: #2c3e50; }
   letter-spacing: 0.02em;
   border: 1px solid #d1d5db;
 }
-.policy-bar[data-filter="policy"]   .policy-bar__seg--no     { opacity: 0.22; filter: grayscale(0.6); }
-.policy-bar[data-filter="nopolicy"] .policy-bar__seg--policy { opacity: 0.22; filter: grayscale(0.6); }
+.policy-bar[data-filter="policy"]   .policy-bar__seg--no {
+  background: linear-gradient(180deg, #d1d5db 0%, #9ca3af 100%);
+}
+.policy-bar[data-filter="nopolicy"] .policy-bar__seg--policy {
+  background: linear-gradient(180deg, #d1d5db 0%, #9ca3af 100%);
+}
+.policy-bar[data-filter="policy"]   .policy-bar__seg--no     .policy-bar__lbl,
+.policy-bar[data-filter="nopolicy"] .policy-bar__seg--policy .policy-bar__lbl {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
 .policy-bar[data-filter="policy"]   .policy-bar__seg--policy,
 .policy-bar[data-filter="nopolicy"] .policy-bar__seg--no {
   filter: saturate(1.25) brightness(1.05);
