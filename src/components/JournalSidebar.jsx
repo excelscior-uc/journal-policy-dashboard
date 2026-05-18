@@ -147,7 +147,6 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
       {/* All-fields page: "All Research Fields" entry + field list */}
       {routeSlug === 'all-fields' && (
         <div className="journal-sidebar__subfields" aria-label="Research fields">
-          <div className="journal-sidebar__subfields-hint">All research fields — open one</div>
           <div className="bar-legend" aria-label="Bar color legend">
             <div className="bar-legend__item">
               <span className="bar-legend__label">Journals</span>
