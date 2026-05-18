@@ -38,7 +38,8 @@ function CustomTooltip({ active, payload, label }) {
   )
 }
 
-function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines }) {
+function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear }) {
+  if (payload.value === hideYear) return null
   const isPolicy = showPolicyLines && policyYears.has(payload.value)
   return (
     <g transform={`translate(${x},${y}) rotate(-40)`}>
@@ -219,7 +220,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                 minTickGap={0}
                 height={46}
                 tickMargin={4}
-                tick={<PolicyAwareTick policyYears={policyYears} showPolicyLines={showPolicyLines} />}
+                tick={<PolicyAwareTick policyYears={policyYears} showPolicyLines={showPolicyLines} hideYear={extendedData?.[0]?.year} />}
                 tickLine={{ stroke: '#adb5bd' }}
                 axisLine={{ stroke: '#ced4da' }}
                 label={{ value: 'Year', position: 'insideBottom', offset: -4, fontSize: 11, fill: '#6c757d', fontWeight: 700 }}
