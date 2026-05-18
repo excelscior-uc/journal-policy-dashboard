@@ -18,5 +18,4 @@ export const SERIES_CONFIG = [
   { key: 'pct_only_bar',         name: '% only bar',            color: '#c0392b' },
   { key: 'pct_bar_informative',  name: '% bar and informative', color: '#e8998d' },
   { key: 'pct_only_informative', name: '% only informative',    color: '#76b5b2' },
-  { key: 'pct_eligible',         name: '% eligible articles',   color: 'rgba(160,160,160,0.7)', dashed: true },
 ]
