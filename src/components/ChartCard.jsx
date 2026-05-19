@@ -161,9 +161,19 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
     }
   }
 
-  const extendedData = useMemo(() => chartData?.length
-    ? [{ year: chartData[0].year - 1 }, ...chartData, { year: chartData[chartData.length - 1].year + 1 }]
-    : chartData, [chartData])
+  const extendedData = useMemo(() => {
+    if (!chartData?.length) return chartData
+    const dataMin = chartData[0].year
+    const dataMax = chartData[chartData.length - 1].year
+    const policyMin = policyLines.length ? Math.min(...policyLines.map(p => p.year)) : dataMin
+    const policyMax = policyLines.length ? Math.max(...policyLines.map(p => p.year)) : dataMax
+    const min = Math.min(dataMin, policyMin) - 1
+    const max = Math.max(dataMax, policyMax) + 1
+    const byYear = new Map(chartData.map(d => [d.year, d]))
+    const out = []
+    for (let y = min; y <= max; y++) out.push(byYear.get(y) ?? { year: y })
+    return out
+  }, [chartData, policyLines])
 
   return (
     <div className="chart-card" ref={cardRef}>
