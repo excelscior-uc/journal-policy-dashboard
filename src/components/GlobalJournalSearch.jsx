@@ -31,7 +31,11 @@ export default function GlobalJournalSearch() {
       const hayAbbrev = j.name.toLowerCase()
       const hayFull = full.toLowerCase()
       if (hayAbbrev.includes(q) || hayFull.includes(q)) {
-        out.push({ ...j, fullName: full })
+        const fields = j.fields.length ? j.fields : [null]
+        for (const f of fields) {
+          out.push({ ...j, fullName: full, field: f })
+          if (out.length >= 50) break
+        }
         if (out.length >= 50) break
       }
     }
@@ -41,7 +45,7 @@ export default function GlobalJournalSearch() {
   useEffect(() => { setActive(0) }, [query])
 
   function selectResult(r) {
-    const target = r.fields[0]
+    const target = r.field || r.fields[0]
     if (!target) return
     navigate(`/field/${target.slug}?journal=${encodeURIComponent(r.id)}`)
     setOpen(false)
@@ -87,7 +91,7 @@ export default function GlobalJournalSearch() {
           )}
           {results.map((r, i) => (
             <button
-              key={r.id}
+              key={`${r.id}::${r.field?.slug ?? 'none'}`}
               type="button"
               role="option"
               aria-selected={i === active}
@@ -97,7 +101,7 @@ export default function GlobalJournalSearch() {
             >
               <span className="global-search__item-name">{r.fullName}</span>
               <span className="global-search__item-meta">
-                <span className="global-search__item-field">{r.fields.map(f => f.name).join(', ')}</span>
+                <span className="global-search__item-field">{r.field?.name ?? r.fields.map(f => f.name).join(', ')}</span>
                 {r.hasPolicy && <span className="global-search__item-policy">Policy {r.policyYear}</span>}
               </span>
             </button>
