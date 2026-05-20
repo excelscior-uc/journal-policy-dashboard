@@ -151,15 +151,18 @@
     "policyLines": [
       {
         "year": 2013,
-        "label": "25% of journals adopted"
+        "label": "25% of journals adopted",
+        "count": 7
       },
       {
         "year": 2017,
-        "label": "7% of journals adopted"
+        "label": "7% of journals adopted",
+        "count": 2
       },
       {
         "year": 2019,
-        "label": "4% of journals adopted"
+        "label": "4% of journals adopted",
+        "count": 1
       }
     ]
   },
@@ -313,15 +316,18 @@
     "policyLines": [
       {
         "year": 2013,
-        "label": "70% of journals adopted"
+        "label": "70% of journals adopted",
+        "count": 7
       },
       {
         "year": 2017,
-        "label": "20% of journals adopted"
+        "label": "20% of journals adopted",
+        "count": 2
       },
       {
         "year": 2019,
-        "label": "10% of journals adopted"
+        "label": "10% of journals adopted",
+        "count": 1
       }
     ]
   },

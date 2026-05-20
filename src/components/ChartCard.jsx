@@ -9,9 +9,10 @@ import { SERIES_CONFIG } from '../data/fields'
 
 const EMPTY_POLICY_LINES = []
 
-function CustomTooltip({ active, payload, label }) {
+function CustomTooltip({ active, payload, label, policyByYear, totalJournals }) {
   if (!active || !payload?.length) return null
   const d = payload[0]?.payload
+  const policy = policyByYear?.get(label)
   return (
     <div style={{
       background: '#fefce8',
@@ -37,6 +38,14 @@ function CustomTooltip({ active, payload, label }) {
               {d?.totalArticles ? ` (${(d.eligibleArticles / d.totalArticles * 100).toFixed(1)}%)` : ''}
             </div>
           )}
+        </div>
+      )}
+      {policy && ((policy.count ?? 0) > 0 || (policy.count == null && policy.pct > 0)) && (
+        <div style={{ marginTop: 4, borderTop: '1px solid #fef08a', paddingTop: 3, color: '#6d5f00', fontWeight: 700 }}>
+          {policy.count != null
+            ? <>Policy adopted: {policy.count} journal{policy.count === 1 ? '' : 's'}{totalJournals ? ` of ${totalJournals}` : ''}{policy.pct != null ? ` (${policy.pct}%)` : ''}</>
+            : <>Policy adopted: {policy.pct}% of journals{totalJournals ? ` (~${Math.round(policy.pct / 100 * totalJournals)} of ${totalJournals})` : ''}</>
+          }
         </div>
       )}
     </div>
@@ -106,11 +115,28 @@ function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines }) {
   )
 }
 
-function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = EMPTY_POLICY_LINES, visibleSeries, showPolicyLines = true, tall = false, forceVisible = false, onMount }) {
+function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = EMPTY_POLICY_LINES, totalJournals, visibleSeries, showPolicyLines = true, tall = false, forceVisible = false, onMount }) {
   const ref = useRef()
   const cardRef = useRef()
   const visible = useVisible(ref)
-  const policyYears = useMemo(() => new Set(policyLines.map(pl => pl.year)), [policyLines])
+  const enrichedPolicyLines = useMemo(() => policyLines
+    .map(pl => {
+      const m = pl.label?.match(/(\d+(?:\.\d+)?)\s*%/)
+      const pct = m ? parseFloat(m[1]) : null
+      return { ...pl, pct }
+    })
+    .filter(pl => {
+      if (pl.count != null) return pl.count > 0
+      if (pl.pct != null) return pl.pct > 0
+      return true
+    }),
+    [policyLines]
+  )
+  const policyYears = useMemo(() => new Set(enrichedPolicyLines.map(pl => pl.year)), [enrichedPolicyLines])
+  const policyByYear = useMemo(
+    () => new Map(enrichedPolicyLines.map(pl => [pl.year, pl])),
+    [enrichedPolicyLines]
+  )
   const [menuOpen, setMenuOpen] = useState(false)
   const [busy, setBusy] = useState(false)
   const menuRef = useRef()
@@ -165,15 +191,15 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
     if (!chartData?.length) return chartData
     const dataMin = chartData[0].year
     const dataMax = chartData[chartData.length - 1].year
-    const policyMin = policyLines.length ? Math.min(...policyLines.map(p => p.year)) : dataMin
-    const policyMax = policyLines.length ? Math.max(...policyLines.map(p => p.year)) : dataMax
+    const policyMin = enrichedPolicyLines.length ? Math.min(...enrichedPolicyLines.map(p => p.year)) : dataMin
+    const policyMax = enrichedPolicyLines.length ? Math.max(...enrichedPolicyLines.map(p => p.year)) : dataMax
     const min = Math.min(dataMin, policyMin) - 1
     const max = Math.max(dataMax, policyMax) + 1
     const byYear = new Map(chartData.map(d => [d.year, d]))
     const out = []
     for (let y = min; y <= max; y++) out.push(byYear.get(y) ?? { year: y })
     return out
-  }, [chartData, policyLines])
+  }, [chartData, enrichedPolicyLines])
 
   return (
     <div className="chart-card" ref={cardRef}>
@@ -248,23 +274,30 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                 unit="%"
                 label={{ value: '% Papers', angle: -90, position: 'insideLeft', offset: 10, fontSize: 11, fill: '#6c757d', fontWeight: 700, dy: 20 }}
               />
-              <Tooltip content={<CustomTooltip />} />
+              <Tooltip content={<CustomTooltip policyByYear={policyByYear} totalJournals={totalJournals} />} />
               <Legend
-                key={`legend-${showPolicyLines && policyLines.length > 0 ? 'p' : 'np'}`}
-                content={<CustomLegend visibleSeries={visibleSeries} showPolicyLines={showPolicyLines} hasPolicyLines={policyLines.length > 0} />}
+                key={`legend-${showPolicyLines && enrichedPolicyLines.length > 0 ? 'p' : 'np'}`}
+                content={<CustomLegend visibleSeries={visibleSeries} showPolicyLines={showPolicyLines} hasPolicyLines={enrichedPolicyLines.length > 0} />}
                 verticalAlign="top"
                 align="right"
-                height={showPolicyLines && policyLines.length > 0 ? 44 : 22}
+                height={showPolicyLines && enrichedPolicyLines.length > 0 ? 44 : 22}
               />
-              {showPolicyLines && policyLines.map(pl => (
-                <ReferenceLine
-                  key={pl.year}
-                  x={pl.year}
-                  stroke="rgba(253,231,37,0.7)"
-                  strokeWidth={4}
-                  isAnimationActive={false}
-                />
-              ))}
+              {showPolicyLines && enrichedPolicyLines.map(pl => {
+                const w = pl.count != null
+                  ? Math.max(2, Math.min(14, 2 + pl.count * 1.5))
+                  : pl.pct != null
+                  ? Math.max(2, Math.min(14, 2 + pl.pct * 0.45))
+                  : 4
+                return (
+                  <ReferenceLine
+                    key={pl.year}
+                    x={pl.year}
+                    stroke="rgba(253,231,37,0.7)"
+                    strokeWidth={w}
+                    isAnimationActive={false}
+                  />
+                )
+              })}
               {SERIES_CONFIG.filter(s => !visibleSeries || visibleSeries.has(s.key)).map(s => (
                 <Line
                   key={s.key}

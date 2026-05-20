@@ -125,6 +125,19 @@ function extractPlots(html) {
   return captured
 }
 
+function countsByPolicyYear(journals) {
+  const m = new Map()
+  for (const j of journals) {
+    if (j.policyYear != null) m.set(j.policyYear, (m.get(j.policyYear) ?? 0) + 1)
+  }
+  return m
+}
+
+function annotatePolicyLines(agg, counts) {
+  if (!agg?.policyLines) return agg
+  return { ...agg, policyLines: agg.policyLines.map(pl => ({ ...pl, count: counts.get(pl.year) ?? 0 })) }
+}
+
 function buildFieldJson(slug, fieldKey, plots) {
   const agg = (suffix) => {
     const key = `plot_fagg_${fieldKey}_${suffix}`
@@ -150,12 +163,14 @@ function buildFieldJson(slug, fieldKey, plots) {
     }
   })
 
+  const counts = countsByPolicyYear(journals)
+
   return {
     field: FIELD_DISPLAY_MAP[slug],
     slug,
-    aggAll: agg('all'),
-    aggPolicy: agg('pol'),
-    aggNoPolicy: agg('npo'),
+    aggAll: annotatePolicyLines(agg('all'), counts),
+    aggPolicy: annotatePolicyLines(agg('pol'), counts),
+    aggNoPolicy: annotatePolicyLines(agg('npo'), counts),
     journals,
   }
 }
@@ -163,15 +178,17 @@ function buildFieldJson(slug, fieldKey, plots) {
 function buildAllFieldsJson(plots, fieldJsons) {
   const p = plots['plot_global_agg_global']
   if (!p) return null
+  const allJournals = fieldJsons.flatMap(f => f.journals)
+  const globalCounts = countsByPolicyYear(allJournals)
   return {
     field: 'All Research Fields',
     slug: 'all-fields',
-    aggAll: { chartData: tracesToChartData(p.data), policyLines: tracesToPolicyLines(p.data) },
+    aggAll: annotatePolicyLines({ chartData: tracesToChartData(p.data), policyLines: tracesToPolicyLines(p.data) }, globalCounts),
     aggPolicy: plots['plot_global_agg_pol']
-      ? { chartData: tracesToChartData(plots['plot_global_agg_pol'].data), policyLines: tracesToPolicyLines(plots['plot_global_agg_pol'].data) }
+      ? annotatePolicyLines({ chartData: tracesToChartData(plots['plot_global_agg_pol'].data), policyLines: tracesToPolicyLines(plots['plot_global_agg_pol'].data) }, globalCounts)
       : null,
     aggNoPolicy: plots['plot_global_agg_npo']
-      ? { chartData: tracesToChartData(plots['plot_global_agg_npo'].data), policyLines: tracesToPolicyLines(plots['plot_global_agg_npo'].data) }
+      ? annotatePolicyLines({ chartData: tracesToChartData(plots['plot_global_agg_npo'].data), policyLines: tracesToPolicyLines(plots['plot_global_agg_npo'].data) }, globalCounts)
       : null,
     journals: [],
     fields: fieldJsons.map(f => ({ slug: f.slug, field: f.field, aggAll: f.aggAll, aggPolicy: f.aggPolicy ?? null, aggNoPolicy: f.aggNoPolicy ?? null })),

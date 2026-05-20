@@ -140,6 +140,12 @@ export default function FieldPage() {
     return `n = ${n.toLocaleString()} articles; ${pct}% of total (${nTotal.toLocaleString()}) | ${journalCount} journals`
   }, [aggData, field, deferredPolicyFilter])
 
+  const aggTotalJournals = useMemo(() => {
+    if (deferredPolicyFilter === 'policy') return field?.withPolicy ?? null
+    if (deferredPolicyFilter === 'nopolicy') return ((field?.totalJournals ?? 0) - (field?.withPolicy ?? 0)) || null
+    return field?.totalJournals ?? null
+  }, [field, deferredPolicyFilter])
+
   useEffect(() => {
     if (!isCapturing) return
     let cancelled = false
@@ -271,6 +277,7 @@ export default function FieldPage() {
                     subtitle={aggSubtitle}
                     chartData={aggData.chartData}
                     policyLines={aggData.policyLines}
+                    totalJournals={aggTotalJournals}
                     visibleSeries={deferredVisibleSeries}
                     showPolicyLines={deferredShowPolicyLines}
                     tall
@@ -328,6 +335,7 @@ export default function FieldPage() {
                             subtitle={fieldSub}
                             chartData={fieldAgg?.chartData}
                             policyLines={fieldAgg?.policyLines}
+                            totalJournals={typeof jCount === 'number' ? jCount : null}
                             visibleSeries={deferredVisibleSeries}
                             showPolicyLines={deferredShowPolicyLines}
                             forceVisible={isCapturing}
