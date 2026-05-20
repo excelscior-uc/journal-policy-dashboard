@@ -1,8 +1,0 @@
-{"type":"server-started","port":63160,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:63160","screen_dir":"/Users/yazidzalai/Desktop/journal-policy-dashboard/.superpowers/brainstorm/36756-1778681515/content","state_dir":"/Users/yazidzalai/Desktop/journal-policy-dashboard/.superpowers/brainstorm/36756-1778681515/state"}
-{"type":"screen-added","file":"/Users/yazidzalai/Desktop/journal-policy-dashboard/.superpowers/brainstorm/36756-1778681515/content/home-layout.html"}
-{"type":"screen-added","file":"/Users/yazidzalai/Desktop/journal-policy-dashboard/.superpowers/brainstorm/36756-1778681515/content/landing-page.html"}
-{"type":"screen-added","file":"/Users/yazidzalai/Desktop/journal-policy-dashboard/.superpowers/brainstorm/36756-1778681515/content/landing-page-v2.html"}
-{"type":"screen-added","file":"/Users/yazidzalai/Desktop/journal-policy-dashboard/.superpowers/brainstorm/36756-1778681515/content/landing-page-v3.html"}
-{"type":"screen-added","file":"/Users/yazidzalai/Desktop/journal-policy-dashboard/.superpowers/brainstorm/36756-1778681515/content/field-page.html"}
-{"type":"screen-added","file":"/Users/yazidzalai/Desktop/journal-policy-dashboard/.superpowers/brainstorm/36756-1778681515/content/waiting.html"}
-{"type":"server-stopped","reason":"idle timeout"}
