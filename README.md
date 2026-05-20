@@ -37,24 +37,24 @@ The dashboard (`index.html`) is generated from `step3_generate_dashboard_v10.py`
 
 3,211 rows · 22 columns · one row per journal × year (2010–2025)
 
-| Column                                              | Description                                                                                                                                      |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Journal_Name`                                      | Journal display name                                                                                                                             |
-| `year`                                              | Publication year                                                                                                                                 |
-| `e_issn`                                            | Electronic ISSN (from barzooka screening filename)                                                                                               |
-| `JCR_Abbrev`                                        | WoS JCR abbreviation — unique journal identifier                                                                                                 |
-| `Field`                                             | Primary WoS research field                                                                                                                       |
-| `All_Fields`                                        | All WoS fields the journal belongs to (semicolon-separated)                                                                                      |
-| `policy`                                            | `1` if the journal adopted an editorial visualisation policy, else `0`                                                                           |
-| `policy_year`                                       | Year of policy adoption (blank if no policy)                                                                                                     |
-| `n_articles`                                        | Total screened articles that year (before eligibility filter)                                                                                    |
-| `n_bar_or_informative`                              | Articles containing at least one visualisation for continuous data detected by barzooka - Eligible articles — denominator for proportion columns |
-| `sum_bar` / `sum_inf`                               | Eligible articles containing any bar / informative chart                                                                                         |
-| `sum_only_bar` / `sum_only_inf` / `sum_bar_and_inf` | Mutually exclusive article counts                                                                                                                |
-| `sum_eligible`                                      | = `n_bar_or_informative` (articles with ≥1 bar or informative chart)                                                                             |
-| `p_bar` / `p_informative`                           | Proportion of eligible articles with any bar / informative chart (0–1)                                                                           |
-| `p_only_bar` / `p_only_inf` / `p_bar_and_inf`       | Proportions for mutually exclusive categories (0–1)                                                                                              |
-| `p_eligible`                                        | Fraction of all screened articles that are eligible (0–1; not plotted in dashboard)                                                              |
+| Column                                              | Description                                                                                                                                                  |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Journal_Name`                                      | Journal display name                                                                                                                                         |
+| `year`                                              | Publication year                                                                                                                                             |
+| `e_issn`                                            | Electronic ISSN (from barzooka screening filename)                                                                                                           |
+| `JCR_Abbrev`                                        | WoS JCR abbreviation — unique journal identifier                                                                                                             |
+| `Field`                                             | Primary WoS research field                                                                                                                                   |
+| `All_Fields`                                        | All WoS fields the journal belongs to (semicolon-separated)                                                                                                  |
+| `policy`                                            | `1` if the journal adopted an editorial visualisation policy, else `0`                                                                                       |
+| `policy_year`                                       | Year of policy adoption (blank if no policy)                                                                                                                 |
+| `n_articles`                                        | Total screened articles that year (before eligibility filter)                                                                                                |
+| `n_bar_or_informative`                              | Number of articles containing at least one visualisation for continuous data detected by barzooka - `eligible articles` — denominator for proportion columns |
+| `sum_bar` / `sum_inf`                               | Sum of eligible articles containing any bar / informative chart                                                                                              |
+| `sum_only_bar` / `sum_only_inf` / `sum_bar_and_inf` | Mutually exclusive article sums                                                                                                                              |
+| `sum_eligible`                                      | = `n_bar_or_informative` (sum of articles with ≥1 bar or informative chart)                                                                                  |
+| `p_bar` / `p_informative`                           | Proportion of eligible articles with any bar / informative chart (0–1)                                                                                       |
+| `p_only_bar` / `p_only_inf` / `p_bar_and_inf`       | Proportions for mutually exclusive categories (0–1)                                                                                                          |
+| `p_eligible`                                        | Fraction of all screened articles that are eligible (0–1; not plotted in dashboard)                                                                          |
 
 Proportions are stored as 0–1 in the CSV and scaled to 0–100 by the dashboard script before charting.
 
