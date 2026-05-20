@@ -483,7 +483,8 @@
   "journals": [
     {
       "id": "acta_physiol",
-      "name": "ACTA PHYSIOL",
+      "name": "Acta Physiologica",
+      "abbrev": "ACTA PHYSIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -636,7 +637,8 @@
     },
     {
       "id": "am_j_physiol-cell_ph",
-      "name": "AM J PHYSIOL-CELL PH",
+      "name": "American Journal of Physiology-Cell Physiology",
+      "abbrev": "AM J PHYSIOL-CELL PH",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -794,7 +796,8 @@
     },
     {
       "id": "am_j_physiol-endoc_m",
-      "name": "AM J PHYSIOL-ENDOC M",
+      "name": "American Journal of Physiology-Endocrinology and Metabolism",
+      "abbrev": "AM J PHYSIOL-ENDOC M",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -952,7 +955,8 @@
     },
     {
       "id": "am_j_physiol-gastr_l",
-      "name": "AM J PHYSIOL-GASTR L",
+      "name": "American Journal of Physiology-Gastrointestinal and Liver Physiology",
+      "abbrev": "AM J PHYSIOL-GASTR L",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -1110,7 +1114,8 @@
     },
     {
       "id": "am_j_physiol-heart_c",
-      "name": "AM J PHYSIOL-HEART C",
+      "name": "American Journal of Physiology-Heart and Circulatory Physiology",
+      "abbrev": "AM J PHYSIOL-HEART C",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -1268,7 +1273,8 @@
     },
     {
       "id": "am_j_physiol-lung_c",
-      "name": "AM J PHYSIOL-LUNG C",
+      "name": "American Journal of Physiology-Lung Cellular and Molecular Physiology",
+      "abbrev": "AM J PHYSIOL-LUNG C",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -1426,7 +1432,8 @@
     },
     {
       "id": "am_j_physiol-reg_i",
-      "name": "AM J PHYSIOL-REG I",
+      "name": "American Journal of Physiology-Regulatory integrative and Comparative Physiology",
+      "abbrev": "AM J PHYSIOL-REG I",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -1584,7 +1591,8 @@
     },
     {
       "id": "am_j_physiol-renal",
-      "name": "AM J PHYSIOL-RENAL",
+      "name": "American Journal of Physiology-Renal Physiology",
+      "abbrev": "AM J PHYSIOL-RENAL",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -1742,7 +1750,8 @@
     },
     {
       "id": "arch_physiol_biochem",
-      "name": "ARCH PHYSIOL BIOCHEM",
+      "name": "Archives of Physiology and Biochemistry",
+      "abbrev": "ARCH PHYSIOL BIOCHEM",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1895,7 +1904,8 @@
     },
     {
       "id": "chronobiol_int",
-      "name": "CHRONOBIOL INT",
+      "name": "Chronobiology International",
+      "abbrev": "CHRONOBIOL INT",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2048,7 +2058,8 @@
     },
     {
       "id": "clin_exp_pharmacol_p",
-      "name": "CLIN EXP PHARMACOL P",
+      "name": "Clinical and Experimental Pharmacology and Physiology",
+      "abbrev": "CLIN EXP PHARMACOL P",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2201,7 +2212,8 @@
     },
     {
       "id": "clin_physiol_funct_i",
-      "name": "CLIN PHYSIOL FUNCT I",
+      "name": "Clinical Physiology and Functional Imaging",
+      "abbrev": "CLIN PHYSIOL FUNCT I",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2354,7 +2366,8 @@
     },
     {
       "id": "comp_biochem_phys_a",
-      "name": "COMP BIOCHEM PHYS A",
+      "name": "Comparative Biochemistry and Physiology A-Molecular & integrative Physiology",
+      "abbrev": "COMP BIOCHEM PHYS A",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2507,7 +2520,8 @@
     },
     {
       "id": "conserv_physiol",
-      "name": "CONSERV PHYSIOL",
+      "name": "Conservation Physiology",
+      "abbrev": "CONSERV PHYSIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2633,7 +2647,8 @@
     },
     {
       "id": "eur_j_appl_physiol",
-      "name": "EUR J APPL PHYSIOL",
+      "name": "European Journal of Applied Physiology",
+      "abbrev": "EUR J APPL PHYSIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2786,7 +2801,8 @@
     },
     {
       "id": "exp_physiol",
-      "name": "EXP PHYSIOL",
+      "name": "Experimental Physiology",
+      "abbrev": "EXP PHYSIOL",
       "hasPolicy": true,
       "policyYear": 2021,
       "chartData": [
@@ -2944,7 +2960,8 @@
     },
     {
       "id": "front_physiol",
-      "name": "FRONT PHYSIOL",
+      "name": "Frontiers in Physiology",
+      "abbrev": "FRONT PHYSIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3096,8 +3113,168 @@
       "policyLines": []
     },
     {
+      "id": "j_gen_physiol",
+      "name": "General Physiology",
+      "abbrev": "J GEN PHYSIOL",
+      "hasPolicy": true,
+      "policyYear": 2021,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 59.32203389830508,
+          "pct_bar_informative": 22.03389830508474,
+          "pct_only_informative": 18.64406779661017,
+          "pct_eligible": 73.75,
+          "eligibleArticles": 59,
+          "totalArticles": 80
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 47.82608695652174,
+          "pct_bar_informative": 32.60869565217391,
+          "pct_only_informative": 19.565217391304348,
+          "pct_eligible": 68.65671641791045,
+          "eligibleArticles": 46,
+          "totalArticles": 67
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 45.23809523809524,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 21.42857142857142,
+          "pct_eligible": 59.154929577464785,
+          "eligibleArticles": 42,
+          "totalArticles": 71
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 59.32203389830508,
+          "pct_bar_informative": 23.728813559322028,
+          "pct_only_informative": 16.94915254237288,
+          "pct_eligible": 67.81609195402298,
+          "eligibleArticles": 59,
+          "totalArticles": 87
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 38.33333333333333,
+          "pct_bar_informative": 40,
+          "pct_only_informative": 21.66666666666666,
+          "pct_eligible": 77.92207792207793,
+          "eligibleArticles": 60,
+          "totalArticles": 77
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 52.083333333333336,
+          "pct_bar_informative": 22.91666666666666,
+          "pct_only_informative": 25,
+          "pct_eligible": 78.68852459016394,
+          "eligibleArticles": 48,
+          "totalArticles": 61
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 48.93617021276595,
+          "pct_bar_informative": 31.914893617021278,
+          "pct_only_informative": 19.14893617021276,
+          "pct_eligible": 83.92857142857143,
+          "eligibleArticles": 47,
+          "totalArticles": 56
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 47.22222222222222,
+          "pct_bar_informative": 36.11111111111111,
+          "pct_only_informative": 16.66666666666666,
+          "pct_eligible": 75,
+          "eligibleArticles": 36,
+          "totalArticles": 48
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 54.83870967741935,
+          "pct_bar_informative": 22.58064516129032,
+          "pct_only_informative": 22.58064516129032,
+          "pct_eligible": 69.66292134831461,
+          "eligibleArticles": 62,
+          "totalArticles": 89
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 40.67796610169492,
+          "pct_bar_informative": 25.423728813559322,
+          "pct_only_informative": 33.89830508474576,
+          "pct_eligible": 70.23809523809523,
+          "eligibleArticles": 59,
+          "totalArticles": 84
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 31.11111111111111,
+          "pct_bar_informative": 44.44444444444444,
+          "pct_only_informative": 24.44444444444444,
+          "pct_eligible": 83.33333333333334,
+          "eligibleArticles": 45,
+          "totalArticles": 54
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 24,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 56.00000000000001,
+          "pct_eligible": 85.22727272727273,
+          "eligibleArticles": 75,
+          "totalArticles": 88
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 8.33333333333333,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 58.333333333333336,
+          "pct_eligible": 80,
+          "eligibleArticles": 48,
+          "totalArticles": 60
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 11.26760563380281,
+          "pct_bar_informative": 29.57746478873239,
+          "pct_only_informative": 59.154929577464785,
+          "pct_eligible": 78.02197802197803,
+          "eligibleArticles": 71,
+          "totalArticles": 91
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 5.4054054054054,
+          "pct_bar_informative": 24.32432432432432,
+          "pct_only_informative": 70.27027027027027,
+          "pct_eligible": 74,
+          "eligibleArticles": 37,
+          "totalArticles": 50
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 5.71428571428571,
+          "pct_bar_informative": 34.28571428571428,
+          "pct_only_informative": 60,
+          "pct_eligible": 71.42857142857143,
+          "eligibleArticles": 35,
+          "totalArticles": 49
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2021,
+          "label": ""
+        }
+      ]
+    },
+    {
       "id": "int_j_behav_nutr_phy",
-      "name": "INT J BEHAV NUTR PHY",
+      "name": "International Journal of Behavioral Nutrition and Physical Activity",
+      "abbrev": "INT J BEHAV NUTR PHY",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3250,7 +3427,8 @@
     },
     {
       "id": "int_j_psychophysiol",
-      "name": "INT J PSYCHOPHYSIOL",
+      "name": "International Journal of Psychophysiology",
+      "abbrev": "INT J PSYCHOPHYSIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3403,7 +3581,8 @@
     },
     {
       "id": "j_appl_physiol",
-      "name": "J APPL PHYSIOL",
+      "name": "Journal of Applied Physiology",
+      "abbrev": "J APPL PHYSIOL",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -3561,7 +3740,8 @@
     },
     {
       "id": "j_biol_rhythm",
-      "name": "J BIOL RHYTHM",
+      "name": "Journal of Biological Rhythms",
+      "abbrev": "J BIOL RHYTHM",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3714,7 +3894,8 @@
     },
     {
       "id": "j_electromyogr_kines",
-      "name": "J ELECTROMYOGR KINES",
+      "name": "Journal of Electromyography and Kinesiology",
+      "abbrev": "J ELECTROMYOGR KINES",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3866,166 +4047,9 @@
       "policyLines": []
     },
     {
-      "id": "j_gen_physiol",
-      "name": "J GEN PHYSIOL",
-      "hasPolicy": true,
-      "policyYear": 2021,
-      "chartData": [
-        {
-          "year": 2010,
-          "pct_only_bar": 59.32203389830508,
-          "pct_bar_informative": 22.03389830508474,
-          "pct_only_informative": 18.64406779661017,
-          "pct_eligible": 73.75,
-          "eligibleArticles": 59,
-          "totalArticles": 80
-        },
-        {
-          "year": 2011,
-          "pct_only_bar": 47.82608695652174,
-          "pct_bar_informative": 32.60869565217391,
-          "pct_only_informative": 19.565217391304348,
-          "pct_eligible": 68.65671641791045,
-          "eligibleArticles": 46,
-          "totalArticles": 67
-        },
-        {
-          "year": 2012,
-          "pct_only_bar": 45.23809523809524,
-          "pct_bar_informative": 33.33333333333333,
-          "pct_only_informative": 21.42857142857142,
-          "pct_eligible": 59.154929577464785,
-          "eligibleArticles": 42,
-          "totalArticles": 71
-        },
-        {
-          "year": 2013,
-          "pct_only_bar": 59.32203389830508,
-          "pct_bar_informative": 23.728813559322028,
-          "pct_only_informative": 16.94915254237288,
-          "pct_eligible": 67.81609195402298,
-          "eligibleArticles": 59,
-          "totalArticles": 87
-        },
-        {
-          "year": 2014,
-          "pct_only_bar": 38.33333333333333,
-          "pct_bar_informative": 40,
-          "pct_only_informative": 21.66666666666666,
-          "pct_eligible": 77.92207792207793,
-          "eligibleArticles": 60,
-          "totalArticles": 77
-        },
-        {
-          "year": 2015,
-          "pct_only_bar": 52.083333333333336,
-          "pct_bar_informative": 22.91666666666666,
-          "pct_only_informative": 25,
-          "pct_eligible": 78.68852459016394,
-          "eligibleArticles": 48,
-          "totalArticles": 61
-        },
-        {
-          "year": 2016,
-          "pct_only_bar": 48.93617021276595,
-          "pct_bar_informative": 31.914893617021278,
-          "pct_only_informative": 19.14893617021276,
-          "pct_eligible": 83.92857142857143,
-          "eligibleArticles": 47,
-          "totalArticles": 56
-        },
-        {
-          "year": 2017,
-          "pct_only_bar": 47.22222222222222,
-          "pct_bar_informative": 36.11111111111111,
-          "pct_only_informative": 16.66666666666666,
-          "pct_eligible": 75,
-          "eligibleArticles": 36,
-          "totalArticles": 48
-        },
-        {
-          "year": 2018,
-          "pct_only_bar": 54.83870967741935,
-          "pct_bar_informative": 22.58064516129032,
-          "pct_only_informative": 22.58064516129032,
-          "pct_eligible": 69.66292134831461,
-          "eligibleArticles": 62,
-          "totalArticles": 89
-        },
-        {
-          "year": 2019,
-          "pct_only_bar": 40.67796610169492,
-          "pct_bar_informative": 25.423728813559322,
-          "pct_only_informative": 33.89830508474576,
-          "pct_eligible": 70.23809523809523,
-          "eligibleArticles": 59,
-          "totalArticles": 84
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 31.11111111111111,
-          "pct_bar_informative": 44.44444444444444,
-          "pct_only_informative": 24.44444444444444,
-          "pct_eligible": 83.33333333333334,
-          "eligibleArticles": 45,
-          "totalArticles": 54
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 24,
-          "pct_bar_informative": 20,
-          "pct_only_informative": 56.00000000000001,
-          "pct_eligible": 85.22727272727273,
-          "eligibleArticles": 75,
-          "totalArticles": 88
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 8.33333333333333,
-          "pct_bar_informative": 33.33333333333333,
-          "pct_only_informative": 58.333333333333336,
-          "pct_eligible": 80,
-          "eligibleArticles": 48,
-          "totalArticles": 60
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 11.26760563380281,
-          "pct_bar_informative": 29.57746478873239,
-          "pct_only_informative": 59.154929577464785,
-          "pct_eligible": 78.02197802197803,
-          "eligibleArticles": 71,
-          "totalArticles": 91
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 5.4054054054054,
-          "pct_bar_informative": 24.32432432432432,
-          "pct_only_informative": 70.27027027027027,
-          "pct_eligible": 74,
-          "eligibleArticles": 37,
-          "totalArticles": 50
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 5.71428571428571,
-          "pct_bar_informative": 34.28571428571428,
-          "pct_only_informative": 60,
-          "pct_eligible": 71.42857142857143,
-          "eligibleArticles": 35,
-          "totalArticles": 49
-        }
-      ],
-      "policyLines": [
-        {
-          "year": 2021,
-          "label": ""
-        }
-      ]
-    },
-    {
       "id": "j_mammary_gland_biol",
-      "name": "J MAMMARY GLAND BIOL",
+      "name": "Journal of Mammary Gland Biology and Neoplasia",
+      "abbrev": "J MAMMARY GLAND BIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4142,7 +4166,8 @@
     },
     {
       "id": "j_neurophysiol",
-      "name": "J NEUROPHYSIOL",
+      "name": "Journal of Neurophysiology",
+      "abbrev": "J NEUROPHYSIOL",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -4300,7 +4325,8 @@
     },
     {
       "id": "j_physiol_anthropol",
-      "name": "J PHYSIOL ANTHROPOL",
+      "name": "Journal of Physiological Anthropology",
+      "abbrev": "J PHYSIOL ANTHROPOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4452,8 +4478,163 @@
       "policyLines": []
     },
     {
+      "id": "j_physiol_sci",
+      "name": "Journal of Physiological Sciences",
+      "abbrev": "J PHYSIOL SCI",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 81.81818181818183,
+          "pct_bar_informative": 12.12121212121212,
+          "pct_only_informative": 6.06060606060606,
+          "pct_eligible": 66,
+          "eligibleArticles": 33,
+          "totalArticles": 50
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 79.06976744186046,
+          "pct_bar_informative": 13.95348837209302,
+          "pct_only_informative": 6.97674418604651,
+          "pct_eligible": 74.13793103448276,
+          "eligibleArticles": 43,
+          "totalArticles": 58
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 93.33333333333333,
+          "pct_bar_informative": 6.66666666666666,
+          "pct_only_informative": 0,
+          "pct_eligible": 71.42857142857143,
+          "eligibleArticles": 30,
+          "totalArticles": 42
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 77.77777777777779,
+          "pct_bar_informative": 11.11111111111111,
+          "pct_only_informative": 11.11111111111111,
+          "pct_eligible": 76.59574468085107,
+          "eligibleArticles": 36,
+          "totalArticles": 47
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 94.87179487179488,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 5.12820512820512,
+          "pct_eligible": 88.63636363636364,
+          "eligibleArticles": 39,
+          "totalArticles": 44
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 89.47368421052632,
+          "pct_bar_informative": 2.63157894736842,
+          "pct_only_informative": 7.89473684210526,
+          "pct_eligible": 74.50980392156863,
+          "eligibleArticles": 38,
+          "totalArticles": 51
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 80,
+          "pct_bar_informative": 15,
+          "pct_only_informative": 5,
+          "pct_eligible": 66.66666666666666,
+          "eligibleArticles": 20,
+          "totalArticles": 30
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 85,
+          "pct_bar_informative": 7.5,
+          "pct_only_informative": 7.5,
+          "pct_eligible": 80,
+          "eligibleArticles": 40,
+          "totalArticles": 50
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 79.3103448275862,
+          "pct_bar_informative": 18.96551724137931,
+          "pct_only_informative": 1.72413793103448,
+          "pct_eligible": 82.85714285714286,
+          "eligibleArticles": 58,
+          "totalArticles": 70
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 69.33333333333334,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 10.66666666666666,
+          "pct_eligible": 86.20689655172413,
+          "eligibleArticles": 75,
+          "totalArticles": 87
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 19.44444444444444,
+          "pct_only_informative": 13.88888888888889,
+          "pct_eligible": 78.26086956521739,
+          "eligibleArticles": 36,
+          "totalArticles": 46
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 37.93103448275862,
+          "pct_bar_informative": 41.37931034482758,
+          "pct_only_informative": 20.68965517241379,
+          "pct_eligible": 87.87878787878788,
+          "eligibleArticles": 29,
+          "totalArticles": 33
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 32,
+          "pct_bar_informative": 16,
+          "pct_only_informative": 52,
+          "pct_eligible": 92.59259259259261,
+          "eligibleArticles": 25,
+          "totalArticles": 27
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 40.909090909090914,
+          "pct_bar_informative": 9.09090909090909,
+          "pct_only_informative": 50,
+          "pct_eligible": 81.48148148148148,
+          "eligibleArticles": 22,
+          "totalArticles": 27
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 39.28571428571428,
+          "pct_bar_informative": 21.42857142857142,
+          "pct_only_informative": 39.28571428571428,
+          "pct_eligible": 71.7948717948718,
+          "eligibleArticles": 28,
+          "totalArticles": 39
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 27.58620689655172,
+          "pct_bar_informative": 17.24137931034483,
+          "pct_only_informative": 55.172413793103445,
+          "pct_eligible": 90.625,
+          "eligibleArticles": 29,
+          "totalArticles": 32
+        }
+      ],
+      "policyLines": []
+    },
+    {
       "id": "j_physiol_biochem",
-      "name": "J PHYSIOL BIOCHEM",
+      "name": "Journal of Physiology and Biochemistry",
+      "abbrev": "J PHYSIOL BIOCHEM",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4606,7 +4787,8 @@
     },
     {
       "id": "j_physiol_pharmacol",
-      "name": "J PHYSIOL PHARMACOL",
+      "name": "Journal of Physiology and Pharmacology",
+      "abbrev": "J PHYSIOL PHARMACOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4686,161 +4868,9 @@
       "policyLines": []
     },
     {
-      "id": "j_physiol_sci",
-      "name": "J PHYSIOL SCI",
-      "hasPolicy": false,
-      "policyYear": null,
-      "chartData": [
-        {
-          "year": 2010,
-          "pct_only_bar": 81.81818181818183,
-          "pct_bar_informative": 12.12121212121212,
-          "pct_only_informative": 6.06060606060606,
-          "pct_eligible": 66,
-          "eligibleArticles": 33,
-          "totalArticles": 50
-        },
-        {
-          "year": 2011,
-          "pct_only_bar": 79.06976744186046,
-          "pct_bar_informative": 13.95348837209302,
-          "pct_only_informative": 6.97674418604651,
-          "pct_eligible": 74.13793103448276,
-          "eligibleArticles": 43,
-          "totalArticles": 58
-        },
-        {
-          "year": 2012,
-          "pct_only_bar": 93.33333333333333,
-          "pct_bar_informative": 6.66666666666666,
-          "pct_only_informative": 0,
-          "pct_eligible": 71.42857142857143,
-          "eligibleArticles": 30,
-          "totalArticles": 42
-        },
-        {
-          "year": 2013,
-          "pct_only_bar": 77.77777777777779,
-          "pct_bar_informative": 11.11111111111111,
-          "pct_only_informative": 11.11111111111111,
-          "pct_eligible": 76.59574468085107,
-          "eligibleArticles": 36,
-          "totalArticles": 47
-        },
-        {
-          "year": 2014,
-          "pct_only_bar": 94.87179487179488,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 5.12820512820512,
-          "pct_eligible": 88.63636363636364,
-          "eligibleArticles": 39,
-          "totalArticles": 44
-        },
-        {
-          "year": 2015,
-          "pct_only_bar": 89.47368421052632,
-          "pct_bar_informative": 2.63157894736842,
-          "pct_only_informative": 7.89473684210526,
-          "pct_eligible": 74.50980392156863,
-          "eligibleArticles": 38,
-          "totalArticles": 51
-        },
-        {
-          "year": 2016,
-          "pct_only_bar": 80,
-          "pct_bar_informative": 15,
-          "pct_only_informative": 5,
-          "pct_eligible": 66.66666666666666,
-          "eligibleArticles": 20,
-          "totalArticles": 30
-        },
-        {
-          "year": 2017,
-          "pct_only_bar": 85,
-          "pct_bar_informative": 7.5,
-          "pct_only_informative": 7.5,
-          "pct_eligible": 80,
-          "eligibleArticles": 40,
-          "totalArticles": 50
-        },
-        {
-          "year": 2018,
-          "pct_only_bar": 79.3103448275862,
-          "pct_bar_informative": 18.96551724137931,
-          "pct_only_informative": 1.72413793103448,
-          "pct_eligible": 82.85714285714286,
-          "eligibleArticles": 58,
-          "totalArticles": 70
-        },
-        {
-          "year": 2019,
-          "pct_only_bar": 69.33333333333334,
-          "pct_bar_informative": 20,
-          "pct_only_informative": 10.66666666666666,
-          "pct_eligible": 86.20689655172413,
-          "eligibleArticles": 75,
-          "totalArticles": 87
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 66.66666666666666,
-          "pct_bar_informative": 19.44444444444444,
-          "pct_only_informative": 13.88888888888889,
-          "pct_eligible": 78.26086956521739,
-          "eligibleArticles": 36,
-          "totalArticles": 46
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 37.93103448275862,
-          "pct_bar_informative": 41.37931034482758,
-          "pct_only_informative": 20.68965517241379,
-          "pct_eligible": 87.87878787878788,
-          "eligibleArticles": 29,
-          "totalArticles": 33
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 32,
-          "pct_bar_informative": 16,
-          "pct_only_informative": 52,
-          "pct_eligible": 92.59259259259261,
-          "eligibleArticles": 25,
-          "totalArticles": 27
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 40.909090909090914,
-          "pct_bar_informative": 9.09090909090909,
-          "pct_only_informative": 50,
-          "pct_eligible": 81.48148148148148,
-          "eligibleArticles": 22,
-          "totalArticles": 27
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 39.28571428571428,
-          "pct_bar_informative": 21.42857142857142,
-          "pct_only_informative": 39.28571428571428,
-          "pct_eligible": 71.7948717948718,
-          "eligibleArticles": 28,
-          "totalArticles": 39
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 27.58620689655172,
-          "pct_bar_informative": 17.24137931034483,
-          "pct_only_informative": 55.172413793103445,
-          "pct_eligible": 90.625,
-          "eligibleArticles": 29,
-          "totalArticles": 32
-        }
-      ],
-      "policyLines": []
-    },
-    {
       "id": "j_physiol-london",
-      "name": "J PHYSIOL-LONDON",
+      "name": "Journal of Physiology-London",
+      "abbrev": "J PHYSIOL-LONDON",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -4998,7 +5028,8 @@
     },
     {
       "id": "j_pineal_res",
-      "name": "J PINEAL RES",
+      "name": "Journal of Pineal Research",
+      "abbrev": "J PINEAL RES",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -5151,7 +5182,8 @@
     },
     {
       "id": "kidney_blood_press_r",
-      "name": "KIDNEY BLOOD PRESS R",
+      "name": "Kidney & Blood Pressure Research",
+      "abbrev": "KIDNEY BLOOD PRESS R",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -5304,7 +5336,8 @@
     },
     {
       "id": "lymphat_res_biol",
-      "name": "LYMPHAT RES BIOL",
+      "name": "Lymphatic Research and Biology",
+      "abbrev": "LYMPHAT RES BIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -5457,7 +5490,8 @@
     },
     {
       "id": "neurophysiol_clin",
-      "name": "NEUROPHYSIOL CLIN",
+      "name": "Neurophysiologie Clinique-Clinical Neurophysiology",
+      "abbrev": "NEUROPHYSIOL CLIN",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -5610,7 +5644,8 @@
     },
     {
       "id": "pestic_biochem_phys",
-      "name": "PESTIC BIOCHEM PHYS",
+      "name": "Pesticide Biochemistry and Physiology",
+      "abbrev": "PESTIC BIOCHEM PHYS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -5754,7 +5789,8 @@
     },
     {
       "id": "pflug_arch_eur_j_phy",
-      "name": "PFLUG ARCH EUR J PHY",
+      "name": "Pflugers Archiv-European Journal of Physiology",
+      "abbrev": "PFLUG ARCH EUR J PHY",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -5907,7 +5943,8 @@
     },
     {
       "id": "physiol_genomics",
-      "name": "PHYSIOL GENOMICS",
+      "name": "Physiological Genomics",
+      "abbrev": "PHYSIOL GENOMICS",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -6065,7 +6102,8 @@
     },
     {
       "id": "physiol_meas",
-      "name": "PHYSIOL MEAS",
+      "name": "Physiological Measurement",
+      "abbrev": "PHYSIOL MEAS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -6218,7 +6256,8 @@
     },
     {
       "id": "physiol_res",
-      "name": "PHYSIOL RES",
+      "name": "Physiological Research",
+      "abbrev": "PHYSIOL RES",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -6371,7 +6410,8 @@
     },
     {
       "id": "psychophysiology",
-      "name": "PSYCHOPHYSIOLOGY",
+      "name": "Psychophysiology",
+      "abbrev": "PSYCHOPHYSIOLOGY",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [

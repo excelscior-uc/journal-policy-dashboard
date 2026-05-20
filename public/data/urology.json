@@ -483,7 +483,8 @@
   "journals": [
     {
       "id": "aging_male",
-      "name": "AGING MALE",
+      "name": "Aging Male",
+      "abbrev": "AGING MALE",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -636,7 +637,8 @@
     },
     {
       "id": "am_j_physiol-renal",
-      "name": "AM J PHYSIOL-RENAL",
+      "name": "American Journal of Physiology-Renal Physiology",
+      "abbrev": "AM J PHYSIOL-RENAL",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -794,7 +796,8 @@
     },
     {
       "id": "eur_urol",
-      "name": "EUR UROL",
+      "name": "European Urology",
+      "abbrev": "EUR UROL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -947,7 +950,8 @@
     },
     {
       "id": "eur_urol_oncol",
-      "name": "EUR UROL ONCOL",
+      "name": "European Urology Oncology",
+      "abbrev": "EUR UROL ONCOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1028,7 +1032,8 @@
     },
     {
       "id": "kidney_blood_press_r",
-      "name": "KIDNEY BLOOD PRESS R",
+      "name": "Kidney & Blood Pressure Research",
+      "abbrev": "KIDNEY BLOOD PRESS R",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1181,7 +1186,8 @@
     },
     {
       "id": "kidney_int",
-      "name": "KIDNEY INT",
+      "name": "Kidney International",
+      "abbrev": "KIDNEY INT",
       "hasPolicy": true,
       "policyYear": 2018,
       "chartData": [
@@ -1339,7 +1345,8 @@
     },
     {
       "id": "prostate_cancer_p_d",
-      "name": "PROSTATE CANCER P D",
+      "name": "Prostate Cancer and Prostatic Diseases",
+      "abbrev": "PROSTATE CANCER P D",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -1497,7 +1504,8 @@
     },
     {
       "id": "world_j_mens_health",
-      "name": "WORLD J MENS HEALTH",
+      "name": "World Journal of Mens Health",
+      "abbrev": "WORLD J MENS HEALTH",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [

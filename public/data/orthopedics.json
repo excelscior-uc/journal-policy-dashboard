@@ -400,7 +400,8 @@
   "journals": [
     {
       "id": "bone_joint_j",
-      "name": "BONE JOINT J",
+      "name": "Bone & Joint Journal",
+      "abbrev": "BONE JOINT J",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -526,7 +527,8 @@
     },
     {
       "id": "bone_joint_res",
-      "name": "BONE JOINT RES",
+      "name": "Bone & Joint Research",
+      "abbrev": "BONE JOINT RES",
       "hasPolicy": true,
       "policyYear": 2021,
       "chartData": [
@@ -666,7 +668,8 @@
     },
     {
       "id": "j_orthop_transl",
-      "name": "J ORTHOP TRANSL",
+      "name": "Journal of Orthopaedic Translation",
+      "abbrev": "J ORTHOP TRANSL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [

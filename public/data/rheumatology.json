@@ -472,8 +472,132 @@
   },
   "journals": [
     {
+      "id": "arthritis_rheumatol",
+      "name": "Arthritis & Rheumatology",
+      "abbrev": "ARTHRITIS RHEUMATOL",
+      "hasPolicy": true,
+      "policyYear": 2020,
+      "chartData": [
+        {
+          "year": 2014,
+          "pct_only_bar": 45.36585365853658,
+          "pct_bar_informative": 38.048780487804876,
+          "pct_only_informative": 16.58536585365853,
+          "pct_eligible": 64.26332288401254,
+          "eligibleArticles": 205,
+          "totalArticles": 319
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 37.62376237623762,
+          "pct_bar_informative": 37.62376237623762,
+          "pct_only_informative": 24.75247524752475,
+          "pct_eligible": 65.5844155844156,
+          "eligibleArticles": 202,
+          "totalArticles": 308
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 32,
+          "pct_bar_informative": 44,
+          "pct_only_informative": 24,
+          "pct_eligible": 57.03422053231939,
+          "eligibleArticles": 150,
+          "totalArticles": 263
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 35.29411764705882,
+          "pct_bar_informative": 40.33613445378151,
+          "pct_only_informative": 24.36974789915966,
+          "pct_eligible": 61.34020618556701,
+          "eligibleArticles": 119,
+          "totalArticles": 194
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 27,
+          "pct_bar_informative": 37,
+          "pct_only_informative": 36,
+          "pct_eligible": 58.139534883720934,
+          "eligibleArticles": 100,
+          "totalArticles": 172
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 25.80645161290322,
+          "pct_bar_informative": 35.483870967741936,
+          "pct_only_informative": 38.70967741935484,
+          "pct_eligible": 50.81967213114754,
+          "eligibleArticles": 93,
+          "totalArticles": 183
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 15.887850467289718,
+          "pct_bar_informative": 44.85981308411215,
+          "pct_only_informative": 39.25233644859813,
+          "pct_eligible": 61.142857142857146,
+          "eligibleArticles": 107,
+          "totalArticles": 175
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 17.35537190082644,
+          "pct_bar_informative": 21.487603305785118,
+          "pct_only_informative": 61.15702479338842,
+          "pct_eligible": 61.111111111111114,
+          "eligibleArticles": 121,
+          "totalArticles": 198
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 9.375,
+          "pct_bar_informative": 21.875,
+          "pct_only_informative": 68.75,
+          "pct_eligible": 61.53846153846154,
+          "eligibleArticles": 96,
+          "totalArticles": 156
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 8.92857142857142,
+          "pct_bar_informative": 16.07142857142857,
+          "pct_only_informative": 75,
+          "pct_eligible": 63.63636363636363,
+          "eligibleArticles": 112,
+          "totalArticles": 176
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 11.25,
+          "pct_bar_informative": 22.5,
+          "pct_only_informative": 66.25,
+          "pct_eligible": 59.25925925925925,
+          "eligibleArticles": 80,
+          "totalArticles": 135
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 6.72268907563025,
+          "pct_bar_informative": 20.168067226890752,
+          "pct_only_informative": 73.10924369747899,
+          "pct_eligible": 52.42290748898678,
+          "eligibleArticles": 119,
+          "totalArticles": 227
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2020,
+          "label": ""
+        }
+      ]
+    },
+    {
       "id": "arthritis_res_ther",
-      "name": "ARTHRITIS RES THER",
+      "name": "Arthritis Research & Therapy",
+      "abbrev": "ARTHRITIS RES THER",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -625,130 +749,9 @@
       "policyLines": []
     },
     {
-      "id": "arthritis_rheumatol",
-      "name": "ARTHRITIS RHEUMATOL",
-      "hasPolicy": true,
-      "policyYear": 2020,
-      "chartData": [
-        {
-          "year": 2014,
-          "pct_only_bar": 45.36585365853658,
-          "pct_bar_informative": 38.048780487804876,
-          "pct_only_informative": 16.58536585365853,
-          "pct_eligible": 64.26332288401254,
-          "eligibleArticles": 205,
-          "totalArticles": 319
-        },
-        {
-          "year": 2015,
-          "pct_only_bar": 37.62376237623762,
-          "pct_bar_informative": 37.62376237623762,
-          "pct_only_informative": 24.75247524752475,
-          "pct_eligible": 65.5844155844156,
-          "eligibleArticles": 202,
-          "totalArticles": 308
-        },
-        {
-          "year": 2016,
-          "pct_only_bar": 32,
-          "pct_bar_informative": 44,
-          "pct_only_informative": 24,
-          "pct_eligible": 57.03422053231939,
-          "eligibleArticles": 150,
-          "totalArticles": 263
-        },
-        {
-          "year": 2017,
-          "pct_only_bar": 35.29411764705882,
-          "pct_bar_informative": 40.33613445378151,
-          "pct_only_informative": 24.36974789915966,
-          "pct_eligible": 61.34020618556701,
-          "eligibleArticles": 119,
-          "totalArticles": 194
-        },
-        {
-          "year": 2018,
-          "pct_only_bar": 27,
-          "pct_bar_informative": 37,
-          "pct_only_informative": 36,
-          "pct_eligible": 58.139534883720934,
-          "eligibleArticles": 100,
-          "totalArticles": 172
-        },
-        {
-          "year": 2019,
-          "pct_only_bar": 25.80645161290322,
-          "pct_bar_informative": 35.483870967741936,
-          "pct_only_informative": 38.70967741935484,
-          "pct_eligible": 50.81967213114754,
-          "eligibleArticles": 93,
-          "totalArticles": 183
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 15.887850467289718,
-          "pct_bar_informative": 44.85981308411215,
-          "pct_only_informative": 39.25233644859813,
-          "pct_eligible": 61.142857142857146,
-          "eligibleArticles": 107,
-          "totalArticles": 175
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 17.35537190082644,
-          "pct_bar_informative": 21.487603305785118,
-          "pct_only_informative": 61.15702479338842,
-          "pct_eligible": 61.111111111111114,
-          "eligibleArticles": 121,
-          "totalArticles": 198
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 9.375,
-          "pct_bar_informative": 21.875,
-          "pct_only_informative": 68.75,
-          "pct_eligible": 61.53846153846154,
-          "eligibleArticles": 96,
-          "totalArticles": 156
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 8.92857142857142,
-          "pct_bar_informative": 16.07142857142857,
-          "pct_only_informative": 75,
-          "pct_eligible": 63.63636363636363,
-          "eligibleArticles": 112,
-          "totalArticles": 176
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 11.25,
-          "pct_bar_informative": 22.5,
-          "pct_only_informative": 66.25,
-          "pct_eligible": 59.25925925925925,
-          "eligibleArticles": 80,
-          "totalArticles": 135
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 6.72268907563025,
-          "pct_bar_informative": 20.168067226890752,
-          "pct_only_informative": 73.10924369747899,
-          "pct_eligible": 52.42290748898678,
-          "eligibleArticles": 119,
-          "totalArticles": 227
-        }
-      ],
-      "policyLines": [
-        {
-          "year": 2020,
-          "label": ""
-        }
-      ]
-    },
-    {
       "id": "j_rheumatol",
-      "name": "J RHEUMATOL",
+      "name": "Journal of Rheumatology",
+      "abbrev": "J RHEUMATOL",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -906,7 +909,8 @@
     },
     {
       "id": "lancet_rheumatol",
-      "name": "LANCET RHEUMATOL",
+      "name": "Lancet Rheumatology",
+      "abbrev": "LANCET RHEUMATOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -978,7 +982,8 @@
     },
     {
       "id": "rheumatology",
-      "name": "RHEUMATOLOGY",
+      "name": "Rheumatology",
+      "abbrev": "RHEUMATOLOGY",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1131,7 +1136,8 @@
     },
     {
       "id": "scand_j_rheumatol",
-      "name": "SCAND J RHEUMATOL",
+      "name": "Scandinavian Journal of Rheumatology",
+      "abbrev": "SCAND J RHEUMATOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [

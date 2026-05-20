@@ -473,7 +473,8 @@
   "journals": [
     {
       "id": "acta_pharmacol_sin",
-      "name": "ACTA PHARMACOL SIN",
+      "name": "Acta Pharmacologica Sinica",
+      "abbrev": "ACTA PHARMACOL SIN",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -631,7 +632,8 @@
     },
     {
       "id": "aliment_pharm_ther",
-      "name": "ALIMENT PHARM THER",
+      "name": "Alimentary Pharmacology & Therapeutics",
+      "abbrev": "ALIMENT PHARM THER",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -784,7 +786,8 @@
     },
     {
       "id": "am_j_cardiovasc_drug",
-      "name": "AM J CARDIOVASC DRUG",
+      "name": "American Journal of Cardiovascular Drugs",
+      "abbrev": "AM J CARDIOVASC DRUG",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -937,7 +940,8 @@
     },
     {
       "id": "brit_j_pharmacol",
-      "name": "BRIT J PHARMACOL",
+      "name": "British Journal of Pharmacology",
+      "abbrev": "BRIT J PHARMACOL",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -1095,7 +1099,8 @@
     },
     {
       "id": "clin_exp_pharmacol_p",
-      "name": "CLIN EXP PHARMACOL P",
+      "name": "Clinical and Experimental Pharmacology and Physiology",
+      "abbrev": "CLIN EXP PHARMACOL P",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1248,7 +1253,8 @@
     },
     {
       "id": "j_control_release",
-      "name": "J CONTROL RELEASE",
+      "name": "Journal of Controlled Release",
+      "abbrev": "J CONTROL RELEASE",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1401,7 +1407,8 @@
     },
     {
       "id": "j_food_drug_anal",
-      "name": "J FOOD DRUG ANAL",
+      "name": "Journal of Food and Drug Analysis",
+      "abbrev": "J FOOD DRUG ANAL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1527,7 +1534,8 @@
     },
     {
       "id": "neurotherapeutics",
-      "name": "NEUROTHERAPEUTICS",
+      "name": "Neurotherapeutics",
+      "abbrev": "NEUROTHERAPEUTICS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1671,7 +1679,8 @@
     },
     {
       "id": "pharmaceutics",
-      "name": "PHARMACEUTICS",
+      "name": "Pharmaceutics",
+      "abbrev": "PHARMACEUTICS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [

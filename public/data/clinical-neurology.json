@@ -473,7 +473,8 @@
   "journals": [
     {
       "id": "acta_neuropathol",
-      "name": "ACTA NEUROPATHOL",
+      "name": "Acta Neuropathologica",
+      "abbrev": "ACTA NEUROPATHOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -626,7 +627,8 @@
     },
     {
       "id": "ann_neurol",
-      "name": "ANN NEUROL",
+      "name": "Annals of Neurology",
+      "abbrev": "ANN NEUROL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -779,7 +781,8 @@
     },
     {
       "id": "brain",
-      "name": "BRAIN",
+      "name": "Brain",
+      "abbrev": "BRAIN",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -937,7 +940,8 @@
     },
     {
       "id": "movement_disord",
-      "name": "MOVEMENT DISORD",
+      "name": "Movement Disorders",
+      "abbrev": "MOVEMENT DISORD",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1090,7 +1094,8 @@
     },
     {
       "id": "neuro-oncology",
-      "name": "NEURO-ONCOLOGY",
+      "name": "Neuro-Oncology",
+      "abbrev": "NEURO-ONCOLOGY",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1243,7 +1248,8 @@
     },
     {
       "id": "neuropath_appl_neuro",
-      "name": "NEUROPATH APPL NEURO",
+      "name": "Neuropathology and Applied Neurobiology",
+      "abbrev": "NEUROPATH APPL NEURO",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1396,7 +1402,8 @@
     },
     {
       "id": "neurophysiol_clin",
-      "name": "NEUROPHYSIOL CLIN",
+      "name": "Neurophysiologie Clinique-Clinical Neurophysiology",
+      "abbrev": "NEUROPHYSIOL CLIN",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1549,7 +1556,8 @@
     },
     {
       "id": "neurotherapeutics",
-      "name": "NEUROTHERAPEUTICS",
+      "name": "Neurotherapeutics",
+      "abbrev": "NEUROTHERAPEUTICS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1693,7 +1701,8 @@
     },
     {
       "id": "stroke",
-      "name": "STROKE",
+      "name": "Stroke",
+      "abbrev": "STROKE",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [

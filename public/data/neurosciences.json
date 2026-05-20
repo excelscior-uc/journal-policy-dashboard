@@ -493,7 +493,8 @@
   "journals": [
     {
       "id": "acta_neuropathol",
-      "name": "ACTA NEUROPATHOL",
+      "name": "Acta Neuropathologica",
+      "abbrev": "ACTA NEUROPATHOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -646,7 +647,8 @@
     },
     {
       "id": "ann_neurol",
-      "name": "ANN NEUROL",
+      "name": "Annals of Neurology",
+      "abbrev": "ANN NEUROL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -799,7 +801,8 @@
     },
     {
       "id": "brain",
-      "name": "BRAIN",
+      "name": "Brain",
+      "abbrev": "BRAIN",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -957,7 +960,8 @@
     },
     {
       "id": "int_j_psychophysiol",
-      "name": "INT J PSYCHOPHYSIOL",
+      "name": "International Journal of Psychophysiology",
+      "abbrev": "INT J PSYCHOPHYSIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1110,7 +1114,8 @@
     },
     {
       "id": "j_cerebr_blood_f_met",
-      "name": "J CEREBR BLOOD F MET",
+      "name": "Journal of Cerebral Blood Flow and Metabolism",
+      "abbrev": "J CEREBR BLOOD F MET",
       "hasPolicy": true,
       "policyYear": 2018,
       "chartData": [
@@ -1268,7 +1273,8 @@
     },
     {
       "id": "j_electromyogr_kines",
-      "name": "J ELECTROMYOGR KINES",
+      "name": "Journal of Electromyography and Kinesiology",
+      "abbrev": "J ELECTROMYOGR KINES",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1421,7 +1427,8 @@
     },
     {
       "id": "j_neuroinflamm",
-      "name": "J NEUROINFLAMM",
+      "name": "Journal of Neuroinflammation",
+      "abbrev": "J NEUROINFLAMM",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1574,7 +1581,8 @@
     },
     {
       "id": "j_neurophysiol",
-      "name": "J NEUROPHYSIOL",
+      "name": "Journal of Neurophysiology",
+      "abbrev": "J NEUROPHYSIOL",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -1732,7 +1740,8 @@
     },
     {
       "id": "j_physiol-london",
-      "name": "J PHYSIOL-LONDON",
+      "name": "Journal of Physiology-London",
+      "abbrev": "J PHYSIOL-LONDON",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -1890,7 +1899,8 @@
     },
     {
       "id": "j_pineal_res",
-      "name": "J PINEAL RES",
+      "name": "Journal of Pineal Research",
+      "abbrev": "J PINEAL RES",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2043,7 +2053,8 @@
     },
     {
       "id": "mol_autism",
-      "name": "MOL AUTISM",
+      "name": "Molecular Autism",
+      "abbrev": "MOL AUTISM",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2196,7 +2207,8 @@
     },
     {
       "id": "mol_neurodegener",
-      "name": "MOL NEURODEGENER",
+      "name": "Molecular Neurodegeneration",
+      "abbrev": "MOL NEURODEGENER",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2349,7 +2361,8 @@
     },
     {
       "id": "mol_psychiatr",
-      "name": "MOL PSYCHIATR",
+      "name": "Molecular Psychiatry",
+      "abbrev": "MOL PSYCHIATR",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2502,7 +2515,8 @@
     },
     {
       "id": "nat_hum_behav",
-      "name": "NAT HUM BEHAV",
+      "name": "Nature Human Behaviour",
+      "abbrev": "NAT HUM BEHAV",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -2597,7 +2611,8 @@
     },
     {
       "id": "nat_neurosci",
-      "name": "NAT NEUROSCI",
+      "name": "Nature Neuroscience",
+      "abbrev": "NAT NEUROSCI",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -2755,7 +2770,8 @@
     },
     {
       "id": "neuron",
-      "name": "NEURON",
+      "name": "Neuron",
+      "abbrev": "NEURON",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2908,7 +2924,8 @@
     },
     {
       "id": "neuropath_appl_neuro",
-      "name": "NEUROPATH APPL NEURO",
+      "name": "Neuropathology and Applied Neurobiology",
+      "abbrev": "NEUROPATH APPL NEURO",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3061,7 +3078,8 @@
     },
     {
       "id": "neurophysiol_clin",
-      "name": "NEUROPHYSIOL CLIN",
+      "name": "Neurophysiologie Clinique-Clinical Neurophysiology",
+      "abbrev": "NEUROPHYSIOL CLIN",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3214,7 +3232,8 @@
     },
     {
       "id": "neurotherapeutics",
-      "name": "NEUROTHERAPEUTICS",
+      "name": "Neurotherapeutics",
+      "abbrev": "NEUROTHERAPEUTICS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3358,7 +3377,8 @@
     },
     {
       "id": "npj_parkinsons_dis",
-      "name": "NPJ PARKINSONS DIS",
+      "name": "Npj Parkinsons Disease",
+      "abbrev": "NPJ PARKINSONS DIS",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -3471,7 +3491,8 @@
     },
     {
       "id": "psychophysiology",
-      "name": "PSYCHOPHYSIOLOGY",
+      "name": "Psychophysiology",
+      "abbrev": "PSYCHOPHYSIOLOGY",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [

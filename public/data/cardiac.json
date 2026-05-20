@@ -503,7 +503,8 @@
   "journals": [
     {
       "id": "am_j_cardiovasc_drug",
-      "name": "AM J CARDIOVASC DRUG",
+      "name": "American Journal of Cardiovascular Drugs",
+      "abbrev": "AM J CARDIOVASC DRUG",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -656,7 +657,8 @@
     },
     {
       "id": "am_j_physiol-heart_c",
-      "name": "AM J PHYSIOL-HEART C",
+      "name": "American Journal of Physiology-Heart and Circulatory Physiology",
+      "abbrev": "AM J PHYSIOL-HEART C",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -814,7 +816,8 @@
     },
     {
       "id": "ann_thorac_surg",
-      "name": "ANN THORAC SURG",
+      "name": "Annals of Thoracic Surgery",
+      "abbrev": "ANN THORAC SURG",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -967,7 +970,8 @@
     },
     {
       "id": "atherosclerosis",
-      "name": "ATHEROSCLEROSIS",
+      "name": "Atherosclerosis",
+      "abbrev": "ATHEROSCLEROSIS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1120,7 +1124,8 @@
     },
     {
       "id": "basic_res_cardiol",
-      "name": "BASIC RES CARDIOL",
+      "name": "Basic Research in Cardiology",
+      "abbrev": "BASIC RES CARDIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1273,7 +1278,8 @@
     },
     {
       "id": "can_j_cardiol",
-      "name": "CAN J CARDIOL",
+      "name": "Canadian Journal of Cardiology",
+      "abbrev": "CAN J CARDIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1426,7 +1432,8 @@
     },
     {
       "id": "cardiovasc_diabetol",
-      "name": "CARDIOVASC DIABETOL",
+      "name": "Cardiovascular Diabetology",
+      "abbrev": "CARDIOVASC DIABETOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1578,8 +1585,168 @@
       "policyLines": []
     },
     {
+      "id": "circulation",
+      "name": "Circulation",
+      "abbrev": "CIRCULATION",
+      "hasPolicy": true,
+      "policyYear": 2019,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 57.2139303482587,
+          "pct_bar_informative": 23.38308457711442,
+          "pct_only_informative": 19.402985074626862,
+          "pct_eligible": 50.12468827930174,
+          "eligibleArticles": 201,
+          "totalArticles": 401
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 61.085972850678736,
+          "pct_bar_informative": 23.07692307692307,
+          "pct_only_informative": 15.837104072398189,
+          "pct_eligible": 56.666666666666664,
+          "eligibleArticles": 221,
+          "totalArticles": 390
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 51.94805194805194,
+          "pct_bar_informative": 25.97402597402597,
+          "pct_only_informative": 22.077922077922068,
+          "pct_eligible": 55.00000000000001,
+          "eligibleArticles": 231,
+          "totalArticles": 420
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 45.7286432160804,
+          "pct_bar_informative": 30.65326633165829,
+          "pct_only_informative": 23.6180904522613,
+          "pct_eligible": 56.69515669515669,
+          "eligibleArticles": 199,
+          "totalArticles": 351
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 42.44604316546763,
+          "pct_bar_informative": 28.05755395683453,
+          "pct_only_informative": 29.496402877697843,
+          "pct_eligible": 48.43205574912892,
+          "eligibleArticles": 139,
+          "totalArticles": 287
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 36.5079365079365,
+          "pct_bar_informative": 34.12698412698413,
+          "pct_only_informative": 29.36507936507936,
+          "pct_eligible": 48.09160305343511,
+          "eligibleArticles": 126,
+          "totalArticles": 262
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 25.6198347107438,
+          "pct_bar_informative": 33.88429752066115,
+          "pct_only_informative": 40.49586776859504,
+          "pct_eligible": 48.20717131474104,
+          "eligibleArticles": 121,
+          "totalArticles": 251
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 27.397260273972602,
+          "pct_bar_informative": 40.41095890410959,
+          "pct_only_informative": 32.19178082191781,
+          "pct_eligible": 59.83606557377049,
+          "eligibleArticles": 146,
+          "totalArticles": 244
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 26.41509433962264,
+          "pct_bar_informative": 38.36477987421384,
+          "pct_only_informative": 35.22012578616352,
+          "pct_eligible": 60.91954022988506,
+          "eligibleArticles": 159,
+          "totalArticles": 261
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 21.16788321167883,
+          "pct_bar_informative": 43.7956204379562,
+          "pct_only_informative": 35.036496350364956,
+          "pct_eligible": 52.29007633587786,
+          "eligibleArticles": 137,
+          "totalArticles": 262
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 13.04347826086956,
+          "pct_bar_informative": 31.30434782608696,
+          "pct_only_informative": 55.65217391304348,
+          "pct_eligible": 51.80180180180181,
+          "eligibleArticles": 115,
+          "totalArticles": 222
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 7.9710144927536195,
+          "pct_bar_informative": 20.28985507246377,
+          "pct_only_informative": 71.73913043478261,
+          "pct_eligible": 59.227467811158796,
+          "eligibleArticles": 138,
+          "totalArticles": 233
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 4.71698113207547,
+          "pct_bar_informative": 21.69811320754717,
+          "pct_only_informative": 73.58490566037736,
+          "pct_eligible": 53.80710659898477,
+          "eligibleArticles": 106,
+          "totalArticles": 197
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 5.31914893617021,
+          "pct_bar_informative": 26.59574468085106,
+          "pct_only_informative": 68.08510638297872,
+          "pct_eligible": 52.513966480446925,
+          "eligibleArticles": 94,
+          "totalArticles": 179
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 4.3859649122807,
+          "pct_bar_informative": 23.68421052631578,
+          "pct_only_informative": 71.9298245614035,
+          "pct_eligible": 59.067357512953365,
+          "eligibleArticles": 114,
+          "totalArticles": 193
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 7.199999999999999,
+          "pct_bar_informative": 19.2,
+          "pct_only_informative": 73.6,
+          "pct_eligible": 65.78947368421053,
+          "eligibleArticles": 125,
+          "totalArticles": 190
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2019,
+          "label": ""
+        }
+      ]
+    },
+    {
       "id": "circ_res",
-      "name": "CIRC RES",
+      "name": "Circulation Research",
+      "abbrev": "CIRC RES",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -1737,7 +1904,8 @@
     },
     {
       "id": "circ-arrhythmia_elec",
-      "name": "CIRC-ARRHYTHMIA ELEC",
+      "name": "Circulation-Arrhythmia and Electrophysiology",
+      "abbrev": "CIRC-ARRHYTHMIA ELEC",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -1895,7 +2063,8 @@
     },
     {
       "id": "circ-cardiovasc_imag",
-      "name": "CIRC-CARDIOVASC IMAG",
+      "name": "Circulation-Cardiovascular Imaging",
+      "abbrev": "CIRC-CARDIOVASC IMAG",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -2053,7 +2222,8 @@
     },
     {
       "id": "circ-cardiovasc_inte",
-      "name": "CIRC-CARDIOVASC INTE",
+      "name": "Circulation-Cardiovascular interventions",
+      "abbrev": "CIRC-CARDIOVASC INTE",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -2211,7 +2381,8 @@
     },
     {
       "id": "circ-cardiovasc_qual",
-      "name": "CIRC-CARDIOVASC QUAL",
+      "name": "Circulation-Cardiovascular Quality and Outcomes",
+      "abbrev": "CIRC-CARDIOVASC QUAL",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -2369,7 +2540,8 @@
     },
     {
       "id": "circ-genom_precis_me",
-      "name": "CIRC-GENOM PRECIS ME",
+      "name": "Circulation-Genomic and Precision Medicine",
+      "abbrev": "CIRC-GENOM PRECIS ME",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -2454,166 +2626,9 @@
       ]
     },
     {
-      "id": "circulation",
-      "name": "CIRCULATION",
-      "hasPolicy": true,
-      "policyYear": 2019,
-      "chartData": [
-        {
-          "year": 2010,
-          "pct_only_bar": 57.2139303482587,
-          "pct_bar_informative": 23.38308457711442,
-          "pct_only_informative": 19.402985074626862,
-          "pct_eligible": 50.12468827930174,
-          "eligibleArticles": 201,
-          "totalArticles": 401
-        },
-        {
-          "year": 2011,
-          "pct_only_bar": 61.085972850678736,
-          "pct_bar_informative": 23.07692307692307,
-          "pct_only_informative": 15.837104072398189,
-          "pct_eligible": 56.666666666666664,
-          "eligibleArticles": 221,
-          "totalArticles": 390
-        },
-        {
-          "year": 2012,
-          "pct_only_bar": 51.94805194805194,
-          "pct_bar_informative": 25.97402597402597,
-          "pct_only_informative": 22.077922077922068,
-          "pct_eligible": 55.00000000000001,
-          "eligibleArticles": 231,
-          "totalArticles": 420
-        },
-        {
-          "year": 2013,
-          "pct_only_bar": 45.7286432160804,
-          "pct_bar_informative": 30.65326633165829,
-          "pct_only_informative": 23.6180904522613,
-          "pct_eligible": 56.69515669515669,
-          "eligibleArticles": 199,
-          "totalArticles": 351
-        },
-        {
-          "year": 2014,
-          "pct_only_bar": 42.44604316546763,
-          "pct_bar_informative": 28.05755395683453,
-          "pct_only_informative": 29.496402877697843,
-          "pct_eligible": 48.43205574912892,
-          "eligibleArticles": 139,
-          "totalArticles": 287
-        },
-        {
-          "year": 2015,
-          "pct_only_bar": 36.5079365079365,
-          "pct_bar_informative": 34.12698412698413,
-          "pct_only_informative": 29.36507936507936,
-          "pct_eligible": 48.09160305343511,
-          "eligibleArticles": 126,
-          "totalArticles": 262
-        },
-        {
-          "year": 2016,
-          "pct_only_bar": 25.6198347107438,
-          "pct_bar_informative": 33.88429752066115,
-          "pct_only_informative": 40.49586776859504,
-          "pct_eligible": 48.20717131474104,
-          "eligibleArticles": 121,
-          "totalArticles": 251
-        },
-        {
-          "year": 2017,
-          "pct_only_bar": 27.397260273972602,
-          "pct_bar_informative": 40.41095890410959,
-          "pct_only_informative": 32.19178082191781,
-          "pct_eligible": 59.83606557377049,
-          "eligibleArticles": 146,
-          "totalArticles": 244
-        },
-        {
-          "year": 2018,
-          "pct_only_bar": 26.41509433962264,
-          "pct_bar_informative": 38.36477987421384,
-          "pct_only_informative": 35.22012578616352,
-          "pct_eligible": 60.91954022988506,
-          "eligibleArticles": 159,
-          "totalArticles": 261
-        },
-        {
-          "year": 2019,
-          "pct_only_bar": 21.16788321167883,
-          "pct_bar_informative": 43.7956204379562,
-          "pct_only_informative": 35.036496350364956,
-          "pct_eligible": 52.29007633587786,
-          "eligibleArticles": 137,
-          "totalArticles": 262
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 13.04347826086956,
-          "pct_bar_informative": 31.30434782608696,
-          "pct_only_informative": 55.65217391304348,
-          "pct_eligible": 51.80180180180181,
-          "eligibleArticles": 115,
-          "totalArticles": 222
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 7.9710144927536195,
-          "pct_bar_informative": 20.28985507246377,
-          "pct_only_informative": 71.73913043478261,
-          "pct_eligible": 59.227467811158796,
-          "eligibleArticles": 138,
-          "totalArticles": 233
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 4.71698113207547,
-          "pct_bar_informative": 21.69811320754717,
-          "pct_only_informative": 73.58490566037736,
-          "pct_eligible": 53.80710659898477,
-          "eligibleArticles": 106,
-          "totalArticles": 197
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 5.31914893617021,
-          "pct_bar_informative": 26.59574468085106,
-          "pct_only_informative": 68.08510638297872,
-          "pct_eligible": 52.513966480446925,
-          "eligibleArticles": 94,
-          "totalArticles": 179
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 4.3859649122807,
-          "pct_bar_informative": 23.68421052631578,
-          "pct_only_informative": 71.9298245614035,
-          "pct_eligible": 59.067357512953365,
-          "eligibleArticles": 114,
-          "totalArticles": 193
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 7.199999999999999,
-          "pct_bar_informative": 19.2,
-          "pct_only_informative": 73.6,
-          "pct_eligible": 65.78947368421053,
-          "eligibleArticles": 125,
-          "totalArticles": 190
-        }
-      ],
-      "policyLines": [
-        {
-          "year": 2019,
-          "label": ""
-        }
-      ]
-    },
-    {
       "id": "clin_res_cardiol",
-      "name": "CLIN RES CARDIOL",
+      "name": "Clinical Research in Cardiology",
+      "abbrev": "CLIN RES CARDIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2765,449 +2780,9 @@
       "policyLines": []
     },
     {
-      "id": "eur_j_cardiovasc_nur",
-      "name": "EUR J CARDIOVASC NUR",
-      "hasPolicy": false,
-      "policyYear": null,
-      "chartData": [
-        {
-          "year": 2010,
-          "pct_only_bar": 100,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 0,
-          "pct_eligible": 12,
-          "eligibleArticles": 3,
-          "totalArticles": 25
-        },
-        {
-          "year": 2011,
-          "pct_only_bar": 50,
-          "pct_bar_informative": 25,
-          "pct_only_informative": 25,
-          "pct_eligible": 15.38461538461538,
-          "eligibleArticles": 4,
-          "totalArticles": 26
-        },
-        {
-          "year": 2012,
-          "pct_only_bar": 50,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 50,
-          "pct_eligible": 5,
-          "eligibleArticles": 2,
-          "totalArticles": 40
-        },
-        {
-          "year": 2013,
-          "pct_only_bar": 25,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 75,
-          "pct_eligible": 7.69230769230769,
-          "eligibleArticles": 4,
-          "totalArticles": 52
-        },
-        {
-          "year": 2014,
-          "pct_only_bar": 28.57142857142857,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 71.42857142857143,
-          "pct_eligible": 14.28571428571428,
-          "eligibleArticles": 7,
-          "totalArticles": 49
-        },
-        {
-          "year": 2015,
-          "pct_only_bar": 50,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 50,
-          "pct_eligible": 4.16666666666666,
-          "eligibleArticles": 2,
-          "totalArticles": 48
-        },
-        {
-          "year": 2016,
-          "pct_only_bar": 40,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 60,
-          "pct_eligible": 8.33333333333333,
-          "eligibleArticles": 5,
-          "totalArticles": 60
-        },
-        {
-          "year": 2017,
-          "pct_only_bar": 66.66666666666666,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 33.33333333333333,
-          "pct_eligible": 9.375,
-          "eligibleArticles": 6,
-          "totalArticles": 64
-        },
-        {
-          "year": 2018,
-          "pct_only_bar": 100,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 0,
-          "pct_eligible": 3.07692307692307,
-          "eligibleArticles": 2,
-          "totalArticles": 65
-        },
-        {
-          "year": 2019,
-          "pct_only_bar": 50,
-          "pct_bar_informative": 12.5,
-          "pct_only_informative": 37.5,
-          "pct_eligible": 12.12121212121212,
-          "eligibleArticles": 8,
-          "totalArticles": 66
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 0,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 100,
-          "pct_eligible": 5.26315789473684,
-          "eligibleArticles": 3,
-          "totalArticles": 57
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 16.66666666666666,
-          "pct_bar_informative": 16.66666666666666,
-          "pct_only_informative": 66.66666666666666,
-          "pct_eligible": 8.695652173913041,
-          "eligibleArticles": 6,
-          "totalArticles": 69
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 33.33333333333333,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 66.66666666666666,
-          "pct_eligible": 12.32876712328767,
-          "eligibleArticles": 9,
-          "totalArticles": 73
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 28.57142857142857,
-          "pct_bar_informative": 28.57142857142857,
-          "pct_only_informative": 42.85714285714285,
-          "pct_eligible": 8.75,
-          "eligibleArticles": 7,
-          "totalArticles": 80
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 16.66666666666666,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 83.33333333333334,
-          "pct_eligible": 7.228915662650599,
-          "eligibleArticles": 6,
-          "totalArticles": 83
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 25,
-          "pct_bar_informative": 16.66666666666666,
-          "pct_only_informative": 58.333333333333336,
-          "pct_eligible": 12.244897959183671,
-          "eligibleArticles": 12,
-          "totalArticles": 98
-        }
-      ],
-      "policyLines": []
-    },
-    {
-      "id": "eur_j_heart_fail",
-      "name": "EUR J HEART FAIL",
-      "hasPolicy": false,
-      "policyYear": null,
-      "chartData": [
-        {
-          "year": 2010,
-          "pct_only_bar": 57.14285714285714,
-          "pct_bar_informative": 1.5873015873015799,
-          "pct_only_informative": 41.269841269841265,
-          "pct_eligible": 46.666666666666664,
-          "eligibleArticles": 63,
-          "totalArticles": 135
-        },
-        {
-          "year": 2011,
-          "pct_only_bar": 46,
-          "pct_bar_informative": 8,
-          "pct_only_informative": 46,
-          "pct_eligible": 35.71428571428571,
-          "eligibleArticles": 50,
-          "totalArticles": 140
-        },
-        {
-          "year": 2012,
-          "pct_only_bar": 63.829787234042556,
-          "pct_bar_informative": 12.76595744680851,
-          "pct_only_informative": 23.40425531914893,
-          "pct_eligible": 37.903225806451616,
-          "eligibleArticles": 47,
-          "totalArticles": 124
-        },
-        {
-          "year": 2013,
-          "pct_only_bar": 55.769230769230774,
-          "pct_bar_informative": 7.69230769230769,
-          "pct_only_informative": 36.53846153846153,
-          "pct_eligible": 37.68115942028985,
-          "eligibleArticles": 52,
-          "totalArticles": 138
-        },
-        {
-          "year": 2014,
-          "pct_only_bar": 46.34146341463415,
-          "pct_bar_informative": 21.95121951219512,
-          "pct_only_informative": 31.70731707317073,
-          "pct_eligible": 32.28346456692913,
-          "eligibleArticles": 41,
-          "totalArticles": 127
-        },
-        {
-          "year": 2015,
-          "pct_only_bar": 51.35135135135135,
-          "pct_bar_informative": 5.4054054054054,
-          "pct_only_informative": 43.24324324324324,
-          "pct_eligible": 36.27450980392157,
-          "eligibleArticles": 37,
-          "totalArticles": 102
-        },
-        {
-          "year": 2016,
-          "pct_only_bar": 51.724137931034484,
-          "pct_bar_informative": 3.44827586206896,
-          "pct_only_informative": 44.827586206896555,
-          "pct_eligible": 30.526315789473678,
-          "eligibleArticles": 29,
-          "totalArticles": 95
-        },
-        {
-          "year": 2017,
-          "pct_only_bar": 38.23529411764705,
-          "pct_bar_informative": 5.88235294117647,
-          "pct_only_informative": 55.88235294117647,
-          "pct_eligible": 31.19266055045872,
-          "eligibleArticles": 34,
-          "totalArticles": 109
-        },
-        {
-          "year": 2018,
-          "pct_only_bar": 34.210526315789465,
-          "pct_bar_informative": 7.89473684210526,
-          "pct_only_informative": 57.89473684210527,
-          "pct_eligible": 39.58333333333333,
-          "eligibleArticles": 38,
-          "totalArticles": 96
-        },
-        {
-          "year": 2019,
-          "pct_only_bar": 36.66666666666666,
-          "pct_bar_informative": 6.66666666666666,
-          "pct_only_informative": 56.666666666666664,
-          "pct_eligible": 30.92783505154639,
-          "eligibleArticles": 30,
-          "totalArticles": 97
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 34.883720930232556,
-          "pct_bar_informative": 18.604651162790688,
-          "pct_only_informative": 46.51162790697674,
-          "pct_eligible": 33.85826771653543,
-          "eligibleArticles": 43,
-          "totalArticles": 127
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 23.40425531914893,
-          "pct_bar_informative": 12.76595744680851,
-          "pct_only_informative": 63.829787234042556,
-          "pct_eligible": 40.17094017094017,
-          "eligibleArticles": 47,
-          "totalArticles": 117
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 25,
-          "pct_bar_informative": 25,
-          "pct_only_informative": 50,
-          "pct_eligible": 31.496062992125978,
-          "eligibleArticles": 40,
-          "totalArticles": 127
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 39.53488372093023,
-          "pct_bar_informative": 6.97674418604651,
-          "pct_only_informative": 53.48837209302325,
-          "pct_eligible": 31.15942028985507,
-          "eligibleArticles": 43,
-          "totalArticles": 138
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 24.137931034482758,
-          "pct_bar_informative": 6.89655172413793,
-          "pct_only_informative": 68.96551724137932,
-          "pct_eligible": 36.02484472049689,
-          "eligibleArticles": 58,
-          "totalArticles": 161
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 28.8135593220339,
-          "pct_bar_informative": 11.86440677966101,
-          "pct_only_informative": 59.32203389830508,
-          "pct_eligible": 30.102040816326532,
-          "eligibleArticles": 59,
-          "totalArticles": 196
-        }
-      ],
-      "policyLines": []
-    },
-    {
-      "id": "eur_j_prev_cardiol",
-      "name": "EUR J PREV CARDIOL",
-      "hasPolicy": false,
-      "policyYear": null,
-      "chartData": [
-        {
-          "year": 2012,
-          "pct_only_bar": 63.63636363636363,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 36.36363636363636,
-          "pct_eligible": 17.599999999999998,
-          "eligibleArticles": 22,
-          "totalArticles": 125
-        },
-        {
-          "year": 2013,
-          "pct_only_bar": 42.105263157894726,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 57.89473684210527,
-          "pct_eligible": 19.19191919191919,
-          "eligibleArticles": 19,
-          "totalArticles": 99
-        },
-        {
-          "year": 2014,
-          "pct_only_bar": 55.88235294117647,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 44.11764705882353,
-          "pct_eligible": 22.077922077922068,
-          "eligibleArticles": 34,
-          "totalArticles": 154
-        },
-        {
-          "year": 2015,
-          "pct_only_bar": 72.41379310344827,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 27.58620689655172,
-          "pct_eligible": 20.13888888888889,
-          "eligibleArticles": 29,
-          "totalArticles": 144
-        },
-        {
-          "year": 2016,
-          "pct_only_bar": 52.77777777777778,
-          "pct_bar_informative": 5.55555555555555,
-          "pct_only_informative": 41.66666666666667,
-          "pct_eligible": 23.37662337662337,
-          "eligibleArticles": 36,
-          "totalArticles": 154
-        },
-        {
-          "year": 2017,
-          "pct_only_bar": 40.625,
-          "pct_bar_informative": 9.375,
-          "pct_only_informative": 50,
-          "pct_eligible": 22.22222222222222,
-          "eligibleArticles": 32,
-          "totalArticles": 144
-        },
-        {
-          "year": 2018,
-          "pct_only_bar": 72.22222222222221,
-          "pct_bar_informative": 0,
-          "pct_only_informative": 27.77777777777778,
-          "pct_eligible": 15.78947368421052,
-          "eligibleArticles": 18,
-          "totalArticles": 114
-        },
-        {
-          "year": 2019,
-          "pct_only_bar": 36.84210526315789,
-          "pct_bar_informative": 10.52631578947368,
-          "pct_only_informative": 52.63157894736842,
-          "pct_eligible": 20.65217391304347,
-          "eligibleArticles": 19,
-          "totalArticles": 92
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 55.55555555555556,
-          "pct_bar_informative": 3.7037037037037,
-          "pct_only_informative": 40.74074074074074,
-          "pct_eligible": 26.47058823529412,
-          "eligibleArticles": 27,
-          "totalArticles": 102
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 40,
-          "pct_bar_informative": 4,
-          "pct_only_informative": 56.00000000000001,
-          "pct_eligible": 17.98561151079136,
-          "eligibleArticles": 25,
-          "totalArticles": 139
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 43.24324324324324,
-          "pct_bar_informative": 10.81081081081081,
-          "pct_only_informative": 45.94594594594595,
-          "pct_eligible": 22.8395061728395,
-          "eligibleArticles": 37,
-          "totalArticles": 162
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 33.33333333333333,
-          "pct_bar_informative": 4.16666666666666,
-          "pct_only_informative": 62.5,
-          "pct_eligible": 33.10344827586207,
-          "eligibleArticles": 48,
-          "totalArticles": 145
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 30,
-          "pct_bar_informative": 10,
-          "pct_only_informative": 60,
-          "pct_eligible": 28.169014084507037,
-          "eligibleArticles": 40,
-          "totalArticles": 142
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 25,
-          "pct_bar_informative": 10.57692307692307,
-          "pct_only_informative": 64.42307692307693,
-          "pct_eligible": 26.26262626262626,
-          "eligibleArticles": 104,
-          "totalArticles": 396
-        }
-      ],
-      "policyLines": []
-    },
-    {
       "id": "eurointervention",
-      "name": "EUROINTERVENTION",
+      "name": "Eurointervention",
+      "abbrev": "EUROINTERVENTION",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3360,7 +2935,8 @@
     },
     {
       "id": "europace",
-      "name": "EUROPACE",
+      "name": "Europace",
+      "abbrev": "EUROPACE",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3512,8 +3088,453 @@
       "policyLines": []
     },
     {
+      "id": "eur_j_cardiovasc_nur",
+      "name": "European Journal of Cardiovascular Nursing",
+      "abbrev": "EUR J CARDIOVASC NUR",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 12,
+          "eligibleArticles": 3,
+          "totalArticles": 25
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 25,
+          "pct_only_informative": 25,
+          "pct_eligible": 15.38461538461538,
+          "eligibleArticles": 4,
+          "totalArticles": 26
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 50,
+          "pct_eligible": 5,
+          "eligibleArticles": 2,
+          "totalArticles": 40
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 25,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 75,
+          "pct_eligible": 7.69230769230769,
+          "eligibleArticles": 4,
+          "totalArticles": 52
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 28.57142857142857,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 71.42857142857143,
+          "pct_eligible": 14.28571428571428,
+          "eligibleArticles": 7,
+          "totalArticles": 49
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 50,
+          "pct_eligible": 4.16666666666666,
+          "eligibleArticles": 2,
+          "totalArticles": 48
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 40,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 60,
+          "pct_eligible": 8.33333333333333,
+          "eligibleArticles": 5,
+          "totalArticles": 60
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 66.66666666666666,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 9.375,
+          "eligibleArticles": 6,
+          "totalArticles": 64
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 100,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 0,
+          "pct_eligible": 3.07692307692307,
+          "eligibleArticles": 2,
+          "totalArticles": 65
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 50,
+          "pct_bar_informative": 12.5,
+          "pct_only_informative": 37.5,
+          "pct_eligible": 12.12121212121212,
+          "eligibleArticles": 8,
+          "totalArticles": 66
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 0,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 100,
+          "pct_eligible": 5.26315789473684,
+          "eligibleArticles": 3,
+          "totalArticles": 57
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 16.66666666666666,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 66.66666666666666,
+          "pct_eligible": 8.695652173913041,
+          "eligibleArticles": 6,
+          "totalArticles": 69
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 33.33333333333333,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 66.66666666666666,
+          "pct_eligible": 12.32876712328767,
+          "eligibleArticles": 9,
+          "totalArticles": 73
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 28.57142857142857,
+          "pct_bar_informative": 28.57142857142857,
+          "pct_only_informative": 42.85714285714285,
+          "pct_eligible": 8.75,
+          "eligibleArticles": 7,
+          "totalArticles": 80
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 16.66666666666666,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 83.33333333333334,
+          "pct_eligible": 7.228915662650599,
+          "eligibleArticles": 6,
+          "totalArticles": 83
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 25,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 58.333333333333336,
+          "pct_eligible": 12.244897959183671,
+          "eligibleArticles": 12,
+          "totalArticles": 98
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "eur_j_heart_fail",
+      "name": "European Journal of Heart Failure",
+      "abbrev": "EUR J HEART FAIL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 57.14285714285714,
+          "pct_bar_informative": 1.5873015873015799,
+          "pct_only_informative": 41.269841269841265,
+          "pct_eligible": 46.666666666666664,
+          "eligibleArticles": 63,
+          "totalArticles": 135
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 46,
+          "pct_bar_informative": 8,
+          "pct_only_informative": 46,
+          "pct_eligible": 35.71428571428571,
+          "eligibleArticles": 50,
+          "totalArticles": 140
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 63.829787234042556,
+          "pct_bar_informative": 12.76595744680851,
+          "pct_only_informative": 23.40425531914893,
+          "pct_eligible": 37.903225806451616,
+          "eligibleArticles": 47,
+          "totalArticles": 124
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 55.769230769230774,
+          "pct_bar_informative": 7.69230769230769,
+          "pct_only_informative": 36.53846153846153,
+          "pct_eligible": 37.68115942028985,
+          "eligibleArticles": 52,
+          "totalArticles": 138
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 46.34146341463415,
+          "pct_bar_informative": 21.95121951219512,
+          "pct_only_informative": 31.70731707317073,
+          "pct_eligible": 32.28346456692913,
+          "eligibleArticles": 41,
+          "totalArticles": 127
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 51.35135135135135,
+          "pct_bar_informative": 5.4054054054054,
+          "pct_only_informative": 43.24324324324324,
+          "pct_eligible": 36.27450980392157,
+          "eligibleArticles": 37,
+          "totalArticles": 102
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 51.724137931034484,
+          "pct_bar_informative": 3.44827586206896,
+          "pct_only_informative": 44.827586206896555,
+          "pct_eligible": 30.526315789473678,
+          "eligibleArticles": 29,
+          "totalArticles": 95
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 38.23529411764705,
+          "pct_bar_informative": 5.88235294117647,
+          "pct_only_informative": 55.88235294117647,
+          "pct_eligible": 31.19266055045872,
+          "eligibleArticles": 34,
+          "totalArticles": 109
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 34.210526315789465,
+          "pct_bar_informative": 7.89473684210526,
+          "pct_only_informative": 57.89473684210527,
+          "pct_eligible": 39.58333333333333,
+          "eligibleArticles": 38,
+          "totalArticles": 96
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 36.66666666666666,
+          "pct_bar_informative": 6.66666666666666,
+          "pct_only_informative": 56.666666666666664,
+          "pct_eligible": 30.92783505154639,
+          "eligibleArticles": 30,
+          "totalArticles": 97
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 34.883720930232556,
+          "pct_bar_informative": 18.604651162790688,
+          "pct_only_informative": 46.51162790697674,
+          "pct_eligible": 33.85826771653543,
+          "eligibleArticles": 43,
+          "totalArticles": 127
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 23.40425531914893,
+          "pct_bar_informative": 12.76595744680851,
+          "pct_only_informative": 63.829787234042556,
+          "pct_eligible": 40.17094017094017,
+          "eligibleArticles": 47,
+          "totalArticles": 117
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 25,
+          "pct_bar_informative": 25,
+          "pct_only_informative": 50,
+          "pct_eligible": 31.496062992125978,
+          "eligibleArticles": 40,
+          "totalArticles": 127
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 39.53488372093023,
+          "pct_bar_informative": 6.97674418604651,
+          "pct_only_informative": 53.48837209302325,
+          "pct_eligible": 31.15942028985507,
+          "eligibleArticles": 43,
+          "totalArticles": 138
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 24.137931034482758,
+          "pct_bar_informative": 6.89655172413793,
+          "pct_only_informative": 68.96551724137932,
+          "pct_eligible": 36.02484472049689,
+          "eligibleArticles": 58,
+          "totalArticles": 161
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 28.8135593220339,
+          "pct_bar_informative": 11.86440677966101,
+          "pct_only_informative": 59.32203389830508,
+          "pct_eligible": 30.102040816326532,
+          "eligibleArticles": 59,
+          "totalArticles": 196
+        }
+      ],
+      "policyLines": []
+    },
+    {
+      "id": "eur_j_prev_cardiol",
+      "name": "European Journal of Preventive Cardiology",
+      "abbrev": "EUR J PREV CARDIOL",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2012,
+          "pct_only_bar": 63.63636363636363,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 36.36363636363636,
+          "pct_eligible": 17.599999999999998,
+          "eligibleArticles": 22,
+          "totalArticles": 125
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 42.105263157894726,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 57.89473684210527,
+          "pct_eligible": 19.19191919191919,
+          "eligibleArticles": 19,
+          "totalArticles": 99
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 55.88235294117647,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 44.11764705882353,
+          "pct_eligible": 22.077922077922068,
+          "eligibleArticles": 34,
+          "totalArticles": 154
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 72.41379310344827,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 27.58620689655172,
+          "pct_eligible": 20.13888888888889,
+          "eligibleArticles": 29,
+          "totalArticles": 144
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 52.77777777777778,
+          "pct_bar_informative": 5.55555555555555,
+          "pct_only_informative": 41.66666666666667,
+          "pct_eligible": 23.37662337662337,
+          "eligibleArticles": 36,
+          "totalArticles": 154
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 40.625,
+          "pct_bar_informative": 9.375,
+          "pct_only_informative": 50,
+          "pct_eligible": 22.22222222222222,
+          "eligibleArticles": 32,
+          "totalArticles": 144
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 72.22222222222221,
+          "pct_bar_informative": 0,
+          "pct_only_informative": 27.77777777777778,
+          "pct_eligible": 15.78947368421052,
+          "eligibleArticles": 18,
+          "totalArticles": 114
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 36.84210526315789,
+          "pct_bar_informative": 10.52631578947368,
+          "pct_only_informative": 52.63157894736842,
+          "pct_eligible": 20.65217391304347,
+          "eligibleArticles": 19,
+          "totalArticles": 92
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 55.55555555555556,
+          "pct_bar_informative": 3.7037037037037,
+          "pct_only_informative": 40.74074074074074,
+          "pct_eligible": 26.47058823529412,
+          "eligibleArticles": 27,
+          "totalArticles": 102
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 40,
+          "pct_bar_informative": 4,
+          "pct_only_informative": 56.00000000000001,
+          "pct_eligible": 17.98561151079136,
+          "eligibleArticles": 25,
+          "totalArticles": 139
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 43.24324324324324,
+          "pct_bar_informative": 10.81081081081081,
+          "pct_only_informative": 45.94594594594595,
+          "pct_eligible": 22.8395061728395,
+          "eligibleArticles": 37,
+          "totalArticles": 162
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 33.33333333333333,
+          "pct_bar_informative": 4.16666666666666,
+          "pct_only_informative": 62.5,
+          "pct_eligible": 33.10344827586207,
+          "eligibleArticles": 48,
+          "totalArticles": 145
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 30,
+          "pct_bar_informative": 10,
+          "pct_only_informative": 60,
+          "pct_eligible": 28.169014084507037,
+          "eligibleArticles": 40,
+          "totalArticles": 142
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 25,
+          "pct_bar_informative": 10.57692307692307,
+          "pct_only_informative": 64.42307692307693,
+          "pct_eligible": 26.26262626262626,
+          "eligibleArticles": 104,
+          "totalArticles": 396
+        }
+      ],
+      "policyLines": []
+    },
+    {
       "id": "front_cardiovasc_med",
-      "name": "FRONT CARDIOVASC MED",
+      "name": "Frontiers in Cardiovascular Medicine",
+      "abbrev": "FRONT CARDIOVASC MED",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3630,7 +3651,8 @@
     },
     {
       "id": "heart",
-      "name": "HEART",
+      "name": "Heart",
+      "abbrev": "HEART",
       "hasPolicy": true,
       "policyYear": 2014,
       "chartData": [
@@ -3788,7 +3810,8 @@
     },
     {
       "id": "heart_rhythm",
-      "name": "HEART RHYTHM",
+      "name": "Heart Rhythm",
+      "abbrev": "HEART RHYTHM",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3941,7 +3964,8 @@
     },
     {
       "id": "int_j_cardiovas_imag",
-      "name": "INT J CARDIOVAS IMAG",
+      "name": "International Journal of Cardiovascular Imaging",
+      "abbrev": "INT J CARDIOVAS IMAG",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4093,148 +4117,201 @@
       "policyLines": []
     },
     {
-      "id": "j_am_heart_assoc",
-      "name": "J AM HEART ASSOC",
+      "id": "jacc-clin_electrophy",
+      "name": "JACC-Clinical Electrophysiology",
+      "abbrev": "JACC-CLIN ELECTROPHY",
       "hasPolicy": true,
-      "policyYear": 2019,
+      "policyYear": 2020,
       "chartData": [
         {
-          "year": 2012,
-          "pct_only_bar": 57.77777777777777,
-          "pct_bar_informative": 20,
-          "pct_only_informative": 22.22222222222222,
-          "pct_eligible": 54.21686746987952,
-          "eligibleArticles": 45,
-          "totalArticles": 83
-        },
-        {
-          "year": 2013,
-          "pct_only_bar": 50.37593984962406,
-          "pct_bar_informative": 24.81203007518796,
-          "pct_only_informative": 24.81203007518796,
-          "pct_eligible": 60.73059360730594,
-          "eligibleArticles": 133,
-          "totalArticles": 219
-        },
-        {
-          "year": 2014,
-          "pct_only_bar": 49.38271604938271,
-          "pct_bar_informative": 26.543209876543212,
-          "pct_only_informative": 24.07407407407407,
-          "pct_eligible": 50.31055900621118,
-          "eligibleArticles": 162,
-          "totalArticles": 322
-        },
-        {
           "year": 2015,
-          "pct_only_bar": 44.13793103448276,
-          "pct_bar_informative": 20.68965517241379,
-          "pct_only_informative": 35.17241379310344,
-          "pct_eligible": 44.07294832826747,
-          "eligibleArticles": 145,
-          "totalArticles": 329
+          "pct_only_bar": 46.666666666666664,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 33.33333333333333,
+          "pct_eligible": 33.33333333333333,
+          "eligibleArticles": 15,
+          "totalArticles": 45
         },
         {
           "year": 2016,
-          "pct_only_bar": 51.2,
-          "pct_bar_informative": 22,
-          "pct_only_informative": 26.8,
-          "pct_eligible": 45.95588235294117,
-          "eligibleArticles": 250,
-          "totalArticles": 544
+          "pct_only_bar": 34.48275862068966,
+          "pct_bar_informative": 17.24137931034483,
+          "pct_only_informative": 48.275862068965516,
+          "pct_eligible": 45.3125,
+          "eligibleArticles": 29,
+          "totalArticles": 64
         },
         {
           "year": 2017,
-          "pct_only_bar": 42.97994269340974,
-          "pct_bar_informative": 23.49570200573066,
-          "pct_only_informative": 33.5243553008596,
-          "pct_eligible": 48.47222222222222,
-          "eligibleArticles": 349,
-          "totalArticles": 720
+          "pct_only_bar": 20,
+          "pct_bar_informative": 22.5,
+          "pct_only_informative": 57.49999999999999,
+          "pct_eligible": 37.38317757009345,
+          "eligibleArticles": 40,
+          "totalArticles": 107
         },
         {
           "year": 2018,
-          "pct_only_bar": 35.01577287066246,
-          "pct_bar_informative": 27.444794952681388,
-          "pct_only_informative": 37.53943217665615,
-          "pct_eligible": 44.64788732394366,
-          "eligibleArticles": 317,
-          "totalArticles": 710
+          "pct_only_bar": 21.95121951219512,
+          "pct_bar_informative": 9.75609756097561,
+          "pct_only_informative": 68.29268292682927,
+          "pct_eligible": 37.61467889908257,
+          "eligibleArticles": 41,
+          "totalArticles": 109
         },
         {
           "year": 2019,
-          "pct_only_bar": 29.629629629629626,
-          "pct_bar_informative": 18.18181818181818,
-          "pct_only_informative": 52.18855218855219,
-          "pct_eligible": 40.909090909090914,
-          "eligibleArticles": 297,
-          "totalArticles": 726
+          "pct_only_bar": 41.66666666666667,
+          "pct_bar_informative": 4.16666666666666,
+          "pct_only_informative": 54.166666666666664,
+          "pct_eligible": 25.80645161290322,
+          "eligibleArticles": 24,
+          "totalArticles": 93
         },
         {
           "year": 2020,
-          "pct_only_bar": 28.92561983471074,
-          "pct_bar_informative": 19.55922865013774,
-          "pct_only_informative": 51.515151515151516,
-          "pct_eligible": 45.60301507537688,
-          "eligibleArticles": 363,
-          "totalArticles": 796
+          "pct_only_bar": 23.8095238095238,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 59.523809523809526,
+          "pct_eligible": 36.84210526315789,
+          "eligibleArticles": 42,
+          "totalArticles": 114
         },
         {
           "year": 2021,
-          "pct_only_bar": 21.0401891252955,
-          "pct_bar_informative": 19.62174940898345,
-          "pct_only_informative": 59.33806146572104,
-          "pct_eligible": 44.0625,
-          "eligibleArticles": 423,
-          "totalArticles": 960
+          "pct_only_bar": 24.24242424242424,
+          "pct_bar_informative": 15.151515151515149,
+          "pct_only_informative": 60.60606060606061,
+          "pct_eligible": 32.03883495145631,
+          "eligibleArticles": 33,
+          "totalArticles": 103
         },
         {
           "year": 2022,
-          "pct_only_bar": 15.030674846625761,
-          "pct_bar_informative": 17.79141104294478,
-          "pct_only_informative": 67.17791411042946,
-          "pct_eligible": 41.0062893081761,
-          "eligibleArticles": 326,
-          "totalArticles": 795
+          "pct_only_bar": 19.51219512195122,
+          "pct_bar_informative": 4.8780487804878,
+          "pct_only_informative": 75.60975609756098,
+          "pct_eligible": 47.126436781609186,
+          "eligibleArticles": 41,
+          "totalArticles": 87
         },
         {
           "year": 2023,
-          "pct_only_bar": 14.237288135593221,
-          "pct_bar_informative": 12.88135593220339,
-          "pct_only_informative": 72.88135593220339,
-          "pct_eligible": 38.26199740596627,
-          "eligibleArticles": 295,
-          "totalArticles": 771
+          "pct_only_bar": 15.87301587301587,
+          "pct_bar_informative": 22.22222222222222,
+          "pct_only_informative": 61.904761904761905,
+          "pct_eligible": 41.721854304635755,
+          "eligibleArticles": 63,
+          "totalArticles": 151
         },
         {
           "year": 2024,
-          "pct_only_bar": 20.87912087912088,
-          "pct_bar_informative": 11.53846153846153,
-          "pct_only_informative": 67.58241758241759,
-          "pct_eligible": 36.50952858575727,
-          "eligibleArticles": 364,
-          "totalArticles": 997
+          "pct_only_bar": 15.38461538461538,
+          "pct_bar_informative": 23.07692307692307,
+          "pct_only_informative": 61.53846153846154,
+          "pct_eligible": 41.93548387096774,
+          "eligibleArticles": 65,
+          "totalArticles": 155
         },
         {
           "year": 2025,
-          "pct_only_bar": 15.846994535519121,
-          "pct_bar_informative": 12.841530054644808,
-          "pct_only_informative": 71.31147540983606,
-          "pct_eligible": 34.463276836158194,
-          "eligibleArticles": 366,
-          "totalArticles": 1062
+          "pct_only_bar": 12.3076923076923,
+          "pct_bar_informative": 10.76923076923077,
+          "pct_only_informative": 76.92307692307693,
+          "pct_eligible": 43.624161073825505,
+          "eligibleArticles": 65,
+          "totalArticles": 149
         }
       ],
       "policyLines": [
         {
+          "year": 2020,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "jacc-cardiooncol",
+      "name": "JACC: Cardiooncology",
+      "abbrev": "JACC-CARDIOONCOL",
+      "hasPolicy": true,
+      "policyYear": 2021,
+      "chartData": [
+        {
           "year": 2019,
+          "pct_only_bar": 33.33333333333333,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 50,
+          "pct_eligible": 37.5,
+          "eligibleArticles": 6,
+          "totalArticles": 16
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 40,
+          "pct_bar_informative": 33.33333333333333,
+          "pct_only_informative": 26.66666666666666,
+          "pct_eligible": 42.85714285714285,
+          "eligibleArticles": 15,
+          "totalArticles": 35
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 41.66666666666667,
+          "pct_bar_informative": 8.33333333333333,
+          "pct_only_informative": 50,
+          "pct_eligible": 41.37931034482758,
+          "eligibleArticles": 12,
+          "totalArticles": 29
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 16.66666666666666,
+          "pct_bar_informative": 16.66666666666666,
+          "pct_only_informative": 66.66666666666666,
+          "pct_eligible": 20.68965517241379,
+          "eligibleArticles": 6,
+          "totalArticles": 29
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 16.66666666666666,
+          "pct_bar_informative": 8.33333333333333,
+          "pct_only_informative": 75,
+          "pct_eligible": 30.76923076923077,
+          "eligibleArticles": 12,
+          "totalArticles": 39
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 11.11111111111111,
+          "pct_bar_informative": 11.11111111111111,
+          "pct_only_informative": 77.77777777777779,
+          "pct_eligible": 24.32432432432432,
+          "eligibleArticles": 9,
+          "totalArticles": 37
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 6.66666666666666,
+          "pct_bar_informative": 20,
+          "pct_only_informative": 73.33333333333333,
+          "pct_eligible": 44.11764705882353,
+          "eligibleArticles": 15,
+          "totalArticles": 34
+        }
+      ],
+      "policyLines": [
+        {
+          "year": 2021,
           "label": ""
         }
       ]
     },
     {
       "id": "j_card_fail",
-      "name": "J CARD FAIL",
+      "name": "Journal of Cardiac Failure",
+      "abbrev": "J CARD FAIL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4387,7 +4464,8 @@
     },
     {
       "id": "j_cardiovasc_comput",
-      "name": "J CARDIOVASC COMPUT",
+      "name": "Journal of Cardiovascular Computed Tomography",
+      "abbrev": "J CARDIOVASC COMPUT",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4540,7 +4618,8 @@
     },
     {
       "id": "j_cardiovasc_dev_dis",
-      "name": "J CARDIOVASC DEV DIS",
+      "name": "Journal of Cardiovascular Development and Disease",
+      "abbrev": "J CARDIOVASC DEV DIS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4657,7 +4736,8 @@
     },
     {
       "id": "j_cardiovasc_electr",
-      "name": "J CARDIOVASC ELECTR",
+      "name": "Journal of Cardiovascular Electrophysiology",
+      "abbrev": "J CARDIOVASC ELECTR",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4810,7 +4890,8 @@
     },
     {
       "id": "j_geriatr_cardiol",
-      "name": "J GERIATR CARDIOL",
+      "name": "Journal of Geriatric Cardiology",
+      "abbrev": "J GERIATR CARDIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -4954,7 +5035,8 @@
     },
     {
       "id": "j_heart_lung_transpl",
-      "name": "J HEART LUNG TRANSPL",
+      "name": "Journal of Heart and Lung Transplantation",
+      "abbrev": "J HEART LUNG TRANSPL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -5107,7 +5189,8 @@
     },
     {
       "id": "j_mol_cell_cardiol",
-      "name": "J MOL CELL CARDIOL",
+      "name": "Journal of Molecular and Cellular Cardiology",
+      "abbrev": "J MOL CELL CARDIOL",
       "hasPolicy": true,
       "policyYear": 2021,
       "chartData": [
@@ -5265,7 +5348,8 @@
     },
     {
       "id": "j_nucl_cardiol",
-      "name": "J NUCL CARDIOL",
+      "name": "Journal of Nuclear Cardiology",
+      "abbrev": "J NUCL CARDIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -5417,198 +5501,150 @@
       "policyLines": []
     },
     {
-      "id": "jacc-cardiooncol",
-      "name": "JACC-CARDIOONCOL",
+      "id": "j_am_heart_assoc",
+      "name": "Journal of The American Heart Association",
+      "abbrev": "J AM HEART ASSOC",
       "hasPolicy": true,
-      "policyYear": 2021,
+      "policyYear": 2019,
       "chartData": [
         {
-          "year": 2019,
-          "pct_only_bar": 33.33333333333333,
-          "pct_bar_informative": 16.66666666666666,
-          "pct_only_informative": 50,
-          "pct_eligible": 37.5,
-          "eligibleArticles": 6,
-          "totalArticles": 16
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 40,
-          "pct_bar_informative": 33.33333333333333,
-          "pct_only_informative": 26.66666666666666,
-          "pct_eligible": 42.85714285714285,
-          "eligibleArticles": 15,
-          "totalArticles": 35
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 41.66666666666667,
-          "pct_bar_informative": 8.33333333333333,
-          "pct_only_informative": 50,
-          "pct_eligible": 41.37931034482758,
-          "eligibleArticles": 12,
-          "totalArticles": 29
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 16.66666666666666,
-          "pct_bar_informative": 16.66666666666666,
-          "pct_only_informative": 66.66666666666666,
-          "pct_eligible": 20.68965517241379,
-          "eligibleArticles": 6,
-          "totalArticles": 29
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 16.66666666666666,
-          "pct_bar_informative": 8.33333333333333,
-          "pct_only_informative": 75,
-          "pct_eligible": 30.76923076923077,
-          "eligibleArticles": 12,
-          "totalArticles": 39
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 11.11111111111111,
-          "pct_bar_informative": 11.11111111111111,
-          "pct_only_informative": 77.77777777777779,
-          "pct_eligible": 24.32432432432432,
-          "eligibleArticles": 9,
-          "totalArticles": 37
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 6.66666666666666,
+          "year": 2012,
+          "pct_only_bar": 57.77777777777777,
           "pct_bar_informative": 20,
-          "pct_only_informative": 73.33333333333333,
-          "pct_eligible": 44.11764705882353,
-          "eligibleArticles": 15,
-          "totalArticles": 34
-        }
-      ],
-      "policyLines": [
+          "pct_only_informative": 22.22222222222222,
+          "pct_eligible": 54.21686746987952,
+          "eligibleArticles": 45,
+          "totalArticles": 83
+        },
         {
-          "year": 2021,
-          "label": ""
-        }
-      ]
-    },
-    {
-      "id": "jacc-clin_electrophy",
-      "name": "JACC-CLIN ELECTROPHY",
-      "hasPolicy": true,
-      "policyYear": 2020,
-      "chartData": [
+          "year": 2013,
+          "pct_only_bar": 50.37593984962406,
+          "pct_bar_informative": 24.81203007518796,
+          "pct_only_informative": 24.81203007518796,
+          "pct_eligible": 60.73059360730594,
+          "eligibleArticles": 133,
+          "totalArticles": 219
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 49.38271604938271,
+          "pct_bar_informative": 26.543209876543212,
+          "pct_only_informative": 24.07407407407407,
+          "pct_eligible": 50.31055900621118,
+          "eligibleArticles": 162,
+          "totalArticles": 322
+        },
         {
           "year": 2015,
-          "pct_only_bar": 46.666666666666664,
-          "pct_bar_informative": 20,
-          "pct_only_informative": 33.33333333333333,
-          "pct_eligible": 33.33333333333333,
-          "eligibleArticles": 15,
-          "totalArticles": 45
+          "pct_only_bar": 44.13793103448276,
+          "pct_bar_informative": 20.68965517241379,
+          "pct_only_informative": 35.17241379310344,
+          "pct_eligible": 44.07294832826747,
+          "eligibleArticles": 145,
+          "totalArticles": 329
         },
         {
           "year": 2016,
-          "pct_only_bar": 34.48275862068966,
-          "pct_bar_informative": 17.24137931034483,
-          "pct_only_informative": 48.275862068965516,
-          "pct_eligible": 45.3125,
-          "eligibleArticles": 29,
-          "totalArticles": 64
+          "pct_only_bar": 51.2,
+          "pct_bar_informative": 22,
+          "pct_only_informative": 26.8,
+          "pct_eligible": 45.95588235294117,
+          "eligibleArticles": 250,
+          "totalArticles": 544
         },
         {
           "year": 2017,
-          "pct_only_bar": 20,
-          "pct_bar_informative": 22.5,
-          "pct_only_informative": 57.49999999999999,
-          "pct_eligible": 37.38317757009345,
-          "eligibleArticles": 40,
-          "totalArticles": 107
+          "pct_only_bar": 42.97994269340974,
+          "pct_bar_informative": 23.49570200573066,
+          "pct_only_informative": 33.5243553008596,
+          "pct_eligible": 48.47222222222222,
+          "eligibleArticles": 349,
+          "totalArticles": 720
         },
         {
           "year": 2018,
-          "pct_only_bar": 21.95121951219512,
-          "pct_bar_informative": 9.75609756097561,
-          "pct_only_informative": 68.29268292682927,
-          "pct_eligible": 37.61467889908257,
-          "eligibleArticles": 41,
-          "totalArticles": 109
+          "pct_only_bar": 35.01577287066246,
+          "pct_bar_informative": 27.444794952681388,
+          "pct_only_informative": 37.53943217665615,
+          "pct_eligible": 44.64788732394366,
+          "eligibleArticles": 317,
+          "totalArticles": 710
         },
         {
           "year": 2019,
-          "pct_only_bar": 41.66666666666667,
-          "pct_bar_informative": 4.16666666666666,
-          "pct_only_informative": 54.166666666666664,
-          "pct_eligible": 25.80645161290322,
-          "eligibleArticles": 24,
-          "totalArticles": 93
+          "pct_only_bar": 29.629629629629626,
+          "pct_bar_informative": 18.18181818181818,
+          "pct_only_informative": 52.18855218855219,
+          "pct_eligible": 40.909090909090914,
+          "eligibleArticles": 297,
+          "totalArticles": 726
         },
         {
           "year": 2020,
-          "pct_only_bar": 23.8095238095238,
-          "pct_bar_informative": 16.66666666666666,
-          "pct_only_informative": 59.523809523809526,
-          "pct_eligible": 36.84210526315789,
-          "eligibleArticles": 42,
-          "totalArticles": 114
+          "pct_only_bar": 28.92561983471074,
+          "pct_bar_informative": 19.55922865013774,
+          "pct_only_informative": 51.515151515151516,
+          "pct_eligible": 45.60301507537688,
+          "eligibleArticles": 363,
+          "totalArticles": 796
         },
         {
           "year": 2021,
-          "pct_only_bar": 24.24242424242424,
-          "pct_bar_informative": 15.151515151515149,
-          "pct_only_informative": 60.60606060606061,
-          "pct_eligible": 32.03883495145631,
-          "eligibleArticles": 33,
-          "totalArticles": 103
+          "pct_only_bar": 21.0401891252955,
+          "pct_bar_informative": 19.62174940898345,
+          "pct_only_informative": 59.33806146572104,
+          "pct_eligible": 44.0625,
+          "eligibleArticles": 423,
+          "totalArticles": 960
         },
         {
           "year": 2022,
-          "pct_only_bar": 19.51219512195122,
-          "pct_bar_informative": 4.8780487804878,
-          "pct_only_informative": 75.60975609756098,
-          "pct_eligible": 47.126436781609186,
-          "eligibleArticles": 41,
-          "totalArticles": 87
+          "pct_only_bar": 15.030674846625761,
+          "pct_bar_informative": 17.79141104294478,
+          "pct_only_informative": 67.17791411042946,
+          "pct_eligible": 41.0062893081761,
+          "eligibleArticles": 326,
+          "totalArticles": 795
         },
         {
           "year": 2023,
-          "pct_only_bar": 15.87301587301587,
-          "pct_bar_informative": 22.22222222222222,
-          "pct_only_informative": 61.904761904761905,
-          "pct_eligible": 41.721854304635755,
-          "eligibleArticles": 63,
-          "totalArticles": 151
+          "pct_only_bar": 14.237288135593221,
+          "pct_bar_informative": 12.88135593220339,
+          "pct_only_informative": 72.88135593220339,
+          "pct_eligible": 38.26199740596627,
+          "eligibleArticles": 295,
+          "totalArticles": 771
         },
         {
           "year": 2024,
-          "pct_only_bar": 15.38461538461538,
-          "pct_bar_informative": 23.07692307692307,
-          "pct_only_informative": 61.53846153846154,
-          "pct_eligible": 41.93548387096774,
-          "eligibleArticles": 65,
-          "totalArticles": 155
+          "pct_only_bar": 20.87912087912088,
+          "pct_bar_informative": 11.53846153846153,
+          "pct_only_informative": 67.58241758241759,
+          "pct_eligible": 36.50952858575727,
+          "eligibleArticles": 364,
+          "totalArticles": 997
         },
         {
           "year": 2025,
-          "pct_only_bar": 12.3076923076923,
-          "pct_bar_informative": 10.76923076923077,
-          "pct_only_informative": 76.92307692307693,
-          "pct_eligible": 43.624161073825505,
-          "eligibleArticles": 65,
-          "totalArticles": 149
+          "pct_only_bar": 15.846994535519121,
+          "pct_bar_informative": 12.841530054644808,
+          "pct_only_informative": 71.31147540983606,
+          "pct_eligible": 34.463276836158194,
+          "eligibleArticles": 366,
+          "totalArticles": 1062
         }
       ],
       "policyLines": [
         {
-          "year": 2020,
+          "year": 2019,
           "label": ""
         }
       ]
     },
     {
       "id": "nutr_metab_cardiovas",
-      "name": "NUTR METAB CARDIOVAS",
+      "name": "Nutrition Metabolism and Cardiovascular Diseases",
+      "abbrev": "NUTR METAB CARDIOVAS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [

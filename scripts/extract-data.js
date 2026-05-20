@@ -161,7 +161,8 @@ function buildJournals(rows) {
       const policyYear = hasPolicy ? num(ref.policy_year) : null
       return {
         id: jcrId(abbrev),
-        name: abbrev,
+        name: ref.Journal_Name || abbrev,
+        abbrev,
         hasPolicy,
         policyYear,
         chartData: journalChartData(byAbbrev.get(abbrev)),
@@ -195,7 +196,7 @@ function buildAgg(rows, journals) {
 function buildFieldJson(slug, displayName, rows) {
   const fieldRows = rows.filter(r => fieldsOf(r).includes(displayName))
   const journals = buildJournals(fieldRows)
-  const policyAbbrevs = new Set(journals.filter(j => j.hasPolicy).map(j => j.name))
+  const policyAbbrevs = new Set(journals.filter(j => j.hasPolicy).map(j => j.abbrev))
   const policyRows = fieldRows.filter(r => policyAbbrevs.has(r.JCR_Abbrev))
   const noPolicyRows = fieldRows.filter(r => !policyAbbrevs.has(r.JCR_Abbrev))
   const policyJournals = journals.filter(j => j.hasPolicy)
@@ -213,7 +214,7 @@ function buildFieldJson(slug, displayName, rows) {
 
 function buildAllFieldsJson(rows, fieldJsons) {
   const journals = buildJournals(rows)
-  const policyAbbrevs = new Set(journals.filter(j => j.hasPolicy).map(j => j.name))
+  const policyAbbrevs = new Set(journals.filter(j => j.hasPolicy).map(j => j.abbrev))
   const policyRows = rows.filter(r => policyAbbrevs.has(r.JCR_Abbrev))
   const noPolicyRows = rows.filter(r => !policyAbbrevs.has(r.JCR_Abbrev))
   const policyJournals = journals.filter(j => j.hasPolicy)

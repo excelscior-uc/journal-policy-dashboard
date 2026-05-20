@@ -483,7 +483,8 @@
   "journals": [
     {
       "id": "am_j_hum_genet",
-      "name": "AM J HUM GENET",
+      "name": "American Journal of Human Genetics",
+      "abbrev": "AM J HUM GENET",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -636,7 +637,8 @@
     },
     {
       "id": "cancer_gene_ther",
-      "name": "CANCER GENE THER",
+      "name": "Cancer Gene Therapy",
+      "abbrev": "CANCER GENE THER",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -794,7 +796,8 @@
     },
     {
       "id": "chromosome_res",
-      "name": "CHROMOSOME RES",
+      "name": "Chromosome Research",
+      "abbrev": "CHROMOSOME RES",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -947,7 +950,8 @@
     },
     {
       "id": "circ-genom_precis_me",
-      "name": "CIRC-GENOM PRECIS ME",
+      "name": "Circulation-Genomic and Precision Medicine",
+      "abbrev": "CIRC-GENOM PRECIS ME",
       "hasPolicy": true,
       "policyYear": 2019,
       "chartData": [
@@ -1033,7 +1037,8 @@
     },
     {
       "id": "clin_epigenetics",
-      "name": "CLIN EPIGENETICS",
+      "name": "Clinical Epigenetics",
+      "abbrev": "CLIN EPIGENETICS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1176,161 +1181,9 @@
       "policyLines": []
     },
     {
-      "id": "gene_dev",
-      "name": "GENE DEV",
-      "hasPolicy": false,
-      "policyYear": null,
-      "chartData": [
-        {
-          "year": 2010,
-          "pct_only_bar": 75.43859649122807,
-          "pct_bar_informative": 19.88304093567251,
-          "pct_only_informative": 4.6783625730994105,
-          "pct_eligible": 83.41463414634146,
-          "eligibleArticles": 171,
-          "totalArticles": 205
-        },
-        {
-          "year": 2011,
-          "pct_only_bar": 68.18181818181817,
-          "pct_bar_informative": 25.97402597402597,
-          "pct_only_informative": 5.84415584415584,
-          "pct_eligible": 79.38144329896907,
-          "eligibleArticles": 154,
-          "totalArticles": 194
-        },
-        {
-          "year": 2012,
-          "pct_only_bar": 75.14124293785311,
-          "pct_bar_informative": 19.2090395480226,
-          "pct_only_informative": 5.649717514124291,
-          "pct_eligible": 88.94472361809045,
-          "eligibleArticles": 177,
-          "totalArticles": 199
-        },
-        {
-          "year": 2013,
-          "pct_only_bar": 64.9425287356322,
-          "pct_bar_informative": 29.88505747126437,
-          "pct_only_informative": 5.1724137931034395,
-          "pct_eligible": 89.69072164948454,
-          "eligibleArticles": 174,
-          "totalArticles": 194
-        },
-        {
-          "year": 2014,
-          "pct_only_bar": 51.515151515151516,
-          "pct_bar_informative": 43.636363636363626,
-          "pct_only_informative": 4.84848484848484,
-          "pct_eligible": 84.61538461538461,
-          "eligibleArticles": 165,
-          "totalArticles": 195
-        },
-        {
-          "year": 2015,
-          "pct_only_bar": 57.05882352941176,
-          "pct_bar_informative": 36.47058823529411,
-          "pct_only_informative": 6.47058823529411,
-          "pct_eligible": 88.54166666666666,
-          "eligibleArticles": 170,
-          "totalArticles": 192
-        },
-        {
-          "year": 2016,
-          "pct_only_bar": 51.23456790123457,
-          "pct_bar_informative": 41.9753086419753,
-          "pct_only_informative": 6.79012345679012,
-          "pct_eligible": 92.04545454545455,
-          "eligibleArticles": 162,
-          "totalArticles": 176
-        },
-        {
-          "year": 2017,
-          "pct_only_bar": 37.32394366197183,
-          "pct_bar_informative": 48.59154929577465,
-          "pct_only_informative": 14.084507042253518,
-          "pct_eligible": 89.30817610062893,
-          "eligibleArticles": 142,
-          "totalArticles": 159
-        },
-        {
-          "year": 2018,
-          "pct_only_bar": 40.625,
-          "pct_bar_informative": 43.75,
-          "pct_only_informative": 15.625,
-          "pct_eligible": 92.30769230769232,
-          "eligibleArticles": 96,
-          "totalArticles": 104
-        },
-        {
-          "year": 2019,
-          "pct_only_bar": 35.29411764705882,
-          "pct_bar_informative": 51.76470588235295,
-          "pct_only_informative": 12.94117647058823,
-          "pct_eligible": 90.42553191489363,
-          "eligibleArticles": 85,
-          "totalArticles": 94
-        },
-        {
-          "year": 2020,
-          "pct_only_bar": 25,
-          "pct_bar_informative": 51.19047619047619,
-          "pct_only_informative": 23.8095238095238,
-          "pct_eligible": 93.33333333333333,
-          "eligibleArticles": 84,
-          "totalArticles": 90
-        },
-        {
-          "year": 2021,
-          "pct_only_bar": 15.38461538461538,
-          "pct_bar_informative": 52.56410256410257,
-          "pct_only_informative": 32.05128205128205,
-          "pct_eligible": 91.76470588235294,
-          "eligibleArticles": 78,
-          "totalArticles": 85
-        },
-        {
-          "year": 2022,
-          "pct_only_bar": 14.28571428571428,
-          "pct_bar_informative": 57.14285714285714,
-          "pct_only_informative": 28.57142857142857,
-          "pct_eligible": 90.32258064516128,
-          "eligibleArticles": 56,
-          "totalArticles": 62
-        },
-        {
-          "year": 2023,
-          "pct_only_bar": 11.62790697674418,
-          "pct_bar_informative": 55.81395348837209,
-          "pct_only_informative": 32.558139534883715,
-          "pct_eligible": 91.48936170212765,
-          "eligibleArticles": 43,
-          "totalArticles": 47
-        },
-        {
-          "year": 2024,
-          "pct_only_bar": 7.5,
-          "pct_bar_informative": 62.5,
-          "pct_only_informative": 30,
-          "pct_eligible": 93.02325581395348,
-          "eligibleArticles": 40,
-          "totalArticles": 43
-        },
-        {
-          "year": 2025,
-          "pct_only_bar": 8.16326530612244,
-          "pct_bar_informative": 55.10204081632652,
-          "pct_only_informative": 36.734693877551024,
-          "pct_eligible": 90.74074074074075,
-          "eligibleArticles": 49,
-          "totalArticles": 54
-        }
-      ],
-      "policyLines": []
-    },
-    {
       "id": "gene_ther",
-      "name": "GENE THER",
+      "name": "Gene Therapy",
+      "abbrev": "GENE THER",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -1487,8 +1340,163 @@
       ]
     },
     {
+      "id": "gene_dev",
+      "name": "Genes & Development",
+      "abbrev": "GENE DEV",
+      "hasPolicy": false,
+      "policyYear": null,
+      "chartData": [
+        {
+          "year": 2010,
+          "pct_only_bar": 75.43859649122807,
+          "pct_bar_informative": 19.88304093567251,
+          "pct_only_informative": 4.6783625730994105,
+          "pct_eligible": 83.41463414634146,
+          "eligibleArticles": 171,
+          "totalArticles": 205
+        },
+        {
+          "year": 2011,
+          "pct_only_bar": 68.18181818181817,
+          "pct_bar_informative": 25.97402597402597,
+          "pct_only_informative": 5.84415584415584,
+          "pct_eligible": 79.38144329896907,
+          "eligibleArticles": 154,
+          "totalArticles": 194
+        },
+        {
+          "year": 2012,
+          "pct_only_bar": 75.14124293785311,
+          "pct_bar_informative": 19.2090395480226,
+          "pct_only_informative": 5.649717514124291,
+          "pct_eligible": 88.94472361809045,
+          "eligibleArticles": 177,
+          "totalArticles": 199
+        },
+        {
+          "year": 2013,
+          "pct_only_bar": 64.9425287356322,
+          "pct_bar_informative": 29.88505747126437,
+          "pct_only_informative": 5.1724137931034395,
+          "pct_eligible": 89.69072164948454,
+          "eligibleArticles": 174,
+          "totalArticles": 194
+        },
+        {
+          "year": 2014,
+          "pct_only_bar": 51.515151515151516,
+          "pct_bar_informative": 43.636363636363626,
+          "pct_only_informative": 4.84848484848484,
+          "pct_eligible": 84.61538461538461,
+          "eligibleArticles": 165,
+          "totalArticles": 195
+        },
+        {
+          "year": 2015,
+          "pct_only_bar": 57.05882352941176,
+          "pct_bar_informative": 36.47058823529411,
+          "pct_only_informative": 6.47058823529411,
+          "pct_eligible": 88.54166666666666,
+          "eligibleArticles": 170,
+          "totalArticles": 192
+        },
+        {
+          "year": 2016,
+          "pct_only_bar": 51.23456790123457,
+          "pct_bar_informative": 41.9753086419753,
+          "pct_only_informative": 6.79012345679012,
+          "pct_eligible": 92.04545454545455,
+          "eligibleArticles": 162,
+          "totalArticles": 176
+        },
+        {
+          "year": 2017,
+          "pct_only_bar": 37.32394366197183,
+          "pct_bar_informative": 48.59154929577465,
+          "pct_only_informative": 14.084507042253518,
+          "pct_eligible": 89.30817610062893,
+          "eligibleArticles": 142,
+          "totalArticles": 159
+        },
+        {
+          "year": 2018,
+          "pct_only_bar": 40.625,
+          "pct_bar_informative": 43.75,
+          "pct_only_informative": 15.625,
+          "pct_eligible": 92.30769230769232,
+          "eligibleArticles": 96,
+          "totalArticles": 104
+        },
+        {
+          "year": 2019,
+          "pct_only_bar": 35.29411764705882,
+          "pct_bar_informative": 51.76470588235295,
+          "pct_only_informative": 12.94117647058823,
+          "pct_eligible": 90.42553191489363,
+          "eligibleArticles": 85,
+          "totalArticles": 94
+        },
+        {
+          "year": 2020,
+          "pct_only_bar": 25,
+          "pct_bar_informative": 51.19047619047619,
+          "pct_only_informative": 23.8095238095238,
+          "pct_eligible": 93.33333333333333,
+          "eligibleArticles": 84,
+          "totalArticles": 90
+        },
+        {
+          "year": 2021,
+          "pct_only_bar": 15.38461538461538,
+          "pct_bar_informative": 52.56410256410257,
+          "pct_only_informative": 32.05128205128205,
+          "pct_eligible": 91.76470588235294,
+          "eligibleArticles": 78,
+          "totalArticles": 85
+        },
+        {
+          "year": 2022,
+          "pct_only_bar": 14.28571428571428,
+          "pct_bar_informative": 57.14285714285714,
+          "pct_only_informative": 28.57142857142857,
+          "pct_eligible": 90.32258064516128,
+          "eligibleArticles": 56,
+          "totalArticles": 62
+        },
+        {
+          "year": 2023,
+          "pct_only_bar": 11.62790697674418,
+          "pct_bar_informative": 55.81395348837209,
+          "pct_only_informative": 32.558139534883715,
+          "pct_eligible": 91.48936170212765,
+          "eligibleArticles": 43,
+          "totalArticles": 47
+        },
+        {
+          "year": 2024,
+          "pct_only_bar": 7.5,
+          "pct_bar_informative": 62.5,
+          "pct_only_informative": 30,
+          "pct_eligible": 93.02325581395348,
+          "eligibleArticles": 40,
+          "totalArticles": 43
+        },
+        {
+          "year": 2025,
+          "pct_only_bar": 8.16326530612244,
+          "pct_bar_informative": 55.10204081632652,
+          "pct_only_informative": 36.734693877551024,
+          "pct_eligible": 90.74074074074075,
+          "eligibleArticles": 49,
+          "totalArticles": 54
+        }
+      ],
+      "policyLines": []
+    },
+    {
       "id": "genes_dis",
-      "name": "GENES DIS",
+      "name": "Genes & Diseases",
+      "abbrev": "GENES DIS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1605,7 +1613,8 @@
     },
     {
       "id": "genes_nutr",
-      "name": "GENES NUTR",
+      "name": "Genes and Nutrition",
+      "abbrev": "GENES NUTR",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -1758,7 +1767,8 @@
     },
     {
       "id": "genet_med",
-      "name": "GENET MED",
+      "name": "Genetics in Medicine",
+      "abbrev": "GENET MED",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -1916,7 +1926,8 @@
     },
     {
       "id": "genome_biol",
-      "name": "GENOME BIOL",
+      "name": "Genome Biology",
+      "abbrev": "GENOME BIOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2069,7 +2080,8 @@
     },
     {
       "id": "genome_med",
-      "name": "GENOME MED",
+      "name": "Genome Medicine",
+      "abbrev": "GENOME MED",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2222,7 +2234,8 @@
     },
     {
       "id": "genome_res",
-      "name": "GENOME RES",
+      "name": "Genome Research",
+      "abbrev": "GENOME RES",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2375,7 +2388,8 @@
     },
     {
       "id": "genomics",
-      "name": "GENOMICS",
+      "name": "Genomics",
+      "abbrev": "GENOMICS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2528,7 +2542,8 @@
     },
     {
       "id": "hortic_res-england",
-      "name": "HORTIC RES-ENGLAND",
+      "name": "Horticulture Research",
+      "abbrev": "HORTIC RES-ENGLAND",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -2650,7 +2665,8 @@
     },
     {
       "id": "hum_gene_ther",
-      "name": "HUM GENE THER",
+      "name": "Human Gene Therapy",
+      "abbrev": "HUM GENE THER",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2803,7 +2819,8 @@
     },
     {
       "id": "hum_mol_genet",
-      "name": "HUM MOL GENET",
+      "name": "Human Molecular Genetics",
+      "abbrev": "HUM MOL GENET",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -2956,7 +2973,8 @@
     },
     {
       "id": "j_med_genet",
-      "name": "J MED GENET",
+      "name": "Journal of Medical Genetics",
+      "abbrev": "J MED GENET",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3109,7 +3127,8 @@
     },
     {
       "id": "microb_genomics",
-      "name": "MICROB GENOMICS",
+      "name": "Microbial Genomics",
+      "abbrev": "MICROB GENOMICS",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3217,7 +3236,8 @@
     },
     {
       "id": "mol_autism",
-      "name": "MOL AUTISM",
+      "name": "Molecular Autism",
+      "abbrev": "MOL AUTISM",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3370,7 +3390,8 @@
     },
     {
       "id": "mol_biol_evol",
-      "name": "MOL BIOL EVOL",
+      "name": "Molecular Biology and Evolution",
+      "abbrev": "MOL BIOL EVOL",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3523,7 +3544,8 @@
     },
     {
       "id": "mol_ther",
-      "name": "MOL THER",
+      "name": "Molecular Therapy",
+      "abbrev": "MOL THER",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
@@ -3676,7 +3698,8 @@
     },
     {
       "id": "nat_genet",
-      "name": "NAT GENET",
+      "name": "Nature Genetics",
+      "abbrev": "NAT GENET",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -3834,7 +3857,8 @@
     },
     {
       "id": "npj_genom_med",
-      "name": "NPJ GENOM MED",
+      "name": "Npj Genomic Medicine",
+      "abbrev": "NPJ GENOM MED",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -3938,7 +3962,8 @@
     },
     {
       "id": "oncogene",
-      "name": "ONCOGENE",
+      "name": "Oncogene",
+      "abbrev": "ONCOGENE",
       "hasPolicy": true,
       "policyYear": 2013,
       "chartData": [
@@ -4096,7 +4121,8 @@
     },
     {
       "id": "physiol_genomics",
-      "name": "PHYSIOL GENOMICS",
+      "name": "Physiological Genomics",
+      "abbrev": "PHYSIOL GENOMICS",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -4254,7 +4280,8 @@
     },
     {
       "id": "plos_genet",
-      "name": "PLOS GENET",
+      "name": "Plos Genetics",
+      "abbrev": "PLOS GENET",
       "hasPolicy": true,
       "policyYear": 2017,
       "chartData": [
@@ -4412,7 +4439,8 @@
     },
     {
       "id": "theor_appl_genet",
-      "name": "THEOR APPL GENET",
+      "name": "Theoretical and Applied Genetics",
+      "abbrev": "THEOR APPL GENET",
       "hasPolicy": false,
       "policyYear": null,
       "chartData": [
