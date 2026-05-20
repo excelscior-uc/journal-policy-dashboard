@@ -5,7 +5,8 @@ Reads the aggregated journal × year CSV produced by step 2 and writes a fully
 self-contained, single-file HTML dashboard powered by Plotly.js.
 
 The output file requires no web server and no internet connection to view — open
-it in any modern browser. 
+it in any modern browser. For GitHub Pages deployment, rename the output file
+to index.html and commit it to the repository root or the /docs folder.
 
 Pipeline position
 -----------------
@@ -14,8 +15,8 @@ Pipeline position
                                         sankey_workflow_TIMESTAMP.html
     step3_generate_dashboard.py       →  index_TIMESTAMP.html
 
-The html can be served as a static file — no server configuration needed.
 
+The html can be served as a static file — no server configuration needed.
 The dashboard loads Plotly.js from the Plotly CDN on first visit. Subsequent
 visits use the browser cache; the rest of the file is self-contained HTML/JS.
 
@@ -536,6 +537,179 @@ def _build_about_panel(about_agg_all_div, about_agg_pol_div, about_agg_npo_div,
     </div>
     <div class="collapsible-section">
       <button class="collapsible-toggle" onclick="toggleSection(this)">
+        <span class="collapsible-icon">▸</span>How to Use This Dashboard
+      </button>
+      <div class="collapsible-body" style="display:none;">
+        <p style="font-size:0.88rem;color:#6c757d;margin:0 0 14px;line-height:1.6;">
+          A quick reference for every interactive control in the dashboard.
+        </p>
+        <div class="guide-grid">
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">☰</div>
+              <p class="guide-card-title">Sidebar navigation</p>
+            </div>
+            <p class="guide-card-body">
+              Click any link in the left sidebar to switch between panels.
+              <ul>
+                <li><span class="ui-chip">ℹ About</span> — study background, metrics, and this guide</li>
+                <li><span class="ui-chip">All Research Fields</span> — global overview and one aggregated chart per field</li>
+                <li><span class="ui-chip">&lt;Field name&gt;</span> — aggregated field trend plus individual journal charts</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">👁</div>
+              <p class="guide-card-title">Show / hide all (top bar)</p>
+            </div>
+            <p class="guide-card-body">
+              The toggle buttons in the top toolbar hide or reveal a metric across
+              <em>every</em> chart on the page at once. A strikethrough means the
+              metric is currently hidden. Tap again to restore it.
+              <ul>
+                <li><span class="swatch-inline" style="background:#c0392b;"></span>
+                    <strong>% only bar</strong> — articles with bar charts only</li>
+                <li><span class="swatch-inline" style="background:#e8998d;"></span>
+                    <strong>% bar and informative</strong> — both types present</li>
+                <li><span class="swatch-inline" style="background:#76b5b2;"></span>
+                    <strong>% only informative</strong> — informative charts only</li>
+                <li><span class="swatch-inline" style="background:rgba(253,231,37,0.8);border:1px solid #b8a000;"></span>
+                    <strong>Policy adoption</strong> — vertical policy-year marker</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">⊞</div>
+              <p class="guide-card-title">Show charts (top bar)</p>
+            </div>
+            <p class="guide-card-body">
+              The <span class="ui-chip">Show charts</span> dropdown in the top bar
+              filters the aggregated chart cards across the active tab:
+              <ul>
+                <li><strong>All</strong> — shows All journals, Policy, and Non-Policy cards</li>
+                <li><strong>Policy journals only</strong> — hides the Non-Policy card</li>
+                <li><strong>Non-Policy journals only</strong> — hides the Policy card</li>
+              </ul>
+              The selection applies to the currently visible tab; switching tabs
+              re-applies the same filter automatically.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">⇔</div>
+              <p class="guide-card-title">Columns slider</p>
+            </div>
+            <p class="guide-card-body">
+              Each panel has one or two <span class="ui-chip">Columns</span> sliders
+              that adjust the number of grid columns:
+              <ul>
+                <li><strong>1–3 columns</strong> — for aggregated trend cards
+                    (All / Policy / Non-Policy)</li>
+                <li><strong>1–6 columns</strong> — for individual journal cards</li>
+              </ul>
+              Titles and x-axis tick spacing adapt automatically as cards narrow.
+              In multi-column grids, all y-axes are aligned to the same height.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">🔍</div>
+              <p class="guide-card-title">Find journal</p>
+            </div>
+            <p class="guide-card-body">
+              Type in the <span class="ui-chip">Find journal</span> box on any
+              field tab to filter journal cards:
+              <ul>
+                <li>Matching cards remain fully visible; others are dimmed.</li>
+                <li>Select a name from the autocomplete list (or press
+                    <span class="kbd">Enter</span>) to scroll directly to that card
+                    and briefly highlight its border.</li>
+                <li>Click <span class="kbd">✕</span> to clear the search and
+                    restore all cards.</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">⚙</div>
+              <p class="guide-card-title">Show journals filter</p>
+            </div>
+            <p class="guide-card-body">
+              The <span class="ui-chip">Show journals</span> dropdown on each field
+              tab filters the journal card grid by policy status:
+              <ul>
+                <li><strong>All</strong> — every journal in the field</li>
+                <li><strong>Policy only</strong> — journals with an editorial
+                    visualisation policy</li>
+                <li><strong>Non-Policy only</strong> — journals without such a policy</li>
+              </ul>
+              The search box and policy filter work together — both are applied
+              simultaneously.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">⠿</div>
+              <p class="guide-card-title">Drag-and-drop reordering</p>
+            </div>
+            <p class="guide-card-body">
+              Grab any chart card by the dotted vertical bar on its left edge
+              and drag it to a new position within the same grid. This lets you
+              place journals side by side for direct comparison. The order resets
+              when you navigate away from the tab.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">📊</div>
+              <p class="guide-card-title">Chart interaction (Plotly)</p>
+            </div>
+            <p class="guide-card-body">
+              All charts are interactive:
+              <ul>
+                <li><strong>Hover</strong> over a data point — see year, value,
+                    eligible and total article counts, and policy year (journal charts).</li>
+                <li><strong>Click</strong> a legend item — hide/show that line on
+                    that chart only.</li>
+                <li><strong>Double-click</strong> a legend item — isolate it
+                    (hide all others); double-click again to restore.</li>
+                <li><strong>Box-select or lasso</strong> a chart area to zoom in;
+                    <strong>double-click</strong> the plot to reset zoom.</li>
+                <li><strong>Hover over a yellow band</strong> on aggregated charts —
+                    see the policy year and the share of journals that adopted it
+                    that year.</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-header">
+              <div class="guide-icon">▾</div>
+              <p class="guide-card-title">Collapsible sections</p>
+            </div>
+            <p class="guide-card-body">
+              Click any section header (marked <span class="kbd">▾</span> or
+              <span class="kbd">▸</span>) to collapse or expand its content. All
+              sections on the About tab start expanded. Sections within field tabs
+              are always open.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="collapsible-section">
+      <button class="collapsible-toggle" onclick="toggleSection(this)">
         <span class="collapsible-icon">▸</span>References &amp; Bibliography
       </button>
       <div class="collapsible-body" style="display:none;">
@@ -926,6 +1100,88 @@ def generate_dashboard_html(csv_path: str,
     .footer-body {{ padding: 8px 16px 10px; display: flex; align-items: center;
                     justify-content: center; }}
     .footer-body img {{ max-height: 48px; max-width: 100%; object-fit: contain; }}
+    /* ── Interaction guide styles ─────────────────────────────────────────── */
+    .guide-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 10px;
+      margin-bottom: 6px;
+    }}
+    .guide-card {{
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 14px 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }}
+    .guide-card-header {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 2px;
+    }}
+    .guide-icon {{
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: #2c3e50;
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }}
+    .guide-card-title {{
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin: 0;
+    }}
+    .guide-card-body {{
+      font-size: 0.84rem;
+      color: #495057;
+      line-height: 1.65;
+      margin: 0;
+    }}
+    .guide-card-body ul {{
+      margin: 4px 0 0 1.1em;
+      padding: 0;
+    }}
+    .guide-card-body li {{
+      margin-bottom: 2px;
+    }}
+    .kbd {{
+      display: inline-block;
+      padding: 1px 6px;
+      font-size: 0.77rem;
+      font-family: 'Consolas', 'SF Mono', monospace;
+      color: #2c3e50;
+      background: #f1f3f5;
+      border: 1px solid #ced4da;
+      border-bottom-width: 2px;
+      border-radius: 4px;
+      line-height: 1.5;
+      white-space: nowrap;
+    }}
+    .ui-chip {{
+      display: inline-block;
+      padding: 1px 7px;
+      font-size: 0.77rem;
+      color: #2c3e50;
+      background: #e9ecef;
+      border: 1px solid #ced4da;
+      border-radius: 10px;
+      line-height: 1.6;
+      white-space: nowrap;
+      font-weight: 600;
+    }}
+    .swatch-inline {{
+      display: inline-block;
+      width: 20px; height: 4px;
+      border-radius: 2px;
+      vertical-align: middle;
+      margin: 0 2px;
+    }}
     /* Loading overlay — visible until all Plotly charts have been initialised */
     #loading-overlay {{
       position: fixed; inset: 0; z-index: 9999;
