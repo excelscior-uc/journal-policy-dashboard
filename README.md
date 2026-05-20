@@ -20,14 +20,14 @@ Research fields covered: Cardiac & Cardiovascular Systems · Clinical Neurology 
 
 ---
 
-## Repository contents
+## Files
 
-| File | Description |
-|------|-------------|
-| `bz_journal_year_percentages_All_Fields.csv` | Aggregated dataset — 3,211 rows, one per journal × year |
-| `step1_merge_bz_results.py` | Merges per-journal barzooka screening CSVs into a single file |
-| `step2_build_aggregated_dataset_v3.py` | Filters metadata, joins BZ results, aggregates to journal × year |
-| `step3_generate_dashboard_v10.py` | Reads the aggregated CSV and writes the self-contained HTML dashboard |
+| File                                         | Description                                                           |
+| -------------------------------------------- | --------------------------------------------------------------------- |
+| `bz_journal_year_percentages_All_Fields.csv` | Aggregated dataset — 3,211 rows, one per journal × year               |
+| `step1_merge_bz_results.py`                  | Merges per-journal barzooka screening CSVs into a single file         |
+| `step2_build_aggregated_dataset_v3.py`       | Filters metadata, joins BZ results, aggregates to journal × year      |
+| `step3_generate_dashboard_v10.py`            | Reads the aggregated CSV and writes the self-contained HTML dashboard |
 
 The dashboard (`index.html`) is generated from `step3_generate_dashboard_v10.py` using the aggregated CSV as input. Steps 1 and 2 require the raw barzooka screening files and full article metadata, which are not included here.
 
@@ -37,24 +37,24 @@ The dashboard (`index.html`) is generated from `step3_generate_dashboard_v10.py`
 
 3,211 rows · 22 columns · one row per journal × year (2010–2025)
 
-| Column | Description |
-|--------|-------------|
-| `Journal_Name` | Journal display name |
-| `year` | Publication year |
-| `e_issn` | Electronic ISSN (from barzooka screening filename) |
-| `JCR_Abbrev` | WoS JCR abbreviation — unique journal identifier |
-| `Field` | Primary WoS research field |
-| `All_Fields` | All WoS fields the journal belongs to (semicolon-separated) |
-| `policy` | `1` if the journal adopted an editorial visualisation policy, else `0` |
-| `policy_year` | Year of policy adoption (blank if no policy) |
-| `n_articles` | Total screened articles that year (before eligibility filter) |
-| `n_bar_or_informative` | Eligible articles — denominator for proportion columns |
-| `sum_bar` / `sum_inf` | Eligible articles containing any bar / informative chart |
-| `sum_only_bar` / `sum_only_inf` / `sum_bar_and_inf` | Mutually exclusive article counts |
-| `sum_eligible` | = `n_bar_or_informative` (articles with ≥1 bar or informative chart) |
-| `p_bar` / `p_informative` | Proportion of eligible articles with any bar / informative chart (0–1) |
-| `p_only_bar` / `p_only_inf` / `p_bar_and_inf` | Proportions for mutually exclusive categories (0–1) |
-| `p_eligible` | Fraction of all screened articles that are eligible (0–1; not plotted in dashboard) |
+| Column                                              | Description                                                                         |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `Journal_Name`                                      | Journal display name                                                                |
+| `year`                                              | Publication year                                                                    |
+| `e_issn`                                            | Electronic ISSN (from barzooka screening filename)                                  |
+| `JCR_Abbrev`                                        | WoS JCR abbreviation — unique journal identifier                                    |
+| `Field`                                             | Primary WoS research field                                                          |
+| `All_Fields`                                        | All WoS fields the journal belongs to (semicolon-separated)                         |
+| `policy`                                            | `1` if the journal adopted an editorial visualisation policy, else `0`              |
+| `policy_year`                                       | Year of policy adoption (blank if no policy)                                        |
+| `n_articles`                                        | Total screened articles that year (before eligibility filter)                       |
+| `n_bar_or_informative`                              | Eligible articles — denominator for proportion columns                              |
+| `sum_bar` / `sum_inf`                               | Eligible articles containing any bar / informative chart                            |
+| `sum_only_bar` / `sum_only_inf` / `sum_bar_and_inf` | Mutually exclusive article counts                                                   |
+| `sum_eligible`                                      | = `n_bar_or_informative` (articles with ≥1 bar or informative chart)                |
+| `p_bar` / `p_informative`                           | Proportion of eligible articles with any bar / informative chart (0–1)              |
+| `p_only_bar` / `p_only_inf` / `p_bar_and_inf`       | Proportions for mutually exclusive categories (0–1)                                 |
+| `p_eligible`                                        | Fraction of all screened articles that are eligible (0–1; not plotted in dashboard) |
 
 Proportions are stored as 0–1 in the CSV and scaled to 0–100 by the dashboard script before charting.
 
@@ -77,14 +77,6 @@ python step3_generate_dashboard_v10.py \
     --csv    bz_journal_year_percentages_All_Fields.csv \
     --output dashboard_output/
 ```
-
-Open the resulting `index_TIMESTAMP.html` in any modern browser — no server required.
-
-### Publish on GitHub Pages
-
-1. Rename the output file to `index.html`.
-2. Commit and push it to the branch/folder configured as your GitHub Pages source (e.g. `main` branch root, or `main:/docs`).
-3. GitHub Pages serves it as a static file — no configuration needed. Gzip compression is applied automatically, reducing transfer size by ~70 %.
 
 ---
 
@@ -123,25 +115,25 @@ step2_build_aggregated_dataset_v3.py →  bz_journal_year_percentages_All_Fields
 step3_generate_dashboard_v10.py  →  index_TIMESTAMP.html
 ```
 
-| Stage | Rows | Notes |
-|-------|------|-------|
-| metadata_full.csv (raw) | 622,085 | Full PubMed export |
-| After `is_in_main_folder = TRUE` | 571,769 | In-scope articles |
-| After DOI deduplication | ~571,744 | First occurrence kept |
-| After year filter (2010–2025) | 570,410 | |
-| After left join with BZ results | 570,410 | |
-| After removing no-result rows | 570,402 | All-NULL chart columns |
-| After eligibility filter (`has_bar_or_inf = 1`) | 360,858 | |
-| Aggregated (journal × year) | **3,211** | Dashboard input |
+| Stage                                           | Rows      | Notes                  |
+| ----------------------------------------------- | --------- | ---------------------- |
+| metadata_full.csv (raw)                         | 622,085   | Full PubMed export     |
+| After `is_in_main_folder = TRUE`                | 571,769   | Downloaded articles    |
+| After DOI deduplication                         | ~571,744  | First occurrence kept  |
+| After year filter (2010–2025)                   | 570,410   |                        |
+| After left join with BZ results                 | 570,410   |                        |
+| After removing no-result rows                   | 570,402   | All-NULL chart columns |
+| After eligibility filter (`has_bar_or_inf = 1`) | 360,858   |                        |
+| Aggregated (journal × year)                     | **3,211** | Dashboard input        |
 
 ---
 
 ## Key references
 
-- Weissgerber et al. (2015). Beyond bar and line graphs. *PLOS Biology*. [doi:10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128)
-- Weissgerber et al. (2019). From static to interactive. *PLOS Biology*. [doi:10.1371/journal.pbio.1002484](https://doi.org/10.1371/journal.pbio.1002484)
-- Riedel et al. (2022). Replacing bar graphs. *Clinical Science*. [doi:10.1042/CS20220287](https://doi.org/10.1042/CS20220287)
-- Riedel N et al. *barzooka* — automated figure screening tool. [GitHub](https://github.com/quest-bih/barzooka)
+- Weissgerber et al. (2015). Beyond bar and line graphs. _PLOS Biology_. [doi:10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128)
+- Weissgerber et al. (2019). From static to interactive. _PLOS Biology_. [doi:10.1371/journal.pbio.1002484](https://doi.org/10.1371/journal.pbio.1002484)
+- Riedel et al. (2022). Replacing bar graphs. _Clinical Science_. [doi:10.1042/CS20220287](https://doi.org/10.1042/CS20220287)
+- Riedel N et al. _barzooka_ — automated figure screening tool. [GitHub](https://github.com/quest-bih/barzooka)
 - Schulz et al. (2025). Do journal policies reduce the use of bar graphs? [osf.io/tcyxg](https://osf.io/tcyxg/overview)
 
 ---
