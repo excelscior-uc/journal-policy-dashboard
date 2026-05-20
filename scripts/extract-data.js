@@ -1,97 +1,14 @@
 // scripts/extract-data.js
+//
+// Builds public/data/*.json from data/bz_journal_year_percentages_All_Fields.csv.
+// Output schema matches what src/pages/FieldPage.jsx and src/components/ChartCard.jsx
+// already expect; the rest of the app is untouched.
+
 import { readFileSync, writeFileSync, mkdirSync } from 'fs'
-import { createContext, runInContext } from 'vm'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-
-export const seriesKeyMap = {
-  '% only bar': 'pct_only_bar',
-  '% bar and informative': 'pct_bar_informative',
-  '% only informative': 'pct_only_informative',
-  '% eligible articles': 'pct_eligible',
-}
-
-function getSeriesKey(trace) {
-  // Try legendgroup first, then name (source HTML omits legendgroup on data traces)
-  return seriesKeyMap[trace.legendgroup] || seriesKeyMap[trace.name] || null
-}
-
-/**
- * Decode a Plotly axis value — either a plain JS array or a binary-encoded
- * {dtype, bdata} object (base64 little-endian float64 array).
- */
-function decodeAxis(v) {
-  if (Array.isArray(v)) return v
-  if (v && typeof v === 'object' && v.bdata) {
-    const buf = Buffer.from(v.bdata, 'base64')
-    if (buf.length % 8 !== 0) return []
-    const out = []
-    for (let i = 0; i < buf.length; i += 8) {
-      out.push(buf.readDoubleLE(i))
-    }
-    return out
-  }
-  return []
-}
-
-export function tracesToChartData(traces) {
-  const dataTraces = traces.filter(t => t.legendgroup !== 'policy_vlines' && getSeriesKey(t))
-  if (!dataTraces.length) return []
-
-  const years = decodeAxis(dataTraces[0].x)
-  const countTrace = dataTraces.find(t => Array.isArray(t.customdata) && t.customdata.length > 0)
-
-  return years.map((year, i) => {
-    const point = { year: Math.round(year) }
-    for (const trace of dataTraces) {
-      const key = getSeriesKey(trace)
-      if (key) {
-        const vals = decodeAxis(trace.y)
-        point[key] = vals[i] ?? null
-      }
-    }
-    if (countTrace) {
-      const row = countTrace.customdata[i]
-      if (Array.isArray(row)) {
-        point.eligibleArticles = row[0] ?? null
-        point.totalArticles = row[1] ?? null
-      }
-    }
-    return point
-  })
-}
-
-export function tracesToPolicyLines(traces) {
-  const seen = new Set()
-  return traces
-    .filter(t => t.legendgroup === 'policy_vlines')
-    .reduce((acc, t) => {
-      const xArr = decodeAxis(t.x)
-      const year = Math.round(xArr[0])
-      if (seen.has(year)) return acc
-      seen.add(year)
-      const match = t.hovertemplate?.match(/(\d+% of journals[^<]*)/)
-      acc.push({ year, label: match ? match[1] : '' })
-      return acc
-    }, [])
-}
-
-const FIELD_SLUG_MAP = {
-  Cardiac_and_Cardiovascular_Systems: 'cardiac',
-  Clinical_Neurology: 'clinical-neurology',
-  Endocrinology_and_Metabolism: 'endocrinology',
-  Genetics_and_Heredity: 'genetics',
-  Immunology: 'immunology',
-  Neurosciences: 'neurosciences',
-  Oncology: 'oncology',
-  Orthopedics: 'orthopedics',
-  Pharmacology_and_Pharmacy: 'pharmacology',
-  Physiology: 'physiology',
-  Rheumatology: 'rheumatology',
-  Urology_and_Nephrology: 'urology',
-}
 
 const FIELD_DISPLAY_MAP = {
   cardiac: 'Cardiac & Cardiovascular Systems',
@@ -108,108 +25,241 @@ const FIELD_DISPLAY_MAP = {
   urology: 'Urology & Nephrology',
 }
 
-function extractPlots(html) {
-  const captured = {}
-  const scriptRegex = /<script>([\s\S]*?)<\/script>/g
-  let match
-  while ((match = scriptRegex.exec(html)) !== null) {
-    const code = match[1]
-    if (!code.includes('Plotly.newPlot')) continue
-    try {
-      const ctx = createContext({
-        Plotly: { newPlot: (id, data, layout) => { captured[id] = { data, layout } } },
-      })
-      runInContext(code, ctx)
-    } catch (_) { /* skip non-chart blocks */ }
+const DISPLAY_TO_SLUG = Object.fromEntries(
+  Object.entries(FIELD_DISPLAY_MAP).map(([slug, name]) => [name, slug])
+)
+
+// --- CSV parsing (RFC 4180-ish: quoted fields, escaped quotes) ---
+
+export function parseCsv(text) {
+  const rows = []
+  let field = ''
+  let row = []
+  let inQuotes = false
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i]
+    if (inQuotes) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { field += '"'; i++ } else { inQuotes = false }
+      } else {
+        field += c
+      }
+    } else if (c === '"') {
+      inQuotes = true
+    } else if (c === ',') {
+      row.push(field); field = ''
+    } else if (c === '\n') {
+      row.push(field); rows.push(row); row = []; field = ''
+    } else if (c === '\r') {
+      // skip; \n handles row end
+    } else {
+      field += c
+    }
   }
-  return captured
+  if (field.length > 0 || row.length > 0) { row.push(field); rows.push(row) }
+  if (!rows.length) return []
+  const header = rows[0]
+  return rows.slice(1).filter(r => r.length === header.length).map(r => {
+    const obj = {}
+    for (let i = 0; i < header.length; i++) obj[header[i]] = r[i]
+    return obj
+  })
 }
 
-function countsByPolicyYear(journals) {
+function num(v) {
+  if (v == null || v === '') return null
+  const n = Number(v)
+  return Number.isFinite(n) ? n : null
+}
+
+function jcrId(abbrev) {
+  return abbrev.toLowerCase().replace(/\s+/g, '_')
+}
+
+function fieldsOf(row) {
+  // All_Fields is a semicolon-delimited list of WoS categories.
+  return (row.All_Fields || '').split(';').map(s => s.trim()).filter(Boolean)
+}
+
+// --- Aggregations ---
+
+export function aggregateChartData(rows) {
+  const byYear = new Map()
+  for (const r of rows) {
+    const y = num(r.year); if (y == null) continue
+    const ob = num(r.sum_only_bar) ?? 0
+    const oi = num(r.sum_only_inf) ?? 0
+    const bi = num(r.sum_bar_and_inf) ?? 0
+    const e = num(r.sum_eligible) ?? 0
+    const n = num(r.n_articles) ?? 0
+    const acc = byYear.get(y) ?? { ob: 0, oi: 0, bi: 0, e: 0, n: 0 }
+    acc.ob += ob; acc.oi += oi; acc.bi += bi; acc.e += e; acc.n += n
+    byYear.set(y, acc)
+  }
+  return [...byYear.keys()].sort((a, b) => a - b).map(year => {
+    const a = byYear.get(year)
+    return {
+      year,
+      pct_only_bar: a.e ? (a.ob / a.e) * 100 : 0,
+      pct_bar_informative: a.e ? (a.bi / a.e) * 100 : 0,
+      pct_only_informative: a.e ? (a.oi / a.e) * 100 : 0,
+      pct_eligible: a.n ? (a.e / a.n) * 100 : 0,
+      eligibleArticles: a.e,
+      totalArticles: a.n,
+    }
+  })
+}
+
+function journalChartData(rows) {
+  return rows
+    .map(r => ({
+      year: num(r.year),
+      e: num(r.sum_eligible) ?? 0,
+      n: num(r.n_articles) ?? 0,
+      ob: num(r.p_only_bar) ?? 0,
+      oi: num(r.p_only_inf) ?? 0,
+      bi: num(r.p_bar_and_inf) ?? 0,
+      pe: num(r.p_eligible) ?? 0,
+    }))
+    .filter(r => r.year != null)
+    .sort((a, b) => a.year - b.year)
+    .map(r => ({
+      year: r.year,
+      pct_only_bar: r.ob * 100,
+      pct_bar_informative: r.bi * 100,
+      pct_only_informative: r.oi * 100,
+      pct_eligible: r.pe * 100,
+      eligibleArticles: r.e,
+      totalArticles: r.n,
+    }))
+}
+
+function uniqueJournals(rows) {
+  // Identity = JCR_Abbrev. Pick the latest row for stable policy/policy_year fields.
   const m = new Map()
-  for (const j of journals) {
-    if (j.policyYear != null) m.set(j.policyYear, (m.get(j.policyYear) ?? 0) + 1)
+  for (const r of rows) {
+    const abbrev = r.JCR_Abbrev
+    if (!abbrev) continue
+    const prev = m.get(abbrev)
+    if (!prev || num(r.year) > num(prev.year)) m.set(abbrev, r)
   }
   return m
 }
 
-function annotatePolicyLines(agg, counts) {
-  if (!agg?.policyLines) return agg
-  return { ...agg, policyLines: agg.policyLines.map(pl => ({ ...pl, count: counts.get(pl.year) ?? 0 })) }
+function buildJournals(rows) {
+  const meta = uniqueJournals(rows)
+  const byAbbrev = new Map()
+  for (const r of rows) {
+    const k = r.JCR_Abbrev
+    if (!k) continue
+    if (!byAbbrev.has(k)) byAbbrev.set(k, [])
+    byAbbrev.get(k).push(r)
+  }
+  return [...meta.entries()]
+    .map(([abbrev, ref]) => {
+      const hasPolicy = num(ref.policy) === 1
+      const policyYear = hasPolicy ? num(ref.policy_year) : null
+      return {
+        id: jcrId(abbrev),
+        name: abbrev,
+        hasPolicy,
+        policyYear,
+        chartData: journalChartData(byAbbrev.get(abbrev)),
+        policyLines: policyYear != null ? [{ year: policyYear, label: '' }] : [],
+      }
+    })
+    .sort((a, b) => a.name.localeCompare(b.name))
 }
 
-function buildFieldJson(slug, fieldKey, plots) {
-  const agg = (suffix) => {
-    const key = `plot_fagg_${fieldKey}_${suffix}`
-    const p = plots[key]
-    if (!p) return null
-    return { chartData: tracesToChartData(p.data), policyLines: tracesToPolicyLines(p.data) }
+function policyLinesFor(journals) {
+  const counts = new Map()
+  for (const j of journals) {
+    if (j.policyYear == null) continue
+    counts.set(j.policyYear, (counts.get(j.policyYear) ?? 0) + 1)
   }
-
-  const journalPrefix = `jplot_${fieldKey}_`
-  const journalKeys = Object.keys(plots).filter(k => k.startsWith(journalPrefix))
-
-  const journals = journalKeys.map(k => {
-    const name = k.replace(journalPrefix, '').replace(/_/g, ' ')
-    const p = plots[k]
-    const policyLines = tracesToPolicyLines(p.data)
-    return {
-      id: k.replace(journalPrefix, '').toLowerCase(),
-      name,
-      hasPolicy: policyLines.length > 0,
-      policyYear: policyLines[0]?.year ?? null,
-      chartData: tracesToChartData(p.data),
-      policyLines,
-    }
+  const total = journals.length
+  return [...counts.keys()].sort((a, b) => a - b).map(year => {
+    const count = counts.get(year)
+    const pct = total ? Math.round((count / total) * 100) : 0
+    return { year, label: `${pct}% of journals adopted`, count }
   })
+}
 
-  const counts = countsByPolicyYear(journals)
+function buildAgg(rows, journals) {
+  return {
+    chartData: aggregateChartData(rows),
+    policyLines: policyLinesFor(journals),
+  }
+}
+
+function buildFieldJson(slug, displayName, rows) {
+  const fieldRows = rows.filter(r => fieldsOf(r).includes(displayName))
+  const journals = buildJournals(fieldRows)
+  const policyAbbrevs = new Set(journals.filter(j => j.hasPolicy).map(j => j.name))
+  const policyRows = fieldRows.filter(r => policyAbbrevs.has(r.JCR_Abbrev))
+  const noPolicyRows = fieldRows.filter(r => !policyAbbrevs.has(r.JCR_Abbrev))
+  const policyJournals = journals.filter(j => j.hasPolicy)
+  const noPolicyJournals = journals.filter(j => !j.hasPolicy)
 
   return {
-    field: FIELD_DISPLAY_MAP[slug],
+    field: displayName,
     slug,
-    aggAll: annotatePolicyLines(agg('all'), counts),
-    aggPolicy: annotatePolicyLines(agg('pol'), counts),
-    aggNoPolicy: annotatePolicyLines(agg('npo'), counts),
+    aggAll: buildAgg(fieldRows, journals),
+    aggPolicy: buildAgg(policyRows, policyJournals),
+    aggNoPolicy: buildAgg(noPolicyRows, noPolicyJournals),
     journals,
   }
 }
 
-function buildAllFieldsJson(plots, fieldJsons) {
-  const p = plots['plot_global_agg_global']
-  if (!p) return null
-  const allJournals = fieldJsons.flatMap(f => f.journals)
-  const globalCounts = countsByPolicyYear(allJournals)
+function buildAllFieldsJson(rows, fieldJsons) {
+  const journals = buildJournals(rows)
+  const policyAbbrevs = new Set(journals.filter(j => j.hasPolicy).map(j => j.name))
+  const policyRows = rows.filter(r => policyAbbrevs.has(r.JCR_Abbrev))
+  const noPolicyRows = rows.filter(r => !policyAbbrevs.has(r.JCR_Abbrev))
+  const policyJournals = journals.filter(j => j.hasPolicy)
+  const noPolicyJournals = journals.filter(j => !j.hasPolicy)
+
   return {
     field: 'All Research Fields',
     slug: 'all-fields',
-    aggAll: annotatePolicyLines({ chartData: tracesToChartData(p.data), policyLines: tracesToPolicyLines(p.data) }, globalCounts),
-    aggPolicy: plots['plot_global_agg_pol']
-      ? annotatePolicyLines({ chartData: tracesToChartData(plots['plot_global_agg_pol'].data), policyLines: tracesToPolicyLines(plots['plot_global_agg_pol'].data) }, globalCounts)
-      : null,
-    aggNoPolicy: plots['plot_global_agg_npo']
-      ? annotatePolicyLines({ chartData: tracesToChartData(plots['plot_global_agg_npo'].data), policyLines: tracesToPolicyLines(plots['plot_global_agg_npo'].data) }, globalCounts)
-      : null,
+    aggAll: buildAgg(rows, journals),
+    aggPolicy: buildAgg(policyRows, policyJournals),
+    aggNoPolicy: buildAgg(noPolicyRows, noPolicyJournals),
     journals: [],
-    fields: fieldJsons.map(f => ({ slug: f.slug, field: f.field, aggAll: f.aggAll, aggPolicy: f.aggPolicy ?? null, aggNoPolicy: f.aggNoPolicy ?? null })),
+    fields: fieldJsons.map(f => ({
+      slug: f.slug,
+      field: f.field,
+      aggAll: f.aggAll,
+      aggPolicy: f.aggPolicy ?? null,
+      aggNoPolicy: f.aggNoPolicy ?? null,
+    })),
   }
 }
 
-// Only run main when executed directly (not when imported for tests)
+export function buildAll(rows) {
+  const fieldJsons = Object.entries(FIELD_DISPLAY_MAP).map(
+    ([slug, name]) => buildFieldJson(slug, name, rows)
+  )
+  const allFields = buildAllFieldsJson(rows, fieldJsons)
+  return { fieldJsons, allFields }
+}
+
+export { FIELD_DISPLAY_MAP, DISPLAY_TO_SLUG }
+
+// --- CLI entry ---
+
 if (process.argv[1] && process.argv[1].endsWith('extract-data.js')) {
-  const sourceHtml = readFileSync(join(__dirname, 'source.html'), 'utf8')
-  const plots = extractPlots(sourceHtml)
+  const csvPath = join(__dirname, '../data/bz_journal_year_percentages_All_Fields.csv')
+  const text = readFileSync(csvPath, 'utf8')
+  const rows = parseCsv(text)
   const outDir = join(__dirname, '../public/data')
   mkdirSync(outDir, { recursive: true })
 
-  const fieldJsons = []
-  for (const [fieldKey, slug] of Object.entries(FIELD_SLUG_MAP)) {
-    const json = buildFieldJson(slug, fieldKey, plots)
-    writeFileSync(join(outDir, `${slug}.json`), JSON.stringify(json, null, 2))
-    console.log(`✓ ${slug}.json`)
-    fieldJsons.push(json)
+  const { fieldJsons, allFields } = buildAll(rows)
+  for (const fj of fieldJsons) {
+    writeFileSync(join(outDir, `${fj.slug}.json`), JSON.stringify(fj, null, 2))
+    console.log(`OK ${fj.slug}.json`)
   }
-  const allFields = buildAllFieldsJson(plots, fieldJsons)
   writeFileSync(join(outDir, 'all-fields.json'), JSON.stringify(allFields, null, 2))
-  console.log('✓ all-fields.json')
+  console.log('OK all-fields.json')
 }
