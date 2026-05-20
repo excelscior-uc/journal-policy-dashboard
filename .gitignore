@@ -1,4 +1,3 @@
-.gitignore
 /new_figures_20260313_v28b
 /new_figures_20260313_v35_normalized
 /new_figures_20260313_v36
@@ -11,3 +10,5 @@
 node_modules/
 /dist
 .superpowers/
+.claude/
+.github/
