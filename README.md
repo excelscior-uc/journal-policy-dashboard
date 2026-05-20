@@ -1,6 +1,6 @@
 # Tracking the Shift from Bar Graphs to Informative Plots in Biomedical Journals
 
-An interactive dashboard tracking how data-visualisation practices in scientific publishing have evolved over time — focusing on the use of bar graphs versus more informative alternatives across 213 journals and 12 biomedical research fields:
+Interactive dashboard tracking how data-visualisation practices in scientific publishing evolved 2010–2025 — bar graphs vs. more informative alternatives across **213 journals** and **12 biomedical research fields**:
 
 - Cardiac & Cardiovascular Systems
 - Clinical Neurology
@@ -16,269 +16,189 @@ An interactive dashboard tracking how data-visualisation practices in scientific
 - Urology & Nephrology
 
 > **Pre-registration:** [osf.io/tcyxg](https://osf.io/tcyxg/overview)
-
-> **Dashboard:** [teresacoliveira.github.io/journal-observatory-2](https://teresacoliveira.github.io/journal-observatory-2)
+>
+> **Live dashboard:** [excelscior-uc.github.io/journal-policy-dashboard](https://excelscior-uc.github.io/journal-policy-dashboard/)
 
 ---
 
 ## Overview
 
-This repository processes barzooka screening results and article metadata for 213 biomedical journals and generates a self-contained, single-file HTML dashboard tracking visualisation trends from 2010 to 2025.
+Single-page React app (Vite + Recharts) visualising barzooka screening results and article metadata for 213 biomedical journals, 86 of which adopted an editorial figure-type policy.
 
 The dashboard lets you:
 
-- Track the prevalence of **bar graphs** vs. **informative visualisations** (bars with dots, box plots, dot plots, histograms, violin plots) year by year (2010–2025)
-- Compare **policy journals** (71 journals that adopted an editorial recommendation on figure types) against **non-policy journals**
-- Explore trends at three levels: **global**, **per research field**, and **per journal**
+- Track prevalence of **bar graphs** vs. **informative visualisations** (bars with dots, box plots, dot plots, histograms, violin plots) year by year (2010–2025)
+- Compare **policy journals** (86 with an editorial recommendation on figure types) against **non-policy journals**
+- Explore trends at three levels: **all fields**, **per research field**, and **per journal**
 - Visually assess whether editorial policies produce measurable changes in author behaviour
 
-Figure classification is performed by [barzooka](https://github.com/quest-bih/barzooka) — an automated deep-learning tool that detects chart types in scientific PDF figures.
+Figure classification produced by [barzooka](https://github.com/NiRiedel/barzooka) — automated deep-learning tool detecting chart types in scientific PDF figures.
 
 ---
 
-## Pipeline
+## Tech Stack
 
-The analysis runs as three sequential Python scripts. Each script accepts file paths as command-line arguments with hardcoded defaults, so no script editing is required for routine re-runs.
+- **React 19** + **react-router-dom 7** (HashRouter, lazy-loaded routes)
+- **Vite 8** build with gzip compression plugin
+- **Recharts 3** for trend charts
+- **html-to-image** + **jszip** for client-side chart export
+- **Vitest** + **@testing-library/react** + **jsdom** for unit tests
+- **gh-pages** for deployment
+
+Base path `/journal-policy-dashboard/` set in [vite.config.js](vite.config.js).
+
+---
+
+## Repository Layout
 
 ```
-step1_merge_bz_results.py
-    → merged_bz_results_TIMESTAMP.csv            (571,744 rows)
-
-step2_build_aggregated_dataset_v3.py
-    → bz_journal_year_percentages_All_Fields_TIMESTAMP.csv   (3,211 rows)
-    → sankey_workflow_TIMESTAMP.html
-    → diag_missing_issns_TIMESTAMP.csv           (if any unmatched ISSNs)
-    → diag_unmatched_rows_TIMESTAMP.csv          (if any unmatched rows)
-
-step3_generate_dashboard_v8.py
-    → dashboard_output/index_TIMESTAMP.html      (~3.6 MB, self-contained)
+data/                                       # source aggregated CSV (one row per journal × year)
+scripts/
+  extract-data.js                           # CSV -> public/data/<field>.json (build-time)
+  fetch-journal-names.mjs                   # resolves abbreviations to full titles via NLM/CrossRef
+public/data/
+  <field>.json (×12) + all-fields.json      # per-field payloads fetched by the app
+  journal-names.json                        # abbrev -> full title map
+src/
+  App.jsx                                   # HashRouter; routes / and /field/:slug
+  pages/      Home.jsx, FieldPage.jsx
+  components/ Hero, FieldGrid, ChartCard, FilterBar, JournalSidebar, ...
+  data/       fields.js (field metadata + series config), journalIndex.js
+  hooks/      useVisible.js
+tests/                                      # Vitest specs
 ```
-
-An optional utility script, `looker_studio_prep.py`, produces three supplementary CSV files from the aggregated dataset for use in Google Looker Studio (see [Looker Studio Export](#looker-studio-export)).
 
 ---
 
 ## Requirements
 
-- Python 3.10+
-- pandas
-- plotly
-- requests
-
-Install dependencies:
-
-```bash
-pip install pandas plotly requests
-```
+- Node.js 20+
+- npm
 
 ---
 
 ## Usage
 
-### Step 1 — Merge barzooka screening results
-
-Reads all per-journal `*_bz_results.csv` files and merges them into a single CSV. Rows with no screening results are flagged (`has_no_results = 1`) but retained; they are filtered in step 2, after the join with metadata, so the Sankey diagram can track them at the correct stage.
-
 ```bash
-python step1_merge_bz_results.py \
-    --input  path/to/bz_results_folder/ \
-    --output path/to/output_dir/
+npm install
 ```
 
-### Step 2 — Build aggregated dataset
+| Script              | Purpose                                                |
+| ------------------- | ------------------------------------------------------ |
+| `npm run dev`       | Vite dev server                                        |
+| `npm run build`     | Production build to `dist/`                            |
+| `npm run preview`   | Serve the production build locally                     |
+| `npm test`          | Run Vitest suite once                                  |
+| `npm run test:watch`| Vitest in watch mode                                   |
+| `npm run deploy`    | Build then publish `dist/` to `gh-pages` branch        |
 
-Filters article metadata, joins it with the BZ results, derives article-level chart-type flags, enriches with journal metadata, and aggregates to one row per journal × year. Also produces a Sankey diagram showing row counts and exclusion reasons at each processing stage.
+### Rebuilding the per-field JSON payloads
 
-```bash
-python step2_build_aggregated_dataset_v3.py \
-    --bz      path/to/merged_bz_results_TIMESTAMP.csv \
-    --meta    path/to/metadata_full.csv \
-    --mapping path/to/Journal_names_mapping.csv \
-    --output  path/to/output_dir/
-```
-
-Add `--no-crossref` to skip the Crossref API lookup for missing publication years (only ~18 rows are affected).
-
-### Step 3 — Generate dashboard
-
-Reads the aggregated CSV and writes a fully self-contained HTML dashboard.
+Whenever [data/bz_journal_year_percentages_All_Fields.csv](data/bz_journal_year_percentages_All_Fields.csv) changes, regenerate the JSON files the app fetches:
 
 ```bash
-python step3_generate_dashboard_v8.py \
-    --csv    path/to/bz_journal_year_percentages_All_Fields_TIMESTAMP.csv \
-    --output dashboard_output/
+node scripts/extract-data.js
 ```
 
-Open the resulting `index_TIMESTAMP.html` in any modern browser — no server required.
+Writes one file per field (e.g. `public/data/oncology.json`) plus `all-fields.json`. Schema matches what [src/pages/FieldPage.jsx](src/pages/FieldPage.jsx) and [src/components/ChartCard.jsx](src/components/ChartCard.jsx) expect.
+
+### Refreshing full journal titles
+
+```bash
+node scripts/fetch-journal-names.mjs
+```
+
+Scans `public/data/*.json` for abbreviations and resolves them to full titles via NLM Catalog (E-utilities) with CrossRef fallback. Output: `public/data/journal-names.json`.
 
 ---
 
-## Looker Studio Export
+## Source Data
 
-`looker_studio_prep.py` is an optional utility that transforms the aggregated CSV into three files ready to connect in Google Looker Studio:
-
-- **`ls_main.csv`** — the primary fact table (1 row per journal × year), with derived columns `policy_label`, `policy_adopted` (Before/After/No policy), `years_since_policy`, and `field_count`.
-- **`ls_policy_window.csv`** — event-centred data aligned to years relative to policy adoption (±7 years by default), for ITS-style charts.
-- **`ls_field_summary.csv`** — mean metrics and total eligible articles per field × year, for small-multiple field comparisons.
-
-Proportions are scaled to 0–100 in all three files (unlike the raw aggregated CSV, which uses 0–1).
-
-```bash
-python looker_studio_prep.py \
-    --csv path/to/bz_journal_year_percentages_All_Fields_TIMESTAMP.csv \
-    --out path/to/output_dir/
-```
-
----
-
-## Input Data
-
-### Barzooka screening results
-
-213 per-journal CSV files named `<eissn>_bz_results.csv`. Each file contains one row per screened article with a `prediction` column holding a Python dictionary string of figure-type counts.
-
-### Article metadata (`metadata_full.csv`)
-
-PubMed metadata export covering all retrieved articles. Only rows where `is_in_main_folder == TRUE` are used. After deduplication on DOI and year filtering (2010–2025), approximately 570,410 rows remain.
-
-### Journal mapping CSV
-
-214 rows for 213 journals (one journal, _Transplantation and Cellular Therapy_ / JID 114, has two rows because it changed its name and e-ISSN in 2021). Contains journal name, primary and all WoS research fields, editorial policy flag, policy adoption year, and JCR abbreviation. Of the 213 journals, 40 belong to more than one of the 12 research fields.
-
-### Policy strength data (`Policy_strength_data_original.xlsx`)
-
-71 rows with `BarSpecificity`, `Recommendation vs Requirement vs mixed`, and `SampleSize` classifications for policy-adopting journals. This file informed construction of the journal mapping and is available for future policy-strength subgroup analyses; it is not a direct input to the current three-script pipeline.
-
----
-
-## Aggregated CSV Format
-
-The pipeline produces one row per journal per year (3,211 rows total, covering 213 journals across 2010–2025). Key columns:
+[data/bz_journal_year_percentages_All_Fields.csv](data/bz_journal_year_percentages_All_Fields.csv) — one row per journal × year (3,211 rows total, 213 journals × 2010–2025). Columns:
 
 | Column                                                                                  | Description                                                                                      |
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | `Journal_Name`                                                                          | Formatted journal display name                                                                   |
 | `JCR_Abbrev`                                                                            | WoS JCR abbreviation (unique journal identifier)                                                 |
 | `year`                                                                                  | Publication year (2010–2025)                                                                     |
-| `e_issn`                                                                                | Electronic ISSN (BZ-derived, from the screening filename)                                        |
+| `e_issn`                                                                                | Electronic ISSN                                                                                  |
 | `Field`                                                                                 | Primary WoS research field                                                                       |
 | `All_Fields`                                                                            | All WoS fields the journal belongs to                                                            |
-| `policy`                                                                                | `1` if the journal has an editorial visualisation policy, `0` otherwise                          |
+| `policy`                                                                                | `1` if the journal has an editorial visualisation policy, else `0`                               |
 | `policy_year`                                                                           | Year the policy was adopted (if applicable)                                                      |
-| `n_articles`                                                                            | Count of eligible articles that year                                                             |
-| `n_bar_or_informative`                                                                  | Denominator for proportions (= `n_articles` after eligibility filter)                            |
+| `n_articles`                                                                            | Count of screened articles that year                                                             |
+| `n_bar_or_informative`                                                                  | Denominator for proportions (eligible articles)                                                  |
 | `p_only_bar`                                                                            | Proportion of eligible articles using _only_ bar charts (0–1)                                    |
 | `p_only_inf`                                                                            | Proportion of eligible articles using _only_ informative charts (0–1)                            |
 | `p_bar_and_inf`                                                                         | Proportion of eligible articles using _both_ chart types (0–1)                                   |
 | `p_bar`                                                                                 | Proportion of eligible articles using any bar chart (0–1)                                        |
 | `p_informative`                                                                         | Proportion of eligible articles using any informative chart (0–1)                                |
-| `p_eligible`                                                                            | Proportion of _all_ screened articles that are eligible (`n_bar_or_informative / n_articles`)    |
+| `p_eligible`                                                                            | Proportion of all screened articles that are eligible (`n_bar_or_informative / n_articles`)      |
 | `sum_bar`, `sum_inf`, `sum_only_bar`, `sum_only_inf`, `sum_bar_and_inf`, `sum_eligible` | Article counts for each category                                                                 |
-| `Cardiac & Cardiovascular Systems` … `Urology & Nephrology`                             | Binary field indicators (12 columns; 1 if the journal's `All_Fields` string contains that field) |
 
-> **Note:** `n_articles` and `n_bar_or_informative` are distinct. `n_articles` is the total number of screened articles per journal-year before the eligibility filter; `n_bar_or_informative` is the eligible subset. `p_eligible` therefore reflects the true fraction of all screened articles that contain at least one bar or informative chart.
->
-> Proportions in the CSV (0–1) are scaled to percentages (0–100) by the dashboard script before charting.
-
----
-
-## Processing Stages and Record Counts
-
-| Stage                                           | Rows     | Notes                                                                    |
-| ----------------------------------------------- | -------- | ------------------------------------------------------------------------ |
-| BZ screening files (213 journals)               | 571,744  | One row per screened article                                             |
-| metadata_full.csv (raw)                         | 622,085  | Full PubMed export                                                       |
-| After `is_in_main_folder = TRUE`                | 571,769  | In-scope articles only                                                   |
-| After DOI deduplication                         | ~571,744 | First occurrence kept                                                    |
-| After year filter (2010–2025)                   | 570,410  | 2026 records and unresolvable years removed                              |
-| After left join metadata + BZ                   | 570,410  | Metadata is the left table; unmatched articles receive NaN chart columns |
-| After removing no-results rows                  | 570,402  | Rows where ALL figure-type count columns are NULL (no BZ match)          |
-| After eligibility filter (`has_bar_or_inf = 1`) | 360,858  | Articles containing ≥1 bar or informative chart                          |
-| Aggregated (journal × year)                     | 3,211    | Final dashboard input                                                    |
-
-A Sankey diagram of this flow (with actual row counts from each run) is written to `sankey_workflow_TIMESTAMP.html` by step 2.
-
-**Why the no-results filter is applied after the join:** rows with no screening results are retained through step 1 and removed in step 2 stage C, after the left join with metadata. This placement allows the Sankey diagram to show the accurate count at each distinct stage and catches both BZ rows flagged `has_no_results = 1` in step 1 and metadata rows that found no BZ match after the join (NaN chart columns).
-
----
-
-## Article-Level Flags
-
-Step 2 derives the following binary flags before aggregation:
-
-| Flag              | Definition                                                              |
-| ----------------- | ----------------------------------------------------------------------- |
-| `has_bar`         | `bar > 0`                                                               |
-| `has_informative` | `max(bardot, box, dot, hist, violin) > 0`                               |
-| `has_bar_or_inf`  | `has_bar = 1 OR has_informative = 1` — defines the eligible article set |
-| `only_bar`        | `has_bar = 1 AND has_informative = 0`                                   |
-| `only_inf`        | `has_informative = 1 AND has_bar = 0`                                   |
-| `bar_and_inf`     | `has_bar = 1 AND has_informative = 1`                                   |
+Proportions in the CSV (0–1) are scaled to percentages (0–100) by `extract-data.js` before serialisation.
 
 ---
 
 ## Dashboard Features
 
-**Navigation**
-Sidebar links to the **About** tab, a **Global** overview, and individual **Research Field** tabs (one per field).
+**Navigation.** [Home](src/pages/Home.jsx) lists all fields. Each field opens [FieldPage](src/pages/FieldPage.jsx) at `/field/:slug` via HashRouter.
 
-**Aggregated charts**
-Each tab shows three side-by-side trend charts: _All journals_, _Policy journals_, and _Non-Policy journals_. The **Show charts** dropdown in the top bar filters which card types are visible across the active tab.
+**Aggregated and per-journal charts.** Each field page shows aggregated trend cards (all / policy / non-policy) and a grid of per-journal cards.
 
-**Individual journal charts**
-Each field tab lists per-journal trend charts. Use the **Find journal** search box to highlight and scroll to a specific card, the **Show journals** dropdown to filter by policy status, and the **Columns** slider to adjust the grid layout (1–6 columns for journal cards; 1–3 for aggregated cards). Cards can be **drag-and-dropped** to reorder within their grid.
+**Filtering and search.** [FilterBar](src/components/FilterBar.jsx) toggles metric visibility; [JournalSidebar](src/components/JournalSidebar.jsx) and [GlobalJournalSearch](src/components/GlobalJournalSearch.jsx) find and scroll to specific journals.
 
-**Responsive title and axis scaling**
-Chart titles wrap and shrink as cards narrow. In multi-column grids, the top margin is unified across all cards in each row so that y-axes remain vertically aligned. X-axis tick density adapts to card width (annual ticks at ≥500 px; biennial at ≥350 px; quinquennial below that). These updates fire on column-slider changes, panel switches, section collapses, drag-and-drop reorders, and browser window resizes (via ResizeObserver with an 80 ms debounce).
+**Policy year markers.** Per-journal charts show a vertical line at the policy adoption year. Aggregated charts show semi-transparent bands reflecting the share of journals adopting in each year.
 
-**Global controls**
-**Show/hide all** toggle buttons in the top bar hide or show any metric across every chart simultaneously.
+**Eligible articles line.** Dotted overlay showing `% eligible articles`; toggle via legend.
 
-**Policy year markers**
-Per-journal charts show a single vertical yellow line at the year of policy adoption. Aggregated charts show semi-transparent yellow bands whose width reflects the proportion of journals adopting a policy in a given year.
+**Responsive grid.** Column count adjustable; chart titles wrap/shrink with card width; ChartCard extends the year domain so policy markers near the axis remain visible.
 
-**Eligible articles line**
-A dotted grey line showing `% eligible articles` (proportion of all screened articles that are eligible) is available on all charts; it is hidden by default and can be toggled via the legend.
-
-**Collapsible About sections**
-The About tab contains collapsible sections covering study background, metric definitions, and a references list — all expandable/collapsible without page reload.
+**Export.** Cards can be exported as images (`html-to-image`) and bundled as a zip (`jszip`).
 
 ---
 
 ## Metrics
 
-| Metric                | Colour           | Description                                           |
-| --------------------- | ---------------- | ----------------------------------------------------- |
-| % only bar            | Red `#c0392b`    | Articles using only bar graphs for continuous data    |
-| % bar and informative | Salmon `#e8998d` | Articles using both bar and informative graphs        |
-| % only informative    | Teal `#76b5b2`   | Articles using only informative graphs                |
-| Policy adoption       | Yellow `#fde624` | Vertical marker at the journal's policy adoption year |
+| Metric                  | Series key              | Colour                |
+| ----------------------- | ----------------------- | --------------------- |
+| % only bar              | `pct_only_bar`          | Vermilion `#d55e00`   |
+| % bar and informative   | `pct_bar_informative`   | Orange `#e69f00`      |
+| % only informative      | `pct_only_informative`  | Blue `#0072b2`        |
+
+Palette is Okabe–Ito (colourblind-safe). Defined in [src/data/fields.js](src/data/fields.js).
 
 ---
 
-## Key Design Decisions
+## Testing
 
-**BZ-derived ISSN used for journal mapping.** The journal mapping join uses the ISSN extracted from the BZ filename rather than the PubMed metadata ISSN. One journal in the sample (_Transplantation and Cellular Therapy_, JID 114) changed its name and ISSN in 2021. Its BZ file was compiled under the new ISSN for all articles, so using the BZ filename ISSN correctly unifies pre- and post-2021 articles under the same journal row.
+```bash
+npm test
+```
 
-**No-results filter applied after the join.** Only rows where all figure-type count columns are NULL (no BZ match at all) are removed at stage C. Rows where all counts are zero are valid BZ results — the tool ran and found no matching chart types — and are retained until the eligibility filter at stage E.
+Specs in [tests/](tests/) cover ChartCard rendering, FieldPage prefetch behaviour, navigation components, the `useVisible` IntersectionObserver hook, and the `extract-data.js` CSV parser.
 
-**Denominator for proportions.** The denominator for all proportion columns except `p_eligible` is `n_bar_or_informative` — the count of eligible articles (those containing at least one bar or informative chart) per journal × year. `p_eligible` uses `n_articles` (total screened articles per journal-year, captured before the eligibility filter) as its denominator, making it a meaningful measure of how much of a journal's output the analysis covers.
+---
 
-**Journal mapping not deduplicated.** The mapping file has 214 rows for 213 journals (two rows for JID 114, one per ISSN). All 214 ISSNs are unique, so no deduplication is applied; removing one row would silently discard a valid ISSN-to-journal mapping.
+## Deployment
 
-**Multi-field journals.** Of the 213 journals, 40 belong to more than one of the 12 research fields. Each journal receives a binary `1` for every field present in its `All_Fields` string, allowing it to contribute to all relevant field-level aggregations in the dashboard.
+```bash
+npm run deploy
+```
+
+Builds and pushes `dist/` to the `gh-pages` branch. The site is served at the base path declared in [vite.config.js](vite.config.js).
 
 ---
 
 ## Background & Motivation
 
-Bar graphs that reduce continuous data to a mean and error bar are widely criticised for concealing distributional features — bimodality, skewness, outliers — that are critical for interpreting and replicating results. Despite two decades of calls to replace them, bar charts remain the dominant format across many biomedical journals.
+Bar graphs that reduce continuous data to a mean and error bar are widely criticised for concealing distributional features — bimodality, skewness, outliers — critical for interpreting and replicating results. Despite two decades of calls to replace them, bar charts remain dominant across many biomedical journals.
 
-A growing number of journals have introduced **editorial policies** that explicitly encourage or require more informative alternatives. These policy adoptions create natural quasi-experiments: by comparing visualisation practices _before_ and _after_ a policy — and against journals that never adopted one — it is possible to estimate whether editorial recommendations produce measurable changes in author behaviour.
+A growing number of journals introduced **editorial policies** explicitly encouraging or requiring more informative alternatives. These adoptions create natural quasi-experiments: comparing visualisation practices _before_ and _after_ a policy — and against journals that never adopted one — estimates whether editorial recommendations produce measurable changes in author behaviour.
 
-This dashboard provides exactly that view, enabling longitudinal tracking of hundreds of thousands of articles across 213 journals, year by year from 2010 to 2025.
+This dashboard provides that view across hundreds of thousands of articles, 213 journals, year by year from 2010 to 2025.
 
-The study protocol is publicly pre-registered at **[osf.io/tcyxg](https://osf.io/tcyxg/overview)**.
+Study protocol pre-registered at **[osf.io/tcyxg](https://osf.io/tcyxg/overview)**.
 
 ---
 
@@ -287,17 +207,12 @@ The study protocol is publicly pre-registered at **[osf.io/tcyxg](https://osf.io
 - Weissgerber et al. (2015). _Beyond bar and line graphs: time for a new data presentation paradigm._ PLOS Biology. [doi:10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128)
 - Weissgerber et al. (2019). _From static to interactive: Transforming data visualization to improve transparency._ PLOS Biology. [doi:10.1371/journal.pbio.1002484](https://doi.org/10.1371/journal.pbio.1002484)
 - Weissgerber et al. (2019). _Reveal, don't conceal: Transforming data visualization to improve transparency._ Circulation. [doi:10.1161/CIRCULATIONAHA.118.037777](https://doi.org/10.1161/CIRCULATIONAHA.118.037777)
-- Riedel et al. (2022). _Replacing bar graphs of continuous data with more informative graphics: are we making progress?_ Clinical Science. [doi:10.1042/CS20220287](https://doi.org/10.1042/CS20220287)
-- Riedel N, Nachev V, Schulz R, Kazezian V, Weissgerber T. _barzooka_ — automated figure screening tool. [GitHub](https://github.com/quest-bih/barzooka)
+- Riedel et al. (2022). _Replacing bar graphs of continuous data with more informative graphics: are we making progress?_ Clinical Science. [doi:10.1042/CS20220313](https://doi.org/10.1042/CS20220313)
+- Schulz et al. (2025). _Do journal policies reduce the use of bar graphs?_ [osf.io/tcyxg](https://osf.io/tcyxg/overview)
+- Riedel N, Nachev V, Schulz R, Kazezian V, Weissgerber T. _barzooka._ [GitHub](https://github.com/NiRiedel/barzooka)
 
 ---
 
 ## License
 
-[GNU General Public License v3.0 (GPLv3)](https://github.com/teresacoliveira/journal-observatory-2#GPL-3.0-1-ov-file)
-
----
-
-## Contact
-
-Teresa Cunha-Oliveira — [@teresacoliveira](https://github.com/teresacoliveira)
+[GNU General Public License v3.0 (GPLv3)](LICENSE)
