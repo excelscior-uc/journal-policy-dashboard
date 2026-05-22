@@ -27,7 +27,7 @@ Research fields covered: Cardiac & Cardiovascular Systems · Clinical Neurology 
 | `bz_journal_year_percentages_All_Fields.csv` | Aggregated dataset — 3,211 rows, one per journal × year               |
 | `step1_merge_bz_results.py`                  | Merges per-journal barzooka screening CSVs into a single file         |
 | `step2_build_aggregated_dataset_v3.py`       | Filters metadata, joins BZ results, aggregates to journal × year      |
-| `step3_generate_dashboard_v10.py`            | Reads the aggregated CSV and writes the self-contained HTML dashboard |
+| `step3_generate_dashboard_v11.py`            | Reads the aggregated CSV and writes the self-contained HTML dashboard |
 
 The dashboard (`index.html`) is generated from `step3_generate_dashboard_v10.py` using the aggregated CSV as input. Steps 1 and 2 require the raw barzooka screening files and full article metadata, which are not included here.
 
@@ -112,7 +112,7 @@ Steps 1 and 2 require raw barzooka screening files and full PubMed article metad
 step1_merge_bz_results.py        →  merged_bz_results_TIMESTAMP.csv
 step2_build_aggregated_dataset_v3.py →  bz_journal_year_percentages_All_Fields_TIMESTAMP.csv
                                         sankey_workflow_TIMESTAMP.html
-step3_generate_dashboard_v10.py  →  index_TIMESTAMP.html
+step3_generate_dashboard_v11.py  →  index_TIMESTAMP.html
 ```
 
 | Stage                                           | Rows      | Notes                  |
