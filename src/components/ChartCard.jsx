@@ -227,12 +227,22 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                 </svg>
               </button>
             )}
-            <div className="chart-card__menu" ref={menuRef}>
+            <div
+              className="chart-card__menu"
+              ref={menuRef}
+              onClick={(e) => e.stopPropagation()}
+              onMouseDown={(e) => e.stopPropagation()}
+              onKeyDown={(e) => e.stopPropagation()}
+            >
               <button
+                type="button"
                 className="chart-card__menu-btn"
-                onClick={() => setMenuOpen(o => !o)}
+                onClick={(e) => { e.stopPropagation(); setMenuOpen(o => !o) }}
                 disabled={busy}
                 title="Export chart"
+                aria-label="Export chart"
+                aria-haspopup="menu"
+                aria-expanded={menuOpen}
               >
                 {busy ? '…' : (
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
@@ -243,15 +253,25 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                 )}
               </button>
               {menuOpen && (
-                <div className="chart-card__menu-dropdown">
-                  <button className="chart-card__menu-item" onClick={copyAsPng}>
+                <div className="chart-card__menu-dropdown" role="menu">
+                  <button
+                    type="button"
+                    className="chart-card__menu-item"
+                    onClick={(e) => { e.stopPropagation(); copyAsPng() }}
+                    role="menuitem"
+                  >
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="9" y="9" width="13" height="13" rx="2" />
                       <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
                     </svg>
                     Copy as PNG
                   </button>
-                  <button className="chart-card__menu-item" onClick={downloadAsPng}>
+                  <button
+                    type="button"
+                    className="chart-card__menu-item"
+                    onClick={(e) => { e.stopPropagation(); downloadAsPng() }}
+                    role="menuitem"
+                  >
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                       <polyline points="7 10 12 15 17 10" />
@@ -316,6 +336,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
               {SERIES_CONFIG.filter(s => !visibleSeries || visibleSeries.has(s.key)).map(s => (
                 <Line
                   key={s.key}
+                  type="monotone"
                   dataKey={s.key}
                   name={s.name}
                   stroke={s.color}
