@@ -4,22 +4,15 @@ import { FIELDS, SERIES_CONFIG } from '../data/fields'
 import ChartCard from '../components/ChartCard'
 import FilterBar from '../components/FilterBar'
 import JournalSidebar from '../components/JournalSidebar'
+import CompareModal from '../components/CompareModal'
 import { useJournalNames } from '../data/journalNames'
+import { fetchField, getCachedField } from '../utils/fieldDataCache'
 import JSZip from 'jszip'
 
 const DEFAULT_VISIBLE = new Set(SERIES_CONFIG.map(s => s.key))
 
-const fieldCache = new Map()
-
-function fetchField(slug) {
-  if (fieldCache.has(slug)) return Promise.resolve(fieldCache.get(slug))
-  return fetch(`${import.meta.env.BASE_URL}data/${slug}.json`)
-    .then(r => { if (!r.ok) throw new Error(r.status); return r.json() })
-    .then(json => { fieldCache.set(slug, json); return json })
-}
-
 function prefetchOthers(currentSlug) {
-  const others = FIELDS.filter(f => f.slug !== currentSlug && !fieldCache.has(f.slug))
+  const others = FIELDS.filter(f => f.slug !== currentSlug && !getCachedField(f.slug))
   let i = 0
   function next() {
     if (i >= others.length) return
@@ -33,7 +26,8 @@ export default function FieldPage() {
   const navigate = useNavigate()
   const location = useLocation()
   const getFullName = useJournalNames()
-  const [data, setData] = useState(() => fieldCache.get(slug) ?? null)
+  const [data, setData] = useState(() => getCachedField(slug) ?? null)
+  const [compare, setCompare] = useState(null)
   const [error, setError] = useState(null)
   const [selectedJournal, setSelectedJournal] = useState('__agg__')
   const [visibleSeries, setVisibleSeries] = useState(DEFAULT_VISIBLE)
@@ -64,7 +58,7 @@ export default function FieldPage() {
     setPolicyFilter('all')
     setJournalSearch('')
 
-    const cached = fieldCache.get(slug)
+    const cached = getCachedField(slug)
     if (cached) {
       setData(cached)
       prefetchOthers(slug)
@@ -283,6 +277,16 @@ export default function FieldPage() {
                     tall
                     forceVisible={isCapturing}
                     onMount={registerCapture}
+                    onCompare={() => setCompare({
+                      kind: 'field',
+                      base: {
+                        id: slug,
+                        name: field?.name ?? slug,
+                        chartData: aggData.chartData,
+                        policyLines: aggData.policyLines,
+                      },
+                      currentFieldSlug: slug,
+                    })}
                   />
                 )}
               </div>
@@ -340,6 +344,16 @@ export default function FieldPage() {
                             showPolicyLines={deferredShowPolicyLines}
                             forceVisible={isCapturing}
                             onMount={registerCapture}
+                            onCompare={() => setCompare({
+                              kind: 'field',
+                              base: {
+                                id: f.slug,
+                                name: f.field,
+                                chartData: fieldAgg?.chartData,
+                                policyLines: fieldAgg?.policyLines,
+                              },
+                              currentFieldSlug: f.slug,
+                            })}
                           />
                         </div>
                       )
@@ -393,6 +407,18 @@ export default function FieldPage() {
                             showPolicyLines={deferredShowPolicyLines}
                             forceVisible={isCapturing}
                             onMount={registerCapture}
+                            onCompare={() => setCompare({
+                              kind: 'journal',
+                              base: {
+                                id: j.id,
+                                name: getFullName(j.name, j.name),
+                                chartData: j.chartData,
+                                policyLines: j.policyLines,
+                                hasPolicy: j.hasPolicy,
+                                policyYear: j.policyYear,
+                              },
+                              currentFieldSlug: slug,
+                            })}
                           />
                         </div>
                       )
@@ -422,6 +448,18 @@ export default function FieldPage() {
                   tall
                   forceVisible={isCapturing}
                   onMount={registerCapture}
+                  onCompare={() => setCompare({
+                    kind: 'journal',
+                    base: {
+                      id: activeJournal.id,
+                      name: getFullName(activeJournal.name, activeJournal.name),
+                      chartData: activeJournal.chartData,
+                      policyLines: activeJournal.policyLines,
+                      hasPolicy: activeJournal.hasPolicy,
+                      policyYear: activeJournal.policyYear,
+                    },
+                    currentFieldSlug: slug,
+                  })}
                 />
               </div>
             </>
@@ -429,6 +467,15 @@ export default function FieldPage() {
           </div>
         </div>
       </div>
+      {compare && (
+        <CompareModal
+          kind={compare.kind}
+          base={compare.base}
+          currentFieldSlug={compare.currentFieldSlug}
+          policyFilter={deferredPolicyFilter}
+          onClose={() => setCompare(null)}
+        />
+      )}
     </>
   )
 }

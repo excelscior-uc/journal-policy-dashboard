@@ -115,7 +115,7 @@ function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines }) {
   )
 }
 
-function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = EMPTY_POLICY_LINES, totalJournals, visibleSeries, showPolicyLines = true, tall = false, forceVisible = false, onMount }) {
+function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = EMPTY_POLICY_LINES, totalJournals, visibleSeries, showPolicyLines = true, tall = false, forceVisible = false, onMount, onCompare }) {
   const ref = useRef()
   const cardRef = useRef()
   const visible = useVisible(ref)
@@ -211,6 +211,21 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
               <span className={`chart-card__meta chart-card__meta--${hasPolicy ? 'policy' : 'no-policy'}`}>
                 {meta}
               </span>
+            )}
+            {onCompare && (
+              <button
+                type="button"
+                className="chart-card__menu-btn chart-card__compare-btn"
+                onClick={(e) => { e.stopPropagation(); onCompare() }}
+                title="Compare side by side"
+                aria-label="Compare side by side"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="7" height="16" rx="1.5" />
+                  <rect x="14" y="4" width="7" height="16" rx="1.5" />
+                  <line x1="12" y1="2" x2="12" y2="22" strokeDasharray="2 2" />
+                </svg>
+              </button>
             )}
             <div className="chart-card__menu" ref={menuRef}>
               <button
