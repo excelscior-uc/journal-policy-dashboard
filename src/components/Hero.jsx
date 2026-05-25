@@ -8,6 +8,9 @@ export default function Hero() {
 <h1 className="hero__title">
             Tracking the Shift from <em>Bar Graphs</em> to <em>Informative Plots</em>
           </h1>
+          <p className="hero__subtitle">
+            Impact of Journal Policies on the Visualization of Continuous Data
+          </p>
           <p className="hero__sub">
             Bar charts that reduce continuous data to a mean and error bar are widely criticised for
             concealing distributional features. This dashboard tracks how{' '}
@@ -21,7 +24,14 @@ export default function Hero() {
           <div className="hero__actions">
             <button
               className="hero__cta"
-              onClick={() => document.getElementById('field-grid')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                const heading = document.getElementById('field-grid-heading')
+                if (!heading) return
+                if (heading.getAttribute('aria-expanded') === 'false') {
+                  heading.click()
+                }
+                heading.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }}
             >
               Explore by Research Field
             </button>
