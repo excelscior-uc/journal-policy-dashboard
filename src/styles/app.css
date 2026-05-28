@@ -903,9 +903,9 @@ a  { color: var(--text-strong); }
   margin: 2px 0;
 }
 .articles-bar__total {
-  background: #e8f4f8;
-  color: #2c7a7b;
-  border-color: #b8e0e0;
+  background: var(--accent-surface);
+  color: var(--accent-strong);
+  border-color: var(--accent-surface-border);
 }
 .articles-bar__seg--eligible {
   background: linear-gradient(180deg, #4cc9a4 0%, #009e73 100%);
