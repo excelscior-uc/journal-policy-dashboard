@@ -37,6 +37,12 @@ export default function FieldGrid() {
             )
           })}
         </div>
+        <p className="field-grid__note">
+          <strong>Note:</strong> a journal can belong to more than one research
+          field, so the per-field counts above overlap and add up to more than
+          the site totals of <strong>213 journals</strong> (
+          <strong>71 with a policy</strong>).
+        </p>
       </CollapsibleHomeSection>
   )
 }
