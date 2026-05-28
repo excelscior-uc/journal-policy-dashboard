@@ -198,7 +198,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
                 type="button"
                 className="journal-sidebar__subfield-btn journal-sidebar__subfield-btn--all"
                 data-icon={allMeta?.icon}
-                style={{ marginBottom: 8, background: '#eff6ff', borderColor: '#bfdbfe' }}
+                style={{ marginBottom: 8, background: 'var(--accent-surface)', borderColor: 'var(--accent-surface-border)' }}
                 onClick={() => navigate('/field/all-fields')}
               >
                 <span className="journal-sidebar__subfield-name">
@@ -280,7 +280,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
                     type="button"
                     className="journal-sidebar__subfield-btn"
                     data-icon={f.icon}
-                    style={f.slug === 'all-fields' ? { background: '#eff6ff', borderColor: '#bfdbfe' } : undefined}
+                    style={f.slug === 'all-fields' ? { background: 'var(--accent-surface)', borderColor: 'var(--accent-surface-border)' } : undefined}
                     onClick={() => { closeFlyout(); navigate(`/field/${f.slug}`) }}
                   >
                     <span className="journal-sidebar__subfield-name">

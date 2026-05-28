@@ -27,6 +27,7 @@
   --accent-contrast-text: #1a252f;
   --accent-surface: #f1f8f8;
   --accent-surface-border: #cfe6e5;
+  --fill-strong: #2c3e50;
 
   /* hero */
   --hero-grad: linear-gradient(135deg, #1a252f 0%, #2c3e50 60%, #34495e 100%);
@@ -67,6 +68,7 @@
   --accent-contrast-text: #0f1419;
   --accent-surface: #16292b;
   --accent-surface-border: #2c4f4d;
+  --fill-strong: #33414f;
 
   --hero-grad: linear-gradient(135deg, #0c1218 0%, #16202b 60%, #1c2733 100%);
 
@@ -297,7 +299,7 @@ a  { color: var(--text-strong); }
 
 /* ── BREADCRUMB ── */
 .breadcrumb {
-  background: var(--text-strong); color: #fff;
+  background: var(--fill-strong); color: #fff;
   display: flex; align-items: center; gap: 10px;
   padding: 10px 24px; font-size: 13px;
 }
@@ -604,7 +606,7 @@ a  { color: var(--text-strong); }
   font-size: 14px;
   font-weight: 700;
   line-height: 1.35;
-  background: var(--text-strong);
+  background: var(--fill-strong);
   color: #fff;
   box-sizing: border-box;
 }
@@ -925,8 +927,8 @@ a  { color: var(--text-strong); }
   box-shadow: 0 2px 6px rgba(0,0,0,0.09);
 }
 .journal-link.active {
-  background: var(--text-strong); color: #fff; font-weight: 600;
-  border-color: var(--text-strong);
+  background: var(--fill-strong); color: #fff; font-weight: 600;
+  border-color: var(--fill-strong);
   box-shadow: 0 2px 8px rgba(44,62,80,0.25);
 }
 .journal-link.active .journal-link__name { color: #fff; }
@@ -1069,7 +1071,7 @@ a  { color: var(--text-strong); }
 }
 .cols-seg__btn + .cols-seg__btn { border-left: 1px solid var(--border); }
 .cols-seg__btn:hover:not(.active) { color: var(--text-strong); }
-.cols-seg__btn.active { background: var(--text-strong); color: #fff; }
+.cols-seg__btn.active { background: var(--fill-strong); color: #fff; }
 .chart-section-title:first-child { margin-top: 0; }
 .chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
 .chart-grid--full { grid-template-columns: 1fr; }
@@ -1245,7 +1247,7 @@ a  { color: var(--text-strong); }
 /* ── TOP NAV ── */
 :root { --nav-height: 44px; }
 .top-nav {
-  background: var(--text-strong);
+  background: var(--fill-strong);
   color: #fff;
   padding: 10px 24px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -1939,8 +1941,8 @@ a  { color: var(--text-strong); }
 }
 .intro-chip__swatch { width: 10px; height: 3px; border-radius: 2px; display: inline-block; }
 .intro-chip--on {
-  background: var(--text-strong); color: #fff; font-weight: 600;
-  border: 1px solid var(--text-strong);
+  background: var(--fill-strong); color: #fff; font-weight: 600;
+  border: 1px solid var(--fill-strong);
 }
 .intro-chip--off {
   background: var(--surface); color: var(--tick);
@@ -1980,7 +1982,7 @@ a  { color: var(--text-strong); }
 }
 .intro-modal__dontshow input { cursor: pointer; }
 .intro-modal__got-it {
-  background: var(--text-strong); color: #fff;
+  background: var(--fill-strong); color: #fff;
   border: none; border-radius: 8px;
   padding: 9px 20px;
   font-size: 13px; font-weight: 700;
