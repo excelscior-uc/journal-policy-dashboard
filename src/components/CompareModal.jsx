@@ -8,6 +8,7 @@ import { FIELDS, SERIES_CONFIG } from '../data/fields'
 import { fetchField, getCachedField } from '../utils/fieldDataCache'
 import { useJournalIndex } from '../data/journalIndex'
 import { useJournalNames } from '../data/journalNames'
+import { useTheme } from '../hooks/useTheme'
 
 const MAX_ITEMS = 2
 
@@ -16,7 +17,7 @@ const ITEM_STYLES = [
   { dash: '6 3',     label: 'dashed' },
 ]
 
-function CompareTooltip({ active, label, payload, items, activeMetrics, hiddenItems }) {
+function CompareTooltip({ active, label, payload, items, activeMetrics, hiddenItems, cc }) {
   const ref = useRef(null)
   useLayoutEffect(() => {
     if (!active) return
@@ -64,7 +65,7 @@ function CompareTooltip({ active, label, payload, items, activeMetrics, hiddenIt
               <th key={it.id} className="compare-tooltip__head-cell" title={it.name}>
                 <svg width="18" height="6" aria-hidden="true">
                   <line x1="1" y1="3" x2="17" y2="3"
-                    stroke="#1f2937" strokeWidth="2"
+                    stroke={cc.tickText} strokeWidth="2"
                     strokeDasharray={ITEM_STYLES[idx]?.dash} strokeLinecap="round" />
                 </svg>
                 <span>{it.name}</span>
@@ -148,6 +149,7 @@ async function resolveJournalChart(journalId, fieldSlug) {
 export default function CompareModal({ kind, base, currentFieldSlug, policyFilter = 'all', onClose }) {
   const journalIndex = useJournalIndex()
   const getFullName = useJournalNames()
+  const { chartColors: cc } = useTheme()
   const [items, setItems] = useState(() => [{ ...base }])
   const [metrics, setMetrics] = useState(() => new Set(SERIES_CONFIG.map(s => s.key)))
   const [hiddenItems, setHiddenItems] = useState(() => new Set())
@@ -182,7 +184,8 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
   }, [items])
 
   async function captureChart() {
-    return toPng(captureRef.current, { cacheBust: true, pixelRatio: 2, backgroundColor: '#fff' })
+    const bg = getComputedStyle(document.documentElement).getPropertyValue('--surface').trim() || '#fff'
+    return toPng(captureRef.current, { cacheBust: true, pixelRatio: 2, backgroundColor: bg })
   }
 
   async function copyAsPng() {
@@ -417,7 +420,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                   return (
                     <li key={it.id} className="compare-modal__chip">
                       <svg width="28" height="10" aria-hidden="true" className="compare-modal__chip-swatch">
-                        <line x1="1" y1="5" x2="27" y2="5" stroke="#495057" strokeWidth="2.2"
+                        <line x1="1" y1="5" x2="27" y2="5" stroke={cc.tickText} strokeWidth="2.2"
                           strokeDasharray={dash} strokeLinecap="round" />
                       </svg>
                       <span className="compare-modal__chip-name" title={it.name}>{it.name}</span>
@@ -550,7 +553,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                     >
                       <svg width="18" height="6" aria-hidden="true">
                         <line x1="1" y1="3" x2="17" y2="3"
-                          stroke={on ? s.color : '#6c7280'} strokeWidth="3" strokeLinecap="round" />
+                          stroke={on ? s.color : cc.axisLine} strokeWidth="3" strokeLinecap="round" />
                       </svg>
                       {s.name}
                     </button>
@@ -565,7 +568,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                 >
                   <svg width="18" height="6" aria-hidden="true">
                     <line x1="1" y1="3" x2="17" y2="3"
-                      stroke={showPolicy ? '#d4a017' : '#6c7280'} strokeWidth="3" strokeLinecap="round" />
+                      stroke={showPolicy ? '#d4a017' : cc.axisLine} strokeWidth="3" strokeLinecap="round" />
                   </svg>
                   Policy lines
                 </button>
@@ -584,7 +587,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                     >
                       <svg width="28" height="10" aria-hidden="true">
                         <line x1="1" y1="5" x2="27" y2="5"
-                          stroke={on ? '#495057' : '#ced4da'} strokeWidth="2.2"
+                          stroke={on ? cc.tickText : cc.axisLine} strokeWidth="2.2"
                           strokeDasharray={ITEM_STYLES[idx]?.dash} strokeLinecap="round" />
                       </svg>
                       {it.name}
@@ -598,7 +601,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
             ) : (
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={mergedRows} margin={{ top: 24, right: 16, left: 4, bottom: 16 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                  <CartesianGrid strokeDasharray="3 3" stroke={cc.grid} />
                   <XAxis
                     dataKey="year"
                     interval={0}
@@ -609,11 +612,11 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                         <g transform={`translate(${x},${y}) rotate(-40)`}>
                           {isPolicy && (
                             <rect x={-28} y={-8} width={30} height={15} rx={3} ry={3}
-                              fill="rgba(253,231,37,0.55)" stroke="rgba(253,231,37,0.9)" strokeWidth={1} />
+                              fill={cc.policyTickBg} stroke={cc.policyTickStroke} strokeWidth={1} />
                           )}
                           <text x={0} y={0} textAnchor="end" dominantBaseline="middle"
                             fontSize={11} fontWeight={isPolicy ? 700 : 400}
-                            fill={isPolicy ? '#6d5f00' : '#495057'}>
+                            fill={isPolicy ? cc.policyTickText : cc.tickText}>
                             {payload.value}
                           </text>
                         </g>
@@ -621,18 +624,18 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                     }}
                     height={46}
                     tickMargin={4}
-                    tickLine={{ stroke: '#adb5bd' }}
-                    axisLine={{ stroke: '#ced4da' }}
-                    label={{ value: 'Year', position: 'insideBottom', offset: -4, fontSize: 11, fill: '#6c757d', fontWeight: 700 }}
+                    tickLine={{ stroke: cc.tickLine }}
+                    axisLine={{ stroke: cc.axisLine }}
+                    label={{ value: 'Year', position: 'insideBottom', offset: -4, fontSize: 11, fill: cc.axisLabel, fontWeight: 700 }}
                   />
                   <YAxis
-                    tick={{ fontSize: 10 }}
+                    tick={{ fontSize: 10, fill: cc.tickText }}
                     domain={[0, 100]}
                     unit="%"
-                    label={{ value: '% Papers', angle: -90, position: 'insideLeft', offset: 10, fontSize: 11, fill: '#6c757d', fontWeight: 700, dy: 30 }}
+                    label={{ value: '% Papers', angle: -90, position: 'insideLeft', offset: 10, fontSize: 11, fill: cc.axisLabel, fontWeight: 700, dy: 30 }}
                   />
                   <Tooltip
-                    cursor={{ stroke: '#cbd5e1', strokeDasharray: '3 3' }}
+                    cursor={{ stroke: cc.axisLine, strokeDasharray: '3 3' }}
                     wrapperStyle={{ outline: 'none', zIndex: 10, pointerEvents: 'none' }}
                     offset={16}
                     isAnimationActive={false}
@@ -642,6 +645,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                         items={items}
                         activeMetrics={activeMetrics}
                         hiddenItems={hiddenItems}
+                        cc={cc}
                       />
                     )}
                   />
@@ -655,14 +659,14 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                       <ReferenceLine
                         key={`pol-${pm.itemId}-${pm.year}-${i}`}
                         x={pm.year}
-                        stroke="rgba(253,231,37,0.7)"
+                        stroke={cc.policyMarker}
                         strokeWidth={w}
                         strokeDasharray={pm.dash ?? '0'}
                         isAnimationActive={false}
                         label={{
                           value: pm.year,
                           position: 'top',
-                          fill: '#a37e00',
+                          fill: cc.policyTickText,
                           fontSize: 9,
                           fontWeight: 700,
                         }}
