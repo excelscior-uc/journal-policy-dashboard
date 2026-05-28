@@ -10,6 +10,11 @@ export default defineConfig({
   base: '/journal-policy-dashboard/',
   test: {
     environment: 'jsdom',
+    environmentOptions: {
+      jsdom: {
+        url: 'http://localhost/',
+      },
+    },
     setupFiles: ['./tests/setup.js'],
     globals: true,
   },
