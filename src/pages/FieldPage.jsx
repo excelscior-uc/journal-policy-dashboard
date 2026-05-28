@@ -5,6 +5,7 @@ import ChartCard from '../components/ChartCard'
 import FilterBar from '../components/FilterBar'
 import JournalSidebar from '../components/JournalSidebar'
 import CompareModal from '../components/CompareModal'
+import FeaturesIntroModal from '../components/FeaturesIntroModal'
 import { useJournalNames } from '../data/journalNames'
 import { fetchField, getCachedField } from '../utils/fieldDataCache'
 import JSZip from 'jszip'
@@ -210,6 +211,7 @@ export default function FieldPage() {
 
   return (
     <>
+      <FeaturesIntroModal />
       <div className="field-layout">
         {data && (
           <JournalSidebar
