@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { vi } from 'vitest'
 import ChartCard from '../src/components/ChartCard'
+import { ThemeProvider } from '../src/hooks/useTheme'
 
 // Recharts uses ResizeObserver — stub it
 global.ResizeObserver = class { observe() {} unobserve() {} disconnect() {} }
@@ -22,15 +23,17 @@ const POLICY_LINES = [{ year: 2019 }]
 describe('ChartCard', () => {
   it('renders title and subtitle', () => {
     render(
-      <ChartCard
-        title="Test Journal"
-        subtitle="n = 60 eligible articles"
-        chartData={CHART_DATA}
-        policyLines={POLICY_LINES}
-        visibleSeries={new Set(['pct_only_bar'])}
-        showPolicyLines={true}
-        forceVisible={true}
-      />
+      <ThemeProvider>
+        <ChartCard
+          title="Test Journal"
+          subtitle="n = 60 eligible articles"
+          chartData={CHART_DATA}
+          policyLines={POLICY_LINES}
+          visibleSeries={new Set(['pct_only_bar'])}
+          showPolicyLines={true}
+          forceVisible={true}
+        />
+      </ThemeProvider>
     )
     expect(screen.getByText('Test Journal')).toBeInTheDocument()
     expect(screen.getByText('n = 60 eligible articles')).toBeInTheDocument()
@@ -43,15 +46,17 @@ describe('ChartCard', () => {
     function Wrapper({ counter }) {
       renderSpy()
       return (
-        <ChartCard
-          title="Test Journal"
-          subtitle="n = 60"
-          chartData={CHART_DATA}
-          policyLines={POLICY_LINES}
-          visibleSeries={visibleSeries}
-          showPolicyLines={true}
-          forceVisible={true}
-        />
+        <ThemeProvider>
+          <ChartCard
+            title="Test Journal"
+            subtitle="n = 60"
+            chartData={CHART_DATA}
+            policyLines={POLICY_LINES}
+            visibleSeries={visibleSeries}
+            showPolicyLines={true}
+            forceVisible={true}
+          />
+        </ThemeProvider>
       )
     }
 

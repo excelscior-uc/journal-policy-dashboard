@@ -6,31 +6,32 @@ import {
 } from 'recharts'
 import { useVisible } from '../hooks/useVisible'
 import { SERIES_CONFIG } from '../data/fields'
+import { useTheme } from '../hooks/useTheme'
 
 const EMPTY_POLICY_LINES = []
 
-function CustomTooltip({ active, payload, label, policyByYear, totalJournals }) {
+function CustomTooltip({ active, payload, label, policyByYear, totalJournals, cc }) {
   if (!active || !payload?.length) return null
   const d = payload[0]?.payload
   const policy = policyByYear?.get(label)
   return (
     <div style={{
-      background: '#fefce8',
-      border: '1px solid #fef08a',
+      background: cc.tooltipBg,
+      border: `1px solid ${cc.tooltipBorder}`,
       borderRadius: 6,
       padding: '6px 10px',
       fontSize: 11,
       fontWeight: 700,
       lineHeight: 1.6,
     }}>
-      <div style={{ fontWeight: 600, marginBottom: 2, color: '#713f12' }}>{label}</div>
+      <div style={{ fontWeight: 600, marginBottom: 2, color: cc.tooltipText }}>{label}</div>
       {payload.map(p => (
         <div key={p.dataKey} style={{ color: p.color }}>
           {p.name} : {p.value?.toFixed(1)}%
         </div>
       ))}
       {(d?.totalArticles != null || d?.eligibleArticles != null) && (
-        <div style={{ marginTop: 4, borderTop: '1px solid #fef08a', paddingTop: 3, color: '#713f12', fontWeight: 600 }}>
+        <div style={{ marginTop: 4, borderTop: `1px solid ${cc.tooltipBorder}`, paddingTop: 3, color: cc.tooltipText, fontWeight: 600 }}>
           {d?.totalArticles != null && <div>Total articles: {d.totalArticles.toLocaleString()}</div>}
           {d?.eligibleArticles != null && (
             <div>
@@ -41,7 +42,7 @@ function CustomTooltip({ active, payload, label, policyByYear, totalJournals }) 
         </div>
       )}
       {policy && ((policy.count ?? 0) > 0 || (policy.count == null && policy.pct > 0)) && (
-        <div style={{ marginTop: 4, borderTop: '1px solid #fef08a', paddingTop: 3, color: '#6d5f00', fontWeight: 700 }}>
+        <div style={{ marginTop: 4, borderTop: `1px solid ${cc.tooltipBorder}`, paddingTop: 3, color: cc.tooltipPolicyText, fontWeight: 700 }}>
           {policy.count != null
             ? <>Policy adopted: {policy.count} journal{policy.count === 1 ? '' : 's'}{totalJournals ? ` of ${totalJournals}` : ''}{policy.pct != null ? ` (${policy.pct}%)` : ''}</>
             : <>Policy adopted: {policy.pct}% of journals{totalJournals ? ` (~${Math.round(policy.pct / 100 * totalJournals)} of ${totalJournals})` : ''}</>
@@ -52,7 +53,7 @@ function CustomTooltip({ active, payload, label, policyByYear, totalJournals }) 
   )
 }
 
-function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear }) {
+function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear, cc }) {
   if (payload.value === hideYear) return null
   const isPolicy = showPolicyLines && policyYears.has(payload.value)
   return (
@@ -61,8 +62,8 @@ function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear
         <rect
           x={-28} y={-8} width={30} height={15}
           rx={3} ry={3}
-          fill="rgba(253,231,37,0.55)"
-          stroke="rgba(253,231,37,0.9)"
+          fill={cc.policyTickBg}
+          stroke={cc.policyTickStroke}
           strokeWidth={1}
         />
       )}
@@ -72,7 +73,7 @@ function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear
         dominantBaseline="middle"
         fontSize={11}
         fontWeight={isPolicy ? 700 : 400}
-        fill={isPolicy ? '#6d5f00' : '#495057'}
+        fill={isPolicy ? cc.policyTickText : cc.tickText}
       >
         {payload.value}
       </text>
@@ -80,7 +81,7 @@ function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear
   )
 }
 
-function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines }) {
+function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines, cc }) {
   const series = SERIES_CONFIG.filter(s => !visibleSeries || visibleSeries.has(s.key))
   const line1 = series.slice(0, 3)
   const line2 = series.slice(3)
@@ -102,9 +103,9 @@ function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines }) {
         <div style={{ display: 'flex', gap: '6px 12px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {line2.map(s => <LegendItem key={s.key} s={s} />)}
           {showPolicyLines && hasPolicyLines && (
-            <span style={{ display: 'flex', alignItems: 'center', gap: 4, color: '#6d5f00' }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 4, color: cc.tooltipPolicyText }}>
               <svg width="10" height="14">
-                <rect x="3" y="0" width="4" height="14" rx="1" fill="rgba(253,231,37,0.7)" />
+                <rect x="3" y="0" width="4" height="14" rx="1" fill={cc.policyMarker} />
               </svg>
               Policy Year
             </span>
@@ -119,6 +120,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
   const ref = useRef()
   const cardRef = useRef()
   const visible = useVisible(ref)
+  const { chartColors: cc } = useTheme()
   const enrichedPolicyLines = useMemo(() => policyLines
     .map(pl => {
       const m = pl.label?.match(/(\d+(?:\.\d+)?)\s*%/)
@@ -290,7 +292,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
         {visible || forceVisible ? (
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={extendedData} margin={{ top: 16, right: 14, left: 4, bottom: 14 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+              <CartesianGrid strokeDasharray="3 3" stroke={cc.grid} />
               <XAxis
                 dataKey="year"
                 type="category"
@@ -298,21 +300,21 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                 minTickGap={0}
                 height={46}
                 tickMargin={4}
-                tick={<PolicyAwareTick policyYears={policyYears} showPolicyLines={showPolicyLines} hideYear={extendedData?.[0]?.year} />}
-                tickLine={{ stroke: '#adb5bd' }}
-                axisLine={{ stroke: '#ced4da' }}
-                label={{ value: 'Year', position: 'insideBottom', offset: -4, fontSize: 11, fill: '#6c757d', fontWeight: 700 }}
+                tick={<PolicyAwareTick policyYears={policyYears} showPolicyLines={showPolicyLines} hideYear={extendedData?.[0]?.year} cc={cc} />}
+                tickLine={{ stroke: cc.tickLine }}
+                axisLine={{ stroke: cc.axisLine }}
+                label={{ value: 'Year', position: 'insideBottom', offset: -4, fontSize: 11, fill: cc.axisLabel, fontWeight: 700 }}
               />
               <YAxis
-                tick={{ fontSize: 10 }}
+                tick={{ fontSize: 10, fill: cc.tickText }}
                 domain={[0, 100]}
                 unit="%"
-                label={{ value: '% Papers', angle: -90, position: 'insideLeft', offset: 10, fontSize: 11, fill: '#6c757d', fontWeight: 700, dy: 20 }}
+                label={{ value: '% Papers', angle: -90, position: 'insideLeft', offset: 10, fontSize: 11, fill: cc.axisLabel, fontWeight: 700, dy: 20 }}
               />
-              <Tooltip content={<CustomTooltip policyByYear={policyByYear} totalJournals={totalJournals} />} />
+              <Tooltip content={<CustomTooltip policyByYear={policyByYear} totalJournals={totalJournals} cc={cc} />} />
               <Legend
                 key={`legend-${showPolicyLines && enrichedPolicyLines.length > 0 ? 'p' : 'np'}`}
-                content={<CustomLegend visibleSeries={visibleSeries} showPolicyLines={showPolicyLines} hasPolicyLines={enrichedPolicyLines.length > 0} />}
+                content={<CustomLegend visibleSeries={visibleSeries} showPolicyLines={showPolicyLines} hasPolicyLines={enrichedPolicyLines.length > 0} cc={cc} />}
                 verticalAlign="top"
                 align="right"
                 height={showPolicyLines && enrichedPolicyLines.length > 0 ? 44 : 22}
@@ -327,7 +329,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                   <ReferenceLine
                     key={pl.year}
                     x={pl.year}
-                    stroke="rgba(253,231,37,0.7)"
+                    stroke={cc.policyMarker}
                     strokeWidth={w}
                     isAnimationActive={false}
                   />
