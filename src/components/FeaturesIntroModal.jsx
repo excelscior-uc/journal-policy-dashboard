@@ -98,6 +98,12 @@ export default function FeaturesIntroModal() {
   }, [])
 
   useEffect(() => {
+    function onOpen() { setOpen(true) }
+    window.addEventListener('open-features-intro', onOpen)
+    return () => window.removeEventListener('open-features-intro', onOpen)
+  }, [])
+
+  useEffect(() => {
     if (!open) return
     function onKey(e) { if (e.key === 'Escape') close() }
     document.addEventListener('keydown', onKey)

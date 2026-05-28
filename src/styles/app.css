@@ -1175,10 +1175,31 @@ a  { color: #2c3e50; }
   white-space: nowrap;
   flex-shrink: 0;
 }
+.top-nav__info {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.85);
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.top-nav__info:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
 @media (max-width: 760px) {
   .top-nav { padding: 8px 14px; gap: 10px; }
   .global-search { flex-basis: 100%; min-width: 0; margin-left: 0; order: 3; }
   .top-nav__filter-slot { order: 2; flex-basis: 100%; }
+  .top-nav__info { order: 1; margin-left: auto; }
 }
 
 /* ── HERO (two-column) ── */
