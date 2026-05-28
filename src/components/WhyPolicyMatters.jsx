@@ -1,4 +1,5 @@
 import CollapsibleHomeSection from './CollapsibleHomeSection'
+import { SITE_STATS } from '../data/siteStats'
 
 export default function WhyPolicyMatters() {
   return (
@@ -12,7 +13,7 @@ export default function WhyPolicyMatters() {
       <p>
         Bar charts that reduce continuous data to a mean and error bar are widely criticised for
         concealing distributional features. This dashboard tracks how journal editorial policies are
-        driving the shift toward more informative visualisations across 213 journals and 12 biomedical
+        driving the shift toward more informative visualisations across {SITE_STATS.totalJournals} journals and {SITE_STATS.fieldCount} biomedical
         research fields. Pre-registered study protocol:{' '}
         <a href="https://osf.io/tcyxg" target="_blank" rel="noreferrer">osf.io/tcyxg</a>.
       </p>

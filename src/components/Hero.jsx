@@ -1,4 +1,5 @@
 import GlobalJournalSearch from './GlobalJournalSearch'
+import { SITE_STATS } from '../data/siteStats'
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
             Bar charts that reduce continuous data to a mean and error bar are widely criticised for
             concealing distributional features. This dashboard tracks how{' '}
             <strong>journal editorial policies</strong> are driving the shift toward more informative
-            visualisations across 213 journals and 12 biomedical research fields.{' '}
+            visualisations across {SITE_STATS.totalJournals} journals and {SITE_STATS.fieldCount} biomedical research fields.{' '}
             Pre-registered study protocol:{' '}
             <a href="https://osf.io/tcyxg" target="_blank" rel="noreferrer" className="hero__link">
               osf.io/tcyxg
@@ -43,15 +44,15 @@ export default function Hero() {
         </div>
         <div className="hero__stats">
           <div className="hero__stat-card">
-            <div className="hero__stat-num">213</div>
+            <div className="hero__stat-num">{SITE_STATS.totalJournals}</div>
             <div className="hero__stat-lbl">Journals</div>
           </div>
           <div className="hero__stat-card">
-            <div className="hero__stat-num">12</div>
+            <div className="hero__stat-num">{SITE_STATS.fieldCount}</div>
             <div className="hero__stat-lbl">Research Fields</div>
           </div>
           <div className="hero__stat-card">
-            <div className="hero__stat-num">16 yr</div>
+            <div className="hero__stat-num">{SITE_STATS.yearSpan} yr</div>
             <div className="hero__stat-lbl">Time Span</div>
           </div>
         </div>

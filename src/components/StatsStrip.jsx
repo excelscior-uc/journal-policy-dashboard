@@ -1,8 +1,10 @@
+import { SITE_STATS } from '../data/siteStats'
+
 const STATS = [
-  { num: '12',        lbl: 'Research Fields' },
-  { num: '335+',      lbl: 'Charts' },
-  { num: '2008–2024', lbl: 'Time Span' },
-  { num: 'Pre-reg.',  lbl: 'Study Protocol' },
+  { num: String(SITE_STATS.fieldCount),                      lbl: 'Research Fields' },
+  { num: `${SITE_STATS.chartCount}+`,                        lbl: 'Charts' },
+  { num: `${SITE_STATS.yearMin}–${SITE_STATS.yearMax}`,      lbl: 'Time Span' },
+  { num: 'Pre-reg.',                                         lbl: 'Study Protocol' },
 ]
 
 export default function StatsStrip() {
