@@ -1187,7 +1187,7 @@ a  { color: #2c3e50; }
   margin: 0 auto;
   display: flex;
   gap: 32px;
-  align-items: flex-start;
+  align-items: stretch;
 }
 .hero__text { flex: 1; max-width: 680px; }
 .hero__link { color: #76b5b2; }
@@ -1207,6 +1207,11 @@ a  { color: #2c3e50; }
 .hero__search .global-search__icon { width: 15px; height: 15px; }
 .hero__stats { display: flex; flex-direction: column; gap: 10px; min-width: 130px; flex-shrink: 0; margin-left: auto; }
 .hero__stat-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: rgba(255,255,255,0.08);
   border-radius: 8px;
   padding: 14px 18px;
