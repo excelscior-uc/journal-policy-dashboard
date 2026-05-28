@@ -237,6 +237,47 @@ function buildAllFieldsJson(rows, fieldJsons) {
   }
 }
 
+// --- Field-level journal/policy counts (membership = the `Field` column) ---
+
+export function buildFieldCounts(rows) {
+  const out = {}
+  const perField = new Map() // Field display name -> { all:Set, pol:Set } of JCR_Abbrev
+  const all = new Set()
+  const pol = new Set()
+  for (const r of rows) {
+    const abbrev = r.JCR_Abbrev
+    if (!abbrev) continue
+    const hasPolicy = num(r.policy) === 1
+    all.add(abbrev)
+    if (hasPolicy) pol.add(abbrev)
+
+    const name = r.Field
+    if (!name) continue
+    let e = perField.get(name)
+    if (!e) { e = { all: new Set(), pol: new Set() }; perField.set(name, e) }
+    e.all.add(abbrev)
+    if (hasPolicy) e.pol.add(abbrev)
+  }
+  for (const [name, e] of perField) {
+    const slug = DISPLAY_TO_SLUG[name]
+    if (!slug) continue
+    out[slug] = { totalJournals: e.all.size, withPolicy: e.pol.size }
+  }
+  out['all-fields'] = { totalJournals: all.size, withPolicy: pol.size }
+  return out
+}
+
+function writeFieldsCounts(counts) {
+  const p = join(__dirname, '../src/data/fields.js')
+  let src = readFileSync(p, 'utf8')
+  for (const [slug, c] of Object.entries(counts)) {
+    const re = new RegExp(`(slug: '${slug}',[^\\n]*?totalJournals: )\\d+([^\\n]*?withPolicy: )\\d+`)
+    if (!re.test(src)) { console.warn(`WARN no counts row for slug ${slug}`); continue }
+    src = src.replace(re, `$1${c.totalJournals}$2${c.withPolicy}`)
+  }
+  writeFileSync(p, src)
+}
+
 export function buildAll(rows) {
   const fieldJsons = Object.entries(FIELD_DISPLAY_MAP).map(
     ([slug, name]) => buildFieldJson(slug, name, rows)
@@ -263,4 +304,7 @@ if (process.argv[1] && process.argv[1].endsWith('extract-data.js')) {
   }
   writeFileSync(join(outDir, 'all-fields.json'), JSON.stringify(allFields, null, 2))
   console.log('OK all-fields.json')
+
+  writeFieldsCounts(buildFieldCounts(rows))
+  console.log('OK src/data/fields.js counts')
 }

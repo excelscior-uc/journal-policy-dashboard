@@ -4,6 +4,8 @@
   "description": "An interactive dashboard tracking how data-visualisation practices in scientific publishing have evolved over time — focusing on the use of bar graphs versus more informative alternatives across 213 journals and 12 biomedical research fields:",
   "scripts": {
     "dev": "vite",
+    "data": "node scripts/extract-data.js",
+    "prebuild": "npm run data",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run --passWithNoTests",
