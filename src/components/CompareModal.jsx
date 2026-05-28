@@ -611,7 +611,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                       return (
                         <g transform={`translate(${x},${y}) rotate(-40)`}>
                           {isPolicy && (
-                            <rect x={-33} y={-8} width={35} height={15} rx={3} ry={3}
+                            <rect x={-30} y={-8} width={36} height={15} rx={3} ry={3}
                               fill={cc.policyTickBg} stroke={cc.policyTickStroke} strokeWidth={1} />
                           )}
                           <text x={0} y={0} textAnchor="end" dominantBaseline="middle"
