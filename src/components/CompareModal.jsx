@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { toPng } from 'html-to-image'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
   ReferenceLine, ResponsiveContainer,
@@ -153,14 +154,63 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
   const [showPolicy, setShowPolicy] = useState(true)
   const [query, setQuery] = useState('')
   const [active, setActive] = useState(0)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [busy, setBusy] = useState(false)
   const searchRef = useRef(null)
   const dialogRef = useRef(null)
+  const captureRef = useRef(null)
+  const menuRef = useRef(null)
 
   useEffect(() => {
     function onKey(e) { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
   }, [onClose])
+
+  useEffect(() => {
+    if (!menuOpen) return
+    function close(e) {
+      if (!menuRef.current?.contains(e.target)) setMenuOpen(false)
+    }
+    document.addEventListener('mousedown', close)
+    return () => document.removeEventListener('mousedown', close)
+  }, [menuOpen])
+
+  const exportName = useMemo(() => {
+    const base = items.map(it => it.name).join('-vs-') || 'comparison'
+    return `compare-${base}`.replace(/\s+/g, '-')
+  }, [items])
+
+  async function captureChart() {
+    return toPng(captureRef.current, { cacheBust: true, pixelRatio: 2, backgroundColor: '#fff' })
+  }
+
+  async function copyAsPng() {
+    setMenuOpen(false)
+    setBusy(true)
+    try {
+      const dataUrl = await captureChart()
+      const res = await fetch(dataUrl)
+      const blob = await res.blob()
+      await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function downloadAsPng() {
+    setMenuOpen(false)
+    setBusy(true)
+    try {
+      const dataUrl = await captureChart()
+      const a = document.createElement('a')
+      a.href = dataUrl
+      a.download = `${exportName}.png`
+      a.click()
+    } finally {
+      setBusy(false)
+    }
+  }
 
   useEffect(() => {
     document.body.style.overflow = 'hidden'
@@ -427,6 +477,64 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
           </aside>
 
           <section className="compare-modal__chart">
+            <div className="compare-modal__chart-toolbar">
+              <div
+                className="chart-card__menu"
+                ref={menuRef}
+                onClick={(e) => e.stopPropagation()}
+                onMouseDown={(e) => e.stopPropagation()}
+                onKeyDown={(e) => e.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className="chart-card__menu-btn"
+                  onClick={(e) => { e.stopPropagation(); setMenuOpen(o => !o) }}
+                  disabled={busy || mergedRows.length === 0}
+                  title="Export chart"
+                  aria-label="Export chart"
+                  aria-haspopup="menu"
+                  aria-expanded={menuOpen}
+                >
+                  {busy ? '…' : (
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                      <circle cx="3" cy="9" r="2" />
+                      <circle cx="9" cy="9" r="2" />
+                      <circle cx="15" cy="9" r="2" />
+                    </svg>
+                  )}
+                </button>
+                {menuOpen && (
+                  <div className="chart-card__menu-dropdown" role="menu">
+                    <button
+                      type="button"
+                      className="chart-card__menu-item"
+                      onClick={(e) => { e.stopPropagation(); copyAsPng() }}
+                      role="menuitem"
+                    >
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" />
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                      </svg>
+                      Copy as PNG
+                    </button>
+                    <button
+                      type="button"
+                      className="chart-card__menu-item"
+                      onClick={(e) => { e.stopPropagation(); downloadAsPng() }}
+                      role="menuitem"
+                    >
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                      </svg>
+                      Download as PNG
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="compare-modal__capture" ref={captureRef}>
             <div className="compare-modal__chart-legend">
               <div className="compare-modal__legend-row" role="group" aria-label="Series">
                 {SERIES_CONFIG.map(s => {
@@ -578,6 +686,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                 </LineChart>
               </ResponsiveContainer>
             )}
+            </div>
           </section>
         </div>
       </div>
