@@ -1911,3 +1911,22 @@ a  { color: #2c3e50; }
   .intro-modal { height: 100%; border-radius: 0; max-height: 100%; }
   .intro-modal__backdrop { padding: 0; }
 }
+
+/* ── THEME TOGGLE ── */
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; padding: 0;
+  border: 1px solid var(--border, #dee2e6);
+  border-radius: 6px;
+  background: var(--surface, #fff);
+  color: var(--text-strong, #2c3e50);
+  cursor: pointer;
+}
+.theme-toggle:hover { background: var(--surface-2, #f8f9fa); }
+/* Hero variant: sits on the dark hero in light mode */
+.hero .theme-toggle {
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.hero .theme-toggle:hover { background: rgba(255,255,255,0.18); }
