@@ -1,9 +1,10 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import TopNav from '../src/components/TopNav'
+import { ThemeProvider } from '../src/hooks/useTheme'
 
 function renderWithRouter(ui) {
-  return render(<MemoryRouter>{ui}</MemoryRouter>)
+  return render(<ThemeProvider><MemoryRouter>{ui}</MemoryRouter></ThemeProvider>)
 }
 
 describe('TopNav', () => {

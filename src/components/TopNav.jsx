@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import GlobalJournalSearch from './GlobalJournalSearch'
+import ThemeToggle from './ThemeToggle'
 
 export default function TopNav() {
   return (
@@ -7,6 +8,7 @@ export default function TopNav() {
       <Link to="/" className="top-nav__logo">Journal Policy Dashboard</Link>
       <div id="nav-filter-slot" className="top-nav__filter-slot" />
       <GlobalJournalSearch />
+      <ThemeToggle />
       <button
         type="button"
         className="top-nav__info"

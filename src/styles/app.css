@@ -58,7 +58,9 @@ a  { color: #2c3e50; }
   background: linear-gradient(135deg, #1a252f 0%, #2c3e50 60%, #34495e 100%);
   color: #fff;
   padding: 48px 48px 44px;
+  position: relative;
 }
+.hero__toggle { position: absolute; top: 14px; right: 16px; z-index: 2; }
 .hero__title { font-family: "Crimson Pro", Georgia, serif; font-size: 34px; font-weight: 700; color: #fff; margin-bottom: 14px; line-height: 1.18; }
 .hero__title em { font-style: italic; color: #76b5b2; }
 .hero__title em.hero__title-bar { color: #d55e00; }

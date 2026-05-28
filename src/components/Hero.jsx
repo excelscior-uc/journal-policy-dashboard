@@ -1,9 +1,11 @@
 import GlobalJournalSearch from './GlobalJournalSearch'
 import { SITE_STATS } from '../data/siteStats'
+import ThemeToggle from './ThemeToggle'
 
 export default function Hero() {
   return (
     <div className="hero">
+      <div className="hero__toggle"><ThemeToggle /></div>
       <div className="hero__inner">
         <div className="hero__text">
 <h1 className="hero__title">
