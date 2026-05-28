@@ -2,7 +2,83 @@
 
 :root {
   --topnav-h: 44px;
+
+  /* surfaces */
+  --bg: #f0f2f5;
+  --surface: #fff;
+  --surface-2: #f8f9fa;
+  --surface-3: #f1f3f5;
+
+  /* text */
+  --text: #212529;
+  --text-strong: #2c3e50;
+  --text-body: #495057;
+  --text-muted: #6c757d;
+  --text-subtle: #868e96;
+
+  /* borders / lines */
+  --border: #dee2e6;
+  --border-strong: #ced4da;
+  --tick: #adb5bd;
+
+  /* accent */
+  --accent: #76b5b2;
+  --accent-strong: #3f8f8b;
+  --accent-contrast-text: #1a252f;
+
+  /* hero */
+  --hero-grad: linear-gradient(135deg, #1a252f 0%, #2c3e50 60%, #34495e 100%);
+
+  /* scrollbar */
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+
+  /* chart (CSS-side only; JS uses chartColors) */
+  --chart-grid: #f0f0f0;
+
+  /* focus */
+  --focus-ring: #76b5b2;
+
+  /* shadow */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
 }
+
+[data-theme="dark"] {
+  --bg: #0f1419;
+  --surface: #1a222c;
+  --surface-2: #222c38;
+  --surface-3: #283543;
+
+  --text: #e6e9ee;
+  --text-strong: #f1f4f8;
+  --text-body: #c2cad4;
+  --text-muted: #9aa5b1;
+  --text-subtle: #7c8794;
+
+  --border: #2c3744;
+  --border-strong: #3a4654;
+  --tick: #4a5666;
+
+  --accent: #76b5b2;
+  --accent-strong: #8cc7c4;
+  --accent-contrast-text: #0f1419;
+
+  --hero-grad: linear-gradient(135deg, #0c1218 0%, #16202b 60%, #1c2733 100%);
+
+  --scrollbar-thumb: #3a4654;
+  --scrollbar-thumb-hover: #4a5666;
+
+  --chart-grid: #2c3744;
+
+  --focus-ring: #8cc7c4;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+html, body { background: var(--bg); color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
 
 body {
   font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
