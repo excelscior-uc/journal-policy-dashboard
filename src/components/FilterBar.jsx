@@ -43,6 +43,7 @@ function SegSwitch({ value, onChange }) {
             className={`seg-switch__btn${value === opt.value ? ' active' : ''}`}
             onClick={() => onChange(opt.value)}
             aria-label={`${opt.label} — ${opt.tip}`}
+            data-label={opt.label}
           >
             {opt.label}
           </button>

@@ -348,6 +348,13 @@ a  { color: #2c3e50; }
   transition: color 0.35s ease; white-space: nowrap;
   position: relative; z-index: 1;
 }
+/* reserve bold width so active state doesn't reflow siblings */
+.seg-switch__btn::after {
+  content: attr(data-label);
+  font-weight: 600;
+  height: 0; overflow: hidden; visibility: hidden;
+  display: block; pointer-events: none;
+}
 .seg-switch__btn:hover { color: rgba(255,255,255,0.9); }
 .seg-switch__btn.active { color: #1a252f; font-weight: 600; }
 
