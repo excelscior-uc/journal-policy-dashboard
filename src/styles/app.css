@@ -970,24 +970,21 @@ a  { color: #2c3e50; }
 }
 .chart-section-title__download-btn:hover { color: #2c3e50; }
 .chart-section-title__download-btn:disabled { opacity: 0.5; cursor: default; }
-.cols-label { font-size: 11px; color: #adb5bd; font-weight: 600; transition: color .2s; }
-.cols-label.active { color: #2c3e50; }
-.cols-toggle {
-  position: relative; width: 36px; height: 18px;
-  background: #2c3e50; border: none; border-radius: 9px;
-  cursor: pointer; padding: 0; flex-shrink: 0;
-  transition: background .2s;
+.cols-seg__label { font-size: 11px; color: #adb5bd; font-weight: 600; }
+.cols-seg { display: inline-flex; border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; flex-shrink: 0; }
+.cols-seg__btn {
+  font-size: 11px; font-weight: 600; color: #adb5bd;
+  background: #fff; border: none; padding: 3px 9px; cursor: pointer;
+  line-height: 1.4; transition: background .15s, color .15s;
 }
-.cols-toggle__thumb {
-  position: absolute; top: 2px; left: 2px;
-  width: 14px; height: 14px; border-radius: 50%;
-  background: #fff; transition: transform .2s;
-  display: block;
-}
-.cols-toggle--right .cols-toggle__thumb { transform: translateX(18px); }
+.cols-seg__btn + .cols-seg__btn { border-left: 1px solid #dee2e6; }
+.cols-seg__btn:hover:not(.active) { color: #2c3e50; }
+.cols-seg__btn.active { background: #2c3e50; color: #fff; }
 .chart-section-title:first-child { margin-top: 0; }
-.chart-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+.chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
 .chart-grid--full { grid-template-columns: 1fr; }
+.chart-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .chart-grid--three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .field-chart-link { cursor: pointer; border-radius: 7px; transition: transform 0.15s, box-shadow 0.15s; }
 .field-chart-link:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
 .field-chart-link:focus-visible { outline: 2px solid #4dabf7; outline-offset: 2px; }

@@ -107,12 +107,13 @@ export const FEATURES = [
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="14" height="6" rx="1.5" />
-        <rect x="3" y="11" width="6" height="6" rx="1.5" />
-        <rect x="11" y="11" width="6" height="6" rx="1.5" />
+        <rect x="3" y="11" width="4" height="6" rx="1.5" />
+        <rect x="8" y="11" width="4" height="6" rx="1.5" />
+        <rect x="13" y="11" width="4" height="6" rx="1.5" />
       </svg>
     ),
-    title: '1 or 2 graphs per row',
-    desc: 'Switch the layout between one or two charts per row to focus in or scan more at a glance.',
+    title: 'Adjustable chart layout',
+    desc: 'Switch the layout between one, two, or three charts per row to focus in or scan more at a glance.',
   },
   {
     icon: (

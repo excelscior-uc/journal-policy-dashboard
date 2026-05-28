@@ -12,6 +12,33 @@ import JSZip from 'jszip'
 
 const DEFAULT_VISIBLE = new Set(SERIES_CONFIG.map(s => s.key))
 
+function gridColsClass(cols) {
+  if (cols === 1) return ' chart-grid--full'
+  if (cols === 3) return ' chart-grid--three'
+  return ''
+}
+
+function ColsControl({ value, onChange }) {
+  return (
+    <span className="chart-section-title__cols">
+      <span className="cols-seg__label">Per row</span>
+      <span className="cols-seg" role="group" aria-label="Charts per row">
+        {[1, 2, 3].map(n => (
+          <button
+            key={n}
+            type="button"
+            className={`cols-seg__btn${value === n ? ' active' : ''}`}
+            onClick={() => onChange(n)}
+            aria-pressed={value === n}
+          >
+            {n}
+          </button>
+        ))}
+      </span>
+    </span>
+  )
+}
+
 function prefetchOthers(currentSlug) {
   const others = FIELDS.filter(f => f.slug !== currentSlug && !getCachedField(f.slug))
   let i = 0
@@ -283,19 +310,9 @@ export default function FieldPage() {
                 <>
                   <div className="chart-section-title">
                     Per-Field Charts
-                    <span className="chart-section-title__cols">
-                      <span className={`cols-label${fieldCols === 1 ? ' active' : ''}`}>1 / row</span>
-                      <button
-                        className={`cols-toggle${fieldCols === 2 ? ' cols-toggle--right' : ''}`}
-                        onClick={() => setFieldCols(n => n === 1 ? 2 : 1)}
-                        aria-label="Toggle columns"
-                      >
-                        <span className="cols-toggle__thumb" />
-                      </button>
-                      <span className={`cols-label${fieldCols === 2 ? ' active' : ''}`}>2 / row</span>
-                    </span>
+                    <ColsControl value={fieldCols} onChange={setFieldCols} />
                   </div>
-                  <div className={`chart-grid${fieldCols === 1 ? ' chart-grid--full' : ''}`}>
+                  <div className={`chart-grid${gridColsClass(fieldCols)}`}>
                     {data.fields.map(f => {
                       const meta = FIELDS.find(x => x.slug === f.slug)
                       const fieldAgg = deferredPolicyFilter === 'policy'
@@ -352,19 +369,9 @@ export default function FieldPage() {
                 <>
                   <div className="chart-section-title">
                     Per-Journal Charts
-                    <span className="chart-section-title__cols">
-                      <span className={`cols-label${journalCols === 1 ? ' active' : ''}`}>1 / row</span>
-                      <button
-                        className={`cols-toggle${journalCols === 2 ? ' cols-toggle--right' : ''}`}
-                        onClick={() => setJournalCols(n => n === 1 ? 2 : 1)}
-                        aria-label="Toggle columns"
-                      >
-                        <span className="cols-toggle__thumb" />
-                      </button>
-                      <span className={`cols-label${journalCols === 2 ? ' active' : ''}`}>2 / row</span>
-                    </span>
+                    <ColsControl value={journalCols} onChange={setJournalCols} />
                   </div>
-                  <div className={`chart-grid${journalCols === 1 ? ' chart-grid--full' : ''}`}>
+                  <div className={`chart-grid${gridColsClass(journalCols)}`}>
                     {data.journals.map(j => {
                       const q = journalSearch.trim().toLowerCase()
                       const matchesQuery = !q ||
