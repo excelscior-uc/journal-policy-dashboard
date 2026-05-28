@@ -1819,6 +1819,10 @@ a  { color: #2c3e50; }
   border: 1px solid #eef0f4;
   border-radius: 8px;
 }
+.collapsible-home-section__panel .intro-modal__features--home { padding-left: 0; }
+.intro-modal__features--home .intro-states {
+  width: 100%; max-width: 560px; align-self: flex-start;
+}
 .intro-states__group { display: flex; flex-direction: column; gap: 6px; }
 .intro-states__caption { font-size: 11px; font-weight: 600; color: #495057; }
 .intro-states__caption--soft { font-weight: 500; color: #868e96; }
