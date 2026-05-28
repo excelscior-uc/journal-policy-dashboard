@@ -150,7 +150,6 @@ a  { color: var(--text-strong); }
   padding: 48px 48px 44px;
   position: relative;
 }
-.hero__toggle { position: absolute; top: 14px; right: 16px; z-index: 2; }
 .hero__title { font-family: "Crimson Pro", Georgia, serif; font-size: 34px; font-weight: 700; color: #fff; margin-bottom: 14px; line-height: 1.18; }
 .hero__title em { font-style: italic; color: var(--accent); }
 .hero__title em.hero__title-bar { color: #d55e00; }
@@ -267,8 +266,7 @@ a  { color: var(--text-strong); }
 
 /* ── REF LIST ── */
 .ref-list { list-style: none; padding: 0; }
-.ref-list li { font-size: 14px; color: var(--text); padding: 8px 0; border-bottom: 1px solid var(--surface-3); line-height: 1.55; }
-.ref-list li:last-child { border-bottom: none; }
+.ref-list li { font-size: 14px; color: var(--text); padding: 8px 0; line-height: 1.55; }
 .ref-list a { color: var(--text-strong); text-decoration: underline; text-underline-offset: 2px; }
 .ref-list a:hover { color: var(--accent); }
 
@@ -2015,10 +2013,15 @@ a  { color: var(--text-strong); }
   cursor: pointer;
 }
 .theme-toggle:hover { background: var(--surface-2, #f8f9fa); }
-/* Hero variant: sits on the dark hero in light mode */
-.hero .theme-toggle {
-  border-color: rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.1);
-  color: #fff;
+/* Floating toggle on home screen, lower-right */
+.theme-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
 }
-.hero .theme-toggle:hover { background: rgba(255,255,255,0.18); }
+.theme-float .theme-toggle {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}

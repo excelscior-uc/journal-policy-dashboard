@@ -1,3 +1,32 @@
+import { useTheme } from '../hooks/useTheme'
+
+function TooltipPreview() {
+  const { chartColors: cc } = useTheme()
+  return (
+    <div style={{
+      background: cc.tooltipBg,
+      border: `1px solid ${cc.tooltipBorder}`,
+      borderRadius: 6,
+      padding: '6px 10px',
+      fontSize: 11,
+      fontWeight: 700,
+      lineHeight: 1.6,
+      maxWidth: 300,
+    }}>
+      <div style={{ fontWeight: 600, marginBottom: 2, color: cc.tooltipText }}>2021</div>
+      <div style={{ color: '#d55e00' }}>% only bar : 42.0%</div>
+      <div style={{ color: '#0072b2' }}>% only informative : 31.5%</div>
+      <div style={{ marginTop: 4, borderTop: `1px solid ${cc.tooltipBorder}`, paddingTop: 3, color: cc.tooltipText, fontWeight: 600 }}>
+        <div>Total articles: 1,240</div>
+        <div>Included articles: 980 (79.0%)</div>
+      </div>
+      <div style={{ marginTop: 4, borderTop: `1px solid ${cc.tooltipBorder}`, paddingTop: 3, color: cc.tooltipPolicyText, fontWeight: 700 }}>
+        Policy adopted: 8 journals of 71 (11%)
+      </div>
+    </div>
+  )
+}
+
 export const FEATURES = [
   {
     icon: (
@@ -166,27 +195,7 @@ export const FEATURES = [
     extra: (
       <div className="intro-states">
         <div className="intro-states__caption">A tooltip looks like this:</div>
-        <div style={{
-          background: '#fefce8',
-          border: '1px solid #fef08a',
-          borderRadius: 6,
-          padding: '6px 10px',
-          fontSize: 11,
-          fontWeight: 700,
-          lineHeight: 1.6,
-          maxWidth: 300,
-        }}>
-          <div style={{ fontWeight: 600, marginBottom: 2, color: '#713f12' }}>2021</div>
-          <div style={{ color: '#d55e00' }}>% only bar : 42.0%</div>
-          <div style={{ color: '#0072b2' }}>% only informative : 31.5%</div>
-          <div style={{ marginTop: 4, borderTop: '1px solid #fef08a', paddingTop: 3, color: '#713f12', fontWeight: 600 }}>
-            <div>Total articles: 1,240</div>
-            <div>Included articles: 980 (79.0%)</div>
-          </div>
-          <div style={{ marginTop: 4, borderTop: '1px solid #fef08a', paddingTop: 3, color: '#6d5f00', fontWeight: 700 }}>
-            Policy adopted: 8 journals of 71 (11%)
-          </div>
-        </div>
+        <TooltipPreview />
       </div>
     ),
   },

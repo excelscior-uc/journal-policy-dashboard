@@ -5,6 +5,7 @@ import WhatMetricsMean from '../components/WhatMetricsMean'
 import FieldGrid from '../components/FieldGrid'
 import CollapsibleHomeSection from '../components/CollapsibleHomeSection'
 import Footer from '../components/Footer'
+import ThemeToggle from '../components/ThemeToggle'
 import { FEATURES } from '../data/features.jsx'
 
 const REFS = [
@@ -98,6 +99,9 @@ export default function Home() {
         </CollapsibleHomeSection>
       </div>
       <Footer />
+      <div className="theme-float">
+        <ThemeToggle />
+      </div>
     </>
   )
 }
