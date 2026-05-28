@@ -68,8 +68,8 @@ function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear
         />
       )}
       <text
-        x={0} y={0}
-        textAnchor="end"
+        x={isPolicy ? -12 : 0} y={0}
+        textAnchor={isPolicy ? 'middle' : 'end'}
         dominantBaseline="middle"
         fontSize={11}
         fontWeight={isPolicy ? 700 : 400}

@@ -614,7 +614,7 @@ export default function CompareModal({ kind, base, currentFieldSlug, policyFilte
                             <rect x={-30} y={-8} width={36} height={15} rx={3} ry={3}
                               fill={cc.policyTickBg} stroke={cc.policyTickStroke} strokeWidth={1} />
                           )}
-                          <text x={0} y={0} textAnchor="end" dominantBaseline="middle"
+                          <text x={isPolicy ? -12 : 0} y={0} textAnchor={isPolicy ? 'middle' : 'end'} dominantBaseline="middle"
                             fontSize={11} fontWeight={isPolicy ? 700 : 400}
                             fill={isPolicy ? cc.policyTickText : cc.tickText}>
                             {payload.value}
