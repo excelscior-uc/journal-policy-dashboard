@@ -23,12 +23,12 @@ Interactive dashboard tracking how data-visualisation practices in scientific pu
 
 ## Overview
 
-Single-page React app (Vite + Recharts) visualising barzooka screening results and article metadata for 213 biomedical journals, 86 of which adopted an editorial figure-type policy.
+Single-page React app (Vite + Recharts) visualising barzooka screening results and article metadata for 213 biomedical journals, 71 of which adopted an editorial figure-type policy.
 
 The dashboard lets you:
 
 - Track prevalence of **bar graphs** vs. **informative visualisations** (bars with dots, box plots, dot plots, histograms, violin plots) year by year (2010–2025)
-- Compare **policy journals** (86 with an editorial recommendation on figure types) against **non-policy journals**
+- Compare **policy journals** (71 with an editorial recommendation on figure types) against **non-policy journals**
 - Explore trends at three levels: **all fields**, **per research field**, and **per journal**
 - Visually assess whether editorial policies produce measurable changes in author behaviour
 
@@ -60,11 +60,15 @@ public/data/
   <field>.json (×12) + all-fields.json      # per-field payloads fetched by the app
   journal-names.json                        # abbrev -> full title map
 src/
-  App.jsx                                   # HashRouter; routes / and /field/:slug
+  App.jsx                                   # HashRouter; routes / and /field/:slug; TopNav on field pages
   pages/      Home.jsx, FieldPage.jsx
-  components/ Hero, FieldGrid, ChartCard, FilterBar, JournalSidebar, ...
-  data/       fields.js (field metadata + series config), journalIndex.js
+  components/ Hero, AboutDashboard, WhyPolicyMatters, WhatMetricsMean, FieldGrid,
+              CollapsibleHomeSection, Footer,                 # Home page
+              TopNav, GlobalJournalSearch, FilterBar, JournalSidebar,
+              ChartCard, CompareModal, FeaturesIntroModal, Tooltip  # FieldPage
+  data/       fields.js (field metadata + series config), journalIndex.js, journalNames.js
   hooks/      useVisible.js
+  utils/      fieldDataCache.js             # in-memory field JSON cache + prefetch
 tests/                                      # Vitest specs
 ```
 
@@ -142,19 +146,19 @@ Proportions in the CSV (0–1) are scaled to percentages (0–100) by `extract-d
 
 ## Dashboard Features
 
-**Navigation.** [Home](src/pages/Home.jsx) lists all fields. Each field opens [FieldPage](src/pages/FieldPage.jsx) at `/field/:slug` via HashRouter.
+**Navigation.** [Home](src/pages/Home.jsx) lists all fields (with intro sections: about, why policy matters, what the metrics mean). Each field opens [FieldPage](src/pages/FieldPage.jsx) at `/field/:slug` via HashRouter. A [TopNav](src/components/TopNav.jsx) with global search sits on every field page.
 
 **Aggregated and per-journal charts.** Each field page shows aggregated trend cards (all / policy / non-policy) and a grid of per-journal cards.
 
-**Filtering and search.** [FilterBar](src/components/FilterBar.jsx) toggles metric visibility; [JournalSidebar](src/components/JournalSidebar.jsx) and [GlobalJournalSearch](src/components/GlobalJournalSearch.jsx) find and scroll to specific journals.
+**Filtering and search.** [FilterBar](src/components/FilterBar.jsx) toggles metric visibility, toggles policy-year markers, and switches the policy filter (all / policy / non-policy). [JournalSidebar](src/components/JournalSidebar.jsx) and [GlobalJournalSearch](src/components/GlobalJournalSearch.jsx) find and scroll to specific journals.
 
-**Policy year markers.** Per-journal charts show a vertical line at the policy adoption year. Aggregated charts show semi-transparent bands reflecting the share of journals adopting in each year.
+**Compare.** Any card can be opened in a [CompareModal](src/components/CompareModal.jsx) to overlay two fields or journals on a single chart.
 
-**Eligible articles line.** Dotted overlay showing `% eligible articles`; toggle via legend.
+**Policy year markers.** Per-journal charts show a vertical line at the policy adoption year (toggleable). Aggregated charts show semi-transparent bands reflecting the share of journals adopting in each year.
 
 **Responsive grid.** Column count adjustable; chart titles wrap/shrink with card width; ChartCard extends the year domain so policy markers near the axis remain visible.
 
-**Export.** Cards can be exported as images (`html-to-image`) and bundled as a zip (`jszip`).
+**Export.** Individual cards can be exported as PNG images via the card menu (`html-to-image`).
 
 ---
 
@@ -176,7 +180,7 @@ Palette is Okabe–Ito (colourblind-safe). Defined in [src/data/fields.js](src/d
 npm test
 ```
 
-Specs in [tests/](tests/) cover ChartCard rendering, FieldPage prefetch behaviour, navigation components, the `useVisible` IntersectionObserver hook, and the `extract-data.js` CSV parser.
+Specs in [tests/](tests/) cover ChartCard rendering, FieldPage prefetch behaviour, navigation components (TopNav, JournalSidebar, FieldSwitcherBar), the MetricStrip, the `useVisible` IntersectionObserver hook, and the `extract-data.js` CSV parser.
 
 ---
 
