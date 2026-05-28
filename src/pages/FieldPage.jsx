@@ -251,20 +251,6 @@ export default function FieldPage() {
             <>
               <div className="chart-section-title">
                 Aggregated Trend
-                <button
-                  className="chart-section-title__download-btn"
-                  onClick={() => setIsCapturing(true)}
-                  disabled={isCapturing}
-                  title="Download all charts as ZIP"
-                >
-                  {isCapturing ? '…' : (
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
-                      <circle cx="3" cy="9" r="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <circle cx="15" cy="9" r="2" />
-                    </svg>
-                  )}
-                </button>
               </div>
               <div className="chart-grid chart-grid--full">
                 {aggData && (
