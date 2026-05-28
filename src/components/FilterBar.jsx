@@ -74,7 +74,7 @@ export default function FilterBar({ visibleSeries, onToggleSeries, showPolicyLin
             aria-label={`${s.name} — ${SERIES_TIPS[s.key] ?? ''}`}
           >
             <span className="filter-chip__swatch" style={{ background: s.color }} />
-            {s.name}
+            <span className="filter-chip__txt" data-label={s.name}>{s.name}</span>
           </button>
         </Tooltip>
       ))}
@@ -85,7 +85,7 @@ export default function FilterBar({ visibleSeries, onToggleSeries, showPolicyLin
           aria-label={`Policy lines — ${POLICY_LINES_TIP}`}
         >
           <span className="filter-chip__swatch" style={{ background: 'rgba(253,231,37,0.9)', border: '1px solid #b8a000' }} />
-          Policy lines
+          <span className="filter-chip__txt" data-label="Policy lines">Policy lines</span>
         </button>
       </Tooltip>
       <span className="filter-sep">|</span>

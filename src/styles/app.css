@@ -260,6 +260,14 @@ a  { color: #2c3e50; }
 .filter-chip:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.4); }
 .filter-chip.active { background: #fff; color: #1a252f; border-color: #fff; font-weight: 600; }
 .filter-chip__swatch { width: 10px; height: 3px; border-radius: 2px; display: inline-block; }
+/* reserve bold width so active state doesn't reflow siblings */
+.filter-chip__txt { display: inline-flex; flex-direction: column; }
+.filter-chip__txt::after {
+  content: attr(data-label);
+  font-weight: 600;
+  height: 0; overflow: hidden; visibility: hidden;
+  pointer-events: none;
+}
 .filter-sep { color: rgba(255,255,255,0.35); }
 /* ── GLOBAL JOURNAL SEARCH (top nav) ── */
 .global-search { position: relative; margin-left: auto; flex: 0 1 300px; min-width: 200px; }
