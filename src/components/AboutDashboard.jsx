@@ -16,9 +16,9 @@ export default function AboutDashboard() {
         <strong>barzooka</strong>, an automated deep-learning tool that screens PDF figures.
       </p>
       <ul>
-        <li><strong>Bar charts</strong> — the conventional mean-and-error bar format</li>
+        <li><strong className="label-bar">Bar charts</strong> — the conventional mean-and-error bar format</li>
         <li>
-          <strong>Informative charts</strong> — bars with dots, box plots, dot plots, histograms, or
+          <strong className="label-informative">Informative charts</strong> — bars with dots, box plots, dot plots, histograms, or
           violin plots
         </li>
       </ul>

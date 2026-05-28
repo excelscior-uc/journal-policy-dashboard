@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero__inner">
         <div className="hero__text">
 <h1 className="hero__title">
-            Tracking the Shift from <em>Bar Graphs</em> to <em>Informative Plots</em>
+            Tracking the Shift from <em className="hero__title-bar">Bar Graphs</em> to <em className="hero__title-informative">Informative Plots</em>
           </h1>
           <p className="hero__subtitle">
             Impact of Journal Policies on the Visualization of Continuous Data

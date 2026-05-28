@@ -61,6 +61,10 @@ a  { color: #2c3e50; }
 }
 .hero__title { font-family: "Crimson Pro", Georgia, serif; font-size: 34px; font-weight: 700; color: #fff; margin-bottom: 14px; line-height: 1.18; }
 .hero__title em { font-style: italic; color: #76b5b2; }
+.hero__title em.hero__title-bar { color: #d55e00; }
+.hero__title em.hero__title-informative { color: #4ba3d8; }
+.label-bar { color: #d55e00; }
+.label-informative { color: #0072b2; }
 .hero__subtitle {
   font-family: "Crimson Pro", Georgia, serif;
   font-size: 15px; font-weight: 400; font-style: italic;
