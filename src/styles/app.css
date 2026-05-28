@@ -28,6 +28,10 @@
   --accent-surface: #f1f8f8;
   --accent-surface-border: #cfe6e5;
   --fill-strong: #2c3e50;
+  --agg-surface: #eff6ff;
+  --agg-surface-hover: #dbeafe;
+  --agg-border: #bfdbfe;
+  --agg-text: #1e40af;
 
   /* hero */
   --hero-grad: linear-gradient(135deg, #1a252f 0%, #2c3e50 60%, #34495e 100%);
@@ -69,6 +73,10 @@
   --accent-surface: #16292b;
   --accent-surface-border: #2c4f4d;
   --fill-strong: #33414f;
+  --agg-surface: #16243a;
+  --agg-surface-hover: #1c2e4a;
+  --agg-border: #28456e;
+  --agg-text: #93c5fd;
 
   --hero-grad: linear-gradient(135deg, #0c1218 0%, #16202b 60%, #1c2733 100%);
 
@@ -817,8 +825,7 @@ a  { color: var(--text-strong); }
 .policy-bar[data-filter="nopolicy"] .policy-bar__track {
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.08), 0 0 0 2px rgba(59,130,246,0.25);
 }
-.journal-link--agg .policy-bar__total { color: #1e40af; }
-[data-theme="dark"] .journal-link--agg .policy-bar__total { color: #93c5fd; }
+.journal-link--agg .policy-bar__total { color: var(--agg-text); }
 .journal-link.active .policy-bar__total { color: rgba(255,255,255,0.85); }
 .journal-link.active .policy-bar__track { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.2); }
 .journal-link.active .policy-bar__total,
@@ -979,14 +986,14 @@ a  { color: var(--text-strong); }
   width: 100%;
 }
 .journal-link--agg {
-  background: #eff6ff;
-  border-color: #bfdbfe;
-  color: #1e40af;
+  background: var(--agg-surface);
+  border-color: var(--agg-border);
+  color: var(--agg-text);
   font-weight: 600;
 }
 .journal-link--agg:hover {
-  background: #dbeafe;
-  border-color: #93c5fd;
+  background: var(--agg-surface-hover);
+  border-color: var(--agg-text);
 }
 .journal-link--agg.active {
   background: #1e40af;
@@ -994,9 +1001,9 @@ a  { color: var(--text-strong); }
   color: #fff;
   box-shadow: 0 2px 8px rgba(30,64,175,0.3);
 }
-.journal-link--agg .sf-tag--journals { background: #dbeafe; color: #1e40af; }
-.journal-link--agg .sf-tag--total    { background: #dbeafe; color: #1e40af; }
-.journal-link--agg .sf-tag--eligible { background: #dbeafe; color: #1e40af; }
+.journal-link--agg .sf-tag--journals { background: var(--agg-surface-hover); color: var(--agg-text); }
+.journal-link--agg .sf-tag--total    { background: var(--agg-surface-hover); color: var(--agg-text); }
+.journal-link--agg .sf-tag--eligible { background: var(--agg-surface-hover); color: var(--agg-text); }
 .journal-link--agg.active .sf-tag--journals,
 .journal-link--agg.active .sf-tag--total,
 .journal-link--agg.active .sf-tag--eligible {
