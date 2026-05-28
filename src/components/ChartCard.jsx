@@ -60,7 +60,7 @@ function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear
     <g transform={`translate(${x},${y}) rotate(-40)`}>
       {isPolicy && (
         <rect
-          x={-28} y={-8} width={30} height={15}
+          x={-33} y={-8} width={35} height={15}
           rx={3} ry={3}
           fill={cc.policyTickBg}
           stroke={cc.policyTickStroke}
