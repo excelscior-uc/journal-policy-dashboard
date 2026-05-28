@@ -53,3 +53,23 @@ export function useJournalIndex() {
 }
 
 export function primeJournalIndex() { load() }
+
+function computeFieldCounts(index) {
+  const counts = {}
+  for (const f of FIELDS) counts[f.slug] = { totalJournals: 0, withPolicy: 0 }
+  for (const j of index) {
+    counts['all-fields'].totalJournals++
+    if (j.hasPolicy) counts['all-fields'].withPolicy++
+    for (const f of j.fields) {
+      if (!counts[f.slug]) continue
+      counts[f.slug].totalJournals++
+      if (j.hasPolicy) counts[f.slug].withPolicy++
+    }
+  }
+  return counts
+}
+
+export function useFieldCounts() {
+  const index = useJournalIndex()
+  return index ? computeFieldCounts(index) : null
+}
