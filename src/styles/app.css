@@ -2013,7 +2013,7 @@ a  { color: var(--text-strong); }
   display: inline-flex; align-items: center; justify-content: center;
   width: 30px; height: 30px; padding: 0;
   border: 1px solid var(--border, #dee2e6);
-  border-radius: 6px;
+  border-radius: 50%;
   background: var(--surface, #fff);
   color: var(--text-strong, #2c3e50);
   cursor: pointer;
@@ -2027,7 +2027,8 @@ a  { color: var(--text-strong); }
   z-index: 1000;
 }
 .theme-float .theme-toggle {
-  width: 44px; height: 44px;
+  width: 56px; height: 56px;
   border-radius: 50%;
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
+.theme-float .theme-toggle svg { width: 24px; height: 24px; }
