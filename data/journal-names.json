@@ -1,0 +1,854 @@
+{
+  "ACTA NEUROPATHOL": {
+    "full": "Acta Neuropathologica",
+    "source": "nlm"
+  },
+  "ACTA PHARMACOL SIN": {
+    "full": "Acta Pharmacologica Sinica",
+    "source": "crossref"
+  },
+  "ACTA PHYSIOL": {
+    "full": "Acta Physiologica",
+    "source": "crossref"
+  },
+  "AGING MALE": {
+    "full": "The Aging Male",
+    "source": "nlm"
+  },
+  "ALIMENT PHARM THER": {
+    "full": "Alimentary Pharmacology & Therapeutics",
+    "source": "crossref"
+  },
+  "AM J CARDIOVASC DRUG": {
+    "full": "American Journal of Cardiovascular Drugs",
+    "source": "manual"
+  },
+  "AM J HUM GENET": {
+    "full": "American Journal of Human Genetics",
+    "source": "nlm"
+  },
+  "AM J PHYSIOL CELL PH": {
+    "full": "American Journal of Physiology - Cell Physiology",
+    "source": "manual"
+  },
+  "AM J PHYSIOL ENDOC M": {
+    "full": "American Journal of Physiology - Endocrinology and Metabolism",
+    "source": "manual"
+  },
+  "AM J PHYSIOL GASTR L": {
+    "full": "American Journal of Physiology - Gastrointestinal and Liver Physiology",
+    "source": "manual"
+  },
+  "AM J PHYSIOL HEART C": {
+    "full": "American Journal of Physiology - Heart and Circulatory Physiology",
+    "source": "manual"
+  },
+  "AM J PHYSIOL LUNG C": {
+    "full": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
+    "source": "manual"
+  },
+  "AM J PHYSIOL REG I": {
+    "full": "American Journal of Physiology - Regulatory, Integrative and Comparative Physiology",
+    "source": "manual"
+  },
+  "AM J PHYSIOL RENAL": {
+    "full": "American Journal of Physiology - Renal Physiology",
+    "source": "manual"
+  },
+  "ANN NEUROL": {
+    "full": "Annals of Neurology",
+    "source": "nlm"
+  },
+  "ANN ONCOL": {
+    "full": "Annals of Oncology",
+    "source": "nlm"
+  },
+  "ANN THORAC SURG": {
+    "full": "The Annals of Thoracic Surgery",
+    "source": "nlm"
+  },
+  "ANTIOXID REDOX SIGN": {
+    "full": "Antioxidants & Redox Signaling",
+    "source": "crossref"
+  },
+  "ARCH PHYSIOL BIOCHEM": {
+    "full": "Archives of Physiology and Biochemistry",
+    "source": "nlm"
+  },
+  "ARTHRITIS RES THER": {
+    "full": "Arthritis Research & Therapy",
+    "source": "nlm"
+  },
+  "ARTHRITIS RHEUMATOL": {
+    "full": "Arthritis & Rheumatology",
+    "source": "crossref"
+  },
+  "ATHEROSCLEROSIS": {
+    "full": "Atherosclerosis",
+    "source": "nlm"
+  },
+  "BASIC RES CARDIOL": {
+    "full": "Basic Research in Cardiology",
+    "source": "nlm"
+  },
+  "BIOFACTORS": {
+    "full": "BioFactors",
+    "source": "crossref"
+  },
+  "BLOOD CANCER J": {
+    "full": "Blood Cancer Journal",
+    "source": "nlm"
+  },
+  "BONE JOINT J": {
+    "full": "The Bone & Joint Journal",
+    "source": "nlm"
+  },
+  "BONE JOINT RES": {
+    "full": "Bone and Joint Research",
+    "source": "crossref"
+  },
+  "BONE MARROW TRANSPL": {
+    "full": "Bone Marrow Transplantation",
+    "source": "crossref"
+  },
+  "BRAIN": {
+    "full": "Brain",
+    "source": "nlm"
+  },
+  "BRIT J CANCER": {
+    "full": "British Journal of Cancer",
+    "source": "manual"
+  },
+  "BRIT J PHARMACOL": {
+    "full": "British Journal of Pharmacology",
+    "source": "manual"
+  },
+  "CAN J CARDIOL": {
+    "full": "The Canadian Journal of Cardiology",
+    "source": "nlm"
+  },
+  "CANCER AM CANCER SOC": {
+    "full": "Cancer",
+    "source": "manual"
+  },
+  "CANCER CELL": {
+    "full": "Cancer Cell",
+    "source": "nlm"
+  },
+  "CANCER COMMUN": {
+    "full": "Cancer Communications",
+    "source": "crossref"
+  },
+  "CANCER DISCOV": {
+    "full": "Cancer Discovery",
+    "source": "nlm"
+  },
+  "CANCER GENE THER": {
+    "full": "Cancer Gene Therapy",
+    "source": "crossref"
+  },
+  "CANCER IMMUNOL IMMUN": {
+    "full": "Cancer Immunology Immunotherapy",
+    "source": "crossref"
+  },
+  "CANCER IMMUNOL RES": {
+    "full": "Cancer Immunology Research",
+    "source": "nlm"
+  },
+  "CANCER RES": {
+    "full": "Cancer Research",
+    "source": "crossref"
+  },
+  "CANCER SCI": {
+    "full": "Cancer Science",
+    "source": "nlm"
+  },
+  "CARDIOVASC DIABETOL": {
+    "full": "Cardiovascular Diabetology",
+    "source": "nlm"
+  },
+  "CELL METAB": {
+    "full": "Cell Metabolism",
+    "source": "nlm"
+  },
+  "CELL MOL IMMUNOL": {
+    "full": "Cellular and Molecular Immunology",
+    "source": "crossref"
+  },
+  "CHROMOSOME RES": {
+    "full": "Chromosome Research",
+    "source": "nlm"
+  },
+  "CHRONOBIOL INT": {
+    "full": "Chronobiology International",
+    "source": "nlm"
+  },
+  "CIRC ARRHYTHMIA ELEC": {
+    "full": "Circulation: Arrhythmia and Electrophysiology",
+    "source": "manual"
+  },
+  "CIRC CARDIOVASC IMAG": {
+    "full": "Circulation Cardiovascular Imaging",
+    "source": "crossref"
+  },
+  "CIRC CARDIOVASC INTE": {
+    "full": "Circulation: Cardiovascular Interventions",
+    "source": "manual"
+  },
+  "CIRC CARDIOVASC QUAL": {
+    "full": "Circulation Cardiovascular Quality and Outcomes",
+    "source": "crossref"
+  },
+  "CIRC GENOM PRECIS ME": {
+    "full": "Circulation: Genomic and Precision Medicine",
+    "source": "manual"
+  },
+  "CIRC RES": {
+    "full": "Circulation Research",
+    "source": "nlm"
+  },
+  "CIRCULATION": {
+    "full": "Circulation",
+    "source": "nlm"
+  },
+  "CLIN CANCER RES": {
+    "full": "Clinical Cancer Research",
+    "source": "crossref"
+  },
+  "CLIN EPIGENETICS": {
+    "full": "Clinical Epigenetics",
+    "source": "nlm"
+  },
+  "CLIN EXP PHARMACOL P": {
+    "full": "Clinical and Experimental Pharmacology and Physiology",
+    "source": "manual"
+  },
+  "CLIN INFECT DIS": {
+    "full": "Clinical Infectious Diseases",
+    "source": "nlm"
+  },
+  "CLIN PHYSIOL FUNCT I": {
+    "full": "Clinical Physiology and Functional Imaging",
+    "source": "manual"
+  },
+  "CLIN RES CARDIOL": {
+    "full": "Clinical Research in Cardiology",
+    "source": "nlm"
+  },
+  "CLIN TRANSL IMMUNOL": {
+    "full": "Clinical & Translational Immunology",
+    "source": "crossref"
+  },
+  "CLIN TRANSL MED": {
+    "full": "Clinical and Translational Medicine",
+    "source": "nlm"
+  },
+  "COMP BIOCHEM PHYS A": {
+    "full": "Comparative Biochemistry and Physiology Part a Physiology",
+    "source": "crossref"
+  },
+  "CONSERV PHYSIOL": {
+    "full": "Conservation Physiology",
+    "source": "nlm"
+  },
+  "DIABETES": {
+    "full": "Diabetes",
+    "source": "crossref"
+  },
+  "DIABETES CARE": {
+    "full": "Diabetes Care",
+    "source": "nlm"
+  },
+  "DIABETES METAB J": {
+    "full": "Diabetes & Metabolism Journal",
+    "source": "manual"
+  },
+  "DIABETES METAB RES": {
+    "full": "Diabetes/Metabolism Research and Reviews",
+    "source": "crossref"
+  },
+  "DIABETES OBES METAB": {
+    "full": "Diabetes, Obesity & Metabolism",
+    "source": "nlm"
+  },
+  "DIABETES RES CLIN PR": {
+    "full": "Diabetes Research and Clinical Practice",
+    "source": "crossref"
+  },
+  "DIABETES TECHNOL THE": {
+    "full": "Diabetes Technology & Therapeutics",
+    "source": "crossref"
+  },
+  "DIABETOLOGIA": {
+    "full": "Diabetologia",
+    "source": "nlm"
+  },
+  "ENDOCRINOLOGY": {
+    "full": "Endocrinology",
+    "source": "nlm"
+  },
+  "EUR J APPL PHYSIOL": {
+    "full": "European Journal of Applied Physiology",
+    "source": "nlm"
+  },
+  "EUR J CANCER": {
+    "full": "European Journal of Cancer",
+    "source": "manual"
+  },
+  "EUR J CARDIOVASC NUR": {
+    "full": "European Journal of Cardiovascular Nursing",
+    "source": "manual"
+  },
+  "EUR J ENDOCRINOL": {
+    "full": "European Journal of Endocrinology",
+    "source": "nlm"
+  },
+  "EUR J HEART FAIL": {
+    "full": "European Journal of Heart Failure",
+    "source": "nlm"
+  },
+  "EUR J PREV CARDIOL": {
+    "full": "European Journal of Preventive Cardiology",
+    "source": "manual"
+  },
+  "EUR UROL": {
+    "full": "European Urology",
+    "source": "nlm"
+  },
+  "EUR UROL ONCOL": {
+    "full": "European Urology Oncology",
+    "source": "nlm"
+  },
+  "EUROINTERVENTION": {
+    "full": "EuroIntervention",
+    "source": "crossref"
+  },
+  "EUROPACE": {
+    "full": "Europace",
+    "source": "nlm"
+  },
+  "EXP PHYSIOL": {
+    "full": "Experimental Physiology",
+    "source": "nlm"
+  },
+  "FREE RADICAL BIO MED": {
+    "full": "Free Radical Biology and Medicine",
+    "source": "manual"
+  },
+  "FRONT CARDIOVASC MED": {
+    "full": "Frontiers in Cardiovascular Medicine",
+    "source": "nlm"
+  },
+  "FRONT ENDOCRINOL": {
+    "full": "Frontiers in Endocrinology",
+    "source": "crossref"
+  },
+  "FRONT IMMUNOL": {
+    "full": "Frontiers in Immunology",
+    "source": "nlm"
+  },
+  "FRONT PHYSIOL": {
+    "full": "Frontiers in Physiology",
+    "source": "nlm"
+  },
+  "GASTRIC CANCER": {
+    "full": "Gastric Cancer",
+    "source": "nlm"
+  },
+  "GENE DEV": {
+    "full": "Genes & Development",
+    "source": "crossref"
+  },
+  "GENE THER": {
+    "full": "Gene Therapy",
+    "source": "nlm"
+  },
+  "GENES DIS": {
+    "full": "Genes & Diseases",
+    "source": "nlm"
+  },
+  "GENES NUTR": {
+    "full": "Genes & Nutrition",
+    "source": "crossref"
+  },
+  "GENET MED": {
+    "full": "Genetics in Medicine",
+    "source": "nlm"
+  },
+  "GENOME BIOL": {
+    "full": "Genome Biology",
+    "source": "crossref"
+  },
+  "GENOME MED": {
+    "full": "Genome Medicine",
+    "source": "nlm"
+  },
+  "GENOME RES": {
+    "full": "Genome Research",
+    "source": "nlm"
+  },
+  "GENOMICS": {
+    "full": "Genomics",
+    "source": "nlm"
+  },
+  "HEART": {
+    "full": "Heart",
+    "source": "nlm"
+  },
+  "HEART RHYTHM": {
+    "full": "Heart Rhythm",
+    "source": "crossref"
+  },
+  "HORTIC RES ENGLAND": {
+    "full": "Horticulture Research",
+    "source": "manual"
+  },
+  "HUM GENE THER": {
+    "full": "Human Gene Therapy",
+    "source": "nlm"
+  },
+  "HUM MOL GENET": {
+    "full": "Human Molecular Genetics",
+    "source": "nlm"
+  },
+  "IMMUNITY": {
+    "full": "Immunity",
+    "source": "nlm"
+  },
+  "IMMUNOLOGY": {
+    "full": "Immunology",
+    "source": "crossref"
+  },
+  "INT J BEHAV NUTR PHY": {
+    "full": "International Journal of Behavioral Nutrition and Physical Activity",
+    "source": "manual"
+  },
+  "INT J CANCER": {
+    "full": "International Journal of Cancer",
+    "source": "nlm"
+  },
+  "INT J CARDIOVAS IMAG": {
+    "full": "International Journal of Cardiovascular Imaging",
+    "source": "manual"
+  },
+  "INT J OBESITY": {
+    "full": "International Journal of Obesity",
+    "source": "manual"
+  },
+  "INT J PSYCHOPHYSIOL": {
+    "full": "International Journal of Psychophysiology",
+    "source": "nlm"
+  },
+  "INT J RADIAT ONCOL": {
+    "full": "International Journal of Radiation Oncology, Biology, Physics",
+    "source": "manual"
+  },
+  "J ALLER CL IMM PRACT": {
+    "full": "Journal of Allergy and Clinical Immunology: In Practice",
+    "source": "manual"
+  },
+  "J ALLERGY CLIN IMMUN": {
+    "full": "Journal of Allergy and Clinical Immunology",
+    "source": "manual"
+  },
+  "J AM HEART ASSOC": {
+    "full": "Journal of the American Heart Association",
+    "source": "nlm"
+  },
+  "J APPL PHYSIOL": {
+    "full": "Journal of Applied Physiology",
+    "source": "nlm"
+  },
+  "J AUTOIMMUN": {
+    "full": "Journal of Autoimmunity",
+    "source": "manual"
+  },
+  "J BIOL RHYTHM": {
+    "full": "Journal of Biological Rhythms",
+    "source": "manual"
+  },
+  "J BONE MINER RES": {
+    "full": "Journal of Bone and Mineral Research",
+    "source": "nlm"
+  },
+  "J CARD FAIL": {
+    "full": "Journal of Cardiac Failure",
+    "source": "nlm"
+  },
+  "J CARDIOVASC COMPUT": {
+    "full": "Journal of Cardiovascular Computed Tomography",
+    "source": "manual"
+  },
+  "J CARDIOVASC DEV DIS": {
+    "full": "Journal of Cardiovascular Development and Disease",
+    "source": "nlm"
+  },
+  "J CARDIOVASC ELECTR": {
+    "full": "Journal of Cardiovascular Electrophysiology",
+    "source": "manual"
+  },
+  "J CEREBR BLOOD F MET": {
+    "full": "Journal of Cerebral Blood Flow and Metabolism",
+    "source": "manual"
+  },
+  "J CLIN IMMUNOL": {
+    "full": "Journal of Clinical Immunology",
+    "source": "nlm"
+  },
+  "J CONTROL RELEASE": {
+    "full": "Journal of Controlled Release",
+    "source": "nlm"
+  },
+  "J ELECTROMYOGR KINES": {
+    "full": "Journal of Electromyography and Kinesiology",
+    "source": "manual"
+  },
+  "J EXP CLIN CANC RES": {
+    "full": "Journal of Experimental & Clinical Cancer Research",
+    "source": "manual"
+  },
+  "J EXP MED": {
+    "full": "The Journal of Experimental Medicine",
+    "source": "nlm"
+  },
+  "J FOOD DRUG ANAL": {
+    "full": "Journal of Food and Drug Analysis",
+    "source": "nlm"
+  },
+  "J GEN PHYSIOL": {
+    "full": "The Journal of General Physiology",
+    "source": "nlm"
+  },
+  "J GERIATR CARDIOL": {
+    "full": "Journal of Geriatric Cardiology",
+    "source": "nlm"
+  },
+  "J HEART LUNG TRANSPL": {
+    "full": "Journal of Heart and Lung Transplantation",
+    "source": "manual"
+  },
+  "J HEMATOL ONCOL": {
+    "full": "Journal of Hematology & Oncology",
+    "source": "nlm"
+  },
+  "J IMMUNOL": {
+    "full": "Journal of Immunology",
+    "source": "manual"
+  },
+  "J IMMUNOTHER CANCER": {
+    "full": "Journal for Immunotherapy of Cancer",
+    "source": "nlm"
+  },
+  "J INNATE IMMUN": {
+    "full": "Journal of Innate Immunity",
+    "source": "nlm"
+  },
+  "J MAMMARY GLAND BIOL": {
+    "full": "Journal of Mammary Gland Biology and Neoplasia",
+    "source": "manual"
+  },
+  "J MED GENET": {
+    "full": "Journal of Medical Genetics",
+    "source": "nlm"
+  },
+  "J MOL CELL CARDIOL": {
+    "full": "Journal of Molecular and Cellular Cardiology",
+    "source": "nlm"
+  },
+  "J MOL ENDOCRINOL": {
+    "full": "Journal of Molecular Endocrinology",
+    "source": "manual"
+  },
+  "J NEUROINFLAMM": {
+    "full": "Journal of Neuroinflammation",
+    "source": "manual"
+  },
+  "J NEUROPHYSIOL": {
+    "full": "Journal of Neurophysiology",
+    "source": "nlm"
+  },
+  "J NUCL CARDIOL": {
+    "full": "Journal of Nuclear Cardiology",
+    "source": "manual"
+  },
+  "J ORTHOP TRANSL": {
+    "full": "Journal of Orthopaedic Translation",
+    "source": "manual"
+  },
+  "J PHYSIOL ANTHROPOL": {
+    "full": "Journal of Physiological Anthropology",
+    "source": "nlm"
+  },
+  "J PHYSIOL BIOCHEM": {
+    "full": "Journal of Physiology and Biochemistry",
+    "source": "manual"
+  },
+  "J PHYSIOL LONDON": {
+    "full": "Journal of Physiology",
+    "source": "manual"
+  },
+  "J PHYSIOL PHARMACOL": {
+    "full": "Journal of Physiology and Pharmacology",
+    "source": "nlm"
+  },
+  "J PHYSIOL SCI": {
+    "full": "Journal of Physiological Sciences",
+    "source": "manual"
+  },
+  "J PINEAL RES": {
+    "full": "Journal of Pineal Research",
+    "source": "nlm"
+  },
+  "J RHEUMATOL": {
+    "full": "Journal of Rheumatology",
+    "source": "manual"
+  },
+  "J THORAC ONCOL": {
+    "full": "Journal of Thoracic Oncology",
+    "source": "nlm"
+  },
+  "JACC CARDIOONCOL": {
+    "full": "JACC CardioOncology",
+    "source": "crossref"
+  },
+  "JACC CLIN ELECTROPHY": {
+    "full": "JACC Clinical Electrophysiology",
+    "source": "crossref"
+  },
+  "JNCI J NATL CANCER I": {
+    "full": "JNCI: Journal of the National Cancer Institute",
+    "source": "manual"
+  },
+  "KIDNEY BLOOD PRESS R": {
+    "full": "Kidney and Blood Pressure Research",
+    "source": "manual"
+  },
+  "KIDNEY INT": {
+    "full": "Kidney International",
+    "source": "nlm"
+  },
+  "LANCET HIV": {
+    "full": "The Lancet HIV",
+    "source": "crossref"
+  },
+  "LANCET RHEUMATOL": {
+    "full": "The Lancet Rheumatology",
+    "source": "nlm"
+  },
+  "LEUKEMIA": {
+    "full": "Leukemia",
+    "source": "nlm"
+  },
+  "LIVER CANCER": {
+    "full": "Liver Cancer",
+    "source": "nlm"
+  },
+  "LYMPHAT RES BIOL": {
+    "full": "Lymphatic Research and Biology",
+    "source": "crossref"
+  },
+  "METABOLISM": {
+    "full": "Metabolism: Clinical and Experimental",
+    "source": "nlm"
+  },
+  "MICROB GENOMICS": {
+    "full": "Microbial Genomics",
+    "source": "crossref"
+  },
+  "MOL AUTISM": {
+    "full": "Molecular Autism",
+    "source": "nlm"
+  },
+  "MOL BIOL EVOL": {
+    "full": "Molecular Biology and Evolution",
+    "source": "nlm"
+  },
+  "MOL CANCER": {
+    "full": "Molecular Cancer",
+    "source": "nlm"
+  },
+  "MOL METAB": {
+    "full": "Molecular Metabolism",
+    "source": "nlm"
+  },
+  "MOL NEURODEGENER": {
+    "full": "Molecular Neurodegeneration",
+    "source": "crossref"
+  },
+  "MOL PSYCHIATR": {
+    "full": "Molecular Psychiatry",
+    "source": "crossref"
+  },
+  "MOL THER": {
+    "full": "Molecular Therapy",
+    "source": "nlm"
+  },
+  "MOL THER ONCOLYTICS": {
+    "full": "Molecular Therapy Oncolytics",
+    "source": "nlm"
+  },
+  "MOVEMENT DISORD": {
+    "full": "Movement Disorders",
+    "source": "crossref"
+  },
+  "MUCOSAL IMMUNOL": {
+    "full": "Mucosal Immunology",
+    "source": "nlm"
+  },
+  "NAT GENET": {
+    "full": "Nature Genetics",
+    "source": "crossref"
+  },
+  "NAT HUM BEHAV": {
+    "full": "Nature Human Behaviour",
+    "source": "nlm"
+  },
+  "NAT IMMUNOL": {
+    "full": "Nature Immunology",
+    "source": "crossref"
+  },
+  "NAT METAB": {
+    "full": "Nature Metabolism",
+    "source": "nlm"
+  },
+  "NAT NEUROSCI": {
+    "full": "Nature Neuroscience",
+    "source": "crossref"
+  },
+  "NEURO ONCOLOGY": {
+    "full": "Neuro-Oncology",
+    "source": "crossref"
+  },
+  "NEURON": {
+    "full": "Neuron",
+    "source": "nlm"
+  },
+  "NEUROPATH APPL NEURO": {
+    "full": "Neuropathology and Applied Neurobiology",
+    "source": "crossref"
+  },
+  "NEUROPHYSIOL CLIN": {
+    "full": "Neurophysiologie Clinique",
+    "source": "nlm"
+  },
+  "NEUROTHERAPEUTICS": {
+    "full": "Neurotherapeutics",
+    "source": "crossref"
+  },
+  "NPJ BREAST CANCER": {
+    "full": "npj Breast Cancer",
+    "source": "nlm"
+  },
+  "NPJ GENOM MED": {
+    "full": "npj Genomic Medicine",
+    "source": "nlm"
+  },
+  "NPJ PARKINSONS DIS": {
+    "full": "npj Parkinson's Disease",
+    "source": "nlm"
+  },
+  "NPJ PRECIS ONCOL": {
+    "full": "npj Precision Oncology",
+    "source": "crossref"
+  },
+  "NPJ VACCINES": {
+    "full": "npj Vaccines",
+    "source": "nlm"
+  },
+  "NUTR DIABETES": {
+    "full": "Nutrition & Diabetes",
+    "source": "nlm"
+  },
+  "NUTR METAB CARDIOVAS": {
+    "full": "Nutrition Metabolism and Cardiovascular Diseases",
+    "source": "crossref"
+  },
+  "OBESITY": {
+    "full": "Obesity",
+    "source": "crossref"
+  },
+  "ONCOGENE": {
+    "full": "Oncogene",
+    "source": "nlm"
+  },
+  "ONCOGENESIS": {
+    "full": "Oncogenesis",
+    "source": "crossref"
+  },
+  "ONCOIMMUNOLOGY": {
+    "full": "Oncoimmunology",
+    "source": "nlm"
+  },
+  "PESTIC BIOCHEM PHYS": {
+    "full": "Pesticide Biochemistry and Physiology",
+    "source": "crossref"
+  },
+  "PFLUG ARCH EUR J PHY": {
+    "full": "Pfl\u00fcgers Archiv - European Journal of Physiology",
+    "source": "manual"
+  },
+  "PHARMACEUTICS": {
+    "full": "Pharmaceutics",
+    "source": "nlm"
+  },
+  "PHYSIOL GENOMICS": {
+    "full": "Physiological Genomics",
+    "source": "crossref"
+  },
+  "PHYSIOL MEAS": {
+    "full": "Physiological Measurement",
+    "source": "nlm"
+  },
+  "PHYSIOL RES": {
+    "full": "Physiological Research",
+    "source": "nlm"
+  },
+  "PLOS GENET": {
+    "full": "PLoS Genetics",
+    "source": "nlm"
+  },
+  "PROSTATE CANCER P D": {
+    "full": "Prostate Cancer and Prostatic Diseases",
+    "source": "manual"
+  },
+  "PSYCHOPHYSIOLOGY": {
+    "full": "Psychophysiology",
+    "source": "nlm"
+  },
+  "RHEUMATOLOGY": {
+    "full": "Rheumatology",
+    "source": "crossref"
+  },
+  "SCAND J RHEUMATOL": {
+    "full": "Scandinavian Journal of Rheumatology",
+    "source": "nlm"
+  },
+  "STROKE": {
+    "full": "Stroke",
+    "source": "nlm"
+  },
+  "THEOR APPL GENET": {
+    "full": "Theoretical and Applied Genetics",
+    "source": "nlm"
+  },
+  "THER ADV MED ONCOL": {
+    "full": "Therapeutic Advances in Medical Oncology",
+    "source": "nlm"
+  },
+  "THYROID": {
+    "full": "Thyroid",
+    "source": "nlm"
+  },
+  "TRANSPL CELL THER": {
+    "full": "Transplantation and Cellular Therapy",
+    "source": "crossref"
+  },
+  "VIRULENCE": {
+    "full": "Virulence",
+    "source": "nlm"
+  },
+  "WORLD J MENS HEALTH": {
+    "full": "The World Journal of Men's Health",
+    "source": "nlm"
+  }
+}
