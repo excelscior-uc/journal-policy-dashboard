@@ -13,3 +13,5 @@ node_modules/
 .claude/
 .github/
 docs/
+/slides_deck
+.DS_Store
