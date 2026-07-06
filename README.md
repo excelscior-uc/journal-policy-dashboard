@@ -32,7 +32,7 @@ The dashboard lets you:
 - Explore trends at three levels: **all fields**, **per research field**, and **per journal**
 - Visually assess whether editorial policies produce measurable changes in author behaviour
 
-Figure classification produced by [barzooka](https://github.com/NiRiedel/barzooka) — automated deep-learning tool detecting chart types in scientific PDF figures.
+Figure classification produced by [barzooka](https://github.com/quest-bih/barzooka) — automated deep-learning tool detecting chart types in scientific PDF figures.
 
 ---
 
@@ -213,7 +213,7 @@ Study protocol pre-registered at **[osf.io/tcyxg](https://osf.io/tcyxg/overview)
 - Weissgerber et al. (2019). _Reveal, don't conceal: Transforming data visualization to improve transparency._ Circulation. [doi:10.1161/CIRCULATIONAHA.118.037777](https://doi.org/10.1161/CIRCULATIONAHA.118.037777)
 - Riedel et al. (2022). _Replacing bar graphs of continuous data with more informative graphics: are we making progress?_ Clinical Science. [doi:10.1042/CS20220313](https://doi.org/10.1042/CS20220313)
 - Schulz et al. (2025). _Do journal policies reduce the use of bar graphs?_ [osf.io/tcyxg](https://osf.io/tcyxg/overview)
-- Riedel N, Nachev V, Schulz R, Kazezian V, Weissgerber T. _barzooka._ [GitHub](https://github.com/NiRiedel/barzooka)
+- Riedel N, Nachev V, Schulz R, Kazezian V, Weissgerber T. _barzooka._ [GitHub](https://github.com/quest-bih/barzooka)
 
 ---
 

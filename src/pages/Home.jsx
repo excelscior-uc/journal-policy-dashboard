@@ -2,8 +2,10 @@ import Hero from '../components/Hero'
 import AboutDashboard from '../components/AboutDashboard'
 import WhyPolicyMatters from '../components/WhyPolicyMatters'
 import WhatMetricsMean from '../components/WhatMetricsMean'
+import MethodsSection from '../components/MethodsSection'
 import FieldGrid from '../components/FieldGrid'
 import CollapsibleHomeSection from '../components/CollapsibleHomeSection'
+import Impressum from '../components/Impressum'
 import Footer from '../components/Footer'
 import ThemeToggle from '../components/ThemeToggle'
 import { FEATURES } from '../data/features.jsx'
@@ -43,7 +45,7 @@ const REFS = [
     author: 'Riedel N, Nachev V, Schulz R, Kazezian V, Weissgerber T.',
     title: 'barzooka.',
     venue: 'GitHub',
-    url: 'https://github.com/NiRiedel/barzooka',
+    url: 'https://github.com/quest-bih/barzooka',
   },
 ]
 
@@ -56,6 +58,7 @@ export default function Home() {
         <WhyPolicyMatters />
         <FieldGrid />
         <WhatMetricsMean />
+        <MethodsSection />
       </div>
       <div className="section-wrap" style={{ marginTop: 24, paddingBottom: 0 }}>
         <CollapsibleHomeSection
@@ -97,6 +100,9 @@ export default function Home() {
             ))}
           </ul>
         </CollapsibleHomeSection>
+      </div>
+      <div className="section-wrap" style={{ marginTop: 24, paddingBottom: 0 }}>
+        <Impressum />
       </div>
       <Footer />
       <div className="theme-float">

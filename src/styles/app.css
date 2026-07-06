@@ -293,7 +293,7 @@ a  { color: var(--text-strong); }
   filter: grayscale(1) opacity(0.5);
   transition: filter 0.25s ease, transform 0.2s ease;
 }
-.footer__logo-card--bih img { height: 100px; max-width: 250px; }
+.footer__logo-card--bih img { height: 88px; max-width: 285px; }
 .footer__logo-card--excellsior img { height: 68px; max-width: 190px; }
 .footer__logo-card:hover img {
   filter: grayscale(0) opacity(1);
@@ -1220,6 +1220,137 @@ a  { color: var(--text-strong); }
 }
 .home-browse-collapsible { margin-bottom: 0; }
 .home-refs-section { margin-top: 32px; padding-bottom: 0; }
+
+/* ── Methods (home) ── */
+.methods-section__steps {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.methods-section__step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.methods-section__step-n {
+  flex: 0 0 auto;
+  width: 24px; height: 24px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px; font-weight: 700;
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  margin-top: 1px;
+}
+.methods-section__step-title {
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  font-size: 14px; font-weight: 700;
+  color: var(--text-strong);
+  margin-bottom: 2px;
+}
+.methods-section__step-desc { margin: 0; }
+.methods-section__subhead {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 15px; font-weight: 600;
+  color: var(--text-strong);
+  margin: 20px 0 6px;
+}
+.methods-section__defs { margin: 0; }
+.methods-section__defs li { padding: 2px 0; }
+
+/* ── Impressum (home) ── */
+.impressum-section__subhead {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 15px; font-weight: 600;
+  color: var(--text-strong);
+  margin: 20px 0 6px;
+}
+.impressum-section__ops {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.impressum-section__op {
+  flex: 1 1 260px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: var(--surface);
+}
+.impressum-section__op-name {
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  font-size: 14px; font-weight: 700;
+  color: var(--text-strong);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  margin-bottom: 4px;
+}
+.impressum-section__badge {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: #fff; background: var(--accent);
+  padding: 2px 7px; border-radius: 999px;
+}
+.impressum-section__op-org,
+.impressum-section__op-addr,
+.impressum-section__op-email,
+.impressum-section__op-orcid {
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  font-size: 13px; line-height: 1.5;
+  color: var(--text-body);
+}
+.impressum-section__op-addr { color: var(--tick); }
+
+.impressum-section__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 4px 0 8px;
+}
+.impressum-section__card {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.impressum-section__card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.impressum-section__card-label {
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--tick);
+}
+.impressum-section__card-url {
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  font-size: 13px; line-height: 1.4;
+  color: var(--text-strong);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-word;
+}
+.impressum-section__card:hover .impressum-section__card-url { color: var(--accent); }
+.impressum-section__card-note {
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  font-size: 12px;
+  color: var(--tick);
+}
+.impressum-section__defs { margin: 0; }
+.impressum-section__defs li { padding: 2px 0; }
 /* ── What the Metrics Mean (home) ── */
 .metrics-mean {
   margin-top: 40px;
