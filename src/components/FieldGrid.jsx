@@ -11,7 +11,7 @@ export default function FieldGrid() {
         panelClassName="field-grid-section__body"
         headingId="field-grid-heading"
         panelId="field-grid-panel"
-        title="Browse by Research Field"
+        title="Explore the Dashboard by Research Field"
       >
         <div id="field-grid" className="field-grid">
           {FIELDS.map(f => {

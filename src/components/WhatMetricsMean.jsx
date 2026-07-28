@@ -29,6 +29,7 @@ export default function WhatMetricsMean() {
       headingId="metrics-mean-heading"
       panelId="metrics-mean-panel"
       title="What the Metrics Mean"
+      defaultOpen={false}
     >
       {METRICS.map((m) => (
         <div key={m.label} className="metrics-mean__card">

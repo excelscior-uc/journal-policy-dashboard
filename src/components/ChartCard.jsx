@@ -53,8 +53,8 @@ function CustomTooltip({ active, payload, label, policyByYear, totalJournals, cc
   )
 }
 
-function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear, cc }) {
-  if (payload.value === hideYear) return null
+function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYears, cc }) {
+  if (hideYears?.includes(payload.value)) return null
   const isPolicy = showPolicyLines && policyYears.has(payload.value)
   return (
     <g transform={`translate(${x},${y}) rotate(-40)`}>
@@ -196,7 +196,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
     const policyMin = enrichedPolicyLines.length ? Math.min(...enrichedPolicyLines.map(p => p.year)) : dataMin
     const policyMax = enrichedPolicyLines.length ? Math.max(...enrichedPolicyLines.map(p => p.year)) : dataMax
     const min = Math.min(dataMin, policyMin) - 1
-    const max = Math.max(dataMax, policyMax) + 1
+    const max = Math.max(dataMax, policyMax)
     const byYear = new Map(chartData.map(d => [d.year, d]))
     const out = []
     for (let y = min; y <= max; y++) out.push(byYear.get(y) ?? { year: y })
@@ -291,7 +291,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
       <div ref={ref} className={`chart-card__body${tall ? ' chart-card__body--agg' : ''}`}>
         {visible || forceVisible ? (
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={extendedData} margin={{ top: 16, right: 14, left: 4, bottom: 14 }}>
+            <LineChart data={extendedData} margin={{ top: 16, right: 20, left: 4, bottom: 14 }}>
               <CartesianGrid strokeDasharray="3 3" stroke={cc.grid} />
               <XAxis
                 dataKey="year"
@@ -300,7 +300,7 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                 minTickGap={0}
                 height={46}
                 tickMargin={4}
-                tick={<PolicyAwareTick policyYears={policyYears} showPolicyLines={showPolicyLines} hideYear={extendedData?.[0]?.year} cc={cc} />}
+                tick={<PolicyAwareTick policyYears={policyYears} showPolicyLines={showPolicyLines} hideYears={[extendedData?.[0]?.year]} cc={cc} />}
                 tickLine={{ stroke: cc.tickLine }}
                 axisLine={{ stroke: cc.axisLine }}
                 label={{ value: 'Year', position: 'insideBottom', offset: -4, fontSize: 11, fill: cc.axisLabel, fontWeight: 700 }}

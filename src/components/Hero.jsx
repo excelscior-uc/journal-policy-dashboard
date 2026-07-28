@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import GlobalJournalSearch from './GlobalJournalSearch'
 import { SITE_STATS } from '../data/siteStats'
 
@@ -23,19 +24,9 @@ export default function Hero() {
             </a>
           </p>
           <div className="hero__actions">
-            <button
-              className="hero__cta"
-              onClick={() => {
-                const heading = document.getElementById('field-grid-heading')
-                if (!heading) return
-                if (heading.getAttribute('aria-expanded') === 'false') {
-                  heading.click()
-                }
-                heading.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }}
-            >
-              Explore by Research Field
-            </button>
+            <Link className="hero__cta" to="/field/all-fields">
+              Explore the Dashboard
+            </Link>
             <span className="hero__or" aria-hidden="true">or</span>
             <div className="hero__search">
               <GlobalJournalSearch />

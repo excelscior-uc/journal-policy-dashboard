@@ -47,6 +47,7 @@ export default function MethodsSection() {
       headingId="methods-heading"
       panelId="methods-panel"
       title="Methods"
+      defaultOpen={false}
     >
       <p>
         The dashboard visualises data from{' '}

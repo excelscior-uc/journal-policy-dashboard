@@ -65,7 +65,7 @@ export default function Home() {
           headingId="features-heading"
           panelId="features-panel"
           title="How to use the dashboard"
-          defaultOpen={true}
+          defaultOpen={false}
         >
           <ul className="intro-modal__features intro-modal__features--home">
             {FEATURES.map(f => (
@@ -88,7 +88,7 @@ export default function Home() {
           headingId="refs-heading"
           panelId="refs-panel"
           title="References & Bibliography"
-          defaultOpen={true}
+          defaultOpen={false}
         >
           <ul className="ref-list">
             {REFS.map((r, i) => (
