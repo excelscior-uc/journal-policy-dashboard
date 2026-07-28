@@ -189,7 +189,10 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
       {/* All-fields page: "All Research Fields" entry + field list */}
       {routeSlug === 'all-fields' && (
         <div className="journal-sidebar__subfields" aria-label="Research fields">
-          <BarLegend />
+          <div className="journal-sidebar__head">
+            <BarLegend />
+          </div>
+          <div className="journal-sidebar__scroll">
           {(() => {
             const allMeta = FIELDS.find(f => f.slug === 'all-fields')
             const allStats = fieldStats['all-fields']
@@ -234,12 +237,14 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
               )
             })}
           </ul>
+          </div>
         </div>
       )}
 
       {/* Per-field page: current field header + collapsible other fields */}
       {routeSlug !== 'all-fields' && (
         <>
+          <div className="journal-sidebar__head">
           <BarLegend />
           {/* Current field + All Journals (aggregated) — combined */}
           <div ref={triggerRef}>
@@ -306,6 +311,9 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
               aria-label="Search journals"
             />
           </div>
+          </div>
+
+          <div className="journal-sidebar__scroll">
           {filtered.map(j => {
             const total = (j.chartData ?? []).reduce((s, r) => s + (r.totalArticles ?? 0), 0)
             const eligible = (j.chartData ?? []).reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
@@ -332,6 +340,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
           {filtered.length === 0 && search && (
             <div className="journal-sidebar__no-results">No journals match "{search}"</div>
           )}
+          </div>
         </>
       )}
     </nav>
