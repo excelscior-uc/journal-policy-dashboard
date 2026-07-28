@@ -1241,6 +1241,95 @@ a  { color: var(--text-strong); }
 .home-browse-collapsible { margin-bottom: 0; }
 .home-refs-section { margin-top: 32px; padding-bottom: 0; }
 
+/* ── Chart-type flip cards (About this Dashboard) ── */
+.chart-flips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 16px;
+  column-gap: 1.2%;
+  margin-top: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+.collapsible-home-section__panel ul.chart-flips { padding-left: 0; }
+.chart-flips__item {
+  display: flex;
+  /* 640/4085 of the source strip — same circle size as the original figure */
+  width: calc((100% - 6%) / 6);
+}
+@media (max-width: 640px) {
+  .chart-flips__item { width: calc((100% - 2.4%) / 3); }
+}
+
+.chart-flip {
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  perspective: 600px;
+  border-radius: 50%;
+}
+.chart-flip__inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0.15, 0.2, 1);
+}
+.chart-flip--flipped .chart-flip__inner { transform: rotateY(180deg); }
+@media (hover: hover) {
+  .chart-flip:hover .chart-flip__inner { transform: rotateY(180deg); }
+}
+.chart-flip:focus-visible { outline: none; }
+.chart-flip:focus-visible .chart-flip__inner { transform: rotateY(180deg); }
+.chart-flip:focus-visible .chart-flip__face {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.chart-flip__face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.chart-flip__face--front {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position-y: center;
+  /* Safari drops the hidden backface without an explicit 3D context of its own. */
+  transform: rotateY(0deg);
+}
+.chart-flip__face--back { transform: rotateY(180deg); }
+.chart-flip__face--avoid { background: #ffe3e0; color: #c92a2a; }
+.chart-flip__face--good { background: #dcf3e3; color: #2b8a3e; }
+.chart-flip__mark { width: 44%; height: 44%; }
+.chart-flip__rip {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: clamp(11px, 1.6vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+[data-theme="dark"] .chart-flip__face--avoid { background: #3a1d1b; color: #ff8a80; }
+[data-theme="dark"] .chart-flip__face--good { background: #16301f; color: #6ede8a; }
+
+@media (prefers-reduced-motion: reduce) {
+  .chart-flip__inner { transition: none; }
+}
+
 /* ── Methods (home) ── */
 .methods-section__steps {
   list-style: none;
