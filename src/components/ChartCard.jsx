@@ -35,7 +35,7 @@ function CustomTooltip({ active, payload, label, policyByYear, totalJournals, cc
           {d?.totalArticles != null && <div>Total articles: {d.totalArticles.toLocaleString()}</div>}
           {d?.eligibleArticles != null && (
             <div>
-              Included articles: {d.eligibleArticles.toLocaleString()}
+              With eligible figures: {d.eligibleArticles.toLocaleString()}
               {d?.totalArticles ? ` (${(d.eligibleArticles / d.totalArticles * 100).toFixed(1)}%)` : ''}
             </div>
           )}
@@ -81,7 +81,7 @@ function PolicyAwareTick({ x, y, payload, policyYears, showPolicyLines, hideYear
   )
 }
 
-function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines, cc }) {
+function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines, dataStartYear, cc }) {
   const series = SERIES_CONFIG.filter(s => !visibleSeries || visibleSeries.has(s.key))
   const line1 = series.slice(0, 3)
   const line2 = series.slice(3)
@@ -99,7 +99,7 @@ function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines, cc }) {
       <div style={{ display: 'flex', gap: '6px 12px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
         {line1.map(s => <LegendItem key={s.key} s={s} />)}
       </div>
-      {(line2.length > 0 || (showPolicyLines && hasPolicyLines)) && (
+      {(line2.length > 0 || (showPolicyLines && hasPolicyLines) || dataStartYear != null) && (
         <div style={{ display: 'flex', gap: '6px 12px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {line2.map(s => <LegendItem key={s.key} s={s} />)}
           {showPolicyLines && hasPolicyLines && (
@@ -108,6 +108,14 @@ function CustomLegend({ visibleSeries, showPolicyLines, hasPolicyLines, cc }) {
                 <rect x="3" y="0" width="4" height="14" rx="1" fill={cc.policyMarker} />
               </svg>
               Policy Year
+            </span>
+          )}
+          {dataStartYear != null && (
+            <span style={{ display: 'flex', alignItems: 'center', gap: 4, color: cc.dataStartText }}>
+              <svg width="10" height="14">
+                <line x1="5" y1="0" x2="5" y2="14" stroke={cc.dataStartMarker} strokeWidth={2} strokeDasharray="4 3" />
+              </svg>
+              First publication year ({dataStartYear})
             </span>
           )}
         </div>
@@ -202,6 +210,14 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
     for (let y = min; y <= max; y++) out.push(byYear.get(y) ?? { year: y })
     return out
   }, [chartData, enrichedPolicyLines])
+
+  // Policy year sits well before the first year with data -> mark where data actually starts.
+  const dataStartYear = useMemo(() => {
+    if (!showPolicyLines || !chartData?.length || !enrichedPolicyLines.length) return null
+    const dataMin = chartData[0].year
+    const policyMax = Math.max(...enrichedPolicyLines.map(p => p.year))
+    return dataMin > policyMax + 1 ? dataMin : null
+  }, [chartData, enrichedPolicyLines, showPolicyLines])
 
   return (
     <div className="chart-card" ref={cardRef}>
@@ -313,11 +329,11 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
               />
               <Tooltip content={<CustomTooltip policyByYear={policyByYear} totalJournals={totalJournals} cc={cc} />} />
               <Legend
-                key={`legend-${showPolicyLines && enrichedPolicyLines.length > 0 ? 'p' : 'np'}`}
-                content={<CustomLegend visibleSeries={visibleSeries} showPolicyLines={showPolicyLines} hasPolicyLines={enrichedPolicyLines.length > 0} cc={cc} />}
+                key={`legend-${showPolicyLines && enrichedPolicyLines.length > 0 ? 'p' : 'np'}-${dataStartYear ?? 'nd'}`}
+                content={<CustomLegend visibleSeries={visibleSeries} showPolicyLines={showPolicyLines} hasPolicyLines={enrichedPolicyLines.length > 0} dataStartYear={dataStartYear} cc={cc} />}
                 verticalAlign="top"
                 align="right"
-                height={showPolicyLines && enrichedPolicyLines.length > 0 ? 44 : 22}
+                height={(showPolicyLines && enrichedPolicyLines.length > 0) || dataStartYear != null ? 44 : 22}
               />
               {showPolicyLines && enrichedPolicyLines.map(pl => {
                 const w = pl.count != null
@@ -335,6 +351,15 @@ function ChartCard({ title, meta, hasPolicy, subtitle, chartData, policyLines = 
                   />
                 )
               })}
+              {dataStartYear != null && (
+                <ReferenceLine
+                  x={dataStartYear}
+                  stroke={cc.dataStartMarker}
+                  strokeWidth={1.5}
+                  strokeDasharray="5 4"
+                  isAnimationActive={false}
+                />
+              )}
               {SERIES_CONFIG.filter(s => !visibleSeries || visibleSeries.has(s.key)).map(s => (
                 <Line
                   key={s.key}

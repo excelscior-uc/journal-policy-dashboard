@@ -104,7 +104,7 @@ function CompareTooltip({ active, label, payload, items, activeMetrics, hiddenIt
                 })}
               </tr>
               <tr>
-                <td><span className="compare-tooltip__label-soft">Included articles</span></td>
+                <td><span className="compare-tooltip__label-soft">With eligible figures</span></td>
                 {visibleItems.map(it => {
                   const d = articleFor(it)
                   if (!d || d.eligibleArticles == null) return <td key={it.id} className="compare-tooltip__val">—</td>

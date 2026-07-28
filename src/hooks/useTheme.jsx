@@ -18,6 +18,8 @@ const CHART_COLORS = {
     policyTickBg: 'rgba(253,231,37,0.55)',
     policyTickStroke: 'rgba(253,231,37,0.9)',
     policyTickText: '#6d5f00',
+    dataStartMarker: '#868e96',
+    dataStartText: '#6c757d',
   },
   dark: {
     grid: '#2c3744',
@@ -33,6 +35,8 @@ const CHART_COLORS = {
     policyTickBg: 'rgba(253,231,37,0.28)',
     policyTickStroke: 'rgba(253,231,37,0.7)',
     policyTickText: '#e8d77a',
+    dataStartMarker: '#7d8896',
+    dataStartText: '#9aa5b1',
   },
 }
 

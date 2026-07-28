@@ -18,7 +18,7 @@ function TooltipPreview() {
       <div style={{ color: '#0072b2' }}>% only informative : 31.5%</div>
       <div style={{ marginTop: 4, borderTop: `1px solid ${cc.tooltipBorder}`, paddingTop: 3, color: cc.tooltipText, fontWeight: 600 }}>
         <div>Total articles: 1,240</div>
-        <div>Included articles: 980 (79.0%)</div>
+        <div>With eligible figures: 980 (79.0%)</div>
       </div>
       <div style={{ marginTop: 4, borderTop: `1px solid ${cc.tooltipBorder}`, paddingTop: 3, color: cc.tooltipPolicyText, fontWeight: 700 }}>
         Policy adopted: 8 journals of 71 (11%)

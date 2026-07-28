@@ -49,14 +49,14 @@ function ArticlesBar({ total = 0, eligible = 0 }) {
   const nPct = total > 0 ? (nonElig / total) * 100 : 0
   const fmt = n => n.toLocaleString()
   return (
-    <div className="articles-bar" aria-label={`${fmt(total)} total articles, ${fmt(eligible)} eligible`}>
+    <div className="articles-bar" aria-label={`${fmt(total)} total articles, ${fmt(eligible)} with eligible figures`}>
       <span className="policy-bar__total articles-bar__total">{fmt(total)} total</span>
       <div className="policy-bar__track">
         {ePct > 0 && (
           <div
             className="policy-bar__seg articles-bar__seg--eligible"
             style={{ flexBasis: `${ePct}%` }}
-            title={`${fmt(eligible)} eligible`}
+            title={`${fmt(eligible)} with eligible figures`}
           >
             <span className="policy-bar__lbl">{fmt(eligible)}</span>
           </div>
@@ -65,7 +65,7 @@ function ArticlesBar({ total = 0, eligible = 0 }) {
           <div
             className="policy-bar__seg articles-bar__seg--non"
             style={{ flexBasis: `${nPct}%` }}
-            title={`${fmt(nonElig)} not eligible`}
+            title={`${fmt(nonElig)} without eligible figures`}
           >
             <span className="policy-bar__lbl articles-bar__lbl--dark">{fmt(nonElig)}</span>
           </div>

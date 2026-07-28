@@ -159,7 +159,7 @@ export default function FieldPage() {
       : deferredPolicyFilter === 'nopolicy'
       ? ((field?.totalJournals ?? 0) - (field?.withPolicy ?? 0)) || '—'
       : (field?.totalJournals ?? '—')
-    return `n = ${n.toLocaleString()} articles; ${pct}% of total (${nTotal.toLocaleString()}) | ${journalCount} journals`
+    return `n = ${n.toLocaleString()} articles with eligible figures (${pct}% of ${nTotal.toLocaleString()}) | ${journalCount} journals`
   }, [aggData, field, deferredPolicyFilter])
 
   const aggTotalJournals = useMemo(() => {
@@ -231,7 +231,7 @@ export default function FieldPage() {
     const n = rows.reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
     const nTotal = rows.reduce((s, r) => s + (r.totalArticles ?? 0), 0)
     const pct = nTotal > 0 ? ((n / nTotal) * 100).toFixed(1) : '—'
-    return `n = ${n.toLocaleString()} articles; ${pct}% of total (${nTotal.toLocaleString()})`
+    return `n = ${n.toLocaleString()} articles with eligible figures (${pct}% of ${nTotal.toLocaleString()})`
   }
 
   if (error) return <div style={{ padding: 24, color: '#c0392b' }}>Failed to load data: {error}</div>
@@ -329,7 +329,7 @@ export default function FieldPage() {
                         : deferredPolicyFilter === 'nopolicy'
                         ? ((meta?.totalJournals ?? 0) - (meta?.withPolicy ?? 0)) || '—'
                         : (meta?.totalJournals ?? '—')
-                      const fieldSub = `n = ${n.toLocaleString()} articles; ${pct}% of total (${nTotal.toLocaleString()}) | ${jCount} journals`
+                      const fieldSub = `n = ${n.toLocaleString()} articles with eligible figures (${pct}% of ${nTotal.toLocaleString()}) | ${jCount} journals`
                       return (
                         <div
                           key={f.slug}
