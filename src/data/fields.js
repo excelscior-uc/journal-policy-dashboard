@@ -1,5 +1,5 @@
 export const FIELDS = [
-  { slug: 'all-fields',         name: 'All Research Fields',              icon: '🌐', totalJournals: 213, withPolicy: 71 },
+  { slug: 'all-fields',         name: 'All Research Fields',              icon: '🧍', totalJournals: 213, withPolicy: 71 },
   { slug: 'cardiac',            name: 'Cardiac & Cardiovascular Systems', icon: '🫀', totalJournals: 36,  withPolicy: 13 },
   { slug: 'clinical-neurology', name: 'Clinical Neurology',               icon: '🧠', totalJournals: 9,   withPolicy: 2  },
   { slug: 'endocrinology',      name: 'Endocrinology & Metabolism',       icon: '🔬', totalJournals: 32,  withPolicy: 10 },
@@ -9,7 +9,7 @@ export const FIELDS = [
   { slug: 'oncology',           name: 'Oncology',                         icon: '🎗️', totalJournals: 40,  withPolicy: 16 },
   { slug: 'orthopedics',        name: 'Orthopedics',                      icon: '🦴', totalJournals: 3,   withPolicy: 1  },
   { slug: 'pharmacology',       name: 'Pharmacology & Pharmacy',          icon: '💊', totalJournals: 9,   withPolicy: 2  },
-  { slug: 'physiology',         name: 'Physiology',                       icon: '⚡', totalJournals: 40,  withPolicy: 13 },
+  { slug: 'physiology',         name: 'Physiology',                       icon: '💪', totalJournals: 40,  withPolicy: 13 },
   { slug: 'rheumatology',       name: 'Rheumatology',                     icon: '🩺', totalJournals: 6,   withPolicy: 2  },
   { slug: 'urology',            name: 'Urology & Nephrology',             icon: '🫘', totalJournals: 8,   withPolicy: 3  },
 ]
