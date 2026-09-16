@@ -5,7 +5,10 @@ import ThemeToggle from './ThemeToggle'
 export default function TopNav() {
   return (
     <nav className="top-nav">
-      <Link to="/" className="top-nav__logo">Journal Policy Dashboard</Link>
+      <Link to="/" className="top-nav__logo">
+        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="" className="top-nav__logo-img" />
+        Journal Policy Dashboard
+      </Link>
       <div id="nav-filter-slot" className="top-nav__filter-slot" />
       <GlobalJournalSearch />
       <ThemeToggle />

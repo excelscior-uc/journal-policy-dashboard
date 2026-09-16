@@ -5,6 +5,9 @@ import { SITE_STATS } from '../data/siteStats'
 export default function Hero() {
   return (
     <div className="hero">
+      <div className="hero__logo">
+        <img src={`${import.meta.env.BASE_URL}icon-light.png`} alt="The Bar Graph Extinction logo" />
+      </div>
       <div className="hero__inner">
         <div className="hero__text">
 <h1 className="hero__title">
