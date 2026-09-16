@@ -1,12 +1,44 @@
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import GlobalJournalSearch from './GlobalJournalSearch'
 import { SITE_STATS } from '../data/siteStats'
 
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+
 export default function Hero() {
+  const videoRef = useRef(null)
+  const [playing, setPlaying] = useState(false)
+
+  const startAnimation = () => {
+    const v = videoRef.current
+    if (!v || prefersReducedMotion()) return
+    v.currentTime = 0
+    v.play().then(() => setPlaying(true)).catch(() => {})
+  }
+  const stopAnimation = () => {
+    videoRef.current?.pause()
+    setPlaying(false)
+  }
+
   return (
     <div className="hero">
-      <div className="hero__logo">
+      <div
+        className={`hero__logo${playing ? ' hero__logo--playing' : ''}`}
+        onMouseEnter={startAnimation}
+        onMouseLeave={stopAnimation}
+      >
         <img src={`${import.meta.env.BASE_URL}icon-light.png`} alt="The Bar Graph Extinction logo" />
+        <video
+          ref={videoRef}
+          className="hero__logo-video"
+          src={`${import.meta.env.BASE_URL}logo-hover.mp4`}
+          muted
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          onEnded={() => setPlaying(false)}
+        />
       </div>
       <div className="hero__inner">
         <div className="hero__text">

@@ -1585,9 +1585,29 @@ a  { color: var(--text-strong); }
   left: 0;
   width: calc((100vw - 1100px) / 2 + 48px);
   padding: 0 32px;
+}
+.hero__logo img,
+.hero__logo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: opacity .25s ease;
+}
+/* video has a black background; screen blend drops it onto the hero gradient */
+.hero__logo-video {
+  position: absolute;
+  inset: 0;
+  padding: 0 32px;
+  box-sizing: border-box;
+  mix-blend-mode: screen;
+  -webkit-mask-image: linear-gradient(to right, transparent 32px, #000 72px, #000 calc(100% - 72px), transparent calc(100% - 32px));
+  mask-image: linear-gradient(to right, transparent 32px, #000 72px, #000 calc(100% - 72px), transparent calc(100% - 32px));
+  opacity: 0;
   pointer-events: none;
 }
-.hero__logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.hero__logo--playing img { opacity: 0; }
+.hero__logo--playing .hero__logo-video { opacity: 1; }
 @media (max-width: 1400px) {
   .hero__logo { display: none; }
 }
