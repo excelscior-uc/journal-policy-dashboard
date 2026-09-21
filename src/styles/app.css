@@ -509,11 +509,45 @@ a  { color: var(--text-strong); }
 .journal-sidebar__scroll {
   flex: 1 1 auto;
   min-height: 0;
-  overflow-y: auto;
+}
+
+/* Custom always-visible scrollbar (native overlay bars fade out) */
+.scrollarea {
+  position: relative;
+  display: flex;
+  min-height: 0;
+}
+.scrollarea__viewport {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: scroll;
   overscroll-behavior: contain;
+  padding-right: 12px; /* room for the drawn bar */
   scrollbar-width: none;
 }
-.journal-sidebar__scroll::-webkit-scrollbar { display: none; }
+.scrollarea__viewport::-webkit-scrollbar { width: 0; height: 0; display: none; }
+.scrollarea__track {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 2px;
+  width: 8px;
+  border-radius: 999px;
+  background: var(--surface-3);
+}
+.scrollarea__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 999px;
+  background: var(--scrollbar-thumb);
+  cursor: grab;
+  touch-action: none;
+}
+.scrollarea__thumb:hover { background: var(--scrollbar-thumb-hover); }
+.scrollarea__thumb:active { cursor: grabbing; background: var(--scrollbar-thumb-hover); }
+.scrollarea__thumb--idle { cursor: default; opacity: 0.45; } /* content fits: bar stays, inert */
 
 /* Hidden span: same typography as subfield rows (icon + name) for sidebar width */
 .journal-sidebar__measure {
@@ -1758,7 +1792,8 @@ a  { color: var(--text-strong); }
     overflow: visible;
     display: block;
   }
-  .journal-sidebar__scroll { overflow: visible; }
+  .journal-sidebar__scroll .scrollarea__viewport { overflow: visible; padding-right: 0; }
+  .journal-sidebar__scroll .scrollarea__track { display: none; }
   .chart-grid { grid-template-columns: 1fr; }
 }
 

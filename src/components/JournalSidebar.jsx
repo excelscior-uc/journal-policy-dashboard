@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { FIELDS } from '../data/fields'
 import { useJournalNames } from '../data/journalNames'
 import Tooltip from './Tooltip'
+import ScrollArea from './ScrollArea'
 
 const FIELDS_EXCEPT_ALL = FIELDS.filter(f => f.slug !== 'all-fields')
 
@@ -192,7 +193,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
           <div className="journal-sidebar__head">
             <BarLegend />
           </div>
-          <div className="journal-sidebar__scroll">
+          <ScrollArea className="journal-sidebar__scroll">
           {(() => {
             const allMeta = FIELDS.find(f => f.slug === 'all-fields')
             const allStats = fieldStats['all-fields']
@@ -237,7 +238,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
               )
             })}
           </ul>
-          </div>
+          </ScrollArea>
         </div>
       )}
 
@@ -313,7 +314,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
           </div>
           </div>
 
-          <div className="journal-sidebar__scroll">
+          <ScrollArea className="journal-sidebar__scroll">
           {filtered.map(j => {
             const total = (j.chartData ?? []).reduce((s, r) => s + (r.totalArticles ?? 0), 0)
             const eligible = (j.chartData ?? []).reduce((s, r) => s + (r.eligibleArticles ?? 0), 0)
@@ -340,7 +341,7 @@ function JournalSidebar({ journals, selectedId, onSelect, fieldStats = {}, polic
           {filtered.length === 0 && search && (
             <div className="journal-sidebar__no-results">No journals match "{search}"</div>
           )}
-          </div>
+          </ScrollArea>
         </>
       )}
     </nav>
